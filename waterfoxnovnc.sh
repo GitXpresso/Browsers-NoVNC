@@ -9,9 +9,11 @@ echo "creating waterfox.desktop using the cat here document"
 cat << EOF > ~/waterfox.desktop
 [Desktop Entry]
 Version=1.0
-Type=Application
-Exec=/usr/lib/waterfox/waterfox
-Terminal=false
+Name=Waterfox Web Browser
+Comment=Browse the World Wide Web
+GenericName=Web Browser
+Keywords=Internet;WWW;Browser;Web;Explorer
+Exec=/usr/lib/waterfox/waterfoxTerminal=false %u
 X-MultipleArgs=false
 Icon=/usr/lib/waterfox/chrome/icons/default/default48.png
 StartupWMClass=waterfox
