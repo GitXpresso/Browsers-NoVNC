@@ -5,7 +5,7 @@ cd ~/
 wget https://github.com/zen-browser/desktop/releases/latest/download/zen.linux-x86_64.tar.bz2 && sudo tar -xvf zen.linux-x86_64.tar.bz2 -C /usr/lib
 git clone https://github.com/gitxpresso/linux-novnc.git
 echo "creating zen.desktop using cat here document"
-cat << EOF > /usr/share/applications/zen.desktop
+sudo cat << EOF > /usr/share/applications/zen.desktop
 [Desktop Entry]
 Version=1.0
 Type=Application
