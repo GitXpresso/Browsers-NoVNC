@@ -6,7 +6,7 @@ sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox
 wget https://cdn1.waterfox.net/waterfox/releases/6.5.3/Linux_x86_64/waterfox-6.5.3.tar.bz2 && sudo tar -xf waterfox-6.5.3.tar.bz2 -C /usr/lib/
 cd ~/
 echo "creating waterfox.desktop using the cat here document"
-cat << EOF > /usr/share/applications
+cat << EOF > ~/zen.desktop
 [Desktop Entry]
 Version=1.0
 Type=Application
