@@ -9,5 +9,5 @@ git clone https://github.com/gitxpresso/linux-novnc.git
 sudo mv -f usr/lib/tor-browser/start-tor-browser.desktop /usr/share/applications
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
-/usr/lib/tor-browser/firefox --display=:0
+/usr/lib/tor-browser/Browser/firefox --display=:0
 echo "Finished, Now go to https://localhost:5900 to access waterfox the vnc server"
