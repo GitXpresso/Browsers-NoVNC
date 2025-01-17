@@ -3,11 +3,16 @@
 
 - [Chrome Novnc](#Chrome-Novnc)
 - [Waterfox Novnc](#Waterfox-Novnc)
+<details><summary>Mozilla Browsers</summary>
+
 - [Firefox Novnc](#Firefox-Novnc)
+
+</details>
+
 - [Tor Novnc](#Tor-Novnc)
 - [Zen Novnc](#Zen-Novnc)
 
-### Chrome Novnc
+# Chrome Novnc
 ## Run Chrome NoVNC
 ### Install curl if you don't have it
 ``` 
