@@ -17,7 +17,7 @@ Pin-Priority: 1000
 echo "updating and installing firefox"
 sudo apt-get update && sudo apt-get install firefox -y
 echo "firefox installed, now starting the novnc server"
-tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE  -xstartup /usr/bin/firefox -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
+tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
 firefox --display=:0
 echo -e "novnc server started go https://localhost:5900"
