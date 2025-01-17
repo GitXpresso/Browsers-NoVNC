@@ -1,14 +1,20 @@
 # Browsers-NoVNC
 ## Table of Contents
 
-- [Chrome Novnc](#Chrome-Novnc)
-- [Waterfox Novnc](#Waterfox-Novnc)
+<details><summary>Google Browsers</summary>
+  
+- [Chrome Novnc](#Chrome-Novnc) 
+- [Chromium Novnc](#Chromium-Novnc)
+ 
+</details>
+
 <details><summary>Mozilla Browsers</summary>
 
 - [Firefox Novnc](#Firefox-Novnc)
-
+ 
 </details>
 
+- [Waterfox Novnc](#Waterfox-Novnc)
 - [Tor Novnc](#Tor-Novnc)
 - [Zen Novnc](#Zen-Novnc)
 
