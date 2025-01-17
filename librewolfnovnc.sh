@@ -1,7 +1,7 @@
 echo "updating system to successfully install required packages"
 sudo apt update
 echo "Installing required packages"
-sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox
+sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox dbus-x11
 cd ~/
 sudo apt update && sudo apt install extrepo -y
 sudo extrepo enable librewolf
