@@ -20,5 +20,6 @@ StartupNotify=true
 Actions=new-window;new-private-window;open-profile-manager;
 EOF
 sudo mv -f ~/zen.desktop /usr/share/applications/
-tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE  -xstartup /usr/bin/openbox -xstartup /usr/lib/waterfox/waterfox -geometry 1366x768 -localhost no :2
+tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE  -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6200 localhost:5902
+/usr/lib/zen/zen --display=:0
