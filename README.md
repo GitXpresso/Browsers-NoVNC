@@ -37,7 +37,7 @@ sudo apt install curl
 ```
 ## Start Zen NoVnc
 ```
-https://raw.githubusercontent.com/GitXpresso/Waterfox-VNC/refs/heads/main/zenbrowsernovnc.sh | bash
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Waterfox-VNC/refs/heads/main/zenbrowsernovnc.sh | bash
 ```
 # What is looks like
 ![Screenshot 2025-01-17 12.29.18 PM.png](<https://media-hosting.imagekit.io//67a2fb69d27e455f/Screenshot%202025-01-17%2012.29.18%20PM.png?Expires=1831742984&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=nSkvMo~KvfBTHo16JKUVLhDgSj-qK2~HOm-TX-jTfL9buABdxAgTukMbWKB4HwBjGFGe3vQZbfdTAFUMYEl--~C4mv9RDa1FlkOVvlxCcaaelVPRbc~mR7wdgVDqgm9TFLfBdc0ldLLAh1l-tjwAFDOSrelAuNm4u3bpeq0TGI5drM800rBBXK0rnnNkopdTxDQxGkZ9oM9RmWw7XuDKHYSnG97GOezx4chYRcPPL809WioNIeL8EtmGFodICInT7d~~~x6e7Oi-ViEDls-ETSlZ~vYbgMVbb4ijl0itXhtXRQ5Kvfp8Lno7JDe7Jr3k0SBYB9gszS~Rlcju0tkaCQ__>)
