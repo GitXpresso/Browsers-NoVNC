@@ -21,6 +21,7 @@ Every browser that supports linux and `--display=:0` works with installed browse
 
 <details><summary>Firefox Based Browsers</summary>
   
+- [Librewolf NoVNC](#Librewolf-NoVNC) **
 - [Floorp NoVNC](#Floorp-NoVNC)
 - [Tor NoVNC](#Tor-NoVNC) *
 - [Mullvad NoVNC](#Mullvad-NoVNC) ****
@@ -31,7 +32,7 @@ Every browser that supports linux and `--display=:0` works with installed browse
 - [Brave NoVNC](#Brave-NoVNC) ****
 - [Falkon NoVNC](#Falkon-NoVNC) ****
 - [Chrome Novnc](#Chrome-NoVNC) ***
-- [Librewolf NoVNC](#Librewolf-NoVNC) ****
+
 - [Vivaldi NoVNC](#Vivaldi-NoVNC) ****
 - [Zen Novnc](#Zen-NoVNC) ***
 
@@ -64,6 +65,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 # Librewolf NoVNC
 ![Librewolf](https://upload.wikimedia.org/wikipedia/commons/d/d0/LibreWolf_icon.svg)
 ### About Librewolf
+[LibreWolf](https://librewolf.net) is a free and open-source fork of Firefox, with an emphasis on privacy and security. It is licensed under the MPL 2.0
 ## Run Librewolf NoVNC
 ### Install curl if you don't have it
 ``` 
