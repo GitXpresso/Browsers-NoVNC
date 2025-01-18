@@ -53,7 +53,7 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Waterfox-VNC/refs/heads/main/librewolfnovnc.sh | bash
 ```
-## What  Librewolf looks like
+## What Librewolf looks like
 
 Image has not been added yet
 
@@ -76,6 +76,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Waterfox-VNC/refs/heads/
 ```
 ## What Firefox looks like
 ![Screenshot 2025-01-17 12.44.44 PM.png](<https://media-hosting.imagekit.io//ac2aeff7e77e4d15/Screenshot%202025-01-17%2012.44.44%20PM.png?Expires=1831743897&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=nAuc~o8OcMQZ-Mw5zef17L9m5QBbmdqt6Z~OqYqVrEyNtaqg4OKCpAqMcCN7q08En2h80CqF2lvjQFlCmCobesHpCqwDZ-qsYsTFHwZrYsnzHhnVv-9q0I~aVkX1OoA4JgnfQ~dBlvwwp5faO67RAzi~UtMdYsMolaOEqdz-wfQ2WuMx0VbgFEmT~G3jvhCsrO7BFDYuqmKhLiH-Gfuy7tF3DMQ0TKssy8JlDld0I9bUNzvj-s9H6copbraSoquqXLIjHv7AphCD0UdhOF0XW6QHI3Wwy6aVBqkBmKpJI7G3UcWdHKcOuoQt-iWo~h29OvsOHsgtEvgQsbwNdyRL3g__>)
+# Seamonkey NoVNC
 ## Run Seamonkey NoVNC
 ### Install curl if you don't have it
 ``` 
@@ -105,7 +106,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Waterfox-VNC/refs/heads/
 ## What Waterfox looks like
 ![Waterfox Novnc](<https://media-hosting.imagekit.io//076eae515bf74dd4/Screenshot%202025-01-17%2012.11.59%20PM.png?Expires=1831741943&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=cDElZA3hP67r8lIe2Y-1zpqDDujp2GhzpiiRNp3xJ8KxJ97q1LgGJ3FlBY-7GU9cAVWFjdns9sniPocigFThIxKgi06FdefaKVXNXNwniu~h4SPK1uQOD4nu~WElyEZdt7vdcPVcBsLpxmvd26eudE8zEX7WJ8K7A2R~eBHwoB7kWz49lw5euKMguU64zYqJGbOq-EOwxFGKLl-nvDNA7Cu7BwOMwy0D96aUr5aqHOYMgbG8AvxMl5PZOEYKSp5f8d36jAYbg8gyTlxaPdxl2dKnHMyOqJgknD2tXql0e~DcG7kNz9c9RWCy435M4n3cn5fO5NtN2TMYoyf0hx9FnA__>)](https://waterfox.net/)
 # Vivaldi NoVNC
-## Run Librewolf NoVNC
+## Run Vivaldi NoVNC
 ### Install curl if you don't have it
 ``` 
 sudo apt install curl
