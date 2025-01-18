@@ -1,4 +1,5 @@
 echo "updating system to successfully install required packages"
+
 sudo apt update
 echo "Installing required packages"
 sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox dbus-x11

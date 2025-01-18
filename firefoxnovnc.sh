@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "updating system to successfully install required packages"
+sudo apt update
 echo "installing required packages"
 sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox
 sudo install -d -m 0755 /etc/apt/keyrings
