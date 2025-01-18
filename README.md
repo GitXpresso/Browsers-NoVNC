@@ -62,8 +62,9 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Chrome looks like
 ![Google Chrome](<https://media-hosting.imagekit.io//b17cc3fbdfae406e/Screenshot%202025-01-17%2011.56.23%20AM.png?Expires=1831741275&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=lAbs2zDf39IWAKpSYw9vIQkF7RlXwJ83A9gYaX0clmEehdTLz1MdZgYcIkrlwFBK6BvBvXCw6hrYz-7YcYdedOGgd2LaWgB-1DgWesQ16LTiv7-xijYVeWe2PvSjCjvhHsEWs-H00lJPGcyN-Jwpv5lVHCr9dmCgFIMLUGxfUAlHUh~hZCFQB4pkCCA7YWlLsNXg3skE8zba2ypK2wy8Oz~yuxf9-DUcp0ae3Vc3zWePcLd6RjZn1FcbyU~8DLlEsbg3rOJj1orUN7Pv-CuOHcEdf-69FxTHLcWTej~yyZEJrxY6W1p8wmgXFcxvRauILJ109s-1eVD1Dm9r6~R4sg__>)
-# Librewolf NoVNC
+
 ![Librewolf](https://upload.wikimedia.org/wikipedia/commons/d/d0/LibreWolf_icon.svg)
+# Librewolf NoVNC
 ### About Librewolf
 [LibreWolf](https://librewolf.net) is a free and open-source fork of Firefox, with an emphasis on privacy and security. It is licensed under the MPL 2.0
 ## Run Librewolf NoVNC
