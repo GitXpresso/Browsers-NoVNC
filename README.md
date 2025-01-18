@@ -3,19 +3,33 @@
 
 >[!NOTE]
 > A astrisk(*) next to the anchored link means the contents has not been added yet.
+>
+> 2 astrisks(*) means that the image of what the browser looks like in the NoVNC session has not been added yet
+>
+> 3 astrisks(*) next to the anchored link means that the browser logo and about the browser has not been added yet
+>
+> 4 astrisks(*) next to the anchored link means that it neither has the about the browser, browser logo, and image of the what browser looks like in the NoVNC server session
+>
+> No Asterisks(*) next to the anchored link means it has the about the browser, logo of the browser, and what the browser looks like in NoVNC session
 
-
-<details><summary>Firefox Based Browsers</summary>
+<details><summary>Mozilla Browsers</summary>
   
-- [Firefox Novnc](#Firefox-NoVNC)
-- [Waterfox Novnc](#Waterfox-NoVNC)
-- [Tor Novnc](#Tor-NoVNC) *
+- [Firefox NoVNC](#Firefox-NoVNC)
+- [Seamonkey NoVNC](#Seamonkey-NoVNC) ****
 
 </details>
 
-- [Chrome Novnc](#Chrome-NoVNC) 
-- [Librewolf NoVNC](#Librewolf-NoVNC)
-- [Zen Novnc](#Zen-NoVNC)
+<details><summary>Firefox Based Browsers</summary>
+  
+- [Waterfox Novnc](#Waterfox-NoVNC)
+- [Tor NoVNC](#Tor-NoVNC) *
+
+</details>
+
+- [Chrome Novnc](#Chrome-NoVNC) ***
+- [Librewolf NoVNC](#Librewolf-NoVNC) ****
+- [Vivaldi NoVNC](#Vivaldi-NoVNC) *
+- [Zen Novnc](#Zen-NoVNC) ***
 
 # Chrome NoVNC
 ## Run Chrome NoVNC
@@ -62,6 +76,19 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Waterfox-VNC/refs/heads/
 ```
 ## What Firefox looks like
 ![Screenshot 2025-01-17 12.44.44 PM.png](<https://media-hosting.imagekit.io//ac2aeff7e77e4d15/Screenshot%202025-01-17%2012.44.44%20PM.png?Expires=1831743897&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=nAuc~o8OcMQZ-Mw5zef17L9m5QBbmdqt6Z~OqYqVrEyNtaqg4OKCpAqMcCN7q08En2h80CqF2lvjQFlCmCobesHpCqwDZ-qsYsTFHwZrYsnzHhnVv-9q0I~aVkX1OoA4JgnfQ~dBlvwwp5faO67RAzi~UtMdYsMolaOEqdz-wfQ2WuMx0VbgFEmT~G3jvhCsrO7BFDYuqmKhLiH-Gfuy7tF3DMQ0TKssy8JlDld0I9bUNzvj-s9H6copbraSoquqXLIjHv7AphCD0UdhOF0XW6QHI3Wwy6aVBqkBmKpJI7G3UcWdHKcOuoQt-iWo~h29OvsOHsgtEvgQsbwNdyRL3g__>)
+## Run Seamonkey NoVNC
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Seamonkey NoVNC using Curl
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Waterfox-VNC/refs/heads/main/seamonkeynovnc.sh | bash
+```
+## What Seamonkey looks like
+
+Image has not been added yet
+
 # Waterfox NoVNC
 [![Waterfox logo](https://cdn.brandfetch.io/id_-XdGZcp/w/820/h/158/theme/dark/logo.png?c=1bfwsmEH20zzEfSNTed)](https://www.waterfox.net/waterfox/)
 
