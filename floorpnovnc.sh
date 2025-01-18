@@ -2,7 +2,7 @@
 echo "updating system to successfully install required packages"
 sudo apt update
 echo "Installing required packages"
-sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox dbus-x11 dialog
+sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox dbus-x11 dialog tilix
 cd ~/
 wget https://github.com/Floorp-Projects/Floorp/releases/latest/download/floorp-11.22.0.linux-x86_64.tar.bz2 && sudo tar -xvf floorp-11.22.0.linux-x86_64.tar.bz2 -C /usr/lib && sudo rm -rf floorp-11.22.0.linux-x86_64.tar.bz2 
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0

@@ -2,7 +2,7 @@
 echo "updating system to successfully install required packages"
 sudo apt update
 echo "installing required packages"
-sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox
+sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox tilix
 sudo install -d -m 0755 /etc/apt/keyrings
 Import the Mozilla APT repository signing key:
 wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
