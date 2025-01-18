@@ -14,6 +14,7 @@
  
 </details>
 
+- [Librewolf NoVNC](#Librewolf-NoVNC)
 - [Waterfox Novnc](#Waterfox-Novnc)
 - [Tor Novnc](#Tor-Novnc)
 - [Zen Novnc](#Zen-Novnc)
