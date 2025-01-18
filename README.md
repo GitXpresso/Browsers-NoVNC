@@ -25,6 +25,7 @@
 - [Tor NoVNC](#Tor-NoVNC) *
 
 </details>
+
 - [Falkon NoVNC](#Falkon-NoVNC) ****
 - [Chrome Novnc](#Chrome-NoVNC) ***
 - [Librewolf NoVNC](#Librewolf-NoVNC) ****
