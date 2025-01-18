@@ -22,7 +22,7 @@ Every browser that supports linux and `--display=:0` works with installed browse
 <details><summary>Firefox Based Browsers</summary>
  
 - [Tor NoVNC](#Tor-NoVNC) *
-- [Mullvad NoVNC](#Mullvad-NoVNC) *
+- [Mullvad NoVNC](#Mullvad-NoVNC) ****
 - [Waterfox NoVNC](#Waterfox-NoVNC)
 
 </details>
