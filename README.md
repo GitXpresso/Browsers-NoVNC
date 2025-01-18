@@ -1,4 +1,5 @@
 # Browsers-NoVNC
+Every browser that supports linux and `--display=:0` works with installed browser in the terminal will be added to this repository
 ## Table of Contents
 >[!IMPORTANT]
 > A astrisk(*) next to the anchored link means the contents has not been added yet.
