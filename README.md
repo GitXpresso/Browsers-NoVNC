@@ -1,6 +1,5 @@
 # Browsers-NoVNC
 ## Table of Contents
-
 >[!IMPORTANT]
 > A astrisk(*) next to the anchored link means the contents has not been added yet.
 >
