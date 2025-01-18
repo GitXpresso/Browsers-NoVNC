@@ -4,7 +4,7 @@ sudo apt update
 echo "installing required packages"
 sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox
 cd ~/
-wget https://github.com/zen-browser/desktop/releases/latest/download/zen.linux-x86_64.tar.bz2 && sudo tar -xvf zen.linux-x86_64.tar.bz2 -C /usr/lib
+wget https://github.com/zen-browser/desktop/releases/latest/download/zen.linux-x86_64.tar.bz2 && sudo tar -xvf zen.linux-x86_64.tar.bz2 -C /usr/lib && sudo rm -rf zen.linux-x86_64.tar.bz2
 git clone https://github.com/gitxpresso/linux-novnc.git
 echo "creating zen.desktop using cat here document"
 sudo cat << EOF > ~/zen.desktop
