@@ -1,11 +1,15 @@
 # Browsers-NoVNC
 ## Table of Contents
 
+>[!NOTE]
+> A astrisk(*) next to the anchored link means the contents has not been added yet.
+
+
 <details><summary>Firefox Based Browsers</summary>
   
 - [Firefox Novnc](#Firefox-NoVNC)
 - [Waterfox Novnc](#Waterfox-NoVNC)
-- [Tor Novnc](#Tor-NoVNC)
+- [Tor Novnc](#Tor-NoVNC) *
 
 </details>
 
