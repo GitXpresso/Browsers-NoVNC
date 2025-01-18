@@ -2,7 +2,7 @@
 Every browser that supports linux and `--display=:0` works with installed browser in the terminal will be added to this repository
 ## Table of Contents
 >[!IMPORTANT]
-> A astrisk(*) next to the anchored link means the contents has not been added yet.
+> A astrisk(*) next to the anchored link means the contents has not been added yet, or it has the header but doesn't have the contents
 >
 > 2 astrisks(*) means that the image of what the browser looks like in the NoVNC session has not been added yet
 >
@@ -21,8 +21,9 @@ Every browser that supports linux and `--display=:0` works with installed browse
 
 <details><summary>Firefox Based Browsers</summary>
  
-- [Waterfox Novnc](#Waterfox-NoVNC)
 - [Tor NoVNC](#Tor-NoVNC) *
+- [Mullvad NoVNC](#Mullvad-NoVNC) *
+- [Waterfox NoVNC](#Waterfox-NoVNC)
 
 </details>
 
@@ -120,6 +121,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Waterfox looks like
 [![Waterfox Novnc](<https://media-hosting.imagekit.io//076eae515bf74dd4/Screenshot%202025-01-17%2012.11.59%20PM.png?Expires=1831741943&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=cDElZA3hP67r8lIe2Y-1zpqDDujp2GhzpiiRNp3xJ8KxJ97q1LgGJ3FlBY-7GU9cAVWFjdns9sniPocigFThIxKgi06FdefaKVXNXNwniu~h4SPK1uQOD4nu~WElyEZdt7vdcPVcBsLpxmvd26eudE8zEX7WJ8K7A2R~eBHwoB7kWz49lw5euKMguU64zYqJGbOq-EOwxFGKLl-nvDNA7Cu7BwOMwy0D96aUr5aqHOYMgbG8AvxMl5PZOEYKSp5f8d36jAYbg8gyTlxaPdxl2dKnHMyOqJgknD2tXql0e~DcG7kNz9c9RWCy435M4n3cn5fO5NtN2TMYoyf0hx9FnA__>)](https://waterfox.net/)
+# Mullvad NoVNC
 # Vivaldi NoVNC
 ## Run Vivaldi NoVNC
 ### Install curl if you don't have it
