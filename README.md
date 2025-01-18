@@ -65,10 +65,9 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 <br/>
 <div align="left">
   <a href="https://librewolf.net">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/LibreWolf_icon.svg" alt="Logo" width="150" height="150">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/LibreWolf_icon.svg" alt="Logo" width="200" height="200">
   </a>
-
-  <h2 align= "left">Librewolf </h2>
+  <h1 align= "left">Librewolf </h1>
     <br/>
 LibreWolf is a free and open-source fork of Firefox, with an emphasis on privacy and security. 
 </div>
