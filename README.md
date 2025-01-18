@@ -1,7 +1,7 @@
 # Browsers-NoVNC
 ## Table of Contents
 
->[!NOTE]
+>[!IMPORTANT]
 > A astrisk(*) next to the anchored link means the contents has not been added yet.
 >
 > 2 astrisks(*) means that the image of what the browser looks like in the NoVNC session has not been added yet
