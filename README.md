@@ -28,7 +28,7 @@
 
 - [Chrome Novnc](#Chrome-NoVNC) ***
 - [Librewolf NoVNC](#Librewolf-NoVNC) ****
-- [Vivaldi NoVNC](#Vivaldi-NoVNC) *
+- [Vivaldi NoVNC](#Vivaldi-NoVNC) ****
 - [Zen Novnc](#Zen-NoVNC) ***
 
 # Chrome NoVNC
@@ -104,6 +104,20 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Waterfox-VNC/refs/heads/
 ```
 ## What Waterfox looks like
 ![Waterfox Novnc](<https://media-hosting.imagekit.io//076eae515bf74dd4/Screenshot%202025-01-17%2012.11.59%20PM.png?Expires=1831741943&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=cDElZA3hP67r8lIe2Y-1zpqDDujp2GhzpiiRNp3xJ8KxJ97q1LgGJ3FlBY-7GU9cAVWFjdns9sniPocigFThIxKgi06FdefaKVXNXNwniu~h4SPK1uQOD4nu~WElyEZdt7vdcPVcBsLpxmvd26eudE8zEX7WJ8K7A2R~eBHwoB7kWz49lw5euKMguU64zYqJGbOq-EOwxFGKLl-nvDNA7Cu7BwOMwy0D96aUr5aqHOYMgbG8AvxMl5PZOEYKSp5f8d36jAYbg8gyTlxaPdxl2dKnHMyOqJgknD2tXql0e~DcG7kNz9c9RWCy435M4n3cn5fO5NtN2TMYoyf0hx9FnA__>)](https://waterfox.net/)
+# Vivaldi NoVNC
+## Run Librewolf NoVNC
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Vivaldi NoVNC using Curl
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Waterfox-VNC/refs/heads/main/vivaldinovnc.sh | bash
+```
+## What Vivaldi looks like
+
+Image has not been added yet
+
 # Zen NoVNC
 ## Install Curl if you don't have it 
 ```
