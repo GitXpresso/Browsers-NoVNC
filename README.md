@@ -20,7 +20,8 @@ Every browser that supports linux and `--display=:0` works with installed browse
 </details>
 
 <details><summary>Firefox Based Browsers</summary>
- 
+  
+- [Floorp NoVNC](#Floorp-NoVNC)
 - [Tor NoVNC](#Tor-NoVNC) *
 - [Mullvad NoVNC](#Mullvad-NoVNC) ****
 - [Waterfox NoVNC](#Waterfox-NoVNC)
@@ -85,6 +86,20 @@ sudo apt install curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/falkonnovnc.sh | bash
 ```
 ## What Falkon looks like
+
+Image has not been added yet
+
+# Floorp NoVNC
+## Run Floorp NoVNC
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Floorp NoVNC using Curl
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/floorpnovnc.sh | bash
+```
+## What Floorp looks like
 
 Image has not been added yet
 
