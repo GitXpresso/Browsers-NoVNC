@@ -20,12 +20,12 @@
 </details>
 
 <details><summary>Firefox Based Browsers</summary>
-  
+ 
 - [Waterfox Novnc](#Waterfox-NoVNC)
 - [Tor NoVNC](#Tor-NoVNC) *
 
 </details>
-
+- [Falkon NoVNC](#Falkon-NoVNC) ****
 - [Chrome Novnc](#Chrome-NoVNC) ***
 - [Librewolf NoVNC](#Librewolf-NoVNC) ****
 - [Vivaldi NoVNC](#Vivaldi-NoVNC) ****
@@ -54,6 +54,20 @@ sudo apt install curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/librewolfnovnc.sh | bash
 ```
 ## What Librewolf looks like
+
+Image has not been added yet
+
+# Falkon NoVNC
+## Run Falkon NoVNC
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Falkon NoVNC using Curl
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/falkonnovnc.sh | bash
+```
+## What Falkon looks like
 
 Image has not been added yet
 
