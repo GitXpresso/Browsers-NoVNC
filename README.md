@@ -44,7 +44,15 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Waterfox-VNC/refs/heads/
 Image has not been added yet
 
 # Firefox NoVNC
+
+[![Firefox logo](https://images.weserv.nl/?url=raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/firefox-icon.png&w=110)](https://www.mozilla.org/firefox/)[![Firefox](https://images.placeholders.dev/?width=224&height=110&fontFamily=monospace&fontWeight=400&fontSize=52&text=Firefox&bgColor=rgba(0,0,0,0.0)&textColor=rgba(121,121,121,1))](https://www.mozilla.org/firefox/)
+
+### About Firefox
+
+Mozilla [Firefox](https://firefox.com/) is a free and open-source web browser developed by Mozilla
+Foundation and its subsidiary, Mozilla Corporate. 
 ## Install curl if you don't have it
+
 ```
 sudo apt install curl
 ```
