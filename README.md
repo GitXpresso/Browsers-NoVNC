@@ -105,8 +105,7 @@ sudo apt install curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/floorpnovnc.sh | bash
 ```
 ## What Floorp looks like
-
-Image has not been added yet
+![Screenshot 2025-01-18 at 22-16-16 New Tab.png](<https://media-hosting.imagekit.io//ed0ab13a73ca46c7/Screenshot%202025-01-18%20at%2022-16-16%20New%20Tab.png?Expires=1831846674&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=TxF3flo6KiSOqo1430Zft2AST7tdxKmrBwIrlGSUSY4YeodNHquTsfI5YfgiMLa4GWEkf1Zv93ImQyYfsS46G34n92R3vg9-3gRjVkZv9W~mC~rfbVqWlw~nn95mCbwh07Oy~CbxoAEY2tOHPTkKvBtV4PSTj0ts4AB6Chef-REYVzxfmyhagXA9T3DDG4lj-nXBCNqkN~zLF-C79ZG4YQ6D7c-sdI6vLRQXru-EewO2g7-oL1G0F1ZoX8rN4lnfyL8NUvrgcLvYkSuE3EwpTYisv6KB~OumpHVF0tcOkaSxY~rPL3ydygCZH3TytZbFrq9ZCaTHVWsdxAL5dXMxgQ__>)
 
 # Firefox NoVNC
 
