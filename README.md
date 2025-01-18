@@ -14,15 +14,15 @@ Every browser that supports linux and `--display=:0` works with installed browse
 
 <details><summary>Mozilla Browsers</summary>
   
-- [Firefox NoVNC](#Firefox-NoVNC)
+- [Firefox NoVNC](#Run-Firefox-NoVNC)
 - [Seamonkey NoVNC](#Seamonkey-NoVNC) ****
 
 </details>
 
 <details><summary>Firefox Based Browsers</summary>
   
-- [Librewolf NoVNC](#Librewolf-NoVNC) **
-- [Floorp NoVNC](#Floorp-NoVNC)
+- [Librewolf NoVNC](#Run-Librewolf-NoVNC) **
+- [Floorp NoVNC](#Run-Floorp-NoVNC)
 - [Tor NoVNC](#Tor-NoVNC) *
 - [Mullvad NoVNC](#Mullvad-NoVNC) ****
 - [Waterfox NoVNC](#Waterfox-NoVNC)
@@ -63,16 +63,15 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ## What Chrome looks like
 ![Google Chrome](<https://media-hosting.imagekit.io//b17cc3fbdfae406e/Screenshot%202025-01-17%2011.56.23%20AM.png?Expires=1831741275&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=lAbs2zDf39IWAKpSYw9vIQkF7RlXwJ83A9gYaX0clmEehdTLz1MdZgYcIkrlwFBK6BvBvXCw6hrYz-7YcYdedOGgd2LaWgB-1DgWesQ16LTiv7-xijYVeWe2PvSjCjvhHsEWs-H00lJPGcyN-Jwpv5lVHCr9dmCgFIMLUGxfUAlHUh~hZCFQB4pkCCA7YWlLsNXg3skE8zba2ypK2wy8Oz~yuxf9-DUcp0ae3Vc3zWePcLd6RjZn1FcbyU~8DLlEsbg3rOJj1orUN7Pv-CuOHcEdf-69FxTHLcWTej~yyZEJrxY6W1p8wmgXFcxvRauILJ109s-1eVD1Dm9r6~R4sg__>)
 <br />
-<div align="center">
+<div align="left">
   <a href="https://librewolf.net">
     <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/LibreWolf_icon.svg" alt="Logo" width="150" height="150">
   </a>
 
-  <h3 align="center">Librewolf NoVNC </h3>
-
-  <p align="center">
-       LibreWolf is a free and open-source fork of Firefox, with an emphasis on privacy and security. 
+  <h2 align= "left">Librewolf </h2>
     <br />
+LibreWolf is a free and open-source fork of Firefox, with an emphasis on privacy and security. 
+
 
 ## Run Librewolf NoVNC
 ### Install curl if you don't have it
@@ -101,7 +100,6 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 
 Image has not been added yet
 
-# Floorp NoVNC
 !-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -109,11 +107,12 @@ Image has not been added yet
     <img src="https://avatars.githubusercontent.com/u/94953125?s=200&v=4" alt="Logo" width="150" height="150">
   </a>
 
-  <h3 align="center">Floorp Browser </h3>
+  <h3 align="center">Floorp NoVNC</h3>
 
   <p align="center">
        A Browser built for keeping the Open, Private and Sustainable Web alive. Based on Mozilla Firefox.
     <br />
+    
 ## Run Floorp NoVNC
 ### Install curl if you don't have it
 ``` 
