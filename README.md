@@ -171,6 +171,15 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ## What Icecat looks like
 ![icecat.png](<https://media-hosting.imagekit.io//e31e532ff7014497/icecat.png?Expires=1831908720&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=zOAh-yvtqMWn-jqVcCla66chjiBONfjXuvwVjQOM5qxy92HKE2FY~2jwk7UY7AXdLrrpxjfK9Niu-PY0xWKSislPSUxPbQEY2O0nmKKjdl8T1VvIljm6TVk4IO-my2oiw1sAUbPTWpjiwQSvzV7oL6nDhBVGkKCjTR8xpAVvVISsnGjhs~7rC3cAPjDPMf8fHgxgjPBdfp3hwTi6R8hJ1vy6t50Jj5yU74Xjf4uCxJhbe2p4a21U0z1YsRYa8oyJH9brBNY5smdq5stLlN7LjeM39WdlBJvrVYFkjR5YNpUaFmk6ZZgWNO9iCwmF67P1jMGUx2ryxptT~-JabtdMOg__>)
 # Mullvad NoVNC
+<br/>
+<div align="center">
+  <a href="https://mullvad.net">
+    <img src="https://imagekit.io/tools/asset-public-link?detail=%7B%22name%22%3A%22mullvad.jpeg%22%2C%22type%22%3A%22image%2Fjpeg%22%2C%22signedurl_expire%22%3A%222028-01-19T16%3A17%3A50.899Z%22%2C%22signedUrl%22%3A%22https%3A%2F%2Fmedia-hosting.imagekit.io%2F%2Fc5fc20608dd440ec%2Fmullvad.jpeg%3FExpires%3D1831911471%26Key-Pair-Id%3DK2ZIVPTIP2VGHC%26Signature%3DoTSkVcuY19~4aGL-j9anZhFK8z7RNI2JCEgsO5Zcaw0BeWjOLwZw0~TT5--rMN7KhCeK5ciS-kzhRHdQmymbizsnas1CigzWDHkrJOliWmOea5zpnoTjRbX3~abB0g3AU7sBgUXriiBsHvXXSZeIX67Drh7Dm1J9e2ilyCJKSlWnd8wYTL0mBmkL70eiqxExPTXECGvhNXclYXTUTlz73zYvZr~TNYl8DfEvfHhD6v~~p1NiWKgP1dXfVQSCU00G3dcn2uNNHIZ48aLxy0S~gDy27ZEa3V52lfp4svxr2zM2cr0HzLd835ixNekXwBssXx6~j3WpptwXA3NispFbvg__%22%7D)" alt="Logo" width="200" height="200">
+  </a>
+  <h1 align= "center">Mullvad </h1>
+    <br/>
+<h3 center "left">LibreWolf is a free and open-source fork of Firefox, with an emphasis on privacy and security. </h3>
+</div>
 ## Run Mullvad NoVNC
 ### Install curl if you don't have it
 ``` 
