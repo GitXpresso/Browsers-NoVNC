@@ -186,6 +186,16 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ## What Mullvad looks like
 
 Image has not been added yet
+# Tor NoVNC
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Tor NoVNC using Curl
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/librewolfnovnc.sh | bash
+```
+## What Tor looks like
 
 # Vivaldi NoVNC
 ## Run Vivaldi NoVNC
