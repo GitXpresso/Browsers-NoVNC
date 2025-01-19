@@ -15,7 +15,7 @@ Every browser that supports linux and `--display=:0` works with installed browse
 <details><summary>Mozilla Browsers</summary>
   
 - [Firefox NoVNC](#Firefox-NoVNC)
-- [Seamonkey NoVNC](#Seamonkey-NoVNC) **
+- [Seamonkey NoVNC](#Seamonkey-NoVNC) 
 
 </details>
 
@@ -31,18 +31,18 @@ Every browser that supports linux and `--display=:0` works with installed browse
 </details>
 
 - [Falkon NoVNC](#Falkon-NoVNC) ****
-- [Chrome Novnc](#Chrome-NoVNC) ***
+- [Chrome Novnc](#Chrome-NoVNC) 
 
 - [Vivaldi NoVNC](#Vivaldi-NoVNC) ***
 - [Zen Novnc](#Zen-NoVNC) ***
 
-# Chrome NoVNC
+
 # Chrome NoVNC
 
 <br/>
 <div align="center">
   <a href="https://github.com/Floorp-Projects/Floorp">
-    <img src="https://i.ibb.co/M7f2jDR/th-4090100660.jpeg" alt="Logo" width="150" height="150">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg" alt="Logo" width="150" height="150">
   </a>
 
   <h3 align="center">Google Chrome </h3>
