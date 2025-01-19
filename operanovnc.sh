@@ -2,7 +2,7 @@
 echo "Updating Your System"
 sudo apt update
 echo "Installing the required packages in order for the script to work properly"
-sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox dialog
+sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox dialog tilix dbus-x11
 cd ~/
 wget -qO- https://deb.opera.com/archive.key | sudo apt-key add -
 sudo add-apt-repository "deb [arch=i386,amd64] https://deb.opera.com/opera-stable/ stable non-free"
