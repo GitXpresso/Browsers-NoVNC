@@ -33,7 +33,7 @@ Every browser that supports linux and `--display=:0` works with installed browse
 
 - [Falkon NoVNC](#Falkon-NoVNC) ****
 - [Chrome Novnc](#Chrome-NoVNC) 
-- [Vivaldi NoVNC](#Vivaldi-NoVNC) ***
+- [Vivaldi NoVNC](#Vivaldi-NoVNC) 
  
 
 
@@ -86,6 +86,16 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ## What Librewolf looks like
 ![librewolf.png](<https://media-hosting.imagekit.io//3ade5c80c0e14121/librewolf.png?Expires=1831853978&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=anK-bXP9pP7p1jcpXZ~7yXNfArP-W7OalWcKHVCWZ7WG7dXaoJyu0jGAVhLRrh1N56aXV6TMtAAbVlOKACJd7qi6d0x3bkKNBARikw1qwNEKDttcSxWWcmwVVJRQ5XN89neGibVItk2FSnMulx92G3H~PukAzLIbD5j1Seti4CJmAcYbrIliNVZ3VHaoVu4KKSANPyOiIvn8Diy9dxj-Fwr0PscdMvzWQzOP4iVjv3znVUVKixbuPjsOuHTnEX-Qpi9Ia-MHaGMZmw-F8CDswKBF8ubRLE0KehVtSarENSCO~jjF9BPFbO7jOBzfMjavg1wJMPzbnviXs77oD5TyOw__>)
 # Falkon NoVNC
+<br/>
+<div align="center">
+  <a href="https://vivaldi.com">
+    <img src=" " alt="Logo" width="130" height="130">
+  </a>
+  <h1 align= "center">Falkon</h1>
+    <br/>
+<p center "left"> </p>
+</div>
+
 ## Run Falkon NoVNC
 ### Install curl if you don't have it
 ``` 
