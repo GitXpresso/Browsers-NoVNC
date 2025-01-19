@@ -190,7 +190,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 <br/>
 <div align="center">
   <a href="https://icecatbrowser.org">
-    <img src="https://www.gnu.org/software/gnuzilla/icecat.pngcecat.png" alt="Logo" width="150" height="150">
+    <img src="https://www.gnu.org/software/gnuzilla/icecat.png" alt="Logo" width="150" height="150">
   </a>
 
   <h3 align="center">GNU Icecat</h3>
