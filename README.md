@@ -202,14 +202,14 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 <br/>
 <div align="center">
   <a href="https://mullvad.net">
-    <img src="https://imagekit.io/tools/asset-public-link?detail=%7B%22name%22%3A%22mullvad.jpeg%22%2C%22type%22%3A%22image%2Fjpeg%22%2C%22signedurl_expire%22%3A%222028-01-19T16%3A17%3A50.899Z%22%2C%22signedUrl%22%3A%22https%3A%2F%2Fmedia-hosting.imagekit.io%2F%2Fc5fc20608dd440ec%2Fmullvad.jpeg%3FExpires%3D1831911471%26Key-Pair-Id%3DK2ZIVPTIP2VGHC%26Signature%3DoTSkVcuY19~4aGL-j9anZhFK8z7RNI2JCEgsO5Zcaw0BeWjOLwZw0~TT5--rMN7KhCeK5ciS-kzhRHdQmymbizsnas1CigzWDHkrJOliWmOea5zpnoTjRbX3~abB0g3AU7sBgUXriiBsHvXXSZeIX67Drh7Dm1J9e2ilyCJKSlWnd8wYTL0mBmkL70eiqxExPTXECGvhNXclYXTUTlz73zYvZr~TNYl8DfEvfHhD6v~~p1NiWKgP1dXfVQSCU00G3dcn2uNNHIZ48aLxy0S~gDy27ZEa3V52lfp4svxr2zM2cr0HzLd835ixNekXwBssXx6~j3WpptwXA3NispFbvg__%22%7D)" alt="Logo" width="200" height="200">
+    <img src="  " alt="Logo" width="200" height="200">
   </a>
   <h1 align= "center">Mullvad </h1>
     <br/>
-<h4 center "left">Mullvad Browser is a privacy-focused web browser developed in collaboration with the Tor Project, designed to enhance online privacy by minimizing tracking and fingerprinting. It can be used with a trusted VPN for added security, offering features similar to the Tor Browser but without connecting to the Tor network. </h4>
+<p center "left">Mullvad Browser is a privacy-focused web browser developed in collaboration with the Tor Project, designed to enhance online privacy by minimizing tracking and fingerprinting. </p>
 </div>
-
-## Run Mullvad NoVNC
+  
+Run Mullvad NoVNC
 ### Install curl if you don't have it
 ``` 
 sudo apt install curl
