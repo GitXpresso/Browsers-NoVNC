@@ -252,12 +252,12 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 # Vivaldi NoVNC
 <br/>
 <div align="center">
-  <a href="https://github.com/zen/zen-desktop">
+  <a href="https://vivaldi.com">
     <img src=" " alt="Logo" width="130" height="130">
   </a>
   <h1 align= "center">Vivaldi</h1>
     <br/>
-<p center "left"></p>
+<p center "left">Vivaldi is a free, customizable web browser developed by Vivaldi Technologies, known for its built-in email client and features like ad blocking and privacy protection. It is designed for users who prefer a highly personalized browsing experience.</p>
 </div>
 
 ## Run Vivaldi NoVNC
