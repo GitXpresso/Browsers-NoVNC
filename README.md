@@ -26,15 +26,15 @@ Every browser that supports linux and `--display=:0` works with installed browse
 - [Tor NoVNC](#Tor-NoVNC) 
 - [Mullvad NoVNC](#Mullvad-NoVNC) 
 - [Waterfox NoVNC](#Waterfox-NoVNC)
-- [Icecat NoVNC](#Icecat-NoVNC) 
+- [Icecat NoVNC](#Icecat-NoVNC)
+- [Zen Novnc](#Zen-NoVNC)
 
 </details>
 
 - [Falkon NoVNC](#Falkon-NoVNC) ****
 - [Chrome Novnc](#Chrome-NoVNC) 
-
 - [Vivaldi NoVNC](#Vivaldi-NoVNC) ***
-- [Zen Novnc](#Zen-NoVNC) ***
+ 
 
 
 # Chrome NoVNC
@@ -215,7 +215,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 <br/>
 <div align="center">
   <a href="https://mullvad.net">
-    <img src="https://static.wikia.nocookie.net/logopedia/images/3/35/Mullvad_Browser_2023.png" alt="Logo" width="200" height="200">
+    <img src="https://static.wikia.nocookie.net/logopedia/images/3/35/Mullvad_Browser_2023.png" alt="Logo" width="150" height="150">
   </a>
   <h1 align= "center">Mullvad </h1>
     <br/>
@@ -235,7 +235,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ![mullvad.png](<https://media-hosting.imagekit.io//f4531350ebd246b9/mullvad.png?Expires=1831910992&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=hHikCyhKJxM-AzXSTTdLSq2jTj0fUfHXxgs~S97ly-7lf36yHOKIn4JZ5KB5PjdYQoMkTtkVYG2c36wjueM73c0EgnBXBs500K-cvuzKhLAsjZyGKPhjUGRyi9cxWua~QpCozRolIAYB-QztSz0G~dkQ9-ZHL-0LR-JXlKntR8Hy-WLnj0TXM4t32150kYzWJ5lMeUHpC9DEH6geQkWR6FznOSNv8kw0V1wNMXhhU8xAy~k~0vlCTNYKqOuqxDKKqqf0ipKpWv55pAOyRSF3rJIPjMnORPwXjNR7tEo9ncHBqNzGwEND9yjB3mzM9eBAKD4alxedtYLyADOsAcX6NA__>)
 # Tor NoVNC
 <p align="center">
-  <img width="300px" src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Tor_project_logo_hq.png">
+  <img width="150px" src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Tor_project_logo_hq.png">
   <h2 center "left">  Tor(The Onion Routing) is a free overlay network for enabling anonymous communication. </h2>
 </p>
   
@@ -265,12 +265,13 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 <br/>
 <div align="center">
   <a href="https://github.com/zen/zen-desktop">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Zen_Browser_logo_%28red_circles%29.svg" alt="Logo" width="200" height="200">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Zen_Browser_logo_%28red_circles%29.svg" alt="Logo" width="150" height="150">
   </a>
   <h1 align= "center">Zen</h1>
     <br/>
-<p center "left">Mullvad Browser is a privacy-focused web browser developed in collaboration with the Tor Project, designed to enhance online privacy by minimizing tracking and fingerprinting. </p>
+<p center "left">Zen Browser is a free and open-source fork of Mozilla Firefox, with its main focus being privacy, customizability and design </p>
 </div>
+
 ## Run Zen NoVNC
 ## Install Curl if you don't have it 
 ```
