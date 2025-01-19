@@ -130,6 +130,20 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ## What Firefox looks like
 ![Screenshot 2025-01-17 12.44.44 PM.png](<https://media-hosting.imagekit.io//ac2aeff7e77e4d15/Screenshot%202025-01-17%2012.44.44%20PM.png?Expires=1831743897&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=nAuc~o8OcMQZ-Mw5zef17L9m5QBbmdqt6Z~OqYqVrEyNtaqg4OKCpAqMcCN7q08En2h80CqF2lvjQFlCmCobesHpCqwDZ-qsYsTFHwZrYsnzHhnVv-9q0I~aVkX1OoA4JgnfQ~dBlvwwp5faO67RAzi~UtMdYsMolaOEqdz-wfQ2WuMx0VbgFEmT~G3jvhCsrO7BFDYuqmKhLiH-Gfuy7tF3DMQ0TKssy8JlDld0I9bUNzvj-s9H6copbraSoquqXLIjHv7AphCD0UdhOF0XW6QHI3Wwy6aVBqkBmKpJI7G3UcWdHKcOuoQt-iWo~h29OvsOHsgtEvgQsbwNdyRL3g__>)
 # Seamonkey NoVNC
+![https://filebin.net/q3b8ilv8rmy6qstx/default64.png]
+<br/>
+<div align="center">
+  <a href="https://github.com/Floorp-Projects/Floorp">
+    <img src=https://filebin.net/q3b8ilv8rmy6qstx/default64.png" alt="Logo" width="150" height="150">
+  </a>
+
+  <h3 align="center">Floorp </h3>
+
+  <p align="center">
+       
+    <br/>
+</div>
+
 ## Run Seamonkey NoVNC
 ### Install curl if you don't have it
 ``` 
