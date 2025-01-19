@@ -262,7 +262,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 <br/>
 <div align="center">
   <a href="https://vivaldi.com">
-    <img src=" " alt="Logo" width="130" height="130">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Vivaldi_web_browser_logo.svg/456px-Vivaldi_web_browser_logo.svg.png?20190912145229" alt="Logo" width="130" height="130">
   </a>
   <h1 align= "center">Vivaldi</h1>
     <br/>
