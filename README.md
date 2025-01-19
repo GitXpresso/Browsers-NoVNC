@@ -89,7 +89,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 <br/>
 <div align="center">
   <a href="https://falkon.org">
-    <img src=" " alt="Logo" width="130" height="130">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Breezeicons-apps-48-falkon.svg" alt="Logo" width="130" height="130">
   </a>
   <h1 align= "center">Falkon</h1>
     <br/>
