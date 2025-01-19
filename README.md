@@ -31,7 +31,7 @@ Every browser that supports linux and `--display=:0` works with installed browse
 
 </details>
 
-- [Falkon NoVNC](#Falkon-NoVNC) ****
+- [Falkon NoVNC](#Falkon-NoVNC) 
 - [Chrome Novnc](#Chrome-NoVNC) 
 - [Vivaldi NoVNC](#Vivaldi-NoVNC) 
  
