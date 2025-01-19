@@ -1,0 +1,1 @@
+wget https://filebin.net/x2v6mw0ke7y3wigc/microsoft-edge-stable_132.0.2957.115-1_amd64.deb && sudo apt install -y ./microsoft-edge-stable_132.0.2957.115-1_amd64.deb && sudo rm -rf microsoft-edge-stable_132.0.2957.115-1_amd64.deb
