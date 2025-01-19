@@ -26,6 +26,7 @@ Every browser that supports linux and `--display=:0` works with installed browse
 - [Tor NoVNC](#Tor-NoVNC) 
 - [Mullvad NoVNC](#Mullvad-NoVNC) ****
 - [Waterfox NoVNC](#Waterfox-NoVNC)
+- [Icecat NoVNC](#Icecat-NoVNC) ***
 
 </details>
 
@@ -183,6 +184,7 @@ sudo apt install curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/icecatnovnc.sh | bash
 ```
 ## What Icecat looks like
+![icecat.png](<https://media-hosting.imagekit.io//e31e532ff7014497/icecat.png?Expires=1831908720&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=zOAh-yvtqMWn-jqVcCla66chjiBONfjXuvwVjQOM5qxy92HKE2FY~2jwk7UY7AXdLrrpxjfK9Niu-PY0xWKSislPSUxPbQEY2O0nmKKjdl8T1VvIljm6TVk4IO-my2oiw1sAUbPTWpjiwQSvzV7oL6nDhBVGkKCjTR8xpAVvVISsnGjhs~7rC3cAPjDPMf8fHgxgjPBdfp3hwTi6R8hJ1vy6t50Jj5yU74Xjf4uCxJhbe2p4a21U0z1YsRYa8oyJH9brBNY5smdq5stLlN7LjeM39WdlBJvrVYFkjR5YNpUaFmk6ZZgWNO9iCwmF67P1jMGUx2ryxptT~-JabtdMOg__>)
 # Mullvad NoVNC
 ## Run Mullvad NoVNC
 ### Install curl if you don't have it
