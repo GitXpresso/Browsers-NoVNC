@@ -21,9 +21,9 @@ Every browser that supports linux and `--display=:0` works with installed browse
 
 <details><summary>Firefox Based Browsers</summary>
   
-- [Librewolf NoVNC](#Run-Librewolf-NoVNC) **
+- [Librewolf NoVNC](#Run-Librewolf-NoVNC) 
 - [Floorp NoVNC](#Run-Floorp-NoVNC)
-- [Tor NoVNC](#Tor-NoVNC) *
+- [Tor NoVNC](#Tor-NoVNC) ***
 - [Mullvad NoVNC](#Mullvad-NoVNC) ****
 - [Waterfox NoVNC](#Waterfox-NoVNC)
 
@@ -33,7 +33,7 @@ Every browser that supports linux and `--display=:0` works with installed browse
 - [Falkon NoVNC](#Falkon-NoVNC) ****
 - [Chrome Novnc](#Chrome-NoVNC) ***
 
-- [Vivaldi NoVNC](#Vivaldi-NoVNC) ****
+- [Vivaldi NoVNC](#Vivaldi-NoVNC) ***
 - [Zen Novnc](#Zen-NoVNC) ***
 
 # Brave NoVNC DOES NOT WORK
