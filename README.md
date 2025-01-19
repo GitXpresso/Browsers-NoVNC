@@ -181,8 +181,7 @@ sudo apt install curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/mullvadnovnc.sh | bash
 ```
 ## What Mullvad looks like
-
-Image has not been added yet
+![mullvad.png](<https://media-hosting.imagekit.io//f4531350ebd246b9/mullvad.png?Expires=1831910992&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=hHikCyhKJxM-AzXSTTdLSq2jTj0fUfHXxgs~S97ly-7lf36yHOKIn4JZ5KB5PjdYQoMkTtkVYG2c36wjueM73c0EgnBXBs500K-cvuzKhLAsjZyGKPhjUGRyi9cxWua~QpCozRolIAYB-QztSz0G~dkQ9-ZHL-0LR-JXlKntR8Hy-WLnj0TXM4t32150kYzWJ5lMeUHpC9DEH6geQkWR6FznOSNv8kw0V1wNMXhhU8xAy~k~0vlCTNYKqOuqxDKKqqf0ipKpWv55pAOyRSF3rJIPjMnORPwXjNR7tEo9ncHBqNzGwEND9yjB3mzM9eBAKD4alxedtYLyADOsAcX6NA__>)
 # Tor NoVNC
 <p align="center">
   <img width="300px" src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Tor_project_logo_hq.png">
