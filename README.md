@@ -134,7 +134,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 <br/>
 <div align="center">
   <a href="https://github.com/Floorp-Projects/Floorp">
-    <img src=https://filebin.net/q3b8ilv8rmy6qstx/default64.png" alt="Logo" width="150" height="150">
+    <img src=https://i.ibb.co/M80rbs0/default64.png" alt="Logo" width="150" height="150">
   </a>
 
   <h3 align="center">Floorp </h3>
