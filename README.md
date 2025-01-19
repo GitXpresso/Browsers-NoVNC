@@ -41,14 +41,14 @@ Every browser that supports linux and `--display=:0` works with installed browse
 
 <br/>
 <div align="center">
-  <a href="https://github.com/Floorp-Projects/Floorp">
+  <a href="https://google.com/chrome">
     <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg" alt="Logo" width="150" height="150">
   </a>
 
   <h3 align="center">Google Chrome </h3>
 
   <p align="center">
-       A Browser built for keeping the Open, Private and Sustainable Web alive. Based on Mozilla Firefox.
+       Google Chrome is a web browser developed by Google.
     <br/>
 </div>
 
