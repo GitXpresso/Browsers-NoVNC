@@ -178,8 +178,9 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
   </a>
   <h1 align= "center">Mullvad </h1>
     <br/>
-<h3 center "left">LibreWolf is a free and open-source fork of Firefox, with an emphasis on privacy and security. </h3>
+<h4 center "left">Mullvad Browser is a privacy-focused web browser developed in collaboration with the Tor Project, designed to enhance online privacy by minimizing tracking and fingerprinting. It can be used with a trusted VPN for added security, offering features similar to the Tor Browser but without connecting to the Tor network. </h4>
 </div>
+
 ## Run Mullvad NoVNC
 ### Install curl if you don't have it
 ``` 
