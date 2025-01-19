@@ -42,7 +42,7 @@ Every browser that supports linux and `--display=:0` works with installed browse
 <br/>
 <div align="center">
   <a href="https://github.com/Floorp-Projects/Floorp">
-    <img src="https://i.ibb.co/M7f2jDR/th-4090100660.jp" alt="Logo" width="150" height="150">
+    <img src="https://i.ibb.co/M7f2jDR/th-4090100660.jpg" alt="Logo" width="150" height="150">
   </a>
 
   <h3 align="center">Google Chrome </h3>
