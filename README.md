@@ -133,13 +133,13 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ![https://filebin.net/q3b8ilv8rmy6qstx/default64.png]
 <br/>
 <div align="center">
-  <a href="https://github.com/Floorp-Projects/Floorp">
+  <a href="https://seamonkey-project.org">
     <img src=https://i.ibb.co/M80rbs0/default64.png" alt="Logo" width="150" height="150">
   </a>
 
-  <h3 align="center">Floorp </h3>
+  <h3 align="center">Seamonkey </h3>
 
-  <p align="center">
+  <p align="center"> SeaMonkey is a free and open-source Internet suite that includes a web browser, email client, HTML editor, and IRC chat client. </p>
        
     <br/>
 </div>
