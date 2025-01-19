@@ -187,8 +187,9 @@ Image has not been added yet
 # Tor NoVNC
 <p align="center">
   <img width="300px" src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Tor_project_logo_hq.png">
-  <h2 center "left">  </h2>
-</p
+  <h2 center "left">  Tor(The Onion Routing) is a free overlay network for enabling anonymous communication. </h2>
+</p>
+  
 ### Install curl if you don't have it
 ``` 
 sudo apt install curl
