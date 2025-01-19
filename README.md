@@ -37,6 +37,20 @@ Every browser that supports linux and `--display=:0` works with installed browse
 - [Zen Novnc](#Zen-NoVNC) ***
 
 # Chrome NoVNC
+# Chrome NoVNC
+
+<br/>
+<div align="center">
+  <a href="https://github.com/Floorp-Projects/Floorp">
+    <img src="https://i.ibb.co/M7f2jDR/th-4090100660.jp" alt="Logo" width="150" height="150">
+  </a>
+
+  <h3 align="center">Google Chrome </h3>
+
+  <p align="center">
+       A Browser built for keeping the Open, Private and Sustainable Web alive. Based on Mozilla Firefox.
+    <br/>
+</div>
 ## Run Chrome NoVNC
 ### Install curl if you don't have it
 ``` 
