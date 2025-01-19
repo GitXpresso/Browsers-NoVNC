@@ -15,7 +15,7 @@ Every browser that supports linux and `--display=:0` works with installed browse
 <details><summary>Mozilla Browsers</summary>
   
 - [Firefox NoVNC](#Firefox-NoVNC)
-- [Seamonkey NoVNC](#Seamonkey-NoVNC) ****
+- [Seamonkey NoVNC](#Seamonkey-NoVNC) **
 
 </details>
 
@@ -130,7 +130,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ## What Firefox looks like
 ![Screenshot 2025-01-17 12.44.44 PM.png](<https://media-hosting.imagekit.io//ac2aeff7e77e4d15/Screenshot%202025-01-17%2012.44.44%20PM.png?Expires=1831743897&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=nAuc~o8OcMQZ-Mw5zef17L9m5QBbmdqt6Z~OqYqVrEyNtaqg4OKCpAqMcCN7q08En2h80CqF2lvjQFlCmCobesHpCqwDZ-qsYsTFHwZrYsnzHhnVv-9q0I~aVkX1OoA4JgnfQ~dBlvwwp5faO67RAzi~UtMdYsMolaOEqdz-wfQ2WuMx0VbgFEmT~G3jvhCsrO7BFDYuqmKhLiH-Gfuy7tF3DMQ0TKssy8JlDld0I9bUNzvj-s9H6copbraSoquqXLIjHv7AphCD0UdhOF0XW6QHI3Wwy6aVBqkBmKpJI7G3UcWdHKcOuoQt-iWo~h29OvsOHsgtEvgQsbwNdyRL3g__>)
 # Seamonkey NoVNC
-![https://filebin.net/q3b8ilv8rmy6qstx/default64.png]
+
 <br/>
 <div align="center">
   <a href="https://seamonkey-project.org">
@@ -141,7 +141,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 
   <p align="center"> SeaMonkey is a free and open-source Internet suite that includes a web browser, email client, HTML editor, and IRC chat client. </p>
        
-    <br/>
+   <br/>
 </div>
 
 ## Run Seamonkey NoVNC
