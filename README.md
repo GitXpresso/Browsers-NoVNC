@@ -209,7 +209,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 <p center "left">Mullvad Browser is a privacy-focused web browser developed in collaboration with the Tor Project, designed to enhance online privacy by minimizing tracking and fingerprinting. </p>
 </div>
   
-Run Mullvad NoVNC
+## Run Mullvad NoVNC
 ### Install curl if you don't have it
 ``` 
 sudo apt install curl
