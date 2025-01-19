@@ -250,6 +250,16 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ## What Tor looks like
 ![2025-01-18_23-55.png](<https://media-hosting.imagekit.io//206f87de1060478c/2025-01-18_23-55.png?Expires=1831853600&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=pfMjz~U6WCGc90YOtLa~dJXAQOKBajb0p9eILcBua2jIvkJXbpKWgHLsSLMUTiXAVCI9rZQgLXfjwlcVdIhk-OguanrHCcKg2eejPQSLAZV7A4cLJRliuhn7IKKVqAZaDEfBVuAAffVTPAshLXhYq-GAI-0z4OiL-zpbEUQXoiBSwjEj~1RoHIcPwY4sLPI5K89Gkm3jHtmhUWMaIKAI2s7um5h~x4qKOA58Ip~9KosMV7pnCO~s9GRBWWXB2lKX0D7TwLRDKHkEY4utBsEY9fmzW1IxgrtUHisYDmwW2qvMlDqarpjNMmuyIdX2buwnIaEMlWwr0obcqfJskKY5EQ__>)
 # Vivaldi NoVNC
+<br/>
+<div align="center">
+  <a href="https://github.com/zen/zen-desktop">
+    <img src=" " alt="Logo" width="130" height="130">
+  </a>
+  <h1 align= "center">Vivaldi</h1>
+    <br/>
+<p center "left"></p>
+</div>
+
 ## Run Vivaldi NoVNC
 ### Install curl if you don't have it
 ``` 
