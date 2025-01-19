@@ -30,26 +30,11 @@ Every browser that supports linux and `--display=:0` works with installed browse
 
 </details>
 
-- [Brave NoVNC](#Brave-NoVNC) ****
 - [Falkon NoVNC](#Falkon-NoVNC) ****
 - [Chrome Novnc](#Chrome-NoVNC) ***
 
 - [Vivaldi NoVNC](#Vivaldi-NoVNC) ***
 - [Zen Novnc](#Zen-NoVNC) ***
-
-# Brave NoVNC DOES NOT WORK
-## Run Brave NoVNC
-### Install curl if you don't have it
-``` 
-sudo apt install curl
-```
-### Run Brave NoVNC using Curl
-```
-curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/bravenovnc.sh | bash
-```
-## What Brave looks like
-
-Image has not been added yet
 
 # Chrome NoVNC
 ## Run Chrome NoVNC
