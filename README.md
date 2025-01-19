@@ -262,6 +262,16 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ## What Vivaldi looks like
 ![vivaldi.png](<https://media-hosting.imagekit.io//2b0ec0f9c002468f/vivaldi.png?Expires=1831853692&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PJUB~C0F8KmrW5QwB6AI0e751GkQGMtSWajkyb1ajF4WRrjpqj~mzcjPzpFAE0kfj9xXvsuHkX9vcGkA6YtyroNVlEBubK1J9TJW3T4XunWqABZq-~~QyTOlR-rmK2dBiI3xa8gJnPRH6nYN3LAyzJbhy0fDcZgrw2n8rsW3CB810AvZQUHIt0x7I6LKzTug3vtZxMAfKuhgC1yGVaRkLA3y4-QwtSoIbVPKkkF4C~aEBp6CM~mEZwJcoK9Xt1c671jspDC-VHgz9QUKa7pGqB3VVstG5S52jv5uAsFJKzbUx3uaALJwvPw1wjFL2-tYaYj6euTSRZh7HjSThE~ZBw__>)
 # Zen NoVNC
+<br/>
+<div align="center">
+  <a href="https://github.com/zen/zen-desktop">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Zen_Browser_logo_%28red_circles%29.svg" alt="Logo" width="200" height="200">
+  </a>
+  <h1 align= "center">Zen</h1>
+    <br/>
+<p center "left">Mullvad Browser is a privacy-focused web browser developed in collaboration with the Tor Project, designed to enhance online privacy by minimizing tracking and fingerprinting. </p>
+</div>
+## Run Zen NoVNC
 ## Install Curl if you don't have it 
 ```
 sudo apt install curl
