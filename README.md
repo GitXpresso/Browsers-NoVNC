@@ -82,9 +82,7 @@ sudo apt install curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/librewolfnovnc.sh | bash
 ```
 ## What Librewolf looks like
-
-Image has not been added yet
-
+![librewolf.png](<https://media-hosting.imagekit.io//3ade5c80c0e14121/librewolf.png?Expires=1831853978&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=anK-bXP9pP7p1jcpXZ~7yXNfArP-W7OalWcKHVCWZ7WG7dXaoJyu0jGAVhLRrh1N56aXV6TMtAAbVlOKACJd7qi6d0x3bkKNBARikw1qwNEKDttcSxWWcmwVVJRQ5XN89neGibVItk2FSnMulx92G3H~PukAzLIbD5j1Seti4CJmAcYbrIliNVZ3VHaoVu4KKSANPyOiIvn8Diy9dxj-Fwr0PscdMvzWQzOP4iVjv3znVUVKixbuPjsOuHTnEX-Qpi9Ia-MHaGMZmw-F8CDswKBF8ubRLE0KehVtSarENSCO~jjF9BPFbO7jOBzfMjavg1wJMPzbnviXs77oD5TyOw__>)
 # Falkon NoVNC
 ## Run Falkon NoVNC
 ### Install curl if you don't have it
