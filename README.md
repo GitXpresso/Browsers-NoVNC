@@ -88,12 +88,12 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 # Falkon NoVNC
 <br/>
 <div align="center">
-  <a href="https://vivaldi.com">
+  <a href="https://falkon.org">
     <img src=" " alt="Logo" width="130" height="130">
   </a>
   <h1 align= "center">Falkon</h1>
     <br/>
-<p center "left"> </p>
+<p center "left">Falkon is a free and open-source web browser developed by KDE, originally known as QupZilla. It is built on the Qt WebEngine and is designed to be lightweight, offering features like a built-in ad blocker and integration with desktop environments.</p>
 </div>
 
 ## Run Falkon NoVNC
