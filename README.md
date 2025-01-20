@@ -34,7 +34,8 @@ Every browser that supports linux and `--display=:0` works with installed browse
 - [Falkon NoVNC](#Falkon-NoVNC) 
 - [Chrome Novnc](#Chrome-NoVNC) 
 - [Vivaldi NoVNC](#Vivaldi-NoVNC) 
- 
+
+ [Similar Projects I making](#Similar-Projects-Im-making)
 
 
 # Chrome NoVNC
@@ -280,6 +281,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Vivaldi looks like
 ![vivaldi.png](<https://media-hosting.imagekit.io//2b0ec0f9c002468f/vivaldi.png?Expires=1831853692&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PJUB~C0F8KmrW5QwB6AI0e751GkQGMtSWajkyb1ajF4WRrjpqj~mzcjPzpFAE0kfj9xXvsuHkX9vcGkA6YtyroNVlEBubK1J9TJW3T4XunWqABZq-~~QyTOlR-rmK2dBiI3xa8gJnPRH6nYN3LAyzJbhy0fDcZgrw2n8rsW3CB810AvZQUHIt0x7I6LKzTug3vtZxMAfKuhgC1yGVaRkLA3y4-QwtSoIbVPKkkF4C~aEBp6CM~mEZwJcoK9Xt1c671jspDC-VHgz9QUKa7pGqB3VVstG5S52jv5uAsFJKzbUx3uaALJwvPw1wjFL2-tYaYj6euTSRZh7HjSThE~ZBw__>)
+[Back to the top](#Table-of-Contents)
 # Zen NoVNC
 <br/>
 <div align="center">
@@ -302,3 +304,10 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 # What Zen Browser looks like
 ![Screenshot 2025-01-17 12.29.18 PM.png](<https://media-hosting.imagekit.io//67a2fb69d27e455f/Screenshot%202025-01-17%2012.29.18%20PM.png?Expires=1831742984&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=nSkvMo~KvfBTHo16JKUVLhDgSj-qK2~HOm-TX-jTfL9buABdxAgTukMbWKB4HwBjGFGe3vQZbfdTAFUMYEl--~C4mv9RDa1FlkOVvlxCcaaelVPRbc~mR7wdgVDqgm9TFLfBdc0ldLLAh1l-tjwAFDOSrelAuNm4u3bpeq0TGI5drM800rBBXK0rnnNkopdTxDQxGkZ9oM9RmWw7XuDKHYSnG97GOezx4chYRcPPL809WioNIeL8EtmGFodICInT7d~~~x6e7Oi-ViEDls-ETSlZ~vYbgMVbb4ijl0itXhtXRQ5Kvfp8Lno7JDe7Jr3k0SBYB9gszS~Rlcju0tkaCQ__>)
+
+[Back to the top](#Table-of-Contents)
+
+# Similar Projects Im making
+[LinuxApps NoVNC](https://github.com/gitxpresso/linuxapps-novnc)
+As much linux apps I can find, any collaboration would help, thanks
+[
