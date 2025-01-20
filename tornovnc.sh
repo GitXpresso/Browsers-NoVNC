@@ -2,7 +2,7 @@
 echo "Updating Your System"
 sudo apt update
 echo "Installing the required packages in order for the script to work properly"
-sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox kdialog zenity tilix
+sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox kdialog zenity tilix apt-utils
 cd ~/
 wget https://www.torproject.org/dist/torbrowser/14.0.4/tor-browser-linux-x86_64-14.0.4.tar.xz && tar -xvf tor-browser-linux-x86_64-14.0.4.tar.xz -C ~/ && sudo rm -rf tor-browser-linux-x86_64-14.0.4.tar.xz
 git clone https://github.com/gitxpresso/linux-novnc.git
