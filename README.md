@@ -268,17 +268,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Tor looks like
 ![2025-01-18_23-55.png](<https://media-hosting.imagekit.io//206f87de1060478c/2025-01-18_23-55.png?Expires=1831853600&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=pfMjz~U6WCGc90YOtLa~dJXAQOKBajb0p9eILcBua2jIvkJXbpKWgHLsSLMUTiXAVCI9rZQgLXfjwlcVdIhk-OguanrHCcKg2eejPQSLAZV7A4cLJRliuhn7IKKVqAZaDEfBVuAAffVTPAshLXhYq-GAI-0z4OiL-zpbEUQXoiBSwjEj~1RoHIcPwY4sLPI5K89Gkm3jHtmhUWMaIKAI2s7um5h~x4qKOA58Ip~9KosMV7pnCO~s9GRBWWXB2lKX0D7TwLRDKHkEY4utBsEY9fmzW1IxgrtUHisYDmwW2qvMlDqarpjNMmuyIdX2buwnIaEMlWwr0obcqfJskKY5EQ__>)
-# Vivaldi NoVNC
-<br/>
-<div align="center">
-  <a href="https://vivaldi.com">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Vivaldi_web_browser_logo.svg/456px-Vivaldi_web_browser_logo.svg.png?20190912145229" alt="Logo" width="130" height="130">
-  </a>
-  <h1 align= "center">Vivaldi</h1>
-    <br/>
-<p center "left">Vivaldi is a free, customizable web browser developed by Vivaldi Technologies, known for its built-in email client and features like ad blocking and privacy protection. It is designed for users who prefer a highly personalized browsing experience.</p>
-</div>
-# Chrome NoVNC
+# Pale Moon NoVNC
 
 <br/>
 <div align="center">
@@ -304,6 +294,17 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Pale Moon looks like
 ![Screenshot 2025-01-21 10.41.31 AM.png](<https://media-hosting.imagekit.io//d4ecf443d1ae450f/Screenshot%202025-01-21%2010.41.31%20AM.png?Expires=1832082120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=zGtdOO1NXevsvrqrGySJpGbf6FjpR3YeK4498zUe1QklD9BBfstzCyNzHbIB6-uNFaX6lkiRflgRtCcheY~w43zjvtxWfF5ajrXPS58XXskoZ0Cn0mek9ea-KMOLCkBHW-WPuorNy49nMlhwy53A3KalnPEZ60TaQ-zIRAFt1fYmncUZ5~9mbzq0c0kAJT0R8sUqcw~285U1DEXAfwJY80rCS9QGBPyglahwSzzyvchAb0qVxfNw6JD8X~p61JALouYqqDARO82v6-jW-BFUcCgSgI0jq-4ZR~n-reFjjHi2Qka4IHmclStHNeBaeK6oxJ152shkn7EvcP1XFYxUqw__>)
+# Vivaldi NoVNC
+<br/>
+<div align="center">
+  <a href="https://vivaldi.com">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Vivaldi_web_browser_logo.svg/456px-Vivaldi_web_browser_logo.svg.png?20190912145229" alt="Logo" width="130" height="130">
+  </a>
+  <h1 align= "center">Vivaldi</h1>
+    <br/>
+<p center "left">Vivaldi is a free, customizable web browser developed by Vivaldi Technologies, known for its built-in email client and features like ad blocking and privacy protection. It is designed for users who prefer a highly personalized browsing experience.</p>
+</div>
+
 ## Run Vivaldi NoVNC
 ### Install curl if you don't have it
 ``` 
@@ -316,6 +317,8 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ## What Vivaldi looks like
 ![vivaldi.png](<https://media-hosting.imagekit.io//2b0ec0f9c002468f/vivaldi.png?Expires=1831853692&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PJUB~C0F8KmrW5QwB6AI0e751GkQGMtSWajkyb1ajF4WRrjpqj~mzcjPzpFAE0kfj9xXvsuHkX9vcGkA6YtyroNVlEBubK1J9TJW3T4XunWqABZq-~~QyTOlR-rmK2dBiI3xa8gJnPRH6nYN3LAyzJbhy0fDcZgrw2n8rsW3CB810AvZQUHIt0x7I6LKzTug3vtZxMAfKuhgC1yGVaRkLA3y4-QwtSoIbVPKkkF4C~aEBp6CM~mEZwJcoK9Xt1c671jspDC-VHgz9QUKa7pGqB3VVstG5S52jv5uAsFJKzbUx3uaALJwvPw1wjFL2-tYaYj6euTSRZh7HjSThE~ZBw__>)
 [Back to the top](#Table-of-Contents)
+# Qutebrowser NoVNC
+https://github.com/qutebrowser/qutebrowser/blob/main/qutebrowser/icons/qutebrowser-48x48.png?raw=true
 # Zen NoVNC
 <br/>
 <div align="center">
