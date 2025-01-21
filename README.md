@@ -325,7 +325,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 
   <h3 align="center">Pulse browser </h3>
 
-  <p align="center">experimental Firefox fork</p>
+  <p align="center">Pulse Browser is an experimental fork of Firefox designed to enhance productivity with a minimalistic user interface and built-in tools, such as a QR code generator and ad blocker. It aims to balance usability and privacy, offering features that differ from standard Firefox while still maintaining some level of security.</p>
        
    <br/>
 </div>
