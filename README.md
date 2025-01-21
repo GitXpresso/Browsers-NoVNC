@@ -30,7 +30,7 @@ Every browser that supports linux and `--display=:0` works with installed browse
 - [Zen Novnc](#Zen-NoVNC)
 - [Pale Moon NoVNC](#Pale-Moon-NoVNC)
 - [Midori NoVNC](#Midori-NoVNC)
-- [Pulse NoVNC](#Pulse-NoVNC) *
+- [Pulse NoVNC](#Pulse-NoVNC) 
 </details>
 
 <details><summary>Other</summary>
@@ -316,6 +316,31 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Pale Moon looks like
 ![Screenshot 2025-01-21 10.41.31 AM.png](<https://media-hosting.imagekit.io//d4ecf443d1ae450f/Screenshot%202025-01-21%2010.41.31%20AM.png?Expires=1832082120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=zGtdOO1NXevsvrqrGySJpGbf6FjpR3YeK4498zUe1QklD9BBfstzCyNzHbIB6-uNFaX6lkiRflgRtCcheY~w43zjvtxWfF5ajrXPS58XXskoZ0Cn0mek9ea-KMOLCkBHW-WPuorNy49nMlhwy53A3KalnPEZ60TaQ-zIRAFt1fYmncUZ5~9mbzq0c0kAJT0R8sUqcw~285U1DEXAfwJY80rCS9QGBPyglahwSzzyvchAb0qVxfNw6JD8X~p61JALouYqqDARO82v6-jW-BFUcCgSgI0jq-4ZR~n-reFjjHi2Qka4IHmclStHNeBaeK6oxJ152shkn7EvcP1XFYxUqw__>)
+# Pulse NoVNC
+<br/>
+<div align="center">
+  <a href="https://pulsebrowser.app">
+    <img src=" " alt="Logo" width="150" height="150">
+  </a>
+
+  <h3 align="center">Pulse browser </h3>
+
+  <p align="center">experimental Firefox fork</p>
+       
+   <br/>
+</div>
+
+## Run Pulse Browser NoVNC
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Pulse Browser NoVNC using Curl
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/pulsenovnc.sh | bash
+```
+## What Pulse Browser looks like
+![pulse.png](<https://media-hosting.imagekit.io//16a84285d19b49a7/pulse.png?Expires=1832102775&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ezjTfiJVDcVL7I9U-rsitCo39rMKjJz653Y5sxaQnDVXsAT5akHIQeVWNOQSa668g-EX0rcaZD8KpJlZPXaYGdNIRv-oHX2rtN0yVyjFxx1kuP~hz~nu77BDWL2UrEqylmPjOBP9ldCZyy~hQdPALLYQAJO2J5vPNmPuWak4K18cXThBLWJq6fOz7Jqor5FesuMtZHu37EaqsFsH4P8K0tjYc-JCVzecS3RxBk0JhZpsDCzcVF-ZaADXzK728Re0Sh2JHhvqdjlWBY6CPVwbVFjpXw0l7~88eczQEiOFG93L4RK70zm1NRRSouwrcOy7YEkZe74rADSwDb9joOun2w__>)
 # Vivaldi NoVNC
 <br/>
 <div align="center">
