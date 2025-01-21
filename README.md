@@ -29,8 +29,8 @@ Every browser that supports linux and `--display=:0` works with installed browse
 - [Icecat NoVNC](#Icecat-NoVNC)
 - [Zen Novnc](#Zen-NoVNC)
 - [Pale Moon NoVNC](#Pale-Moon-NoVNC)
-- [Midori NoVNC](#Midori-NoVNC)
-
+- [Midori NoVNC](#Midori-NoVNC) *
+- [Qutebrowser NoVNC](#Qutebrowser-NoVNC) *
 </details>
 
 <details><summary>Other</summary>
