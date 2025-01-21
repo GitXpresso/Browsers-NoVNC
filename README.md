@@ -286,7 +286,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 
   <h3 align="center">Pale Moon </h3>
 
-  <p align="center">Pale Moon is a free and open-source web browser that emphasizes customization and privacy, originally forked from Firefox. It features a user interface similar to older versions of Firefox and supports legacy add-ons, while using its own Goanna rendering engine.</p>
+  <p align="center">Pale Moon is a free, open-source browser focused on customization and privacy, based on an older version of Firefox.</p>
        
    <br/>
 </div>
