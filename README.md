@@ -30,7 +30,6 @@ Every browser that supports linux and `--display=:0` works with installed browse
 - [Zen Novnc](#Zen-NoVNC)
 - [Pale Moon NoVNC](#Pale-Moon-NoVNC)
 - [Midori NoVNC](#Midori-NoVNC) *
-- [Qutebrowser NoVNC](#Qutebrowser-NoVNC) *
 - [Otter Browser NoVNC](#Otter-Browser-NoVNC) *
 </details>
 
@@ -39,7 +38,8 @@ Every browser that supports linux and `--display=:0` works with installed browse
 - [Similar Projects I making](#Similar-Projects-Im-making)
 
 </details>
-  
+
+- [Qutebrowser NoVNC](#Qutebrowser-NoVNC) 
 - [Falkon NoVNC](#Falkon-NoVNC) 
 - [Chrome Novnc](#Chrome-NoVNC) 
 - [Vivaldi NoVNC](#Vivaldi-NoVNC)
@@ -318,7 +318,31 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ![vivaldi.png](<https://media-hosting.imagekit.io//2b0ec0f9c002468f/vivaldi.png?Expires=1831853692&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PJUB~C0F8KmrW5QwB6AI0e751GkQGMtSWajkyb1ajF4WRrjpqj~mzcjPzpFAE0kfj9xXvsuHkX9vcGkA6YtyroNVlEBubK1J9TJW3T4XunWqABZq-~~QyTOlR-rmK2dBiI3xa8gJnPRH6nYN3LAyzJbhy0fDcZgrw2n8rsW3CB810AvZQUHIt0x7I6LKzTug3vtZxMAfKuhgC1yGVaRkLA3y4-QwtSoIbVPKkkF4C~aEBp6CM~mEZwJcoK9Xt1c671jspDC-VHgz9QUKa7pGqB3VVstG5S52jv5uAsFJKzbUx3uaALJwvPw1wjFL2-tYaYj6euTSRZh7HjSThE~ZBw__>)
 [Back to the top](#Table-of-Contents)
 # Qutebrowser NoVNC
-https://github.com/qutebrowser/qutebrowser/blob/main/qutebrowser/icons/qutebrowser-48x48.png?raw=true
+
+<br/>
+<div align="center">
+  <a href="https://palemoon.org">
+    <img src="https://www.logo.wine/a/logo/Qutebrowser/Qutebrowser-Logo.wine.svg" alt="Logo" width="150" height="150">
+  </a>
+
+  <h3 align="center">Qutebrowser </h3>
+
+  <p align="center">qutebrowser is a free, open-source web browser that is keyboard-focused and minimal in design.</p>
+       
+   <br/>
+</div>
+
+## Run Qutebrowser NoVNC
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Qutebrowser NoVNC using Curl
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/qutebrowsernovnc.sh | bash
+```
+## What Qutebrowsers looks like
+![Screenshot 2025-01-21 12.33.32 PM.png](<https://media-hosting.imagekit.io//a25233fc22b04390/Screenshot%202025-01-21%2012.33.32%20PM.png?Expires=1832088829&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=WTq6~YtNSGM4cufa4pjCg2eMR5tFaFMNBHpTgohOmdkvZ4EUXTrv9lmmZa1Sf4rKyM9NuV2EjE-bnJrwOktLTaUzpPuOrwr3witpDFZexCmo71po28C91et4j3DOo3NZQEK0HwytaIbXx4IFBg-HPruakrZzn1ooTWfqWea-b~fPwcIB~wBerpznFVJLNzVTGydOMFMv7VXk-dh9SwhW1O8CnWuJ1M6G71gYasOeIdxBAjhSkPQCbdFgG3j4Ps5P7eDOWcdc7ASuZCRtlhoS0zqb1MjYPsxuZaxI8el8HMa~6p314YNpnH2D~p9puWUzcKHyO5ltdtL06VXJ3TNHRw__>)
 # Zen NoVNC
 <br/>
 <div align="center">
