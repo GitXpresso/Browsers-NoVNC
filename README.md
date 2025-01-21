@@ -34,7 +34,7 @@ Every browser that supports linux and `--display=:0` works with installed browse
 - [Falkon NoVNC](#Falkon-NoVNC) 
 - [Chrome Novnc](#Chrome-NoVNC) 
 - [Vivaldi NoVNC](#Vivaldi-NoVNC) 
-
+- [Pale Moon NoVNC](#Pale-Moon-NoVNC)
  [Similar Projects I making](#Similar-Projects-Im-making)
 
 
@@ -310,4 +310,4 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 # Similar Projects Im making
 [LinuxApps NoVNC](https://github.com/gitxpresso/linuxapps-novnc)
 As much linux apps I can find, any collaboration would help, thanks
-[
+Not going to work on thos project until i have all the still working Browsers that support linux
