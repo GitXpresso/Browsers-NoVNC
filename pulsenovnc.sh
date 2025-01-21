@@ -4,7 +4,7 @@ sudo apt update
 echo "installing required packages"
 sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox tilix
 cd ~/
-wget https://github.com/pulse-browser/browser/releases/download/1.0.0-a.87/pulse-browser.linux.tar.bz2 && tar -xvf pulse-browser.linux.tar.bz2 && sudo rm -rf pulse-browser.linux.tar.bz2 
+wget https://github.com/pulse-browser/browser/releases/download/1.0.0-a.87/pulse-browser.linux.tar.bz2 -C /usr/lib && tar -xvf pulse-browser.linux.tar.bz2 && sudo rm -rf pulse-browser.linux.tar.bz2
 git clone https://github.com/gitxpresso/linux-novnc.git
 cat << EOF > ~/pulse.desktop
 [Desktop Entry]
