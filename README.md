@@ -28,14 +28,21 @@ Every browser that supports linux and `--display=:0` works with installed browse
 - [Waterfox NoVNC](#Waterfox-NoVNC)
 - [Icecat NoVNC](#Icecat-NoVNC)
 - [Zen Novnc](#Zen-NoVNC)
-
+- [Pale Moon NoVNC](#Pale-Moon-NoVNC)
+- 
 </details>
 
+<details><summary>Other</summary>
+  
+- [Similar Projects I making](#Similar-Projects-Im-making)
+
+</details>
+  
 - [Falkon NoVNC](#Falkon-NoVNC) 
 - [Chrome Novnc](#Chrome-NoVNC) 
-- [Vivaldi NoVNC](#Vivaldi-NoVNC) 
-- [Pale Moon NoVNC](#Pale-Moon-NoVNC)
- [Similar Projects I making](#Similar-Projects-Im-making)
+- [Vivaldi NoVNC](#Vivaldi-NoVNC)
+
+
 
 
 # Chrome NoVNC
