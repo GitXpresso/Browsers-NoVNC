@@ -281,7 +281,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 <br/>
 <div align="center">
   <a href="https://palemoon.org">
-    <img src=" " alt="Logo" width="150" height="150">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/Pale_Moon_browser_icon.png/120px-Pale_Moon_browser_icon.png" alt="Logo" width="150" height="150">
   </a>
 
   <h3 align="center">Pale Moon </h3>
