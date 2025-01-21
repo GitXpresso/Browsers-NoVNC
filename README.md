@@ -1,5 +1,5 @@
 # Browsers-NoVNC
-Every browser that supports linux and `--display=:0` works with installed browser in the terminal will be added to this repository
+Every browser that supports linux and has no errors with the browser in the novnc session and `--display=:0` works with installed browser in the terminal will be added to this repository
 ## Table of Contents
 >[!IMPORTANT]
 > A astrisk(*) next to the anchored link means the contents has not been added yet, or it has the header but doesn't have the contents
@@ -209,7 +209,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 <br/>
 <div align="center">
   <a href="https://midori-browser.org">
-    <img src="https://midori-browser.org/images/midori-logo.png" alt="Logo" width="150" height="150">
+    <img src="https://commons.wikimedia.org/wiki/File:Midori.svg" alt="Logo" width="150" height="150">
   </a>
   <h3 align="center">Midori</h3>
    <p align="center">Midori (Japanese: 緑, romanized: midori, lit. 'green') is a free and open-source web browser</p>
@@ -320,7 +320,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 <br/>
 <div align="center">
   <a href="https://pulsebrowser.app">
-    <img src=" " alt="Logo" width="150" height="150">
+    <img src="https://raw.githubusercontent.com/pulse-browser/assets/main/pulse-logo.png" alt="Logo" width="150" height="150">
   </a>
 
   <h3 align="center">Pulse browser </h3>
