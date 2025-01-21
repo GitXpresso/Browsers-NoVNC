@@ -208,7 +208,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 # Midori NoVNC
 <br/>
 <div align="center">
-  <a href="https://midori-browser.org">
+  <a href="https://astian.org/en/midori-browser">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Midori.svg/800px-Midori.svg.png" alt="Logo" width="150" height="150">
   </a>
   <h3 align="center">Midori</h3>
