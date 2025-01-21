@@ -31,6 +31,7 @@ Every browser that supports linux and `--display=:0` works with installed browse
 - [Pale Moon NoVNC](#Pale-Moon-NoVNC)
 - [Midori NoVNC](#Midori-NoVNC) *
 - [Qutebrowser NoVNC](#Qutebrowser-NoVNC) *
+- [Otter Browser NoVNC](#Otter-Browser-NoVNC) *
 </details>
 
 <details><summary>Other</summary>
