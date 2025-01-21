@@ -269,6 +269,31 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
     <br/>
 <p center "left">Vivaldi is a free, customizable web browser developed by Vivaldi Technologies, known for its built-in email client and features like ad blocking and privacy protection. It is designed for users who prefer a highly personalized browsing experience.</p>
 </div>
+# Chrome NoVNC
+
+<br/>
+<div align="center">
+  <a href="https://palemoon.org">
+    <img src=" " alt="Logo" width="150" height="150">
+  </a>
+
+  <h3 align="center">Pale Moon </h3>
+
+  <p align="center">
+       
+   <br/>
+</div>
+
+## Run Pale Moon NoVNC
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Pale Moon NoVNC using Curl
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/palemoonnovnc.sh | bash
+```
+## What Pale Moon looks like
 
 ## Run Vivaldi NoVNC
 ### Install curl if you don't have it
