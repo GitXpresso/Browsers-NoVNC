@@ -209,7 +209,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 <br/>
 <div align="center">
   <a href="https://midori-browser.org">
-    <img src="https://commons.wikimedia.org/wiki/File:Midori.svg" alt="Logo" width="150" height="150">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Midori.svg/800px-Midori.svg.png" alt="Logo" width="150" height="150">
   </a>
   <h3 align="center">Midori</h3>
    <p align="center">Midori (Japanese: 緑, romanized: midori, lit. 'green') is a free and open-source web browser</p>
