@@ -205,6 +205,28 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Waterfox looks like
 [![Waterfox Novnc](<https://media-hosting.imagekit.io//076eae515bf74dd4/Screenshot%202025-01-17%2012.11.59%20PM.png?Expires=1831741943&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=cDElZA3hP67r8lIe2Y-1zpqDDujp2GhzpiiRNp3xJ8KxJ97q1LgGJ3FlBY-7GU9cAVWFjdns9sniPocigFThIxKgi06FdefaKVXNXNwniu~h4SPK1uQOD4nu~WElyEZdt7vdcPVcBsLpxmvd26eudE8zEX7WJ8K7A2R~eBHwoB7kWz49lw5euKMguU64zYqJGbOq-EOwxFGKLl-nvDNA7Cu7BwOMwy0D96aUr5aqHOYMgbG8AvxMl5PZOEYKSp5f8d36jAYbg8gyTlxaPdxl2dKnHMyOqJgknD2tXql0e~DcG7kNz9c9RWCy435M4n3cn5fO5NtN2TMYoyf0hx9FnA__>)](https://waterfox.net/)
+# Midori NoVNC
+<br/>
+<div align="center">
+  <a href="https://midori-browser.org">
+    <img src="https://midori-browser.org/images/midori-logo.png" alt="Logo" width="150" height="150">
+  </a>
+  <h3 align="center">Midori</h3>
+   <p align="center">Midori (Japanese: 緑, romanized: midori, lit. 'green') is a free and open-source web browser</p>
+</div>
+
+## Run Midori NoVNC
+### Install curl if you don't have it
+```
+sudo apt install curl
+```
+### Run Midori NoVNC using curl
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/midorinovnc.sh | bash
+```
+### What Midori looks like
+![Screenshot 2025-01-21 1.12.54 PM.png](<https://media-hosting.imagekit.io//286624c5827443c2/Screenshot%202025-01-21%201.12.54%20PM.png?Expires=1832091360&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=R~adlf4glr451sMC7XmycRmzj3DAqcsaoRyljoYxjjjoFxXl8sI1aEXTL~2J5IGc0Qh8XZHUPKd509zVQgbgpKIoI2timZjw1UiG50ePn8HkN7qqySaqmvYR0MbjyvMBg4EqtPj9LxBSk2sERKzz9eTYBBoHSYQtaDHc9CsjnSCH8Ad31~Zk-Zu--f3zyoAoajIeYR1fUWYqVS4A1qtHwka8Mx1zEOCjNLXKo0q73uRdOm0mfBho4~2nZsE9zXqNOrqw-Um7cc1XGSmVgjjGmzFBinAHN8rreIU9HadGmkpKWE7HCuNxrMfNT1C4uUQVUhvvQkg6obVs1ECJFVR64Q__>)
+
 # Icecat NoVNC
 <br/>
 <div align="center">
