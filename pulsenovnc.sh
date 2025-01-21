@@ -1,4 +1,3 @@
-
 #!/bin/bash
 echo "updating system to successfully install required packages"
 sudo apt update
