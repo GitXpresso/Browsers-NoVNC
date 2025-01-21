@@ -301,7 +301,7 @@ sudo apt install curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/palemoonnovnc.sh | bash
 ```
 ## What Pale Moon looks like
-
+![Screenshot 2025-01-21 10.41.31 AM.png](<https://media-hosting.imagekit.io//d4ecf443d1ae450f/Screenshot%202025-01-21%2010.41.31%20AM.png?Expires=1832082120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=zGtdOO1NXevsvrqrGySJpGbf6FjpR3YeK4498zUe1QklD9BBfstzCyNzHbIB6-uNFaX6lkiRflgRtCcheY~w43zjvtxWfF5ajrXPS58XXskoZ0Cn0mek9ea-KMOLCkBHW-WPuorNy49nMlhwy53A3KalnPEZ60TaQ-zIRAFt1fYmncUZ5~9mbzq0c0kAJT0R8sUqcw~285U1DEXAfwJY80rCS9QGBPyglahwSzzyvchAb0qVxfNw6JD8X~p61JALouYqqDARO82v6-jW-BFUcCgSgI0jq-4ZR~n-reFjjHi2Qka4IHmclStHNeBaeK6oxJ152shkn7EvcP1XFYxUqw__>)
 ## Run Vivaldi NoVNC
 ### Install curl if you don't have it
 ``` 
