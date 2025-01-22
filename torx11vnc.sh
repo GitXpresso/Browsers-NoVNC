@@ -11,4 +11,4 @@ x11vnc -usepw -display :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
 export DISPLAY=:0
 ~/tor-browser/Browser/start-tor-browser --display=:0
-echo and -e "Tor, X11vnc, and NoVNC has started Now go to https://localhost:5900 to access tor on the vnc server"
+echo -e "Tor, X11vnc, and NoVNC has started Now go to https://localhost:5900 to access tor on the vnc server"
