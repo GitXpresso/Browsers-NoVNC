@@ -44,7 +44,9 @@ Every browser that supports linux and has no errors with the browser in the novn
 - [Chrome Novnc](#Chrome-NoVNC) 
 - [Vivaldi NoVNC](#Vivaldi-NoVNC)
 
-
+- [ ] adding x11vnc files instead of tigervnc
+- [ ] setting audio for x11vnc using [NoVNCAudio](https://github.com/no-body-in-particular/NoVNCAudio)
+       
 
 
 # Chrome NoVNC
