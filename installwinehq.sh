@@ -8,6 +8,6 @@ sudo apt update
 sudo apt install -y --install-recommends wine 
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE  -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
-winecfg --display=:0
+winecfg 
 wget https://github.com/GitXpresso/Browsers-NoVNC/releases/download/winehq/
-winehq OperaGXSetup.exe --display=:0
+wine OperaGXSetup.exe --display=:0
