@@ -44,10 +44,8 @@ Every browser that supports linux and has no errors with the browser in the novn
 - [Chrome Novnc](#Chrome-NoVNC) 
 - [Vivaldi NoVNC](#Vivaldi-NoVNC)
 
-- [ ] add x11vnc files 
-- [ ] try to figure out how to add audio for x11vnc using [NoVNCAudio](https://github.com/no-body-in-particular/NoVNCAudio) if I cant figure task 
 - [ ] edit [docker baseimage kasmvnc](https://github.com/linuxserver/docker-baseimage-kasmvnc) for the other browsers as a other option   
-
+- [ ] merge [LinuxApps-NoVNC](https://github.com/gitxpresso/LinuxApps-NoVNC) with this projectc
 
 # Chrome NoVNC
 
