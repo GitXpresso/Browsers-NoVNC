@@ -4,7 +4,6 @@ sudo apt update
 echo "Installing the required packages in order for the script to work properly"
 sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox tilix
 cd ~/
-sudo mv ~/palemoon.desktop /usr/share/applications/
 wget https://cdn1.waterfox.net/waterfox/releases/6.5.3/Linux_x86_64/waterfox-6.5.3.tar.bz2 && sudo tar -xvf waterfox-6.5.3.tar.bz2 -C /usr/lib && sudo rm -rf waterfox-6.5.3.tar.bz2 
 git clone https://github.com/gitxpresso/linux-novnc.git
 cat << EOF > ~/waterfox.desktop
