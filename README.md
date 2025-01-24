@@ -44,7 +44,8 @@ Every browser that supports linux and has no errors with the browser in the novn
 - [Chrome Novnc](#Chrome-NoVNC) 
 - [Vivaldi NoVNC](#Vivaldi-NoVNC)
 
-- [ ] edit [docker baseimage kasmvnc](https://github.com/linuxserver/docker-baseimage-kasmvnc) for the other browsers as a other option   
+`Brave does not work but it does work in a linuxserver openbox kasmvnc session`
+- [ ] edit [docker baseimage kasmvnc](https://github.com/linuxserver/docker-baseimage-kasmvnc) for the other browsers 
 - [ ] merge [LinuxApps-NoVNC](https://github.com/gitxpresso/LinuxApps-NoVNC) with this projectc
 - [ ] use winehq to install browsers that dont work 
 - [ ] use winehq to have opera gx in a browser
