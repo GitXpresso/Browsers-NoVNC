@@ -53,8 +53,11 @@ Every browser that supports linux and has no errors with the browser in the novn
 - [ ] use winehq to have opera gx in a browser
 - [ ] Contact "thelamer" to see if he he can make a linuxserver kasmvnc docker container for the following browsers
 > [!NOTE]
-> There are desktop files you can use for the linuxserver kasmvnc docker container
+> There are desktop files you can use for the linuxserver kasmvnc docker container for the browsers
+
+
 `List of browsers to be in a linuxserver in a kasmvnc docker container`
+
 - Brave creates a /usr/share/hicolor/apps/48x48/brave.png
 - Tor Browser which is a proot app in the linux server repository "proot apps"
 - Google Chrome 
