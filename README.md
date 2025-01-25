@@ -173,12 +173,21 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 
 # Firefox NoVNC
 
-[![Firefox logo](https://images.weserv.nl/?url=raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/firefox-icon.png&w=110)](https://www.mozilla.org/firefox/)[![Firefox](https://images.placeholders.dev/?width=224&height=110&fontFamily=monospace&fontWeight=400&fontSize=52&text=Firefox&bgColor=rgba(0,0,0,0.0)&textColor=rgba(121,121,121,1))](https://www.mozilla.org/firefox/)
+[![Firefox logo](https://images.weserv.nl/?url=raw.githubusercontent.com/jlesage/docker-
+<br/>
+<div align="center">
+  <a href="https://seamonkey-project.org">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/220px-Firefox_logo%2C_2019.svg.png" alt="Logo" width="150" height="150">
+  </a>
 
-### About Firefox
+  <h3 align="center">Firefox </h3>
 
-Mozilla [Firefox](https://firefox.com/) is a free and open-source web browser developed by Mozilla
-Foundation and its subsidiary, Mozilla Corporate. 
+  <p align="center"> Mozilla [Firefox](https://firefox.com/) is a free and open-source web browser developed by Mozilla
+Foundation and its subsidiary, Mozilla Corporate.  </p>
+       
+   <br/>
+</div>
+
 ## Install curl if you don't have it
 
 ```
