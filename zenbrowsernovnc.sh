@@ -14,7 +14,7 @@ Icon=/usr/lib/zen/browser/chrome/icons/default/default48.png
 Type=Application
 Categories=Network;WebBrowser;
 Exec=/usr/lib/zen/zen %u
-Name=Pale Moon
+Name=Zen browser
 Comment=Zen Browser
 Terminal=false
 StartupNotify=true
@@ -24,4 +24,4 @@ EOF
 sudo mv ~/zen.desktop /usr/share/applications/
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE  -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
-/usr/lib/zen/zen --display=:0
+/usr/lib/zen/zen --start-maximized --display=:0
