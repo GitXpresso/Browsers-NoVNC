@@ -8,5 +8,5 @@ wget https://filebin.net/7e896uopsecqi68f/midori_11.5_amd64.deb && sudo apt inst
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 
 export DISPLAY=:0
-midori --display=:0
 echo "Midori started go to https://localhost:6080 to access NoVNC and Midori"
+midori --display=:0
