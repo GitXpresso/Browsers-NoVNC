@@ -22,5 +22,5 @@ EOF
 sudo mv ~/seamonkey.desktop /usr/share/applications/
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
-/usr/lib/seamonkey/seamonkey --display=:0
+/usr/lib/seamonkey/seamonkey --start-maximized --display=:0
 echo -e "librewolf has started go to https://localhost:6080 to access your vnc session"
