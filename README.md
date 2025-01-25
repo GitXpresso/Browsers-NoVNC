@@ -42,6 +42,13 @@ Every browser that supports linux and has no errors with the browser in the novn
  
 </details>
 
+<details><summary>Google browsers</summary>
+
+- [Chrome NoVNC](#Chrome-NoVNC)
+- [Chromium NoVNC](#Chromium-NoVNC)
+
+</details>
+
 <details><summary>Chromium Based Browsers</summary>
 
 - [Brave NoVNC](#Brave-NoVNC)
@@ -130,6 +137,27 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Brave looks like
 ![2025-01-25_16-59.png](<https://media-hosting.imagekit.io//3821d4c140e34a42/2025-01-25_16-59.png?Expires=1832432475&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=IE6KbDF8x0YlLC2cX57SygoQOBU3vnv17vzcenvTyOF-FsSE8VL1~Mr2f9UeXPEn8TUvMqgI-YMruLhah30~NzRKdzfVHNUknxhIhdolRaNBlySppfaRlbkHn8sKx8AUBPTo4YtFx6X5Tr5-zr~lbfJ6O4~N3hR6M7amzau1AQFSlfFv~qEBpebuq50Mnq1NCrjoeieFuHpU5X0e43IiXJ5Mnm5iClPdUPAAau5Nm9eHtR5GlKeAyoGs7LyaiqFLVhFvefPjX2z13lumB2D4QYUW8bqZNl4j7K3XAJtCjK1Rpbe4nk2hAgRgkyJgCJ8Zq6-7g5~XnSJLaka9XUtKPg__>)
+# Chromium NoVNC
+<br/>
+<div align="center">
+  <a href="https://librewolf.net">
+    <img src=" " alt="Logo" width="150" height="150">
+  </a>
+  <h1 align= "center">Chromium </h1>
+    <br/>
+<h3 center "left">  </h3>
+</div>
+
+## Run Chromium NoVNC
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Chromium NoVNC using Curl
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/chromiumnovnc.sh | bash
+```
+## What Chromium looks like
 # Librewolf NoVNC
 <br/>
 <div align="center">
