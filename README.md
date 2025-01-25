@@ -146,7 +146,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
   </a>
   <h1 align= "center">Chromium </h1>
     <br/>
-<h3 center "left">  </h3>
+<h3 center "left">Chromium is a free and open-source web browser project developed primarily by Google, which serves as the foundation for Google Chrome and many other browsers. It is known for its speed, security, and stability, and is widely used in various applications and frameworks.</h3>
 </div>
 
 ## Run Chromium NoVNC
