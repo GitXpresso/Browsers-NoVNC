@@ -246,11 +246,11 @@ export USER="linux"
 ```
 sudo mv -f ~/browsers-novnc/waterfoxservice /etc/init.d/waterfoxnovnc
 ```
-###Step 4: Make the file executable
+### Step 4: Make the file executable
 ```
 sudo chmod +x /etc/init.d/waterfoxnovnc
 ```
-### Step 4: After doing Step 1, 2, 3, and Step 4 run this command to have Waterfox NoVNC automatically start on boot
+### Step 5: After doing Step 1, 2, 3, and Step 4 run this command to have Waterfox NoVNC automatically start on boot
 ```
 sudo service waterfox start
 ```
@@ -359,11 +359,11 @@ export USER="linux"
 ```
 sudo mv -f ~/browsers-novnc/torservice /etc/init.d/tornovnc
 ```
-###Step 4: Make the file executable
+### Step 4: Make the file executable
 ```
 sudo chmod +x /etc/init.d/tornovnc
 ```
-### Step 4: After doing Step 1, 2, 3, and Step 4 run this command to have Waterfox NoVNC automatically start on boot
+### Step 5: After doing Step 1, 2, 3, and Step 4 run this command to have Waterfox NoVNC automatically start on boot
 ```
 sudo service tornovnc start
 ```
