@@ -1,0 +1,3 @@
+tar -cvf example.tar /path/to/directory
+bzip example.tar
+xz example.tar
