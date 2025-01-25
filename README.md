@@ -116,7 +116,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
   </a>
   <h1 align= "center">Brave</h1>
     <br/>
-<h3 center "left">. </h3>
+<h3 center "left">Free and open-source web browser developed by Brave Software, Inc. based on the Chromium web browser</h3>
 </div>
 
 ## Run Brave NoVNC
