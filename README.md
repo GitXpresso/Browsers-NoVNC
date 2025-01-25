@@ -237,6 +237,7 @@ git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
 ```
 ### Step 2: Go to the cloned directory and edit waterfox service "USER" variable on line 13
 > [!NOTE]
+> If you don't know current your linux username then do "whoami" or "echo $USER" to find your current linux username 
 > You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
 example:
 ```
@@ -350,6 +351,7 @@ git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
 ```
 ### Step 2: Go to the cloned directory and edit waterfox service "USER" variable, USER variable is on line 13
 > [!NOTE]
+> If you don't know current your linux username then do "whoami" or "echo $USER" to find your current linux username
 > You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
 example:
 ```
