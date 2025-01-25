@@ -67,9 +67,11 @@ esac
 
 exit 0
 EOF
+sudo mv -f ~/waterfoxnovnc /etc/init.d
+sudo chmod +x /etc/init.d/waterfoxnovnc
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
-sudo mv -f ~/waterfoxnovnc /etc/init.d
-echo -e "to automatically have waterfox launch on startup do "sudo service waterfoxnovnc start" "
+echo -e "to automatically have waterfox launch on startup do "sudo service waterfoxnovnc start""
+/usr/lib/waterfox --display=:0
 echo "Finished, Now go to https://localhost:5900 to access waterfox the vnc server"
 
