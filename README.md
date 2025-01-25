@@ -45,40 +45,41 @@ Every browser that supports linux and has no errors with the browser in the novn
 
 <details><summary>Google browsers</summary>
 
-- [Chrome NoVNC](#Chrome-NoVNC)
-- [Chromium NoVNC](#Chromium-NoVNC)
+- [Chrome NoVNC](#Chrome-NoVNC) ✔️
+- [Chromium NoVNC](#Chromium-NoVNC) ✔️
 
 </details>
 
 <details><summary>Chromium Based Browsers</summary>
   
-- [Srware Iron NoVNC](#Srware-Iron-NoVNC)
-- [Thorium NoVNC](#Thorium-NoVNC)
-- [Brave NoVNC](#Brave-NoVNC)
-- [Microsft Edge NoVNC](#Microsoft-Edge-NoVNC)
-- [Opera NoVNC](#Opera-NoVNC)
+- [Srware Iron NoVNC](#Srware-Iron-NoVNC) ❌ crash after a couple seconds when launched
+- [Thorium NoVNC](#Thorium-NoVNC) ✔️
+- [Brave NoVNC](#Brave-NoVNC) ✔️
+- [Microsft Edge NoVNC](#Microsoft-Edge-NoVNC) ✔️
+- [Opera NoVNC](#Opera-NoVNC) ✔️
+- [Vivaldi NoVNC](#Vivaldi-NoVNC) ✔️
   
 </details>
 
 <details><summary>Mozilla Browsers</summary>
   
-- [Firefox NoVNC](#Firefox-NoVNC)
-- [Seamonkey NoVNC](#Seamonkey-NoVNC) 
+- [Firefox NoVNC](#Firefox-NoVNC) ✔️
+- [Seamonkey NoVNC](#Seamonkey-NoVNC) ✔️
 
 </details>
 
 <details><summary>Firefox Based Browsers</summary>
   
-- [Librewolf-NoVNC](#Librewolf-NoVNC) 
-- [Floorp NoVNC](#Floorp-NoVNC)
-- [Tor NoVNC](#Tor-NoVNC) 
-- [Mullvad NoVNC](#Mullvad-NoVNC) 
+- [Librewolf-NoVNC](#Librewolf-NoVNC) ✔️
+- [Floorp NoVNC](#Floorp-NoVNC) ✔️
+- [Tor NoVNC](#Tor-NoVNC) ✔️
+- [Mullvad NoVNC](#Mullvad-NoVNC) ✔️
 - [Waterfox NoVNC](#Waterfox-NoVNC)
-- [Icecat NoVNC](#Icecat-NoVNC)
-- [Zen Novnc](#Zen-NoVNC)
-- [Pale Moon NoVNC](#Pale-Moon-NoVNC)
-- [Midori NoVNC](#Midori-NoVNC)
-- [Pulse NoVNC](#Pulse-NoVNC) 
+- [Icecat NoVNC](#Icecat-NoVNC) ✔️
+- [Zen Novnc](#Zen-NoVNC) ✔️
+- [Pale Moon NoVNC](#Pale-Moon-NoVNC) ✔️
+- [Midori NoVNC](#Midori-NoVNC) ✔️
+- [Pulse NoVNC](#Pulse-NoVNC) ✔️
 </details>
 
 <details><summary>Other</summary>
@@ -87,10 +88,10 @@ Every browser that supports linux and has no errors with the browser in the novn
 
 </details>
 
-- [Qutebrowser NoVNC](#Qutebrowser-NoVNC) 
-- [Falkon NoVNC](#Falkon-NoVNC) 
-- [Chrome Novnc](#Chrome-NoVNC) 
-- [Vivaldi NoVNC](#Vivaldi-NoVNC)
+- [Qutebrowser NoVNC](#Qutebrowser-NoVNC) ✔️
+- [Falkon NoVNC](#Falkon-NoVNC) ✔️
+
+
 
 # Chrome NoVNC
 
