@@ -173,16 +173,15 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 
 # Firefox NoVNC
 
-[![Firefox logo](https://images.weserv.nl/?url=raw.githubusercontent.com/jlesage/docker-
 <br/>
 <div align="center">
-  <a href="https://seamonkey-project.org">
+  <a href="https://firefox.com">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/220px-Firefox_logo%2C_2019.svg.png" alt="Logo" width="150" height="150">
   </a>
 
   <h3 align="center">Firefox </h3>
 
-  <p align="center"> Mozilla [Firefox](https://firefox.com/) is a free and open-source web browser developed by Mozilla
+  <p align="center"> Mozilla Firefox is a free and open-source web browser developed by Mozilla
 Foundation and its subsidiary, Mozilla Corporate.  </p>
        
    <br/>
