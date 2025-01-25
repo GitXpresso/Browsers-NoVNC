@@ -47,7 +47,7 @@ su ${USER} -c "/usr/lib/waterfox/waterfox --display=:0"
 ;;
 
 stop)
-log_action_begin_msg "Stoping vncserver for user '${USER}' on localhost:${DISPLAY}"
+log_action_begin_msg "Stoping vncserver for user '${USER}' on ${DISPLAY}"
 su ${USER} -c "/usr/bin/vncserver -kill :${DISPLAY}"
 ;;
 
