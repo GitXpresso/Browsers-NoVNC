@@ -227,9 +227,9 @@ Name[zh_CN]=新建 InPrivate 窗口
 Name[zh_TW]=新 InPrivate 視窗
 Exec=/usr/bin/microsoft-edge --no-sandbox --test-type --disable-dev-shm-usage --inprivate
 EOF 
-
+ sudo rm -rf /usr/share/applications/microsoft-edge.desktop && sudo mv -f ~/microsoft-edge.desktop /usr/share/applications
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
 export DISPLAY=:0
 microsoft-edge-stable  --no-sandbox --test-type --disable-dev-shm-usage --start-maximized --display=:0
-echo "Tor and NoVNC has started Now go to https://localhost:5900 to access tor on the vnc server"
+echo "Microsoft Edge and NoVNC has started Now go to https://localhost:5900 to access edge on the vnc server"
