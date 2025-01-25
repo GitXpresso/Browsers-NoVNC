@@ -152,6 +152,28 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Librewolf looks like
 ![librewolf.png](<https://media-hosting.imagekit.io//3ade5c80c0e14121/librewolf.png?Expires=1831853978&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=anK-bXP9pP7p1jcpXZ~7yXNfArP-W7OalWcKHVCWZ7WG7dXaoJyu0jGAVhLRrh1N56aXV6TMtAAbVlOKACJd7qi6d0x3bkKNBARikw1qwNEKDttcSxWWcmwVVJRQ5XN89neGibVItk2FSnMulx92G3H~PukAzLIbD5j1Seti4CJmAcYbrIliNVZ3VHaoVu4KKSANPyOiIvn8Diy9dxj-Fwr0PscdMvzWQzOP4iVjv3znVUVKixbuPjsOuHTnEX-Qpi9Ia-MHaGMZmw-F8CDswKBF8ubRLE0KehVtSarENSCO~jjF9BPFbO7jOBzfMjavg1wJMPzbnviXs77oD5TyOw__>)
+# Librewolf NoVNC
+<br/>
+<div align="center">
+  <a href="https://microsoft.com">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Microsoft_Edge_logo_%282019%29.svg" alt="Logo" width="150" height="150">
+  </a>
+  <h1 align= "center">Microsoft Edge</h1>
+    <br/>
+<h3 center "left"></h3>
+</div>
+
+## Run Microsoft Edge NoVNC
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Microsoft Edge NoVNC using Curl
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/edgenovnc.sh | bash
+```
+## What Microsoft Edge looks like
+
 # Falkon NoVNC
 <br/>
 <div align="center">
