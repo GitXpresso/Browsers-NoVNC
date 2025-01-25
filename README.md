@@ -17,7 +17,8 @@ Every browser that supports linux and has no errors with the browser in the novn
   
 `Brave does not work but it does work in a linuxserver openbox kasmvnc session`
 
-- [ ] add link to video pn how to have waterfox noVNC automatically start on boo
+- [ ] add link to video pn how to have waterfox noVNC automatically start on bootboo
+- [ ] finish adding all service files 
 - [ ] use winehq to install browsers that dont work 
 - [ ] use winehq to have opera gx in a browser
 - [ ] Contact "thelamer" to see if he he can make a linuxserver kasmvnc docker container for the following browsers
@@ -234,16 +235,22 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
 ```
-### Step 2: Go to the cloned directory and edit waterfox service "USER" variable
+### Step 2: Go to the cloned directory and edit waterfox service "USER" variable on line 13
+> [!NOTE]
+> You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
 example:
 ```
 export USER="linux"
 ```
 ### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
 ```
-sudo mv -f ~/browsers-novnc/waterfoxservice /etc/init.d/waterfox
+sudo mv -f ~/browsers-novnc/waterfoxservice /etc/init.d/waterfoxnovnc
 ```
-### After doing Step 1, 2, and Step 3 run this command to have Waterfox NoVNC automatically start on boot
+###Step 4: Make the file executable
+```
+sudo chmod +x /etc/init.d/waterfoxnovnc
+```
+### Step 4: After doing Step 1, 2, 3, and Step 4 run this command to have Waterfox NoVNC automatically start on boot
 ```
 sudo service waterfox start
 ```
@@ -335,6 +342,30 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ### Run Tor Xpra using Curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/torxpra.sh | bash
+```
+### Have Waterfox automatically starts on boot
+### Step 1: Clone the repository
+```
+git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
+```
+### Step 2: Go to the cloned directory and edit waterfox service "USER" variable, USER variable is on line 13
+> [!NOTE]
+> You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
+example:
+```
+export USER="linux"
+```
+### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
+```
+sudo mv -f ~/browsers-novnc/torservice /etc/init.d/tornovnc
+```
+###Step 4: Make the file executable
+```
+sudo chmod +x /etc/init.d/tornovnc
+```
+### Step 4: After doing Step 1, 2, 3, and Step 4 run this command to have Waterfox NoVNC automatically start on boot
+```
+sudo service tornovnc start
 ```
 ## What Tor looks like
 ![2025-01-18_23-55.png](<https://media-hosting.imagekit.io//206f87de1060478c/2025-01-18_23-55.png?Expires=1831853600&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=pfMjz~U6WCGc90YOtLa~dJXAQOKBajb0p9eILcBua2jIvkJXbpKWgHLsSLMUTiXAVCI9rZQgLXfjwlcVdIhk-OguanrHCcKg2eejPQSLAZV7A4cLJRliuhn7IKKVqAZaDEfBVuAAffVTPAshLXhYq-GAI-0z4OiL-zpbEUQXoiBSwjEj~1RoHIcPwY4sLPI5K89Gkm3jHtmhUWMaIKAI2s7um5h~x4qKOA58Ip~9KosMV7pnCO~s9GRBWWXB2lKX0D7TwLRDKHkEY4utBsEY9fmzW1IxgrtUHisYDmwW2qvMlDqarpjNMmuyIdX2buwnIaEMlWwr0obcqfJskKY5EQ__>)
