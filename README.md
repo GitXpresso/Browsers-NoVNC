@@ -129,8 +129,7 @@ sudo apt install curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/bravenovnc.sh | bash
 ```
 ## What Brave looks like
-Not added yet
-
+![2025-01-25_16-59.png](<https://media-hosting.imagekit.io//3821d4c140e34a42/2025-01-25_16-59.png?Expires=1832432475&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=IE6KbDF8x0YlLC2cX57SygoQOBU3vnv17vzcenvTyOF-FsSE8VL1~Mr2f9UeXPEn8TUvMqgI-YMruLhah30~NzRKdzfVHNUknxhIhdolRaNBlySppfaRlbkHn8sKx8AUBPTo4YtFx6X5Tr5-zr~lbfJ6O4~N3hR6M7amzau1AQFSlfFv~qEBpebuq50Mnq1NCrjoeieFuHpU5X0e43IiXJ5Mnm5iClPdUPAAau5Nm9eHtR5GlKeAyoGs7LyaiqFLVhFvefPjX2z13lumB2D4QYUW8bqZNl4j7K3XAJtCjK1Rpbe4nk2hAgRgkyJgCJ8Zq6-7g5~XnSJLaka9XUtKPg__>)
 # Librewolf NoVNC
 <br/>
 <div align="center">
