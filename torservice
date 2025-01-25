@@ -1,5 +1,6 @@
-# Edit "linux username here" with your linux username 
+# Copy file contents under the line into a new file called "waterfoxnovnc" and then edit "linux username here" with your linux username 
 # Don't know your linux username then do "whoami" or "echo $USER" to find your current username for linux
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 #!/bin/sh -e
 ### BEGIN INIT INFO
 # Provides:          vncserver
