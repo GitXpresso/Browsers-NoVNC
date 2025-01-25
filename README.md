@@ -21,7 +21,7 @@ Every browser that supports linux and has no errors with the browser in the novn
 - [ ] finish adding all service files 
 - [ ] use winehq to install browsers that dont work 
 - [ ] use winehq to have opera gx in a browser
-- [ ] Contact "thelamer" to see if he he can make a linuxserver kasmvnc docker container for the following browsers
+- [ ] Contact [@thelamer](https://github.com/thelamer) to see if he he can make a linuxserver kasmvnc docker container for the following browsers
 > [!NOTE]
 > There are desktop files you can use for the linuxserver kasmvnc docker container for the browsers
 
