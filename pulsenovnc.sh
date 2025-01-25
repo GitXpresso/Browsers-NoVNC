@@ -24,4 +24,4 @@ EOF
 sudo mv ~/pulse.desktop /usr/share/applications/
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE  -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
-/usr/lib/pulse-browser --display=:0
+/usr/lib/pulse-browser --start-maximized --display=:0
