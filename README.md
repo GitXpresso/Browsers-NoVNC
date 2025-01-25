@@ -258,6 +258,11 @@ git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
 > If you don't know current your linux username then do "whoami" or "echo $USER" to find your current linux username
 > 
 > You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
+#### Example of what USER variable looks like in the script
+The number "13" below is to show what is on line 13
+```
+13 export USER="linux"
+```
 ### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
 ```
 sudo mv -f ~/browsers-novnc/waterfoxservice /etc/init.d/waterfoxnovnc
@@ -374,7 +379,11 @@ git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
 > If you don't know current your linux username then do "whoami" or "echo $USER" to find your current linux username
 > 
 > You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
-
+#### Example of what USER variable looks like in the script
+The number "13" below is to show what is on line 13
+```
+13 export USER="linux"
+```
 ### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
 ```
 sudo mv -f ~/browsers-novnc/torservice /etc/init.d/tornovnc
