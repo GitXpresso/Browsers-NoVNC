@@ -17,9 +17,9 @@ cat << EOF > ~/waternovnc
 ### END INIT INFO
 
 PATH="$PATH:/usr/X11R6/bin/"
-
+sudo useradd waterfox
 # The Username:Group that will run VNC
-export USER="codeany"
+export USER="waterfox"
 # Set the Display variable for firefox
 
 #${RUNAS}
@@ -47,6 +47,7 @@ OPTIONS="-name ${NAME} -depth ${DEPTH} -geometry ${GEOMETRY} :${DISPLAY} -xstart
 case "$1" in
 start)
 log_action_begin_msg "Starting vncserver for user '${USER}' on ${DISPLAY}"
+sudo su - waterfox
 su ${USER} -c "/usr/bin/tigervncserver -SecurityTypes none --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 :0"
 websockify -D --web=/usr/share/novnc/ --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
 su ${USER} -c "export DISPLAY=:0"
