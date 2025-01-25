@@ -578,4 +578,4 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 # Similar Projects Im making
 [LinuxApps NoVNC](https://github.com/gitxpresso/linuxapps-novnc)
 As much linux apps I can find, any collaboration would help, thanks
-Not going to work on thos project until i have all the still working Browsers that support linux
+Not going to work on this project until I have all the still working Browsers that support linux
