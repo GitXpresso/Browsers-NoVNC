@@ -182,7 +182,7 @@ sudo apt install curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/thoriumnovnc.sh | bash
 ```
 ## What Thorium looks like
-
+![2025-01-25_18-42.png](<https://media-hosting.imagekit.io//0708c6a5fc5f478b/2025-01-25_18-42.png?Expires=1832439160&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=yHupthlnobDqTD4k7bSYKV7cguhuBlWLF61FrX92rE2JIWPQO9HJ4w~ChfWgRDV6bDvdY65WT~3DOB4dpDPzxa32g3WKTzK3~QshpBi22vq0YyGzwF5RlYWQk2xUW9KuiZqPNRgXaprF7sRqY4MjoCvAXih3Vzm21ar9rsmSSP1rehht255KboR9PA71KurdlzNPO9UHRexcdW9hoxzz8teji9eBEBzZg1Hnlonj~aSSTncbO7vdX-2NmyT7V8mxD8xu-cJQEb0aBlWe3PB8I2LnvWZuitNZnXiio3hdGxeSLh0AFQp1OKVs1cYSIkf9K8bUozNIMh0RPtbj3eguVw__>)
 # Librewolf NoVNC
 <br/>
 <div align="center">
