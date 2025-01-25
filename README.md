@@ -42,6 +42,14 @@ Every browser that supports linux and has no errors with the browser in the novn
  
 </details>
 
+<details><summary>Chromium Based Browsers</summary>
+
+- [Brave NoVNC](#Brave-NoVNC)
+- [Microsft Edge NoVNC](#Microsoft-Edge-NoVNC)
+- [Opera NoVNC](#Opera-NoVNC)
+  
+</details>
+
 <details><summary>Mozilla Browsers</summary>
   
 - [Firefox NoVNC](#Firefox-NoVNC)
@@ -100,6 +108,29 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Chrome looks like
 ![Google Chrome](<https://media-hosting.imagekit.io//b17cc3fbdfae406e/Screenshot%202025-01-17%2011.56.23%20AM.png?Expires=1831741275&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=lAbs2zDf39IWAKpSYw9vIQkF7RlXwJ83A9gYaX0clmEehdTLz1MdZgYcIkrlwFBK6BvBvXCw6hrYz-7YcYdedOGgd2LaWgB-1DgWesQ16LTiv7-xijYVeWe2PvSjCjvhHsEWs-H00lJPGcyN-Jwpv5lVHCr9dmCgFIMLUGxfUAlHUh~hZCFQB4pkCCA7YWlLsNXg3skE8zba2ypK2wy8Oz~yuxf9-DUcp0ae3Vc3zWePcLd6RjZn1FcbyU~8DLlEsbg3rOJj1orUN7Pv-CuOHcEdf-69FxTHLcWTej~yyZEJrxY6W1p8wmgXFcxvRauILJ109s-1eVD1Dm9r6~R4sg__>)
+# Brave NoVNC
+
+<div align="center">
+  <a href="https://brave.com">
+    <img src="https://static.wikia.nocookie.net/logopedia/images/9/9d/Brave_lion.svg/revision/latest?cb=20210121105720" alt="Logo" width="200" height="200">
+  </a>
+  <h1 align= "center">Brave</h1>
+    <br/>
+<h3 center "left">. </h3>
+</div>
+
+## Run Brave NoVNC
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Brave NoVNC using Curl
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/bravenovnc.sh | bash
+```
+## What Brave looks like
+Not added yet
+
 # Librewolf NoVNC
 <br/>
 <div align="center">
