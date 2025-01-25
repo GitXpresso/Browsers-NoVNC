@@ -203,7 +203,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 <br/>
 <div align="center">
   <a href="https://seamonkey-project.org">
-    <img src=https://i.ibb.co/M80rbs0/default64.png" alt="Logo" width="150" height="150">
+    <img src="https://i.ibb.co/M80rbs0/default64.png" alt="Logo" width="150" height="150">
   </a>
 
   <h3 align="center">Seamonkey </h3>
@@ -226,10 +226,20 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ![seamonkey.png](<https://media-hosting.imagekit.io//f785835a7cf8444d/seamonkey.png?Expires=1831923822&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=arvN69w8dqKRIrZdIyJe7rwTLm7M5N0qnGIKJoOeHeULjwjbSYacmckgB1X3qjRezfcbiAEfORlfQT551yrAgxznCCM8KQfCGMLrQtoukv3CPz9vwZA44mRkMVauSoAQBPXAoxNQZ17I38rFSHyCBw7IViDCs83-K3p-XvuVa8sOb-5TJeZ-mrZUN9ZdYZSd-JZJLEucktK1-lP7jfZkBJymBHb6mrRYCEUVUVPcIXVP91kf4xVmunqV83Rerwn~-NHRafVsp2~7gn5psQ3DcXndJ04WubQv7rnVtUjRYY1GCmkD~JsjeBaDOBIc5TXYYeFolHXZLgF4MHsi0i6a0A__>)
 
 # Waterfox NoVNC
-[![Waterfox logo](https://cdn.brandfetch.io/id_-XdGZcp/w/820/h/158/theme/dark/logo.png?c=1bfwsmEH20zzEfSNTed)](https://www.waterfox.net/waterfox/)
 
-### About Waterfox
-[Waterfox](https://waterfox.net/) is a popular open-source web browser that combines speed, privacy, and customization. With Waterfox, you can enjoy a fast and private browsing experience right out of the box. 
+<br/>
+<div align="center">
+  <a href="https://waterfox.net">
+    <img src= "https://upload.wikimedia.org/wikipedia/commons/e/e4/Waterfox_logo_2019.svg" alt="Logo" width="150" height="150">
+  </a>
+
+  <h3 align="center">Waterfox</h3>
+
+  <p align="center">Waterfox is a popular open-source web browser that combines speed, privacy, and customization. With Waterfox, you can enjoy a fast and private browsing experience right out of the box. </p>
+       
+   <br/>
+</div>
+
 ## Install curl if you don't have it
 ```
 sudo apt install curl
