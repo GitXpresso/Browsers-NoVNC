@@ -52,6 +52,7 @@ Every browser that supports linux and has no errors with the browser in the novn
 
 <details><summary>Chromium Based Browsers</summary>
   
+- [Srware Iron NoVNC](#Srware-Iron-NoVNC)
 - [Thorium NoVNC](#Thorium-NoVNC)
 - [Brave NoVNC](#Brave-NoVNC)
 - [Microsft Edge NoVNC](#Microsoft-Edge-NoVNC)
