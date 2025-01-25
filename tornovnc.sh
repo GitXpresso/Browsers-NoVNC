@@ -12,4 +12,4 @@ tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bi
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
 export DISPLAY=:0
 echo "Tor and NoVNC has started Now go to https://localhost:5900 to access tor on the vnc server"
-~/tor-browser/Browser/start-tor-browser --start-fullscreen --kiosk --display=:0
+~/tor-browser/Browser/start-tor-browser --start-maximized --display=:0
