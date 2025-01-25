@@ -5,10 +5,15 @@ echo "Installing the required packages in order for the script to work properly"
 sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox tilix
 cd ~/ 
 wget https://github.com/GitXpresso/Browsers-NoVNC/releases/download/waterfox/waterfox-6.5.3.tar.bz2 && sudo tar -xvf waterfox-6.5.3.tar.bz2 -C /usr/lib && sudo rm -rf waterfox-6.5.3.bz2
-cat << EOF > ~waterfoxnovnc
+cat << EOF > ~/waterfoxnovnc
+#!/bin/sh -e
+### BEGIN INIT INFO
+# Provides:          vncserver
+# Required-Start:    networking
 # Default-Start:     3 4 5
 # Default-Stop:      0 6
 ### END INIT INFO
+
 
 PATH="$PATH:/usr/X11R6/bin/"
 sudo useradd waterfox
