@@ -17,7 +17,8 @@ Every browser that supports linux and has no errors with the browser in the novn
   
 `Brave does not work but it does work in a linuxserver openbox kasmvnc session`
 
-- [ ] add link to video pn how to have waterfox noVNC automatically start on bootboo
+- [ ] add link to video pn how to have waterfox noVNC automatically start on boot
+- [ ] add all the browsers
 - [ ] finish adding all service files 
 - [ ] use winehq to install browsers that dont work 
 - [ ] use winehq to have opera gx in a browser
@@ -141,7 +142,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 <br/>
 <div align="center">
   <a href="https://librewolf.net">
-    <img src=" " alt="Logo" width="150" height="150">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Chromium_Logo.svg/512px-Chromium_Logo.svg.png" alt="Logo" width="150" height="150">
   </a>
   <h1 align= "center">Chromium </h1>
     <br/>
