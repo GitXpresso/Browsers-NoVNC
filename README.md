@@ -169,7 +169,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
   </a>
   <h1 align= "center">Thorium </h1>
     <br/>
-<h3 center "left"> </h3>
+<h3 center "left">Thorium Browser is a fast, open-source web browser based on Chromium, designed to improve performance and usability. It is available on multiple platforms, including Windows, macOS, Linux, and Android, and aims to provide a more efficient browsing experience compared to standard Chromium.</h3>
 </div>
 
 ## Run Thorium NoVNC
