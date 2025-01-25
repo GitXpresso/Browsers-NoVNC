@@ -30,7 +30,7 @@ GEOMETRY="1366x768"
 #GEOMETRY="1280x1024"
 
 # Window manager vnc server will use
-XSTARTUP=/usr/bin/openbox
+XSTARTUP="/usr/bin/openbox"
 # The name that the VNC Desktop will have.
 NAME="tor"
 
@@ -41,7 +41,7 @@ OPTIONS="-name ${NAME} -depth ${DEPTH} -geometry ${GEOMETRY} :${DISPLAY} -xstart
 case "$1" in
 start)
 log_action_begin_msg "Starting vncserver for user '${USER}' on ${DISPLAY}"
-su ${USER} -c "tigervncserver -SecurityTypes none --I-KNOW-THIS-IS-INSECURE $XSTARTUP ${NAME} ${GEOMETRY} :0"
+su ${USER} -c "tigervncserver -SecurityTypes none --I-KNOW-THIS-IS-INSECURE -xstartup $XSTARTUP -name ${NAME} -geometry ${GEOMETRY} :0"
 su ${USER} -c "websockify -D --web=/usr/share/novnc/ --cert=~/linux-novnc/novnc.pem 6080 localhost:5900"
 su ${USER} -c "export DISPLAY=:0"
 su ${USER} -c "~/tor-browser/Browser/start-tor-browser --display=:0"
