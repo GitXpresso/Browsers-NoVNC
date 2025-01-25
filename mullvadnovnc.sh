@@ -11,5 +11,5 @@ sudo apt install mullvad-browser
 cd ~/
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
-mullvad-browser --display=:0
+mullvad-browser --start-maximized --display=:0
 echo "Mullvad browser has started go to https://localhost:5900 to access mullvad"
