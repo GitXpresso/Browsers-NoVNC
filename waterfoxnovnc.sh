@@ -6,8 +6,8 @@ sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox
 cd ~/
 wget https://github.com/GitXpresso/Browsers-NoVNC/releases/download/waterfox/waterfox-6.5.3.tar.bz2 && sudo tar -xvf waterfox-6.5.3.tar.bz2 -C /usr/lib && sudo rm -rf waterfox-6.5.3.tar.bz2 
 git clone https://github.com/gitxpresso/linux-novnc.git
-sudo mv -f ~/waterfox/waterfox.desktop /usr/share/applications/
-cat << EOF > ~/waternovnc
+sudo mv -f /usr/lib/waterfox/waterfox.desktop /usr/share/applications/
+sudo cat << EOF > ~/waternovnc
 #!/bin/sh -e
 ### BEGIN INIT INFO
 # Provides:          vncserver
@@ -49,7 +49,7 @@ start)
 log_action_begin_msg "Starting vncserver for user '${USER}' on ${DISPLAY}"
 sudo su - waterfox
 su ${USER} -c "/usr/bin/tigervncserver -SecurityTypes none --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 :0"
-websockify -D --web=/usr/share/novnc/ --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
+su ${USER} -c "websockify -D --web=/usr/share/novnc/ --cert=~/linux-novnc/novnc.pem 6080 localhost:5900"
 su ${USER} -c "export DISPLAY=:0"
 su ${USER} -c "/usr/lib/waterfox/waterfox --display=:0"
 ;;
