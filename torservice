@@ -1,6 +1,5 @@
 # Edit "linux username here" with your linux username 
 # Don't know your linux username then do "whoami" or "echo $USER" to find your current username for linux
-cat << EOF > ~/tornovnc
 #!/bin/sh -e
 ### BEGIN INIT INFO
 # Provides:          vncserver
@@ -60,6 +59,3 @@ $0 start
 esac
 
 exit 0
-EOF
-sudo mv -f ~/tornovnc /etc/init.d
-sudo chmod +x /etc/init.d/waterfoxnovnc
