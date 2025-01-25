@@ -51,7 +51,8 @@ Every browser that supports linux and has no errors with the browser in the novn
 </details>
 
 <details><summary>Chromium Based Browsers</summary>
-
+  
+- [Thorium NoVNC](#Thorium-NoVNC)
 - [Brave NoVNC](#Brave-NoVNC)
 - [Microsft Edge NoVNC](#Microsoft-Edge-NoVNC)
 - [Opera NoVNC](#Opera-NoVNC)
@@ -160,6 +161,28 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Chromium looks like
 ![2025-01-25_18-31.png](<https://media-hosting.imagekit.io//27ad579f05064d91/2025-01-25_18-31.png?Expires=1832437916&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ZSReX3w235F1uSYLS2jQ5-Z9fBuy~Cxzf-4WlEqZNw9LhKilVn0HZOsbSg1LyNri5pjuU58OOFuh2Vtc~fzse0d2AofoJdtLCjP9nHxOSez6bfrHXGT5Dn3eP2tMgVZ5o6afBrGG0mHLfPF-dpkQYoYTWJ~C0VsQmGiq1nRYUBlVRXMbQ7FXInYBkhiLfci5d4xlifAotkDzySn9EwiZNwx~iLnngN9RM7j5lP-BqPnHHV22Mo05ZrWS-gL4msXypXZJsa159dLa8Ng0dR6J86ollYo3uCVCUawJ3kEI~JL1x6~eNQEwf99HFlrwPgyQf-RNcUiRu0yX9PxMlSbBnQ__>)
+# Chromium NoVNC
+<br/>
+<div align="center">
+  <a href="https://thorium.rocks">
+    <img src="https://thorium.rocks/imgs/thorium.svg" alt="Logo" width="150" height="150">
+  </a>
+  <h1 align= "center">Thorium </h1>
+    <br/>
+<h3 center "left"> </h3>
+</div>
+
+## Run Thorium NoVNC
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Thorium NoVNC using Curl
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/thoriumnovnc.sh | bash
+```
+## What Thorium looks like
+
 # Librewolf NoVNC
 <br/>
 <div align="center">
