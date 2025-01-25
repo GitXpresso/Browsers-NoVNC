@@ -160,7 +160,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
   </a>
   <h1 align= "center">Microsoft Edge</h1>
     <br/>
-<h3 center "left"></h3>
+<h3 center "left">Microsoft Edge is a web browser developed by Microsoft, designed to replace Internet Explorer. It is built on the Chromium open-source project and offers features like AI integration, vertical tabs, and a built-in VPN for enhanced browsing experiences.</h3>
 </div>
 
 ## Run Microsoft Edge NoVNC
