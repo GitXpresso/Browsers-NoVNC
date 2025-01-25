@@ -25,5 +25,5 @@ git clone https://github.com/gitxpresso/linux-novnc.git ~/linux-novnc
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
 export DISPLAY=:0
-/usr/lib/palemoon/palemoon --display=:0
+/usr/lib/palemoon/palemoon --start-maximized --display=:0
 echo "Pale Moon and NoVNC has started Now go to https://localhost:5900 to access tor on the vnc server"
