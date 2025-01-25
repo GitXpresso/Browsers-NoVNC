@@ -249,6 +249,28 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Falkon looks like
 ![falkon.png](<https://media-hosting.imagekit.io//032559a8ffc848cf/falkon.png?Expires=1831928501&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=C3dpIdsOwRWSWbODi4DdeGNaAm-zA8RGxrymqNpEFPUr~2pL4mtCDOeGryJG24EApXQ0YnGPu2zkgSBARvUW5qWyGTs3DLtTyIlsQ5FjMxQdN8OJMpfalZWiihzYnSMwoVUxj85Ylo8ps8fYEvhIzSTq1dU~Mfn~U9~Rg8xAWD0LYbqwpr0~az4b5ZzSb9d0Ex4QXkjH-RGJ4UdAxe~icC3Dlrii0-a799mzeBxO-9-VF1RKSaM29PiHx1SWborhh7lU0GnivmBwxouC09Mk8u4ToJYgbdATdRwrrW6xdfLD0fiUpdDK~gUEUyDCXj9X35ey9AIEQE-G-GUAvKu7dA__>)
+# Opera NoVNC
+<br/>
+<div align="center">
+  <a href="https://">
+    <img src=" " alt="Logo" width="130" height="130">
+  </a>
+  <h1 align= "center">Opera</h1>
+    <br/>
+<p center "left"> </p>
+</div>
+
+## Run Opera NoVNC
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Opera NoVNC using Curl
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/operanovnc.sh | bash
+```
+## What Opera looks like
+![2025-01-25_19-00.png](<https://media-hosting.imagekit.io//9dda0c191f8e4703/2025-01-25_19-00.png?Expires=1832439706&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=kaMOeFnAO4P0BC3M7x7bJPDs7PdG-dgrAwTXaT8zkIbFcpFrmgX8PYM4D4vNzVMMJ~O5OCc9oJ2pBtYYCPDwoTJNe50LT8a0zmjX-rZpCjTaXdPfTpyoh7ceHJaOROvQ1fY-x7G3PPFL-l4QFKG~A0FUDfGHb5LjCF11pAqe1NsLUHk1DR24Rm1GcF68oSOkPdjwAsxB5nK-XkuslAmax8PCO99bPkCU58y2~9WGXlznmaJhVNK0BYuDDQChsBo5-iJ0z9BC8bU00pjtF66je3ENslgyAeq-xpYwwrSQ4rh84Sh~7lBzLC2FaSWL5TWIxVG~ilEciJAQ7lcwyXPfUg__>)
 # Floorp NoVNC
 <!-- PROJECT LOGO -->
 <br/>
