@@ -7,5 +7,5 @@ cd ~/
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
 export DISPLAY=:0
-falkon --display=:0
+falkon  --no-sandbox --test-type --disable-dev-shm-usage --start-maximized --display=:0
 echo -e "falkon has started go to https://localhost:6080 to access your vnc session"
