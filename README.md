@@ -252,8 +252,8 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 # Opera NoVNC
 <br/>
 <div align="center">
-  <a href="https://">
-    <img src=" " alt="Logo" width="130" height="130">
+  <a href="https://opera.com">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Opera_2015_icon.svg/800px-Opera_2015_icon.svg.png" alt="Logo" width="150" height="150">
   </a>
   <h1 align= "center">Opera</h1>
     <br/>
