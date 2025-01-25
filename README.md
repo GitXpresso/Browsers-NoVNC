@@ -228,6 +228,24 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/waterfoxnovnc.sh | bash
 ```
+### Have Waterfox automatically starts on boot
+### Step 1: Clone the repository
+```
+git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
+```
+### Step 2: Go to the cloned directory and edit waterfox service "USER" variable
+example:
+```
+export USER="linux"
+```
+### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
+```
+sudo mv -f ~/browsers-novnc/waterfoxservice /etc/init.d/waterfox
+```
+### After doing Step 1, 2, and Step 3 run this command to have Waterfox NoVNC automatically start on boot
+```
+sudo service waterfox start
+```
 ## What Waterfox looks like
 [![Waterfox Novnc](<https://media-hosting.imagekit.io//076eae515bf74dd4/Screenshot%202025-01-17%2012.11.59%20PM.png?Expires=1831741943&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=cDElZA3hP67r8lIe2Y-1zpqDDujp2GhzpiiRNp3xJ8KxJ97q1LgGJ3FlBY-7GU9cAVWFjdns9sniPocigFThIxKgi06FdefaKVXNXNwniu~h4SPK1uQOD4nu~WElyEZdt7vdcPVcBsLpxmvd26eudE8zEX7WJ8K7A2R~eBHwoB7kWz49lw5euKMguU64zYqJGbOq-EOwxFGKLl-nvDNA7Cu7BwOMwy0D96aUr5aqHOYMgbG8AvxMl5PZOEYKSp5f8d36jAYbg8gyTlxaPdxl2dKnHMyOqJgknD2tXql0e~DcG7kNz9c9RWCy435M4n3cn5fO5NtN2TMYoyf0hx9FnA__>)](https://waterfox.net/)
 # Midori NoVNC
