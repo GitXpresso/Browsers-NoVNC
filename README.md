@@ -327,11 +327,16 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ## What Mullvad looks like
 ![mullvad.png](<https://media-hosting.imagekit.io//f4531350ebd246b9/mullvad.png?Expires=1831910992&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=hHikCyhKJxM-AzXSTTdLSq2jTj0fUfHXxgs~S97ly-7lf36yHOKIn4JZ5KB5PjdYQoMkTtkVYG2c36wjueM73c0EgnBXBs500K-cvuzKhLAsjZyGKPhjUGRyi9cxWua~QpCozRolIAYB-QztSz0G~dkQ9-ZHL-0LR-JXlKntR8Hy-WLnj0TXM4t32150kYzWJ5lMeUHpC9DEH6geQkWR6FznOSNv8kw0V1wNMXhhU8xAy~k~0vlCTNYKqOuqxDKKqqf0ipKpWv55pAOyRSF3rJIPjMnORPwXjNR7tEo9ncHBqNzGwEND9yjB3mzM9eBAKD4alxedtYLyADOsAcX6NA__>)
 # Tor NoVNC
-<p align="center">
-  <img width="200px" src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Tor_project_logo_hq.png">
-  <h2 center "left">  Tor(The Onion Routing) is a free overlay network for enabling anonymous communication. </h2>
-</p>
-  
+<br/>
+<div align="center">
+  <a href="https://mullvad.net">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Tor_Browser_icon.svg" alt="Logo" width="150" height="150">
+  </a>
+  <h1 align= "center">Tor </h1>
+    <br/>
+<p center "left">Tor(The Onion Routing) is a free overlay network for enabling anonymous communication.</p>
+</div>
+
 ### Install curl if you don't have it
 ``` 
 sudo apt install curl
