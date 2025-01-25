@@ -7,7 +7,7 @@
 ### END INIT INFO
 
 PATH="$PATH:/usr/X11R6/bin/"
- 
+ sudo useradd vnc 
 # The Username:Group that will run VNC
 # Put your linux username below
 If you don't know your linux username put this command in your terminal " echo "$USER" " or " whoami "
