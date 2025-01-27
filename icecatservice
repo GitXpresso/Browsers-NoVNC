@@ -41,10 +41,10 @@ OPTIONS="-name ${NAME} -depth ${DEPTH} -geometry ${GEOMETRY} :${DISPLAY} -xstart
 case "$1" in
 start)
 log_action_begin_msg "Starting vncserver for user '${USER}' on ${DISPLAY}"
-su ${USER} -c "tigervncserver -SecurityTypes none --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -name tor -geometry 1366x768 :0"
+su ${USER} -c "tigervncserver -SecurityTypes none --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 :0"
 su ${USER} -c "websockify -D --web=/usr/share/novnc/ --cert=~/linux-novnc/novnc.pem 6080 localhost:5900"
 su ${USER} -c "export DISPLAY=:0"
-su ${USER} -c "~/tor-browser/Browser/start-tor-browser --start-maximized --display=:0"
+su ${USER} -c "~/icecat/icecat --start-maximized --display=:0"
 ;;
 
 stop)
