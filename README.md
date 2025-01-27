@@ -85,6 +85,7 @@ Every browser that supports linux and has no errors with the browser in the novn
 <details><summary>Other</summary>
   
 - [Similar Projects I making](#Similar-Projects-Im-making)
+- [Set Default x-www-browser](#Set-Default-x-www-browser)
 
 </details>
 
@@ -515,16 +516,28 @@ The number "13" below is to show what is on line 13
 ```
 ### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
 ```
-sudo mv -f ~/browsers-novnc/torservice /etc/init.d/tornovnc
+sudo mv -f ~/browsers-novnc/wateroxservice /etc/init.d/wateroxnovnc
 ```
 ### Step 4: Make the file executable
 ```
-sudo chmod +x /etc/init.d/tornovnc
+sudo chmod +x /etc/init.d/waterfoxnovnc
 ```
 ### Step 5: After doing Step 1, 2, 3, and Step 4 run this command to have Waterfox NoVNC automatically start on boot
 ```
-sudo service tornovnc start
+sudo service waterfoxnovnc start
 ```
+## Set watefox as the default x www browser
+### first set waterfox as the default x www browser
+sudo update-alternatives \
+  --install /usr/bin/x-www-browser x-www-browser /usr/lib/waterfox/waterfox 100
+### Then update the x www browser
+update-alternatives --config x-www-browser
+output:
+0*    /usr/lib/waterfox/waterfox 210  auto mode
+1     /usr/lib/waterfox/waterfox 210  manual mode
+2     /usr/lib/waterfox/         100  manual mode
+type 0 as the default and then press enter
+# Now your set setting the x www browser
 ## What Tor looks like
 ![2025-01-18_23-55.png](<https://media-hosting.imagekit.io//206f87de1060478c/2025-01-18_23-55.png?Expires=1831853600&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=pfMjz~U6WCGc90YOtLa~dJXAQOKBajb0p9eILcBua2jIvkJXbpKWgHLsSLMUTiXAVCI9rZQgLXfjwlcVdIhk-OguanrHCcKg2eejPQSLAZV7A4cLJRliuhn7IKKVqAZaDEfBVuAAffVTPAshLXhYq-GAI-0z4OiL-zpbEUQXoiBSwjEj~1RoHIcPwY4sLPI5K89Gkm3jHtmhUWMaIKAI2s7um5h~x4qKOA58Ip~9KosMV7pnCO~s9GRBWWXB2lKX0D7TwLRDKHkEY4utBsEY9fmzW1IxgrtUHisYDmwW2qvMlDqarpjNMmuyIdX2buwnIaEMlWwr0obcqfJskKY5EQ__>)
 # Pale Moon NoVNC
@@ -656,3 +669,5 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 [LinuxApps NoVNC](https://github.com/gitxpresso/linuxapps-novnc)
 As much linux apps I can find, any collaboration would help, thanks
 Not going to work on this project until I have all the still working Browsers that support linux
+# Set Default x www browser
+#
