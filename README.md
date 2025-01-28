@@ -1,5 +1,5 @@
 # Browsers-NoVNC
-Every browser that supports linux and has no errors with the browser in the novnc session and `--display=:0` works with installed browser in the terminal will be added to this repository
+Every browser in a novnc server, plain bash no docker. Does not support audio
 ## Table of Contents
 >[!IMPORTANT]
 > A astrisk(*) next to the anchored link means the contents has not been added yet, or it has the header but doesn't have the contents
