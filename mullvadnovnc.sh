@@ -1,7 +1,7 @@
 echo "updating system to successfully install required packages"
 sudo apt update
 echo "Installing required packages"
-sudo apt install -y curl wget novnc websockify tigervnc-standalone-server tar openbox dbus-x11 tilix
+sudo apt install -y curl wget novnc websockify tigervnc-standalone-server tar openbox dbus-x11 tilix zenity kdialog
 sudo curl -fsSLo /usr/share/keyrings/mullvad-keyring.asc https://repository.mullvad.net/deb/mullvad-keyring.asc
 echo "Adding the Mullvad repository server to apt"
 echo "deb [signed-by=/usr/share/keyrings/mullvad-keyring.asc arch=$( dpkg --print-architecture )] https://repository.mullvad.net/deb/stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/mullvad.list
