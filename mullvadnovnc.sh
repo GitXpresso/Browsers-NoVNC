@@ -7,7 +7,7 @@ echo "Adding the Mullvad repository server to apt"
 echo "deb [signed-by=/usr/share/keyrings/mullvad-keyring.asc arch=$( dpkg --print-architecture )] https://repository.mullvad.net/deb/stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/mullvad.list
 echo -e "Installing the package(mullvad)"
 sudo apt update
-sudo apt install mullvad-browser
+sudo apt install mullvad-browser -y
 cd ~/
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
