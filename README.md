@@ -516,15 +516,15 @@ The number "13" below is to show what is on line 13
 ```
 ### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
 ```
-sudo mv -f ~/browsers-novnc/wateroxservice /etc/init.d/wateroxnovnc
+sudo mv -f ~/browsers-novnc/torservice /etc/init.d/tornovnc
 ```
 ### Step 4: Make the file executable
 ```
-sudo chmod +x /etc/init.d/waterfoxnovnc
+sudo chmod +x /etc/init.d/tornovnc
 ```
 ### Step 5: After doing Step 1, 2, 3, and Step 4 run this command to have Waterfox NoVNC automatically start on boot
 ```
-sudo service waterfoxnovnc start
+sudo service tornovnc start
 ```
 ## Set watefox as the default x www browser
 ### first set waterfox as the default x www browser
