@@ -1,0 +1,62 @@
+# Copy file contents under the line into a new file called "waterfoxnovnc" and then edit "linux username here" with your linux username 
+# Don't know your current linux username then do "whoami" or "echo $USER" to find your current username for USER variable on line 13
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+#!/bin/sh -e
+### BEGIN INIT INFO
+# Provides:          vncserver
+# Required-Start:    networking
+# Default-Start:     3 4 5
+# Default-Stop:      0 6
+### END INIT INFO
+
+PATH="$PATH:/usr/X11R6/bin/" 
+# The Username:Group that will run VNC
+
+export USER=$(whoami)
+# Set the Display variable for firefox
+
+#${RUNAS}
+
+# The display that VNC will use
+DISPLAY=":0"
+
+# Color depth (between 8 and 32)
+DEPTH="16"
+
+# The Desktop geometry to use.
+#GEOMETRY="<WIDTH>x<HEIGHT>"
+#GEOMETRY="x600"
+GEOMETRY="1366x768"
+#GEOMETRY="1280x1024"
+
+# Window manager vnc server will use
+XSTARTUP="/usr/bin/openbox"
+# The name that the VNC Desktop will have.
+NAME="tor"
+
+OPTIONS="-name ${NAME} -depth ${DEPTH} -geometry ${GEOMETRY} :${DISPLAY} -xstartup ${XSTARTUP}"
+
+. /lib/lsb/init-functions
+
+case "$1" in
+start)
+log_action_begin_msg "Starting vncserver for user '${USER}' on ${DISPLAY}"
+su ${USER} -c "tigervncserver -SecurityTypes none --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 :0"
+su ${USER} -c "websockify -D --web=/usr/share/novnc/ --cert=~/linux-novnc/novnc.pem 6080 localhost:5900"
+su ${USER} -c "export DISPLAY=:0"
+su ${USER} -c "playonlinux"
+;;
+
+stop)
+log_action_begin_msg "Stopping vncserver for user '${USER}' on ${DISPLAY}"
+su ${USER} -c "/usr/bin/vncserver -kill :0"
+su ${USER} -c "sudo kill -9 $(lsof -t -i:6080)"
+;;
+
+restart)
+$0 stop
+$0 start
+;;
+esac
+
+exit 0
