@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 echo "Updating Your System"
 sudo apt update
 echo "Installing the required packages in order for the script to work properly"
