@@ -424,7 +424,12 @@ sudo mv -f ~/browsers-novnc/waterfoxservice /etc/init.d/waterfoxnovnc
 ```
 sudo chmod +x /etc/init.d/waterfoxnovnc
 ```
-### Step 5: After doing Step 1, 2, 3, and Step 4 run this command to have Waterfox NoVNC automatically start on boot
+### create the file in /etc/proflie.d
+```
+cat << EOF >~/waterfox
+#!/bin/bash
+sudo service waterfoxnovnc start
+EOF
 ```
 sudo service waterfoxnovnc start
 ```
