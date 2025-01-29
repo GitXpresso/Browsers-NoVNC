@@ -58,6 +58,7 @@ Every browser in a novnc server, plain bash no docker. Does not support audio
 - [Microsft Edge NoVNC](#Microsoft-Edge-NoVNC) ✔️
 - [Opera NoVNC](#Opera-NoVNC) ✔️
 - [Vivaldi NoVNC](#Vivaldi-NoVNC) ✔️
+
   
 </details>
 
@@ -80,6 +81,8 @@ Every browser in a novnc server, plain bash no docker. Does not support audio
 - [Pale Moon NoVNC](#Pale-Moon-NoVNC) ✔️
 - [Midori NoVNC](#Midori-NoVNC) ✔️
 - [Pulse NoVNC](#Pulse-NoVNC) ✔️
+- [Basilisk NoVNC](#Basilisk-NoVNC) ✔️
+
 </details>
 
 <details><summary>Other</summary>
@@ -208,7 +211,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Librewolf looks like
 ![librewolf.png](<https://media-hosting.imagekit.io//3ade5c80c0e14121/librewolf.png?Expires=1831853978&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=anK-bXP9pP7p1jcpXZ~7yXNfArP-W7OalWcKHVCWZ7WG7dXaoJyu0jGAVhLRrh1N56aXV6TMtAAbVlOKACJd7qi6d0x3bkKNBARikw1qwNEKDttcSxWWcmwVVJRQ5XN89neGibVItk2FSnMulx92G3H~PukAzLIbD5j1Seti4CJmAcYbrIliNVZ3VHaoVu4KKSANPyOiIvn8Diy9dxj-Fwr0PscdMvzWQzOP4iVjv3znVUVKixbuPjsOuHTnEX-Qpi9Ia-MHaGMZmw-F8CDswKBF8ubRLE0KehVtSarENSCO~jjF9BPFbO7jOBzfMjavg1wJMPzbnviXs77oD5TyOw__>)
-# Librewolf NoVNC
+# Microsoft Edge NoVNC
 <br/>
 <div align="center">
   <a href="https://microsoft.com">
@@ -230,6 +233,27 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Microsoft Edge looks like
 ![2025-01-25_17-49.png](<https://media-hosting.imagekit.io//e503876f2053497d/2025-01-25_17-49.png?Expires=1832435393&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=dJ5b95-7C9VHwQOGGdjEFNsi4MQDDCZG~OGqnxN5xLhNcz2jcfefZQ80krcpt~RsRTqFcMGTlEbPdGu9MGtwL0VvTLhhQTfpqpVf5C3~PSozsMc7qsACE~mxhdGXDqJ~NALASYWdOMtelTsJy4vJzc0jEGAZz-74C2s-~TV9J-4s5aYg957PbasOyI36-GhRHhupwo5C4Qk~vkcr5pmqvW5atKX8I94xVGfP-gUOb5eZIFLbN8Mol74TS4Cb9wwRBxz7Zcdb1nv65A~6Bnlt2BEY9Y4DijBi6mNGX6d7ku9O7ien-3aHLvWh7U8JeLBLdl0sqm9vh0o0Z5hae~bolw__>)
+# Librewolf NoVNC
+<br/>
+<div align="center">
+  <a href="https://librewolf.net">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Basilisk_Web_Browser_Logo.png?20171118151021" alt="Logo" width="239" height="200">
+  </a>
+    <br/>
+<h3 center "left">Basilisk is an updated fork of Firefox designed to look and feel similar to versions before the underlying backend was changed in version 57.</h3>
+</div>
+
+## Run Basilisk NoVNC
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Basilisk NoVNC using Curl
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/basilisknovnc.sh | bash
+```
+## What Basilisk looks like
+![Screenshot 2025-01-29 11.20.56 AM.png](<https://media-hosting.imagekit.io//70fb048298a549dc/Screenshot%202025-01-29%2011.20.56%20AM.png?Expires=1832776089&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=UDuHDvzQTMC7Is-7NjraDB4pgeknmLzLaGiWQZ7kafHHuNR3S6n7XHADjdmtKeeyzXIJ5BBkqVZX959oMcPpzWhxhbTywgI9pLTAZ7JABKEMvrau4ytYcgVUx51MoVFAO1vIVl2~jYhxZ0S3-qjfJZ6sjMOvU2JnyHHDTOndI75q2~ckyH5q9-g5WMBUlrSiPmbJCgyS3xyZI8h7jbXttXC1n0HF-zeB8wtjaDy7SURgoKYhxMRBlIa-zXyNu2XFhrMa2OdT-PR938Qe0vuIcrUphUBOgBGtasJWqJZa39MogafdwLNXsEmN~Vy6mknBf-2FOP0Ivw8qRnb7B0l2uA__>)
 # Falkon NoVNC
 <br/>
 <div align="center">
