@@ -1,2 +1,0 @@
-#!/bin/bash
-google-chrome --test-type --disable-dev-shm-usage --display=:0
