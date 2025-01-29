@@ -120,13 +120,47 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/chromenovnc.sh | bash
 ```
+### Have Icecat automatically starts on boot
+### Step 1: Clone the repository
+```
+git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
+```
+### Step 2: Go to the cloned directory and edit chrome service "USER" variable on line 13
+> [!TIP]
+> If you don't know current your linux username then do "whoami" or "echo $USER" to find your current linux username
+> 
+> You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
+#### Example of what USER variable looks like in the script
+The number "13" below is to show what is on line 13
+```
+13 export USER="linux"
+```
+### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
+```
+sudo mv -f ~/browsers-novnc/chromeservice /etc/init.d/chromenovnc
+```
+### Step 4: Make the file executable
+```
+sudo chmod +x /etc/init.d/chromenovnc
+```
+### create the file in /etc/proflie.d
+```
+cat << EOF >~/chrome
+#!/bin/bash
+sudo service chromenovnc start
+EOF
+```
+### move the file to /etc/profile.d
+```
+sudo mv -f ~/chrome /etc/profile.d
+```
 ## What Chrome looks like
 ![Google Chrome](<https://media-hosting.imagekit.io//b17cc3fbdfae406e/Screenshot%202025-01-17%2011.56.23%20AM.png?Expires=1831741275&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=lAbs2zDf39IWAKpSYw9vIQkF7RlXwJ83A9gYaX0clmEehdTLz1MdZgYcIkrlwFBK6BvBvXCw6hrYz-7YcYdedOGgd2LaWgB-1DgWesQ16LTiv7-xijYVeWe2PvSjCjvhHsEWs-H00lJPGcyN-Jwpv5lVHCr9dmCgFIMLUGxfUAlHUh~hZCFQB4pkCCA7YWlLsNXg3skE8zba2ypK2wy8Oz~yuxf9-DUcp0ae3Vc3zWePcLd6RjZn1FcbyU~8DLlEsbg3rOJj1orUN7Pv-CuOHcEdf-69FxTHLcWTej~yyZEJrxY6W1p8wmgXFcxvRauILJ109s-1eVD1Dm9r6~R4sg__>)
 # Brave NoVNC
 
 <div align="center">
   <a href="https://brave.com">
-    <img src="https://static.wikia.nocookie.net/logopedia/images/9/9d/Brave_lion.svg/revision/latest?cb=20210121105720" alt="Logo" width="200" height="200">
+    <img src="https://static.wikia.nocookie.net/logopedia/images/9/9d/Brave_lion.svg" alt="Logo" width="170" height="200">
   </a>
   <h1 align= "center">Brave</h1>
     <br/>
@@ -141,6 +175,40 @@ sudo apt install curl
 ### Run Brave NoVNC using Curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/bravenovnc.sh | bash
+```
+### Have Icecat automatically starts on boot
+### Step 1: Clone the repository
+```
+git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
+```
+### Step 2: Go to the cloned directory and edit brave service "USER" variable on line 13
+> [!TIP]
+> If you don't know current your linux username then do "whoami" or "echo $USER" to find your current linux username
+> 
+> You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
+#### Example of what USER variable looks like in the script
+The number "13" below is to show what is on line 13
+```
+13 export USER="linux"
+```
+### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
+```
+sudo mv -f ~/browsers-novnc/braveservice /etc/init.d/bravenovnc
+```
+### Step 4: Make the file executable
+```
+sudo chmod +x /etc/init.d/bravenovnc
+```
+### create the file in /etc/proflie.d
+```
+cat << EOF >~/brave
+#!/bin/bash
+sudo service bravenovnc start
+EOF
+```
+### move the file to /etc/profile.d
+```
+sudo mv -f ~/brave /etc/profile.d
 ```
 ## What Brave looks like
 ![2025-01-25_16-59.png](<https://media-hosting.imagekit.io//3821d4c140e34a42/2025-01-25_16-59.png?Expires=1832432475&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=IE6KbDF8x0YlLC2cX57SygoQOBU3vnv17vzcenvTyOF-FsSE8VL1~Mr2f9UeXPEn8TUvMqgI-YMruLhah30~NzRKdzfVHNUknxhIhdolRaNBlySppfaRlbkHn8sKx8AUBPTo4YtFx6X5Tr5-zr~lbfJ6O4~N3hR6M7amzau1AQFSlfFv~qEBpebuq50Mnq1NCrjoeieFuHpU5X0e43IiXJ5Mnm5iClPdUPAAau5Nm9eHtR5GlKeAyoGs7LyaiqFLVhFvefPjX2z13lumB2D4QYUW8bqZNl4j7K3XAJtCjK1Rpbe4nk2hAgRgkyJgCJ8Zq6-7g5~XnSJLaka9XUtKPg__>)
@@ -164,6 +232,40 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/chromiumnovnc.sh | bash
 ```
+### Have Icecat automatically starts on boot
+### Step 1: Clone the repository
+```
+git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
+```
+### Step 2: Go to the cloned directory and edit chromium service "USER" variable on line 13
+> [!TIP]
+> If you don't know current your linux username then do "whoami" or "echo $USER" to find your current linux username
+> 
+> You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
+#### Example of what USER variable looks like in the script
+The number "13" below is to show what is on line 13
+```
+13 export USER="linux"
+```
+### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
+```
+sudo mv -f ~/browsers-novnc/chromiumservice /etc/init.d/chromiumnovnc
+```
+### Step 4: Make the file executable
+```
+sudo chmod +x /etc/init.d/icecatnovnc
+```
+### create the file in /etc/proflie.d
+```
+cat << EOF >~/chromium
+#!/bin/bash
+sudo service chromiumnovnc start
+EOF
+```
+### move the file to /etc/profile.d
+```
+sudo mv -f ~/chromium /etc/profile.d
+```
 ## What Chromium looks like
 ![2025-01-25_18-31.png](<https://media-hosting.imagekit.io//27ad579f05064d91/2025-01-25_18-31.png?Expires=1832437916&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ZSReX3w235F1uSYLS2jQ5-Z9fBuy~Cxzf-4WlEqZNw9LhKilVn0HZOsbSg1LyNri5pjuU58OOFuh2Vtc~fzse0d2AofoJdtLCjP9nHxOSez6bfrHXGT5Dn3eP2tMgVZ5o6afBrGG0mHLfPF-dpkQYoYTWJ~C0VsQmGiq1nRYUBlVRXMbQ7FXInYBkhiLfci5d4xlifAotkDzySn9EwiZNwx~iLnngN9RM7j5lP-BqPnHHV22Mo05ZrWS-gL4msXypXZJsa159dLa8Ng0dR6J86ollYo3uCVCUawJ3kEI~JL1x6~eNQEwf99HFlrwPgyQf-RNcUiRu0yX9PxMlSbBnQ__>)
 # Thorium NoVNC
@@ -185,6 +287,40 @@ sudo apt install curl
 ### Run Thorium NoVNC using Curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/thoriumnovnc.sh | bash
+```
+### Have Icecat automatically starts on boot
+### Step 1: Clone the repository
+```
+git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
+```
+### Step 2: Go to the cloned directory and edit thorium service "USER" variable on line 13
+> [!TIP]
+> If you don't know current your linux username then do "whoami" or "echo $USER" to find your current linux username
+> 
+> You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
+#### Example of what USER variable looks like in the script
+The number "13" below is to show what is on line 13
+```
+13 export USER="linux"
+```
+### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
+```
+sudo mv -f ~/browsers-novnc/thoriumservice /etc/init.d/thoriumnovnc
+```
+### Step 4: Make the file executable
+```
+sudo chmod +x /etc/init.d/thoriumnovnc
+```
+### create the file in /etc/proflie.d
+```
+cat << EOF >~/thorium
+#!/bin/bash
+sudo service thoriumnovnc start
+EOF
+```
+### move the file to /etc/profile.d
+```
+sudo mv -f ~/thorium /etc/profile.d
 ```
 ## What Thorium looks like
 ![2025-01-25_18-42.png](<https://media-hosting.imagekit.io//0708c6a5fc5f478b/2025-01-25_18-42.png?Expires=1832439160&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=yHupthlnobDqTD4k7bSYKV7cguhuBlWLF61FrX92rE2JIWPQO9HJ4w~ChfWgRDV6bDvdY65WT~3DOB4dpDPzxa32g3WKTzK3~QshpBi22vq0YyGzwF5RlYWQk2xUW9KuiZqPNRgXaprF7sRqY4MjoCvAXih3Vzm21ar9rsmSSP1rehht255KboR9PA71KurdlzNPO9UHRexcdW9hoxzz8teji9eBEBzZg1Hnlonj~aSSTncbO7vdX-2NmyT7V8mxD8xu-cJQEb0aBlWe3PB8I2LnvWZuitNZnXiio3hdGxeSLh0AFQp1OKVs1cYSIkf9K8bUozNIMh0RPtbj3eguVw__>)
@@ -251,6 +387,40 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/basilisknovnc.sh | bash
 ```
+### Have Icecat automatically starts on boot
+### Step 1: Clone the repository
+```
+git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
+```
+### Step 2: Go to the cloned directory and edit basilisk service "USER" variable on line 13
+> [!TIP]
+> If you don't know current your linux username then do "whoami" or "echo $USER" to find your current linux username
+> 
+> You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
+#### Example of what USER variable looks like in the script
+The number "13" below is to show what is on line 13
+```
+13 export USER="linux"
+```
+### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
+```
+sudo mv -f ~/browsers-novnc/basiliskservice /etc/init.d/basilisknovnc
+```
+### Step 4: Make the file executable
+```
+sudo chmod +x /etc/init.d/basilisknovnc
+```
+### create the file in /etc/proflie.d
+```
+cat << EOF >~/basilisk
+#!/bin/bash
+sudo service basilisknovnc start
+EOF
+```
+### move the file to /etc/profile.d
+```
+sudo mv -f ~/basilisk /etc/profile.d
+```
 ## What Basilisk looks like
 ![Screenshot 2025-01-29 11.20.56 AM.png](<https://media-hosting.imagekit.io//70fb048298a549dc/Screenshot%202025-01-29%2011.20.56%20AM.png?Expires=1832776089&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=UDuHDvzQTMC7Is-7NjraDB4pgeknmLzLaGiWQZ7kafHHuNR3S6n7XHADjdmtKeeyzXIJ5BBkqVZX959oMcPpzWhxhbTywgI9pLTAZ7JABKEMvrau4ytYcgVUx51MoVFAO1vIVl2~jYhxZ0S3-qjfJZ6sjMOvU2JnyHHDTOndI75q2~ckyH5q9-g5WMBUlrSiPmbJCgyS3xyZI8h7jbXttXC1n0HF-zeB8wtjaDy7SURgoKYhxMRBlIa-zXyNu2XFhrMa2OdT-PR938Qe0vuIcrUphUBOgBGtasJWqJZa39MogafdwLNXsEmN~Vy6mknBf-2FOP0Ivw8qRnb7B0l2uA__>)
 # Falkon NoVNC
@@ -273,6 +443,40 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/falkonnovnc.sh | bash
 ```
+### Have Icecat automatically starts on boot
+### Step 1: Clone the repository
+```
+git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
+```
+### Step 2: Go to the cloned directory and edit falkon service "USER" variable on line 13
+> [!TIP]
+> If you don't know current your linux username then do "whoami" or "echo $USER" to find your current linux username
+> 
+> You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
+#### Example of what USER variable looks like in the script
+The number "13" below is to show what is on line 13
+```
+13 export USER="linux"
+```
+### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
+```
+sudo mv -f ~/browsers-novnc/falkonservice /etc/init.d/falkonnovnc
+```
+### Step 4: Make the file executable
+```
+sudo chmod +x /etc/init.d/falkonnovnc
+```
+### create the file in /etc/proflie.d
+```
+cat << EOF >~/falkon
+#!/bin/bash
+sudo service falkonnovnc start
+EOF
+```
+### move the file to /etc/profile.d
+```
+sudo mv -f ~/falkon /etc/profile.d
+```
 ## What Falkon looks like
 ![falkon.png](<https://media-hosting.imagekit.io//032559a8ffc848cf/falkon.png?Expires=1831928501&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=C3dpIdsOwRWSWbODi4DdeGNaAm-zA8RGxrymqNpEFPUr~2pL4mtCDOeGryJG24EApXQ0YnGPu2zkgSBARvUW5qWyGTs3DLtTyIlsQ5FjMxQdN8OJMpfalZWiihzYnSMwoVUxj85Ylo8ps8fYEvhIzSTq1dU~Mfn~U9~Rg8xAWD0LYbqwpr0~az4b5ZzSb9d0Ex4QXkjH-RGJ4UdAxe~icC3Dlrii0-a799mzeBxO-9-VF1RKSaM29PiHx1SWborhh7lU0GnivmBwxouC09Mk8u4ToJYgbdATdRwrrW6xdfLD0fiUpdDK~gUEUyDCXj9X35ey9AIEQE-G-GUAvKu7dA__>)
 # Opera NoVNC
@@ -294,6 +498,40 @@ sudo apt install curl
 ### Run Opera NoVNC using Curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/operanovnc.sh | bash
+```
+### Have Icecat automatically starts on boot
+### Step 1: Clone the repository
+```
+git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
+```
+### Step 2: Go to the cloned directory and edit opera service "USER" variable on line 13
+> [!TIP]
+> If you don't know current your linux username then do "whoami" or "echo $USER" to find your current linux username
+> 
+> You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
+#### Example of what USER variable looks like in the script
+The number "13" below is to show what is on line 13
+```
+13 export USER="linux"
+```
+### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
+```
+sudo mv -f ~/browsers-novnc/operaservice /etc/init.d/operanovnc
+```
+### Step 4: Make the file executable
+```
+sudo chmod +x /etc/init.d/operanovnc
+```
+### create the file in /etc/proflie.d
+```
+cat << EOF >~/opera
+#!/bin/bash
+sudo service operanovnc start
+EOF
+```
+### move the file to /etc/profile.d
+```
+sudo mv -f ~/opera /etc/profile.d
 ```
 ## What Opera looks like
 ![2025-01-25_19-00.png](<https://media-hosting.imagekit.io//9dda0c191f8e4703/2025-01-25_19-00.png?Expires=1832439706&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=kaMOeFnAO4P0BC3M7x7bJPDs7PdG-dgrAwTXaT8zkIbFcpFrmgX8PYM4D4vNzVMMJ~O5OCc9oJ2pBtYYCPDwoTJNe50LT8a0zmjX-rZpCjTaXdPfTpyoh7ceHJaOROvQ1fY-x7G3PPFL-l4QFKG~A0FUDfGHb5LjCF11pAqe1NsLUHk1DR24Rm1GcF68oSOkPdjwAsxB5nK-XkuslAmax8PCO99bPkCU58y2~9WGXlznmaJhVNK0BYuDDQChsBo5-iJ0z9BC8bU00pjtF66je3ENslgyAeq-xpYwwrSQ4rh84Sh~7lBzLC2FaSWL5TWIxVG~ilEciJAQ7lcwyXPfUg__>)
@@ -320,6 +558,40 @@ sudo apt install curl
 ### Run Floorp NoVNC using Curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/floorpnovnc.sh | bash
+```
+### Have Icecat automatically starts on boot
+### Step 1: Clone the repository
+```
+git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
+```
+### Step 2: Go to the cloned directory and edit floorp service "USER" variable on line 13
+> [!TIP]
+> If you don't know current your linux username then do "whoami" or "echo $USER" to find your current linux username
+> 
+> You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
+#### Example of what USER variable looks like in the script
+The number "13" below is to show what is on line 13
+```
+13 export USER="linux"
+```
+### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
+```
+sudo mv -f ~/browsers-novnc/floorpservice /etc/init.d/floorpnovnc
+```
+### Step 4: Make the file executable
+```
+sudo chmod +x /etc/init.d/floorpnovnc
+```
+### create the file in /etc/proflie.d
+```
+cat << EOF >~/floorp
+#!/bin/bash
+sudo service floorpnovnc start
+EOF
+```
+### move the file to /etc/profile.d
+```
+sudo mv -f ~/floorp /etc/profile.d
 ```
 ## What Floorp looks like
 ![floorp.png](<https://media-hosting.imagekit.io//2d35d6dd0ae54b25/floorp.png?Expires=1831905312&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=A1KJ8kSm63GbVr01gcv53oe4MDe1ky6fS~9D5QTpx0TAWnR8b-zV1JNXrpHGy7h9cUZffmk2SMjHuu3kTxfMEBj6auHmFaxT1M2t0BTKwysMnA12BReO~-3c80FH4NNBOsDDx80afOEKzAGi7WE0ppIsE7NGP34Y2KpGDMNZD9Mdop5~52B1WYCcO8msxGzkITUhFGE-2YfNei6D1W17T0CVHJGJGA-d7BRiuZPMr~LwBUvDKP8v33igxS7S3cFVQ2oU0wHVZ0NSkfMODiJ-y0makTyUF1wmMvdtRKsnUR3kxvicVtPp217U9~gault5QrZ6z1bovjKNQnWbP~nHcA__>)
@@ -349,6 +621,40 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/firefoxnovnc.sh | bash
 ```
+### Have Icecat automatically starts on boot
+### Step 1: Clone the repository
+```
+git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
+```
+### Step 2: Go to the cloned directory and edit firefox service "USER" variable on line 13
+> [!TIP]
+> If you don't know current your linux username then do "whoami" or "echo $USER" to find your current linux username
+> 
+> You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
+#### Example of what USER variable looks like in the script
+The number "13" below is to show what is on line 13
+```
+13 export USER="linux"
+```
+### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
+```
+sudo mv -f ~/browsers-novnc/firefoxservice /etc/init.d/firefoxnovnc
+```
+### Step 4: Make the file executable
+```
+sudo chmod +x /etc/init.d/firefoxnovnc
+```
+### create the file in /etc/proflie.d
+```
+cat << EOF >~/firefox
+#!/bin/bash
+sudo service firefoxnovnc start
+EOF
+```
+### move the file to /etc/profile.d
+```
+sudo mv -f ~/firefox /etc/profile.d
+```
 ## What Firefox looks like
 ![Screenshot 2025-01-17 12.44.44 PM.png](<https://media-hosting.imagekit.io//ac2aeff7e77e4d15/Screenshot%202025-01-17%2012.44.44%20PM.png?Expires=1831743897&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=nAuc~o8OcMQZ-Mw5zef17L9m5QBbmdqt6Z~OqYqVrEyNtaqg4OKCpAqMcCN7q08En2h80CqF2lvjQFlCmCobesHpCqwDZ-qsYsTFHwZrYsnzHhnVv-9q0I~aVkX1OoA4JgnfQ~dBlvwwp5faO67RAzi~UtMdYsMolaOEqdz-wfQ2WuMx0VbgFEmT~G3jvhCsrO7BFDYuqmKhLiH-Gfuy7tF3DMQ0TKssy8JlDld0I9bUNzvj-s9H6copbraSoquqXLIjHv7AphCD0UdhOF0XW6QHI3Wwy6aVBqkBmKpJI7G3UcWdHKcOuoQt-iWo~h29OvsOHsgtEvgQsbwNdyRL3g__>)
 # Seamonkey NoVNC
@@ -374,6 +680,40 @@ sudo apt install curl
 ### Run Seamonkey NoVNC using Curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/seamonkeynovnc.sh | bash
+```
+### Have Icecat automatically starts on boot
+### Step 1: Clone the repository
+```
+git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
+```
+### Step 2: Go to the cloned directory and edit seamonkey service "USER" variable on line 13
+> [!TIP]
+> If you don't know current your linux username then do "whoami" or "echo $USER" to find your current linux username
+> 
+> You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
+#### Example of what USER variable looks like in the script
+The number "13" below is to show what is on line 13
+```
+13 export USER="linux"
+```
+### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
+```
+sudo mv -f ~/browsers-novnc/seamonkeyservice /etc/init.d/seamonkeynovnc
+```
+### Step 4: Make the file executable
+```
+sudo chmod +x /etc/init.d/seamonkeynovnc
+```
+### create the file in /etc/proflie.d
+```
+cat << EOF >~/seamonkey
+#!/bin/bash
+sudo service seamonkeynovnc start
+EOF
+```
+### move the file to /etc/profile.d
+```
+sudo mv -f ~/seamonkey /etc/profile.d
 ```
 ## What Seamonkey looks like
 ![seamonkey.png](<https://media-hosting.imagekit.io//f785835a7cf8444d/seamonkey.png?Expires=1831923822&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=arvN69w8dqKRIrZdIyJe7rwTLm7M5N0qnGIKJoOeHeULjwjbSYacmckgB1X3qjRezfcbiAEfORlfQT551yrAgxznCCM8KQfCGMLrQtoukv3CPz9vwZA44mRkMVauSoAQBPXAoxNQZ17I38rFSHyCBw7IViDCs83-K3p-XvuVa8sOb-5TJeZ-mrZUN9ZdYZSd-JZJLEucktK1-lP7jfZkBJymBHb6mrRYCEUVUVPcIXVP91kf4xVmunqV83Rerwn~-NHRafVsp2~7gn5psQ3DcXndJ04WubQv7rnVtUjRYY1GCmkD~JsjeBaDOBIc5TXYYeFolHXZLgF4MHsi0i6a0A__>)
@@ -456,6 +796,40 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/midorinovnc.sh | bash
 ```
+### Have Midori automatically starts on boot
+### Step 1: Clone the repository
+```
+git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
+```
+### Step 2: Go to the cloned directory and edit midori service "USER" variable on line 13
+> [!TIP]
+> If you don't know current your linux username then do "whoami" or "echo $USER" to find your current linux username
+> 
+> You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
+#### Example of what USER variable looks like in the script
+The number "13" below is to show what is on line 13
+```
+13 export USER="linux"
+```
+### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
+```
+sudo mv -f ~/browsers-novnc/midoriservice /etc/init.d/midorinovnc
+```
+### Step 4: Make the file executable
+```
+sudo chmod +x /etc/init.d/midorinovnc
+```
+### create the file in /etc/proflie.d
+```
+cat << EOF >~/midori
+#!/bin/bash
+sudo service midorinovnc start
+EOF
+```
+### move the file to /etc/profile.d
+```
+sudo mv -f ~/midori /etc/profile.d
+```
 ### What Midori looks like
 ![Screenshot 2025-01-21 1.12.54 PM.png](<https://media-hosting.imagekit.io//286624c5827443c2/Screenshot%202025-01-21%201.12.54%20PM.png?Expires=1832091360&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=R~adlf4glr451sMC7XmycRmzj3DAqcsaoRyljoYxjjjoFxXl8sI1aEXTL~2J5IGc0Qh8XZHUPKd509zVQgbgpKIoI2timZjw1UiG50ePn8HkN7qqySaqmvYR0MbjyvMBg4EqtPj9LxBSk2sERKzz9eTYBBoHSYQtaDHc9CsjnSCH8Ad31~Zk-Zu--f3zyoAoajIeYR1fUWYqVS4A1qtHwka8Mx1zEOCjNLXKo0q73uRdOm0mfBho4~2nZsE9zXqNOrqw-Um7cc1XGSmVgjjGmzFBinAHN8rreIU9HadGmkpKWE7HCuNxrMfNT1C4uUQVUhvvQkg6obVs1ECJFVR64Q__>)
 
@@ -482,6 +856,40 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/icecatnovnc.sh | bash
 ```
+### Have Icecat automatically starts on boot
+### Step 1: Clone the repository
+```
+git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
+```
+### Step 2: Go to the cloned directory and edit icecat service "USER" variable on line 13
+> [!TIP]
+> If you don't know current your linux username then do "whoami" or "echo $USER" to find your current linux username
+> 
+> You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
+#### Example of what USER variable looks like in the script
+The number "13" below is to show what is on line 13
+```
+13 export USER="linux"
+```
+### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
+```
+sudo mv -f ~/browsers-novnc/icecatservice /etc/init.d/icecatnovnc
+```
+### Step 4: Make the file executable
+```
+sudo chmod +x /etc/init.d/icecatnovnc
+```
+### create the file in /etc/proflie.d
+```
+cat << EOF >~/icecat
+#!/bin/bash
+sudo service icecatnovnc start
+EOF
+```
+### move the file to /etc/profile.d
+```
+sudo mv -f ~/icecat /etc/profile.d
+```
 ## What Icecat looks like
 ![icecat.png](<https://media-hosting.imagekit.io//e31e532ff7014497/icecat.png?Expires=1831908720&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=zOAh-yvtqMWn-jqVcCla66chjiBONfjXuvwVjQOM5qxy92HKE2FY~2jwk7UY7AXdLrrpxjfK9Niu-PY0xWKSislPSUxPbQEY2O0nmKKjdl8T1VvIljm6TVk4IO-my2oiw1sAUbPTWpjiwQSvzV7oL6nDhBVGkKCjTR8xpAVvVISsnGjhs~7rC3cAPjDPMf8fHgxgjPBdfp3hwTi6R8hJ1vy6t50Jj5yU74Xjf4uCxJhbe2p4a21U0z1YsRYa8oyJH9brBNY5smdq5stLlN7LjeM39WdlBJvrVYFkjR5YNpUaFmk6ZZgWNO9iCwmF67P1jMGUx2ryxptT~-JabtdMOg__>)
 # Mullvad NoVNC
@@ -503,6 +911,40 @@ sudo apt install curl
 ### Run Mullvad NoVNC using Curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/mullvadnovnc.sh | bash
+```
+### Have Mullvad automatically starts on boot
+### Step 1: Clone the repository
+```
+git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
+```
+### Step 2: Go to the cloned directory and edit mullvad service "USER" variable on line 13
+> [!TIP]
+> If you don't know current your linux username then do "whoami" or "echo $USER" to find your current linux username
+> 
+> You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
+#### Example of what USER variable looks like in the script
+The number "13" below is to show what is on line 13
+```
+13 export USER="linux"
+```
+### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
+```
+sudo mv -f ~/browsers-novnc/mullvadservice /etc/init.d/mullvadnovnc
+```
+### Step 4: Make the file executable
+```
+sudo chmod +x /etc/init.d/mullvadnovnc
+```
+### create the file in /etc/proflie.d
+```
+cat << EOF >~/mullvad
+#!/bin/bash
+sudo service mullvadnovnc start
+EOF
+```
+### move the file to /etc/profile.d
+```
+sudo mv -f ~/mullvad /etc/profile.d
 ```
 ## What Mullvad looks like
 ![mullvad.png](<https://media-hosting.imagekit.io//f4531350ebd246b9/mullvad.png?Expires=1831910992&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=hHikCyhKJxM-AzXSTTdLSq2jTj0fUfHXxgs~S97ly-7lf36yHOKIn4JZ5KB5PjdYQoMkTtkVYG2c36wjueM73c0EgnBXBs500K-cvuzKhLAsjZyGKPhjUGRyi9cxWua~QpCozRolIAYB-QztSz0G~dkQ9-ZHL-0LR-JXlKntR8Hy-WLnj0TXM4t32150kYzWJ5lMeUHpC9DEH6geQkWR6FznOSNv8kw0V1wNMXhhU8xAy~k~0vlCTNYKqOuqxDKKqqf0ipKpWv55pAOyRSF3rJIPjMnORPwXjNR7tEo9ncHBqNzGwEND9yjB3mzM9eBAKD4alxedtYLyADOsAcX6NA__>)
@@ -529,12 +971,12 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/torxpra.sh | bash
 ```
-### Have Waterfox automatically starts on boot
+### Have Mullvad automatically starts on boot
 ### Step 1: Clone the repository
 ```
 git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
 ```
-### Step 2: Go to the cloned directory and edit waterfox service "USER" variable, USER variable is on line 13
+### Step 2: Go to the cloned directory and edit mullvad service "USER" variable, USER variable is on line 13
 > [!TIP]
 > If you don't know current your linux username then do "whoami" or "echo $USER" to find your current linux username
 > 
@@ -556,23 +998,25 @@ sudo chmod +x /etc/init.d/tornovnc
 ```
 sudo service tornovnc start
 ```
-## Set watefox as the default x www browser
+## Set Tor as the default x www browser
 ### first set waterfox as the default x www browser
 sudo update-alternatives \
-  --install /usr/bin/x-www-browser x-www-browser /usr/lib/waterfox/waterfox 100
+  --install ~/tor-browser/Browser/
+  start-tor-browser x-www-browser 
+  ~/tor-browser/Browser/start-tor-browser 100
 ### Then update the x www browser
 update-alternatives --config x-www-browser
 output:
-0*    /usr/lib/waterfox/waterfox 210  auto mode
-1     /usr/lib/waterfox/waterfox 210  manual mode
-2     /usr/lib/waterfox/         100  manual mode
+0*    ~/tor-browser/Browser/start-tor-browser  210  auto mode
+1     ~/tor-browser/Browser/start-tor-browser  210  manual mode
+2     ~/tor-browser/Browser/start-tor-browser          100  manual mode
 type 0 as the default and then press enter
 # Now your set setting the x www browser
-## Have waterfox service automatically start on login
+## Have tor service automatically start on login
 ### First create the file using cat here document
 ```
-sudo cat << EOF > /etc/profile.d/waterfox
-bash waterfoxservice.sh
+sudo cat << EOF > /etc/profile.d/tor
+sudo service tornovnc start 
 EOF
 ```
 ### then create the waterfox service bash file in order for it work
@@ -603,6 +1047,40 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/palemoonnovnc.sh | bash
 ```
+### Have Icecat automatically starts on boot
+### Step 1: Clone the repository
+```
+git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
+```
+### Step 2: Go to the cloned directory and edit pale moon service "USER" variable on line 13
+> [!TIP]
+> If you don't know current your linux username then do "whoami" or "echo $USER" to find your current linux username
+> 
+> You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
+#### Example of what USER variable looks like in the script
+The number "13" below is to show what is on line 13
+```
+13 export USER="linux"
+```
+### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
+```
+sudo mv -f ~/browsers-novnc/palemoonservice /etc/init.d/palemoonnovnc
+```
+### Step 4: Make the file executable
+```
+sudo chmod +x /etc/init.d/palemoonnovnc
+```
+### create the file in /etc/proflie.d
+```
+cat << EOF >~/palemoon
+#!/bin/bash
+sudo service palemoonnovnc start
+EOF
+```
+### move the file to /etc/profile.d
+```
+sudo mv -f ~/palemoon /etc/profile.d
+```
 ## What Pale Moon looks like
 ![Screenshot 2025-01-21 10.41.31 AM.png](<https://media-hosting.imagekit.io//d4ecf443d1ae450f/Screenshot%202025-01-21%2010.41.31%20AM.png?Expires=1832082120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=zGtdOO1NXevsvrqrGySJpGbf6FjpR3YeK4498zUe1QklD9BBfstzCyNzHbIB6-uNFaX6lkiRflgRtCcheY~w43zjvtxWfF5ajrXPS58XXskoZ0Cn0mek9ea-KMOLCkBHW-WPuorNy49nMlhwy53A3KalnPEZ60TaQ-zIRAFt1fYmncUZ5~9mbzq0c0kAJT0R8sUqcw~285U1DEXAfwJY80rCS9QGBPyglahwSzzyvchAb0qVxfNw6JD8X~p61JALouYqqDARO82v6-jW-BFUcCgSgI0jq-4ZR~n-reFjjHi2Qka4IHmclStHNeBaeK6oxJ152shkn7EvcP1XFYxUqw__>)
 # Pulse NoVNC
@@ -628,6 +1106,40 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/pulsenovnc.sh | bash
 ```
+### Have Icecat automatically starts on boot
+### Step 1: Clone the repository
+```
+git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
+```
+### Step 2: Go to the cloned directory and edit pulse service "USER" variable on line 13
+> [!TIP]
+> If you don't know current your linux username then do "whoami" or "echo $USER" to find your current linux username
+> 
+> You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
+#### Example of what USER variable looks like in the script
+The number "13" below is to show what is on line 13
+```
+13 export USER="linux"
+```
+### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
+```
+sudo mv -f ~/browsers-novnc/pulseservice /etc/init.d/pulsenovnc
+```
+### Step 4: Make the file executable
+```
+sudo chmod +x /etc/init.d/pulsenovnc
+```
+### create the file in /etc/proflie.d
+```
+cat << EOF >~/pulse
+#!/bin/bash
+sudo service pulsenovnc start
+EOF
+```
+### move the file to /etc/profile.d
+```
+sudo mv -f ~ /pulse /etc/profile.d
+```
 ## What Pulse Browser looks like
 ![pulse.png](<https://media-hosting.imagekit.io//16a84285d19b49a7/pulse.png?Expires=1832102775&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ezjTfiJVDcVL7I9U-rsitCo39rMKjJz653Y5sxaQnDVXsAT5akHIQeVWNOQSa668g-EX0rcaZD8KpJlZPXaYGdNIRv-oHX2rtN0yVyjFxx1kuP~hz~nu77BDWL2UrEqylmPjOBP9ldCZyy~hQdPALLYQAJO2J5vPNmPuWak4K18cXThBLWJq6fOz7Jqor5FesuMtZHu37EaqsFsH4P8K0tjYc-JCVzecS3RxBk0JhZpsDCzcVF-ZaADXzK728Re0Sh2JHhvqdjlWBY6CPVwbVFjpXw0l7~88eczQEiOFG93L4RK70zm1NRRSouwrcOy7YEkZe74rADSwDb9joOun2w__>)
 # Vivaldi NoVNC
@@ -649,6 +1161,40 @@ sudo apt install curl
 ### Run Vivaldi NoVNC using Curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/vivaldinovnc.sh | bash
+```
+### Have Icecat automatically starts on boot
+### Step 1: Clone the repository
+```
+git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
+```
+### Step 2: Go to the cloned directory and edit vivaldi service "USER" variable on line 13
+> [!TIP]
+> If you don't know current your linux username then do "whoami" or "echo $USER" to find your current linux username
+> 
+> You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
+#### Example of what USER variable looks like in the script
+The number "13" below is to show what is on line 13
+```
+13 export USER="linux"
+```
+### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
+```
+sudo mv -f ~/browsers-novnc/vivaldiservice /etc/init.d/vivaldinovnc
+```
+### Step 4: Make the file executable
+```
+sudo chmod +x /etc/init.d/vivaldinovnc
+```
+### create the file in /etc/proflie.d
+```
+cat << EOF >~/vivaldi
+#!/bin/bash
+sudo service vivaldinovnc start
+EOF
+```
+### move the file to /etc/profile.d
+```
+sudo mv -f ~/vivaldi /etc/profile.d
 ```
 ## What Vivaldi looks like
 ![vivaldi.png](<https://media-hosting.imagekit.io//2b0ec0f9c002468f/vivaldi.png?Expires=1831853692&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PJUB~C0F8KmrW5QwB6AI0e751GkQGMtSWajkyb1ajF4WRrjpqj~mzcjPzpFAE0kfj9xXvsuHkX9vcGkA6YtyroNVlEBubK1J9TJW3T4XunWqABZq-~~QyTOlR-rmK2dBiI3xa8gJnPRH6nYN3LAyzJbhy0fDcZgrw2n8rsW3CB810AvZQUHIt0x7I6LKzTug3vtZxMAfKuhgC1yGVaRkLA3y4-QwtSoIbVPKkkF4C~aEBp6CM~mEZwJcoK9Xt1c671jspDC-VHgz9QUKa7pGqB3VVstG5S52jv5uAsFJKzbUx3uaALJwvPw1wjFL2-tYaYj6euTSRZh7HjSThE~ZBw__>)
@@ -677,6 +1223,40 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/qutebrowsernovnc.sh | bash
 ```
+### Have Icecat automatically starts on boot
+### Step 1: Clone the repository
+```
+git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
+```
+### Step 2: Go to the cloned directory and edit qute service "USER" variable on line 13
+> [!TIP]
+> If you don't know current your linux username then do "whoami" or "echo $USER" to find your current linux username
+> 
+> You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
+#### Example of what USER variable looks like in the script
+The number "13" below is to show what is on line 13
+```
+13 export USER="linux"
+```
+### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
+```
+sudo mv -f ~/browsers-novnc/icecatservice /etc/init.d/qutenovnc
+```
+### Step 4: Make the file executable
+```
+sudo chmod +x /etc/init.d/qutenovnc
+```
+### create the file in /etc/proflie.d
+```
+cat << EOF >~/qutebrowser
+#!/bin/bash
+sudo service qutebrowsernovnc start
+EOF
+```
+### move the file to /etc/profile.d
+```
+sudo mv -f ~/qutebrowser /etc/profile.d
+```
 ## What Qutebrowsers looks like
 ![Screenshot 2025-01-21 12.33.32 PM.png](<https://media-hosting.imagekit.io//a25233fc22b04390/Screenshot%202025-01-21%2012.33.32%20PM.png?Expires=1832088829&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=WTq6~YtNSGM4cufa4pjCg2eMR5tFaFMNBHpTgohOmdkvZ4EUXTrv9lmmZa1Sf4rKyM9NuV2EjE-bnJrwOktLTaUzpPuOrwr3witpDFZexCmo71po28C91et4j3DOo3NZQEK0HwytaIbXx4IFBg-HPruakrZzn1ooTWfqWea-b~fPwcIB~wBerpznFVJLNzVTGydOMFMv7VXk-dh9SwhW1O8CnWuJ1M6G71gYasOeIdxBAjhSkPQCbdFgG3j4Ps5P7eDOWcdc7ASuZCRtlhoS0zqb1MjYPsxuZaxI8el8HMa~6p314YNpnH2D~p9puWUzcKHyO5ltdtL06VXJ3TNHRw__>)
 # Zen NoVNC
@@ -698,6 +1278,40 @@ sudo apt install curl
 ## Start Zen NoVNC
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/zenbrowsernovnc.sh | bash
+```
+### Have Icecat automatically starts on boot
+### Step 1: Clone the repository
+```
+git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
+```
+### Step 2: Go to the cloned directory and edit zen service "USER" variable on line 13
+> [!TIP]
+> If you don't know current your linux username then do "whoami" or "echo $USER" to find your current linux username
+> 
+> You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
+#### Example of what USER variable looks like in the script
+The number "13" below is to show what is on line 13
+```
+13 export USER="linux"
+```
+### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
+```
+sudo mv -f ~/browsers-novnc/zenservice /etc/init.d/zennovnc
+```
+### Step 4: Make the file executable
+```
+sudo chmod +x /etc/init.d/zennovnc
+```
+### create the file in /etc/proflie.d
+```
+cat << EOF >~/zen
+#!/bin/bash
+sudo service zennovnc start
+EOF
+```
+### move the file to /etc/profile.d
+```
+sudo mv -f ~/zen /etc/profile.d
 ```
 # What Zen Browser looks like
 ![Screenshot 2025-01-17 12.29.18 PM.png](<https://media-hosting.imagekit.io//67a2fb69d27e455f/Screenshot%202025-01-17%2012.29.18%20PM.png?Expires=1831742984&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=nSkvMo~KvfBTHo16JKUVLhDgSj-qK2~HOm-TX-jTfL9buABdxAgTukMbWKB4HwBjGFGe3vQZbfdTAFUMYEl--~C4mv9RDa1FlkOVvlxCcaaelVPRbc~mR7wdgVDqgm9TFLfBdc0ldLLAh1l-tjwAFDOSrelAuNm4u3bpeq0TGI5drM800rBBXK0rnnNkopdTxDQxGkZ9oM9RmWw7XuDKHYSnG97GOezx4chYRcPPL809WioNIeL8EtmGFodICInT7d~~~x6e7Oi-ViEDls-ETSlZ~vYbgMVbb4ijl0itXhtXRQ5Kvfp8Lno7JDe7Jr3k0SBYB9gszS~Rlcju0tkaCQ__>)
