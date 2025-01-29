@@ -431,6 +431,7 @@ cat << EOF >~/waterfox
 sudo service waterfoxnovnc start
 EOF
 ```
+### m
 sudo service waterfoxnovnc start
 ```
 ## What Waterfox looks like
