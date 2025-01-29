@@ -8,5 +8,6 @@ wget https://mirrors.iu13.net/blender/release/Blender4.3/blender-4.3.2-linux-x64
 sudo mv -f ~/blender-4.3.2-linux-x64/blender.desktop /usr/share/applications
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
+ln -s ~/blender-4.3.2-linux-x64/blender /usr/bin/blender
 export DISPLAY=:0
-~/blender-4.3.2-linux-x64/blender
+blender
