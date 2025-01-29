@@ -1,0 +1,2 @@
+#!/bin/bash
+wget https://download.netsurf-browser.org/netsurf/releases/source-full/netsurf-all-3.11.tar.gz && tar -xvf netsurf-all-3.11.tar.gz &7 sudo rm -rf netsurf-all-3.11.tar.gz && sudo rm -rf wget-log && cd netsurf-all-3.11 && make && sudo make install
