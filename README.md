@@ -998,20 +998,6 @@ sudo chmod +x /etc/init.d/tornovnc
 ```
 sudo service tornovnc start
 ```
-## Set Tor as the default x www browser
-### first set waterfox as the default x www browser
-sudo update-alternatives \
-  --install ~/tor-browser/Browser/
-  start-tor-browser x-www-browser 
-  ~/tor-browser/Browser/start-tor-browser 100
-### Then update the x www browser
-update-alternatives --config x-www-browser
-output:
-0*    ~/tor-browser/Browser/start-tor-browser  210  auto mode
-1     ~/tor-browser/Browser/start-tor-browser  210  manual mode
-2     ~/tor-browser/Browser/start-tor-browser          100  manual mode
-type 0 as the default and then press enter
-# Now your set setting the x www browser
 ## Have tor service automatically start on login
 ### First create the file using cat here document
 ```
