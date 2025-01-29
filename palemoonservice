@@ -12,7 +12,7 @@
 PATH="$PATH:/usr/X11R6/bin/" 
 # The Username:Group that will run VNC
 
-export USER=$(whoami)
+export USER="linux username here"
 # Set the Display variable for firefox
 
 #${RUNAS}
