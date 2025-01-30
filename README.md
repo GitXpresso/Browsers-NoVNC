@@ -176,7 +176,7 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/bravenovnc.sh | bash
 ```
-### Have Icecat automatically starts on boot
+### Have Brave automatically starts on boot
 ### Step 1: Clone the repository
 ```
 git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
@@ -343,6 +343,40 @@ sudo apt install curl
 ### Run Librewolf NoVNC using Curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/librewolfnovnc.sh | bash
+```
+### Have librewolf automatically starts on boot
+### Step 1: Clone the repository
+```
+git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
+```
+### Step 2: Go to the cloned directory and edit librewolf service "USER" variable on line 13
+> [!TIP]
+> If you don't know current your linux username then do "whoami" or "echo $USER" to find your current linux username
+> 
+> You can edit the file using vim after finishing editing the file do `:wq` and press `ENTER` to save and exit
+#### Example of what USER variable looks like in the script
+The number "13" below is to show what is on line 13
+```
+13 export USER="linux"
+```
+### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
+```
+sudo mv -f ~/browsers-novnc/librewolfservice /etc/init.d/librewolfnovnc
+```
+### Step 4: Make the file executable
+```
+sudo chmod +x /etc/init.d/librewolfnovnc
+```
+### create the file in /etc/proflie.d
+```
+cat << EOF >~/librewolf
+#!/bin/bash
+sudo service librewolfnovnc start
+EOF
+```
+### move the file to /etc/profile.d
+```
+sudo mv -f ~/librewolf /etc/profile.d
 ```
 ## What Librewolf looks like
 ![](screenshots/librewolf.png)
