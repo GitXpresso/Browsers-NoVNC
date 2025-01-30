@@ -1129,17 +1129,17 @@ sudo service tornovnc start
 ## Have tor service automatically start on login
 ### First create the file using cat here document
 ```
-sudo cat << EOF > /etc/profile.d/tor
+sudo cat << EOF > ~/tor
 sudo service tornovnc start 
 EOF
 ```
 ### move the file to /etc/profile.d
 ```
-sudo mv -f ~/palemoon /etc/profile.d
+sudo mv -f ~/tor /etc/profile.d
 ```
 ### make the file executable
 ```
-sudo chmod +x /etc/profile.d/firefox
+sudo chmod +x /etc/profile.d/tor
 ```
 ## What Tor looks like
 ![](screenshots/tor.png)
