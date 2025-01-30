@@ -120,7 +120,7 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/chromenovnc.sh | bash
 ```
-### Have Icecat automatically starts on boot
+### Have Chrome automatically starts on boot
 ### Step 1: Clone the repository
 ```
 git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
@@ -156,7 +156,7 @@ sudo mv -f ~/chrome /etc/profile.d
 ```
 ### make the file executable
 ```
-sudo chmod +X /etc/profile.d/chrome
+sudo chmod +x /etc/profile.d/chrome
 ```
 ## What Chrome looks like
 ![](screenshots/chrome.png)
@@ -216,7 +216,7 @@ sudo mv -f ~/brave /etc/profile.d
 ```
 ### make the file executable
 ```
-sudo chmod +X /etc/profile.d/brave
+sudo chmod +x /etc/profile.d/brave
 ```
 ## What Brave looks like
 ![](screenshots/brave.png)
@@ -240,7 +240,7 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/chromiumnovnc.sh | bash
 ```
-### Have Icecat automatically starts on boot
+### Have Chromium automatically starts on boot
 ### Step 1: Clone the repository
 ```
 git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
@@ -261,7 +261,7 @@ sudo mv -f ~/browsers-novnc/chromiumservice /etc/init.d/chromiumnovnc
 ```
 ### Step 4: Make the file executable
 ```
-sudo chmod +x /etc/init.d/icecatnovnc
+sudo chmod +x /etc/init.d/chromiumnovnc
 ```
 ### create the file in /etc/proflie.d
 ```
@@ -300,7 +300,7 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/thoriumnovnc.sh | bash
 ```
-### Have Icecat automatically starts on boot
+### Have Thorium automatically starts on boot
 ### Step 1: Clone the repository
 ```
 git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
@@ -539,7 +539,7 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/falkonnovnc.sh | bash
 ```
-### Have Icecat automatically starts on boot
+### Have Falkon automatically starts on boot
 ### Step 1: Clone the repository
 ```
 git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
@@ -599,7 +599,7 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/operanovnc.sh | bash
 ```
-### Have Icecat automatically starts on boot
+### Have Opera automatically starts on boot
 ### Step 1: Clone the repository
 ```
 git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
@@ -663,7 +663,7 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/floorpnovnc.sh | bash
 ```
-### Have Icecat automatically starts on boot
+### Have Floorp automatically starts on boot
 ### Step 1: Clone the repository
 ```
 git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
@@ -729,7 +729,7 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/firefoxnovnc.sh | bash
 ```
-### Have Icecat automatically starts on boot
+### Have Firefox automatically starts on boot
 ### Step 1: Clone the repository
 ```
 git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
@@ -793,7 +793,7 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/seamonkeynovnc.sh | bash
 ```
-### Have Icecat automatically starts on boot
+### Have Seamonkey automatically starts on boot
 ### Step 1: Clone the repository
 ```
 git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
@@ -946,6 +946,10 @@ EOF
 ```
 sudo mv -f ~/midori /etc/profile.d
 ```
+### make the file executable
+```
+sudo chmod +x /etc/profile.d/firefox
+```
 ### What Midori looks like
 ![](screenshots/midori.png)
 
@@ -1006,6 +1010,10 @@ EOF
 ```
 sudo mv -f ~/icecat /etc/profile.d
 ```
+### make the file executable
+```
+sudo chmod +x /etc/profile.d/firefox
+```
 ## What Icecat looks like
 ![](screenshots/icecat.png)
 # Mullvad NoVNC
@@ -1061,6 +1069,10 @@ EOF
 ### move the file to /etc/profile.d
 ```
 sudo mv -f ~/mullvad /etc/profile.d
+```
+### make the file executable
+```
+sudo chmod +x /etc/profile.d/firefox
 ```
 ## What Mullvad looks like
 ![screenshots/mullvad.png]
@@ -1121,8 +1133,14 @@ sudo cat << EOF > /etc/profile.d/tor
 sudo service tornovnc start 
 EOF
 ```
-### then create the waterfox service bash file in order for it work
-
+### move the file to /etc/profile.d
+```
+sudo mv -f ~/palemoon /etc/profile.d
+```
+### make the file executable
+```
+sudo chmod +x /etc/profile.d/firefox
+```
 ## What Tor looks like
 ![](screenshots/tor.png)
 # Pale Moon NoVNC
@@ -1149,7 +1167,7 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/palemoonnovnc.sh | bash
 ```
-### Have Icecat automatically starts on boot
+### Have Pale Moon automatically starts on boot
 ### Step 1: Clone the repository
 ```
 git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
@@ -1183,6 +1201,10 @@ EOF
 ```
 sudo mv -f ~/palemoon /etc/profile.d
 ```
+### make the file executable
+```
+sudo chmod +x /etc/profile.d/firefox
+```
 ## What Pale Moon looks like
 ![](screenshots/palemoon.png)
 # Pulse NoVNC
@@ -1208,7 +1230,7 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/pulsenovnc.sh | bash
 ```
-### Have Icecat automatically starts on boot
+### Have Pulse automatically starts on boot
 ### Step 1: Clone the repository
 ```
 git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
@@ -1241,6 +1263,10 @@ EOF
 ### move the file to /etc/profile.d
 ```
 sudo mv -f ~ /pulse /etc/profile.d
+```
+### make the file executable
+```
+sudo chmod +x /etc/profile.d/firefox
 ```
 ## What Pulse Browser looks like
 ![](screenshot/pulse.png)
@@ -1298,6 +1324,10 @@ EOF
 ```
 sudo mv -f ~/vivaldi /etc/profile.d
 ```
+### make the file executable
+```
+sudo chmod +x /etc/profile.d/firefox
+```
 ## What Vivaldi looks like
 ![](screenshots/vivaldi.png)
 [Back to the top](#Table-of-Contents)
@@ -1325,7 +1355,7 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/qutebrowsernovnc.sh | bash
 ```
-### Have Icecat automatically starts on boot
+### Have Qutebrowser automatically starts on boot
 ### Step 1: Clone the repository
 ```
 git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
@@ -1342,7 +1372,7 @@ The number "13" below is to show what is on line 13
 ```
 ### Step 3: After setting the user variable in Step 2 run the command below in your bash terminal
 ```
-sudo mv -f ~/browsers-novnc/icecatservice /etc/init.d/qutenovnc
+sudo mv -f ~/browsers-novnc/qutebrowserservice /etc/init.d/qutenovnc
 ```
 ### Step 4: Make the file executable
 ```
@@ -1358,6 +1388,10 @@ EOF
 ### move the file to /etc/profile.d
 ```
 sudo mv -f ~/qutebrowser /etc/profile.d
+```
+### make the file executable
+```
+sudo chmod +x /etc/profile.d/firefox
 ```
 ## What Qutebrowsers looks like
 ![](screenshots/qutebrowser.png)
@@ -1381,7 +1415,7 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/zenbrowsernovnc.sh | bash
 ```
-### Have Icecat automatically starts on boot
+### Have Zen automatically starts on boot
 ### Step 1: Clone the repository
 ```
 git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
@@ -1414,6 +1448,10 @@ EOF
 ### move the file to /etc/profile.d
 ```
 sudo mv -f ~/zen /etc/profile.d
+```
+### make the file executable
+```
+sudo chmod +x /etc/profile.d/firefox
 ```
 # What Zen Browser looks like
 ![](screenshots/zen.png)
