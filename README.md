@@ -345,7 +345,7 @@ sudo apt install curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/librewolfnovnc.sh | bash
 ```
 ## What Librewolf looks like
-![librewolf.png](<https://media-hosting.imagekit.io//3ade5c80c0e14121/librewolf.png?Expires=1831853978&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=anK-bXP9pP7p1jcpXZ~7yXNfArP-W7OalWcKHVCWZ7WG7dXaoJyu0jGAVhLRrh1N56aXV6TMtAAbVlOKACJd7qi6d0x3bkKNBARikw1qwNEKDttcSxWWcmwVVJRQ5XN89neGibVItk2FSnMulx92G3H~PukAzLIbD5j1Seti4CJmAcYbrIliNVZ3VHaoVu4KKSANPyOiIvn8Diy9dxj-Fwr0PscdMvzWQzOP4iVjv3znVUVKixbuPjsOuHTnEX-Qpi9Ia-MHaGMZmw-F8CDswKBF8ubRLE0KehVtSarENSCO~jjF9BPFbO7jOBzfMjavg1wJMPzbnviXs77oD5TyOw__>)
+![](screenshots/librewolf.png)
 # Microsoft Edge NoVNC
 <br/>
 <div align="center">
@@ -478,7 +478,7 @@ EOF
 sudo mv -f ~/falkon /etc/profile.d
 ```
 ## What Falkon looks like
-![falkon.png](<https://media-hosting.imagekit.io//032559a8ffc848cf/falkon.png?Expires=1831928501&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=C3dpIdsOwRWSWbODi4DdeGNaAm-zA8RGxrymqNpEFPUr~2pL4mtCDOeGryJG24EApXQ0YnGPu2zkgSBARvUW5qWyGTs3DLtTyIlsQ5FjMxQdN8OJMpfalZWiihzYnSMwoVUxj85Ylo8ps8fYEvhIzSTq1dU~Mfn~U9~Rg8xAWD0LYbqwpr0~az4b5ZzSb9d0Ex4QXkjH-RGJ4UdAxe~icC3Dlrii0-a799mzeBxO-9-VF1RKSaM29PiHx1SWborhh7lU0GnivmBwxouC09Mk8u4ToJYgbdATdRwrrW6xdfLD0fiUpdDK~gUEUyDCXj9X35ey9AIEQE-G-GUAvKu7dA__>)
+![](screenshots/falkon.png)
 # Opera NoVNC
 <br/>
 <div align="center">
@@ -594,7 +594,7 @@ EOF
 sudo mv -f ~/floorp /etc/profile.d
 ```
 ## What Floorp looks like
-![floorp.png](<https://media-hosting.imagekit.io//2d35d6dd0ae54b25/floorp.png?Expires=1831905312&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=A1KJ8kSm63GbVr01gcv53oe4MDe1ky6fS~9D5QTpx0TAWnR8b-zV1JNXrpHGy7h9cUZffmk2SMjHuu3kTxfMEBj6auHmFaxT1M2t0BTKwysMnA12BReO~-3c80FH4NNBOsDDx80afOEKzAGi7WE0ppIsE7NGP34Y2KpGDMNZD9Mdop5~52B1WYCcO8msxGzkITUhFGE-2YfNei6D1W17T0CVHJGJGA-d7BRiuZPMr~LwBUvDKP8v33igxS7S3cFVQ2oU0wHVZ0NSkfMODiJ-y0makTyUF1wmMvdtRKsnUR3kxvicVtPp217U9~gault5QrZ6z1bovjKNQnWbP~nHcA__>)
+![](screenshots/floorp.png)
 
 # Firefox NoVNC
 
@@ -716,7 +716,7 @@ EOF
 sudo mv -f ~/seamonkey /etc/profile.d
 ```
 ## What Seamonkey looks like
-![seamonkey.png](<https://media-hosting.imagekit.io//f785835a7cf8444d/seamonkey.png?Expires=1831923822&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=arvN69w8dqKRIrZdIyJe7rwTLm7M5N0qnGIKJoOeHeULjwjbSYacmckgB1X3qjRezfcbiAEfORlfQT551yrAgxznCCM8KQfCGMLrQtoukv3CPz9vwZA44mRkMVauSoAQBPXAoxNQZ17I38rFSHyCBw7IViDCs83-K3p-XvuVa8sOb-5TJeZ-mrZUN9ZdYZSd-JZJLEucktK1-lP7jfZkBJymBHb6mrRYCEUVUVPcIXVP91kf4xVmunqV83Rerwn~-NHRafVsp2~7gn5psQ3DcXndJ04WubQv7rnVtUjRYY1GCmkD~JsjeBaDOBIc5TXYYeFolHXZLgF4MHsi0i6a0A__>)
+![](screenshots/seamonkey.png)
 
 # Waterfox NoVNC
 
@@ -891,7 +891,7 @@ EOF
 sudo mv -f ~/icecat /etc/profile.d
 ```
 ## What Icecat looks like
-![icecat.png](<https://media-hosting.imagekit.io//e31e532ff7014497/icecat.png?Expires=1831908720&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=zOAh-yvtqMWn-jqVcCla66chjiBONfjXuvwVjQOM5qxy92HKE2FY~2jwk7UY7AXdLrrpxjfK9Niu-PY0xWKSislPSUxPbQEY2O0nmKKjdl8T1VvIljm6TVk4IO-my2oiw1sAUbPTWpjiwQSvzV7oL6nDhBVGkKCjTR8xpAVvVISsnGjhs~7rC3cAPjDPMf8fHgxgjPBdfp3hwTi6R8hJ1vy6t50Jj5yU74Xjf4uCxJhbe2p4a21U0z1YsRYa8oyJH9brBNY5smdq5stLlN7LjeM39WdlBJvrVYFkjR5YNpUaFmk6ZZgWNO9iCwmF67P1jMGUx2ryxptT~-JabtdMOg__>)
+![](screenshots/icecat.png)
 # Mullvad NoVNC
 <br/>
 <div align="center">
@@ -947,7 +947,7 @@ EOF
 sudo mv -f ~/mullvad /etc/profile.d
 ```
 ## What Mullvad looks like
-![mullvad.png](<https://media-hosting.imagekit.io//f4531350ebd246b9/mullvad.png?Expires=1831910992&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=hHikCyhKJxM-AzXSTTdLSq2jTj0fUfHXxgs~S97ly-7lf36yHOKIn4JZ5KB5PjdYQoMkTtkVYG2c36wjueM73c0EgnBXBs500K-cvuzKhLAsjZyGKPhjUGRyi9cxWua~QpCozRolIAYB-QztSz0G~dkQ9-ZHL-0LR-JXlKntR8Hy-WLnj0TXM4t32150kYzWJ5lMeUHpC9DEH6geQkWR6FznOSNv8kw0V1wNMXhhU8xAy~k~0vlCTNYKqOuqxDKKqqf0ipKpWv55pAOyRSF3rJIPjMnORPwXjNR7tEo9ncHBqNzGwEND9yjB3mzM9eBAKD4alxedtYLyADOsAcX6NA__>)
+![screenshots/mullvad.png]
 # Tor NoVNC
 <br/>
 <div align="center">
@@ -1008,7 +1008,7 @@ EOF
 ### then create the waterfox service bash file in order for it work
 
 ## What Tor looks like
-![2025-01-18_23-55.png](<https://media-hosting.imagekit.io//206f87de1060478c/2025-01-18_23-55.png?Expires=1831853600&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=pfMjz~U6WCGc90YOtLa~dJXAQOKBajb0p9eILcBua2jIvkJXbpKWgHLsSLMUTiXAVCI9rZQgLXfjwlcVdIhk-OguanrHCcKg2eejPQSLAZV7A4cLJRliuhn7IKKVqAZaDEfBVuAAffVTPAshLXhYq-GAI-0z4OiL-zpbEUQXoiBSwjEj~1RoHIcPwY4sLPI5K89Gkm3jHtmhUWMaIKAI2s7um5h~x4qKOA58Ip~9KosMV7pnCO~s9GRBWWXB2lKX0D7TwLRDKHkEY4utBsEY9fmzW1IxgrtUHisYDmwW2qvMlDqarpjNMmuyIdX2buwnIaEMlWwr0obcqfJskKY5EQ__>)
+![](screenshots/tor.png)
 # Pale Moon NoVNC
 
 <br/>
@@ -1127,7 +1127,7 @@ EOF
 sudo mv -f ~ /pulse /etc/profile.d
 ```
 ## What Pulse Browser looks like
-![pulse.png](<https://media-hosting.imagekit.io//16a84285d19b49a7/pulse.png?Expires=1832102775&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ezjTfiJVDcVL7I9U-rsitCo39rMKjJz653Y5sxaQnDVXsAT5akHIQeVWNOQSa668g-EX0rcaZD8KpJlZPXaYGdNIRv-oHX2rtN0yVyjFxx1kuP~hz~nu77BDWL2UrEqylmPjOBP9ldCZyy~hQdPALLYQAJO2J5vPNmPuWak4K18cXThBLWJq6fOz7Jqor5FesuMtZHu37EaqsFsH4P8K0tjYc-JCVzecS3RxBk0JhZpsDCzcVF-ZaADXzK728Re0Sh2JHhvqdjlWBY6CPVwbVFjpXw0l7~88eczQEiOFG93L4RK70zm1NRRSouwrcOy7YEkZe74rADSwDb9joOun2w__>)
+![](screenshot/pulse.png)
 # Vivaldi NoVNC
 <br/>
 <div align="center">
@@ -1183,7 +1183,7 @@ EOF
 sudo mv -f ~/vivaldi /etc/profile.d
 ```
 ## What Vivaldi looks like
-![vivaldi.png](<https://media-hosting.imagekit.io//2b0ec0f9c002468f/vivaldi.png?Expires=1831853692&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PJUB~C0F8KmrW5QwB6AI0e751GkQGMtSWajkyb1ajF4WRrjpqj~mzcjPzpFAE0kfj9xXvsuHkX9vcGkA6YtyroNVlEBubK1J9TJW3T4XunWqABZq-~~QyTOlR-rmK2dBiI3xa8gJnPRH6nYN3LAyzJbhy0fDcZgrw2n8rsW3CB810AvZQUHIt0x7I6LKzTug3vtZxMAfKuhgC1yGVaRkLA3y4-QwtSoIbVPKkkF4C~aEBp6CM~mEZwJcoK9Xt1c671jspDC-VHgz9QUKa7pGqB3VVstG5S52jv5uAsFJKzbUx3uaALJwvPw1wjFL2-tYaYj6euTSRZh7HjSThE~ZBw__>)
+![](screenshots/vivaldi.png)
 [Back to the top](#Table-of-Contents)
 # Qutebrowser NoVNC
 
