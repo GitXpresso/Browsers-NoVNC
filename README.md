@@ -154,6 +154,10 @@ EOF
 ```
 sudo mv -f ~/chrome /etc/profile.d
 ```
+### make the file executable
+```
+sudo chmod +X /etc/profile.d/chrome
+```
 ## What Chrome looks like
 ![](screenshots/chrome.png)
 # Brave NoVNC
@@ -209,6 +213,10 @@ EOF
 ### move the file to /etc/profile.d
 ```
 sudo mv -f ~/brave /etc/profile.d
+```
+### make the file executable
+```
+sudo chmod +X /etc/profile.d/brave
 ```
 ## What Brave looks like
 ![](screenshots/brave.png)
@@ -266,6 +274,10 @@ EOF
 ```
 sudo mv -f ~/chromium /etc/profile.d
 ```
+### make the file executable
+```
+sudo chmod +X /etc/profile.d/chromium
+```
 ## What Chromium looks like
 ![](screenshots/chromium.png)
 # Thorium NoVNC
@@ -321,6 +333,10 @@ EOF
 ### move the file to /etc/profile.d
 ```
 sudo mv -f ~/thorium /etc/profile.d
+```
+### make the file executable
+```
+sudo chmod +X /etc/profile.d/thorium
 ```
 ## What Thorium looks like
 ![](screenshots/thorium.png)
@@ -378,6 +394,10 @@ EOF
 ```
 sudo mv -f ~/librewolf /etc/profile.d
 ```
+### make the file executable
+```
+sudo chmod +X /etc/profile.d/librewolf
+```
 ## What Librewolf looks like
 ![](screenshots/librewolf.png)
 # Microsoft Edge NoVNC
@@ -434,6 +454,10 @@ EOF
 ```
 sudo mv -f ~/edge /etc/profile.d
 ```
+### make the file executable
+```
+sudo chmod +X /etc/profile.d/edge
+```
 ## What Microsoft Edge looks like
 ![](screenshots/edge.png)
 # Basilisk NoVNC
@@ -488,6 +512,10 @@ EOF
 ### move the file to /etc/profile.d
 ```
 sudo mv -f ~/basilisk /etc/profile.d
+```
+### make the file executable
+```
+sudo chmod +X /etc/profile.d/basilisk
 ```
 ## What Basilisk looks like
 ![](screenshots/basilisk.png)
@@ -545,6 +573,10 @@ EOF
 ```
 sudo mv -f ~/falkon /etc/profile.d
 ```
+### make the file executable
+```
+sudo chmod +X /etc/profile.d/falkon
+```
 ## What Falkon looks like
 ![](screenshots/falkon.png)
 # Opera NoVNC
@@ -600,6 +632,10 @@ EOF
 ### move the file to /etc/profile.d
 ```
 sudo mv -f ~/opera /etc/profile.d
+```
+### make the file executable
+```
+sudo chmod +X /etc/profile.d/opera
 ```
 ## What Opera looks like
 ![](screenshots/opera.png)
@@ -660,6 +696,10 @@ EOF
 ### move the file to /etc/profile.d
 ```
 sudo mv -f ~/floorp /etc/profile.d
+```
+### make the file executable
+```
+sudo chmod +X /etc/profile.d/floorp
 ```
 ## What Floorp looks like
 ![](screenshots/floorp.png)
@@ -723,6 +763,10 @@ EOF
 ```
 sudo mv -f ~/firefox /etc/profile.d
 ```
+### make the file executable
+```
+sudo chmod +X /etc/profile.d/firefox
+```
 ## What Firefox looks like
 ![](screenshots/firefox.png)
 # Seamonkey NoVNC
@@ -782,6 +826,10 @@ EOF
 ### move the file to /etc/profile.d
 ```
 sudo mv -f ~/seamonkey /etc/profile.d
+```
+### make the file executable
+```
+sudo chmod +X /etc/profile.d/seamonkey
 ```
 ## What Seamonkey looks like
 ![](screenshots/seamonkey.png)
