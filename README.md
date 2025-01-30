@@ -336,7 +336,7 @@ sudo mv -f ~/thorium /etc/profile.d
 ```
 ### make the file executable
 ```
-sudo chmod +X /etc/profile.d/thorium
+sudo chmod +x /etc/profile.d/thorium
 ```
 ## What Thorium looks like
 ![](screenshots/thorium.png)
@@ -396,7 +396,7 @@ sudo mv -f ~/librewolf /etc/profile.d
 ```
 ### make the file executable
 ```
-sudo chmod +X /etc/profile.d/librewolf
+sudo chmod +x /etc/profile.d/librewolf
 ```
 ## What Librewolf looks like
 ![](screenshots/librewolf.png)
@@ -456,7 +456,7 @@ sudo mv -f ~/edge /etc/profile.d
 ```
 ### make the file executable
 ```
-sudo chmod +X /etc/profile.d/edge
+sudo chmod +x /etc/profile.d/edge
 ```
 ## What Microsoft Edge looks like
 ![](screenshots/edge.png)
@@ -515,7 +515,7 @@ sudo mv -f ~/basilisk /etc/profile.d
 ```
 ### make the file executable
 ```
-sudo chmod +X /etc/profile.d/basilisk
+sudo chmod +x /etc/profile.d/basilisk
 ```
 ## What Basilisk looks like
 ![](screenshots/basilisk.png)
@@ -575,7 +575,7 @@ sudo mv -f ~/falkon /etc/profile.d
 ```
 ### make the file executable
 ```
-sudo chmod +X /etc/profile.d/falkon
+sudo chmod +x /etc/profile.d/falkon
 ```
 ## What Falkon looks like
 ![](screenshots/falkon.png)
@@ -635,7 +635,7 @@ sudo mv -f ~/opera /etc/profile.d
 ```
 ### make the file executable
 ```
-sudo chmod +X /etc/profile.d/opera
+sudo chmod +x /etc/profile.d/opera
 ```
 ## What Opera looks like
 ![](screenshots/opera.png)
@@ -765,7 +765,7 @@ sudo mv -f ~/firefox /etc/profile.d
 ```
 ### make the file executable
 ```
-sudo chmod +X /etc/profile.d/firefox
+sudo chmod +x /etc/profile.d/firefox
 ```
 ## What Firefox looks like
 ![](screenshots/firefox.png)
@@ -829,7 +829,7 @@ sudo mv -f ~/seamonkey /etc/profile.d
 ```
 ### make the file executable
 ```
-sudo chmod +X /etc/profile.d/seamonkey
+sudo chmod +x /etc/profile.d/seamonkey
 ```
 ## What Seamonkey looks like
 ![](screenshots/seamonkey.png)
