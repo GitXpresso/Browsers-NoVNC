@@ -155,7 +155,7 @@ EOF
 sudo mv -f ~/chrome /etc/profile.d
 ```
 ## What Chrome looks like
-![Google Chrome](<https://media-hosting.imagekit.io//b17cc3fbdfae406e/Screenshot%202025-01-17%2011.56.23%20AM.png?Expires=1831741275&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=lAbs2zDf39IWAKpSYw9vIQkF7RlXwJ83A9gYaX0clmEehdTLz1MdZgYcIkrlwFBK6BvBvXCw6hrYz-7YcYdedOGgd2LaWgB-1DgWesQ16LTiv7-xijYVeWe2PvSjCjvhHsEWs-H00lJPGcyN-Jwpv5lVHCr9dmCgFIMLUGxfUAlHUh~hZCFQB4pkCCA7YWlLsNXg3skE8zba2ypK2wy8Oz~yuxf9-DUcp0ae3Vc3zWePcLd6RjZn1FcbyU~8DLlEsbg3rOJj1orUN7Pv-CuOHcEdf-69FxTHLcWTej~yyZEJrxY6W1p8wmgXFcxvRauILJ109s-1eVD1Dm9r6~R4sg__>)
+![](screenshots/chrome.png)
 # Brave NoVNC
 
 <div align="center">
@@ -211,7 +211,7 @@ EOF
 sudo mv -f ~/brave /etc/profile.d
 ```
 ## What Brave looks like
-![2025-01-25_16-59.png](<https://media-hosting.imagekit.io//3821d4c140e34a42/2025-01-25_16-59.png?Expires=1832432475&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=IE6KbDF8x0YlLC2cX57SygoQOBU3vnv17vzcenvTyOF-FsSE8VL1~Mr2f9UeXPEn8TUvMqgI-YMruLhah30~NzRKdzfVHNUknxhIhdolRaNBlySppfaRlbkHn8sKx8AUBPTo4YtFx6X5Tr5-zr~lbfJ6O4~N3hR6M7amzau1AQFSlfFv~qEBpebuq50Mnq1NCrjoeieFuHpU5X0e43IiXJ5Mnm5iClPdUPAAau5Nm9eHtR5GlKeAyoGs7LyaiqFLVhFvefPjX2z13lumB2D4QYUW8bqZNl4j7K3XAJtCjK1Rpbe4nk2hAgRgkyJgCJ8Zq6-7g5~XnSJLaka9XUtKPg__>)
+![](screenshots/brave.png)
 # Chromium NoVNC
 <br/>
 <div align="center">
@@ -267,7 +267,7 @@ EOF
 sudo mv -f ~/chromium /etc/profile.d
 ```
 ## What Chromium looks like
-![2025-01-25_18-31.png](<https://media-hosting.imagekit.io//27ad579f05064d91/2025-01-25_18-31.png?Expires=1832437916&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ZSReX3w235F1uSYLS2jQ5-Z9fBuy~Cxzf-4WlEqZNw9LhKilVn0HZOsbSg1LyNri5pjuU58OOFuh2Vtc~fzse0d2AofoJdtLCjP9nHxOSez6bfrHXGT5Dn3eP2tMgVZ5o6afBrGG0mHLfPF-dpkQYoYTWJ~C0VsQmGiq1nRYUBlVRXMbQ7FXInYBkhiLfci5d4xlifAotkDzySn9EwiZNwx~iLnngN9RM7j5lP-BqPnHHV22Mo05ZrWS-gL4msXypXZJsa159dLa8Ng0dR6J86ollYo3uCVCUawJ3kEI~JL1x6~eNQEwf99HFlrwPgyQf-RNcUiRu0yX9PxMlSbBnQ__>)
+![](screenshots/chromium.png)
 # Thorium NoVNC
 <br/>
 <div align="center">
@@ -323,7 +323,7 @@ EOF
 sudo mv -f ~/thorium /etc/profile.d
 ```
 ## What Thorium looks like
-![2025-01-25_18-42.png](<https://media-hosting.imagekit.io//0708c6a5fc5f478b/2025-01-25_18-42.png?Expires=1832439160&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=yHupthlnobDqTD4k7bSYKV7cguhuBlWLF61FrX92rE2JIWPQO9HJ4w~ChfWgRDV6bDvdY65WT~3DOB4dpDPzxa32g3WKTzK3~QshpBi22vq0YyGzwF5RlYWQk2xUW9KuiZqPNRgXaprF7sRqY4MjoCvAXih3Vzm21ar9rsmSSP1rehht255KboR9PA71KurdlzNPO9UHRexcdW9hoxzz8teji9eBEBzZg1Hnlonj~aSSTncbO7vdX-2NmyT7V8mxD8xu-cJQEb0aBlWe3PB8I2LnvWZuitNZnXiio3hdGxeSLh0AFQp1OKVs1cYSIkf9K8bUozNIMh0RPtbj3eguVw__>)
+![](screenshots/thorium.png)
 # Librewolf NoVNC
 <br/>
 <div align="center">
@@ -367,7 +367,7 @@ sudo apt install curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/edgenovnc.sh | bash
 ```
 ## What Microsoft Edge looks like
-![2025-01-25_17-49.png](<https://media-hosting.imagekit.io//e503876f2053497d/2025-01-25_17-49.png?Expires=1832435393&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=dJ5b95-7C9VHwQOGGdjEFNsi4MQDDCZG~OGqnxN5xLhNcz2jcfefZQ80krcpt~RsRTqFcMGTlEbPdGu9MGtwL0VvTLhhQTfpqpVf5C3~PSozsMc7qsACE~mxhdGXDqJ~NALASYWdOMtelTsJy4vJzc0jEGAZz-74C2s-~TV9J-4s5aYg957PbasOyI36-GhRHhupwo5C4Qk~vkcr5pmqvW5atKX8I94xVGfP-gUOb5eZIFLbN8Mol74TS4Cb9wwRBxz7Zcdb1nv65A~6Bnlt2BEY9Y4DijBi6mNGX6d7ku9O7ien-3aHLvWh7U8JeLBLdl0sqm9vh0o0Z5hae~bolw__>)
+![](screenshots/edge.png)
 # Librewolf NoVNC
 <br/>
 <div align="center">
@@ -422,7 +422,7 @@ EOF
 sudo mv -f ~/basilisk /etc/profile.d
 ```
 ## What Basilisk looks like
-![Screenshot 2025-01-29 11.20.56 AM.png](<https://media-hosting.imagekit.io//70fb048298a549dc/Screenshot%202025-01-29%2011.20.56%20AM.png?Expires=1832776089&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=UDuHDvzQTMC7Is-7NjraDB4pgeknmLzLaGiWQZ7kafHHuNR3S6n7XHADjdmtKeeyzXIJ5BBkqVZX959oMcPpzWhxhbTywgI9pLTAZ7JABKEMvrau4ytYcgVUx51MoVFAO1vIVl2~jYhxZ0S3-qjfJZ6sjMOvU2JnyHHDTOndI75q2~ckyH5q9-g5WMBUlrSiPmbJCgyS3xyZI8h7jbXttXC1n0HF-zeB8wtjaDy7SURgoKYhxMRBlIa-zXyNu2XFhrMa2OdT-PR938Qe0vuIcrUphUBOgBGtasJWqJZa39MogafdwLNXsEmN~Vy6mknBf-2FOP0Ivw8qRnb7B0l2uA__>)
+![](screenshots/basilisk.png)
 # Falkon NoVNC
 <br/>
 <div align="center">
@@ -534,7 +534,7 @@ EOF
 sudo mv -f ~/opera /etc/profile.d
 ```
 ## What Opera looks like
-![2025-01-25_19-00.png](<https://media-hosting.imagekit.io//9dda0c191f8e4703/2025-01-25_19-00.png?Expires=1832439706&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=kaMOeFnAO4P0BC3M7x7bJPDs7PdG-dgrAwTXaT8zkIbFcpFrmgX8PYM4D4vNzVMMJ~O5OCc9oJ2pBtYYCPDwoTJNe50LT8a0zmjX-rZpCjTaXdPfTpyoh7ceHJaOROvQ1fY-x7G3PPFL-l4QFKG~A0FUDfGHb5LjCF11pAqe1NsLUHk1DR24Rm1GcF68oSOkPdjwAsxB5nK-XkuslAmax8PCO99bPkCU58y2~9WGXlznmaJhVNK0BYuDDQChsBo5-iJ0z9BC8bU00pjtF66je3ENslgyAeq-xpYwwrSQ4rh84Sh~7lBzLC2FaSWL5TWIxVG~ilEciJAQ7lcwyXPfUg__>)
+![](screenshots/opera.png)
 # Floorp NoVNC
 <!-- PROJECT LOGO -->
 <br/>
@@ -656,7 +656,7 @@ EOF
 sudo mv -f ~/firefox /etc/profile.d
 ```
 ## What Firefox looks like
-![Screenshot 2025-01-17 12.44.44 PM.png](<https://media-hosting.imagekit.io//ac2aeff7e77e4d15/Screenshot%202025-01-17%2012.44.44%20PM.png?Expires=1831743897&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=nAuc~o8OcMQZ-Mw5zef17L9m5QBbmdqt6Z~OqYqVrEyNtaqg4OKCpAqMcCN7q08En2h80CqF2lvjQFlCmCobesHpCqwDZ-qsYsTFHwZrYsnzHhnVv-9q0I~aVkX1OoA4JgnfQ~dBlvwwp5faO67RAzi~UtMdYsMolaOEqdz-wfQ2WuMx0VbgFEmT~G3jvhCsrO7BFDYuqmKhLiH-Gfuy7tF3DMQ0TKssy8JlDld0I9bUNzvj-s9H6copbraSoquqXLIjHv7AphCD0UdhOF0XW6QHI3Wwy6aVBqkBmKpJI7G3UcWdHKcOuoQt-iWo~h29OvsOHsgtEvgQsbwNdyRL3g__>)
+![](screenshots/firefox.png)
 # Seamonkey NoVNC
 
 <br/>
@@ -831,7 +831,7 @@ EOF
 sudo mv -f ~/midori /etc/profile.d
 ```
 ### What Midori looks like
-![Screenshot 2025-01-21 1.12.54 PM.png](<https://media-hosting.imagekit.io//286624c5827443c2/Screenshot%202025-01-21%201.12.54%20PM.png?Expires=1832091360&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=R~adlf4glr451sMC7XmycRmzj3DAqcsaoRyljoYxjjjoFxXl8sI1aEXTL~2J5IGc0Qh8XZHUPKd509zVQgbgpKIoI2timZjw1UiG50ePn8HkN7qqySaqmvYR0MbjyvMBg4EqtPj9LxBSk2sERKzz9eTYBBoHSYQtaDHc9CsjnSCH8Ad31~Zk-Zu--f3zyoAoajIeYR1fUWYqVS4A1qtHwka8Mx1zEOCjNLXKo0q73uRdOm0mfBho4~2nZsE9zXqNOrqw-Um7cc1XGSmVgjjGmzFBinAHN8rreIU9HadGmkpKWE7HCuNxrMfNT1C4uUQVUhvvQkg6obVs1ECJFVR64Q__>)
+![](screenshots/midori.png)
 
 # Icecat NoVNC
 <br/>
@@ -1068,7 +1068,7 @@ EOF
 sudo mv -f ~/palemoon /etc/profile.d
 ```
 ## What Pale Moon looks like
-![Screenshot 2025-01-21 10.41.31 AM.png](<https://media-hosting.imagekit.io//d4ecf443d1ae450f/Screenshot%202025-01-21%2010.41.31%20AM.png?Expires=1832082120&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=zGtdOO1NXevsvrqrGySJpGbf6FjpR3YeK4498zUe1QklD9BBfstzCyNzHbIB6-uNFaX6lkiRflgRtCcheY~w43zjvtxWfF5ajrXPS58XXskoZ0Cn0mek9ea-KMOLCkBHW-WPuorNy49nMlhwy53A3KalnPEZ60TaQ-zIRAFt1fYmncUZ5~9mbzq0c0kAJT0R8sUqcw~285U1DEXAfwJY80rCS9QGBPyglahwSzzyvchAb0qVxfNw6JD8X~p61JALouYqqDARO82v6-jW-BFUcCgSgI0jq-4ZR~n-reFjjHi2Qka4IHmclStHNeBaeK6oxJ152shkn7EvcP1XFYxUqw__>)
+![](screenshots/palemoon.png)
 # Pulse NoVNC
 <br/>
 <div align="center">
@@ -1244,7 +1244,7 @@ EOF
 sudo mv -f ~/qutebrowser /etc/profile.d
 ```
 ## What Qutebrowsers looks like
-![Screenshot 2025-01-21 12.33.32 PM.png](<https://media-hosting.imagekit.io//a25233fc22b04390/Screenshot%202025-01-21%2012.33.32%20PM.png?Expires=1832088829&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=WTq6~YtNSGM4cufa4pjCg2eMR5tFaFMNBHpTgohOmdkvZ4EUXTrv9lmmZa1Sf4rKyM9NuV2EjE-bnJrwOktLTaUzpPuOrwr3witpDFZexCmo71po28C91et4j3DOo3NZQEK0HwytaIbXx4IFBg-HPruakrZzn1ooTWfqWea-b~fPwcIB~wBerpznFVJLNzVTGydOMFMv7VXk-dh9SwhW1O8CnWuJ1M6G71gYasOeIdxBAjhSkPQCbdFgG3j4Ps5P7eDOWcdc7ASuZCRtlhoS0zqb1MjYPsxuZaxI8el8HMa~6p314YNpnH2D~p9puWUzcKHyO5ltdtL06VXJ3TNHRw__>)
+![](screenshots/qutebrowser.png)
 # Zen NoVNC
 <br/>
 <div align="center">
@@ -1300,8 +1300,7 @@ EOF
 sudo mv -f ~/zen /etc/profile.d
 ```
 # What Zen Browser looks like
-![Screenshot 2025-01-17 12.29.18 PM.png](<https://media-hosting.imagekit.io//67a2fb69d27e455f/Screenshot%202025-01-17%2012.29.18%20PM.png?Expires=1831742984&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=nSkvMo~KvfBTHo16JKUVLhDgSj-qK2~HOm-TX-jTfL9buABdxAgTukMbWKB4HwBjGFGe3vQZbfdTAFUMYEl--~C4mv9RDa1FlkOVvlxCcaaelVPRbc~mR7wdgVDqgm9TFLfBdc0ldLLAh1l-tjwAFDOSrelAuNm4u3bpeq0TGI5drM800rBBXK0rnnNkopdTxDQxGkZ9oM9RmWw7XuDKHYSnG97GOezx4chYRcPPL809WioNIeL8EtmGFodICInT7d~~~x6e7Oi-ViEDls-ETSlZ~vYbgMVbb4ijl0itXhtXRQ5Kvfp8Lno7JDe7Jr3k0SBYB9gszS~Rlcju0tkaCQ__>)
-
+![](screenshots/zen.png)
 [Back to the top](#Table-of-Contents)
 
 # Similar Projects Im making
