@@ -4,7 +4,7 @@ sudo apt update
 echo "installing required packages"
 sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox tilix
 cd ~/
-wget https://github.com/pulse-browser/browser/releases/download/1.0.0-a.87/pulse-browser.linux.tar.bz2 -C /usr/lib && tar -xvf pulse-browser.linux.tar.bz2 && sudo rm -rf pulse-browser.linux.tar.bz2
+wget https://github.com/pulse-browser/browser/releases/download/1.0.0-a.87/pulse-browser.linux.tar.bz2 && tar -xvf pulse-browser.linux.tar.bz2 -C ~/ && sudo rm -rf pulse-browser.linux.tar.bz2
 git clone https://github.com/gitxpresso/linux-novnc.git
 cat << EOF > ~/pulse.desktop
 [Desktop Entry]
@@ -24,4 +24,6 @@ EOF
 sudo mv ~/pulse.desktop /usr/share/applications/
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE  -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
-/usr/lib/pulse-browser --start-maximized --display=:0
+sudo ln -s ~/pulse-browser/pulse-browser /usr/bin/startpulse
+export DISPLAY=:0
+startpulse
