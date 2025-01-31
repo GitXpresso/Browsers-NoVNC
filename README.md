@@ -1478,6 +1478,18 @@ Not going to work on this project until I have all the still working Browsers th
 
 </details>
 
+<details><summary>Text editor Software</summary>
+[Kate NoVNC](Kate-NoVNC) *
+[Kile NoVNC](Kile NoVNC) *
+
+</details>
+
+<details><summary>Code Editor Platforms</summary>
+[Vscode NoVNC](#Vscode-NoVNC)
+[Vscodium NoVNC](#Vscodium-NoVNC)
+
+</details>
+
 # 3d Cad Apps
 # Blender NoVNC
 <br/>
@@ -1601,3 +1613,4 @@ sudo apt install curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/vscodecodium.sh | bash
 ## What vscodium looks like
 ![](screenshots/vscodium.png)
+# Text editor Software 
