@@ -1495,3 +1495,12 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ## What Blender Looks like
 ![](screenshots/blender.png)
 # Freecad
+<br/>
+<div align="center">
+  <a href="https://blender.org">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Logo_Blender.svg/512px-Logo_Blender.svg.png?20210528234327" alt="Logo" width="270" height="150">
+  </a>
+  <h3></h3>
+    <br/>
+<h3 center "left"> </h3>
+</div>
