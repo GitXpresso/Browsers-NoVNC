@@ -1515,7 +1515,5 @@ sudo apt install curl
 ```
 ### Install freecad and run NoVNC using Curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/freecadnovnc.sh | bash
-### GIf on how to open freecad
-![](Gifs/freecad.gif)
 ### What freecad looks like
 ![](screenshots/freecad.png)
