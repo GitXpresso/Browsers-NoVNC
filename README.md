@@ -1470,8 +1470,11 @@ Not going to work on this project until I have all the still working Browsers th
 
 <details><summary>3d Software</summary>
 
-[Go to 3d Cad Apps](#3d-Cad-Apps)
 [Blender NoVNC](#Blender-NoVNC)
+[Librecad NoVNC](#Librecad-NoVNC)
+[Freecad NoVNC](#Freecad-NoVNC)
+[Openscad NoVNC](#Openscad-NoVNC)
+[Go to 3d Cad Apps](#3d-Cad-Apps)
 
 </details>
 
@@ -1515,7 +1518,7 @@ sudo apt install curl
 ```
 ### Install freecad and run NoVNC using Curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/freecadnovnc.sh | bash
-### What freecad looks like
+### What Freecad looks like
 ![](screenshots/freecad.png)
 # Openscad NoVNC
 
@@ -1538,3 +1541,22 @@ sudo apt install curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/openscadnovnc.sh | bash
 ### What Openscad looks like
 ![](screenshots/openscad.png)
+# Librecad NoVNC
+<br/>
+<div align="center">
+  <a href="https://librecad.org">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/LibreCAD_icon.svg/100px-LibreCAD_icon.svg.png?20160726122231" alt="Logo" width="150" height="150">
+  </a>
+  
+  <h1>Librecad</h1>
+    <br/>
+<h3 center "left">LibreCAD is a computer-aided design (CAD) application for 2D design. It is free and open-source, and available for Unix / Linux, macOS, and Windows operating systems.</h3>
+</div>
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Install Librecad and run NoVNC using Curl
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/librecadnovnc.sh | bash
+## What Librecad Looks Like
