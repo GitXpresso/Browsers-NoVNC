@@ -1560,3 +1560,4 @@ sudo apt install curl
 ### Install Librecad and run NoVNC using Curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/librecadnovnc.sh | bash
 ## What Librecad Looks Like
+![](screenshots/librecad.png)
