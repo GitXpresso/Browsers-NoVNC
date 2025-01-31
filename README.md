@@ -1652,6 +1652,28 @@ sudo apt install curl
 ```
 ### Install KDevelop and run NoVNC using Curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/kdevelopnovnc.sh | bash
-## What Vscode Looks Like
+## What KDevelop Looks Like
 ![](screenshots/kdevelop.png)
+# Eclipse NoVNC
+<br/>
+<div align="center">
+  <a href="https://eclipse.org">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Eclipse-Luna-Logo.svg/470px-Eclipse-Luna-Logo.svg.png?20181004114753" alt="Logo" width=" height="150">
+  </a>
+
+  <br/>
+<p center "left">Eclipse is a powerful and widely used integrated development environment (IDE) that supports various programming languages, such as Java, C++, and Python.</p>
+</div>
+
+## GIF On how to install using Eclipse Installer
+![](Gifs/how-to-use-eclipse-installer.gif)
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Eclipse NoVNC using Curl
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/eclipsenovnc.sh | bash
+
+## What Eclipse IDE Looks Like
+![](screenshots/eclipse.png)
 # Text editor Software 
