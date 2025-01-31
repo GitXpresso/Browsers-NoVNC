@@ -1,5 +1,7 @@
 # Browsers-NoVNC
 Every browser in a novnc server, plain bash no docker. Does not support audio
+
+***More than just Browsers***
 ## Table of Contents
 >[!IMPORTANT]
 > A astrisk(*) next to the anchored link means the contents has not been added yet, or it has the header but doesn't have the contents
