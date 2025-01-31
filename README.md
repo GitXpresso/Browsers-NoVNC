@@ -1635,4 +1635,23 @@ sudo apt install curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/vscodecodium.sh | bash
 ## What vscodium looks like
 ![](screenshots/vscodium.png)
+# KDevelop NoVNC
+<br/>
+<div align="center">
+  <a href="https://kdevelop.org">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Breezeicons-apps-48-kdevelop.svg/120px-Breezeicons-apps-48-kdevelop.svg.png" alt="Logo" width="150" height="150">
+  </a>
+  <h1>KDevelop</h1>
+    <br/>
+<p center "left">KDevelop is a free and open-source integrated development environment (IDE) for Unix-like computer operating systems and Windows.</p>
+</div>
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Install KDevelop and run NoVNC using Curl
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/kdevelopnovnc.sh | bash
+## What Vscode Looks Like
+![](screenshots/kdevelop.png)
 # Text editor Software 
