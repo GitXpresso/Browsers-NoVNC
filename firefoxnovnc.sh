@@ -21,5 +21,6 @@ sudo apt-get update && sudo apt-get install firefox firefox-geckodriver -y
 echo "firefox installed, now starting the novnc server"
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
-firefox --start-maximized --display=:0
+export DISPlAY=:0
+firefox
 echo -e "novnc server started go https://localhost:5900"
