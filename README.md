@@ -1561,3 +1561,24 @@ sudo apt install curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/librecadnovnc.sh | bash
 ## What Librecad Looks Like
 ![](screenshots/librecad.png)
+# Cross Platform Code Editor Apps
+# Vscode NoVNC
+<br/>
+<div align="center">
+  <a href="https://openscad.org">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519" alt="Logo" width="150" height="150">
+  </a>
+  
+  <h1>Vscode</h1>
+    <br/>
+<p center "left">Visual Studio Code (VS Code) is a free, cross-platform code editor developed by Microsoft. It is designed to provide a streamlined and efficient coding experience for developers working on various platforms, including Windows, macOS, and Linux</p>
+</div>
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Install Vscode and run NoVNC using Curl
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/vscodenovnc.sh | bash
+## What Vscode Looks Like
+![](screenshots/vscode.png)
