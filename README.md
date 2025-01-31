@@ -1468,13 +1468,22 @@ Not going to work on this project until I have all the still working Browsers th
 
 <details><summary>3d Software</summary>
 
-[Go to 3d Creation Suite](#3d-Creation-Suite-Apps)
+[Go to 3d Cad Apps](#3d-Cad-Apps)
 [Blender NoVNC](#Blender-NoVNC)
 
 </details>
 
-# 3d Creation Suite Apps
+# 3d Cad Apps
 # Blender NoVNC
+<br/>
+<div align="center">
+  <a href="https://blender.org">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Logo_Blender.svg/512px-Logo_Blender.svg.png?20210528234327" alt="Logo" width="300" height="150">
+  </a>
+    <br/>
+<h3 center "left">Blender is a free and open-source 3D creation suite. With Blender, you can create 3D visualizations such as still images, 3D animations and VFX shots. You can also edit videos.</h3>
+</div>
+
 ### Install curl if you don't have it
 ``` 
 sudo apt install curl
@@ -1485,11 +1494,4 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Blender Looks like
 ![](screenshots/blender.png)
-<br/>
-<div align="center">
-  <a href="https://blender.org">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Logo_Blender.svg/512px-Logo_Blender.svg.png?20210528234327" alt="Logo" width="270" height="150">
-  </a>
-    <br/>
-<h3 center "left">Blender is a free and open-source 3D creation suite. With Blender, you can create 3D visualizations such as still images, 3D animations and VFX shots. You can also edit videos.</h3>
-</div>
+# Freecad
