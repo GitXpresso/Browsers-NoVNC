@@ -1483,3 +1483,5 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/blendernovnc.sh | bash
 ```
+## What Blender Looks like
+![](screenshots/blender.png)
