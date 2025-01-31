@@ -1522,7 +1522,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 <br/>
 <div align="center">
   <a href="https://openscad.org">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/OpenSCAD-logo.png" alt="Logo" width="150" height="150">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/OpenSCAD-logo.png" alt="Logo" width="170" height="150">
   </a>
   
   <h1>Openscad</h1>
