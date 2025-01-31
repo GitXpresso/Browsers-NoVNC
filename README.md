@@ -87,9 +87,8 @@ Every browser in a novnc server, plain bash no docker. Does not support audio
 </details>
 
 <details><summary>Other</summary>
-  
-- [Similar Projects I making](#Similar-Projects-Im-making)
-- [Set Default x-www-browser](#Set-Default-x-www-browser)
+
+- [Go To LinuxApps NoVNC](#LinuxApps-NoVNC)
 
 </details>
 
@@ -1466,6 +1465,7 @@ Not going to work on this project until I have all the still working Browsers th
 # Set Default x www browser
 
 🚧 UNDER CONSTRUCTION  🚧
+# LinuxApps-NoVNC
 ## Table of Contents
 
 <details><summary>3d Software</summary>
