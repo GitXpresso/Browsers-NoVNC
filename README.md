@@ -1472,6 +1472,7 @@ Not going to work on this project until I have all the still working Browsers th
 
 [Blender NoVNC](#Blender-NoVNC)
 [Librecad NoVNC](#Librecad-NoVNC)
+[Leocad NoVNC](#Leocad-NoVNC)
 [Freecad NoVNC](#Freecad-NoVNC)
 [Openscad NoVNC](#Openscad-NoVNC)
 [Go to 3d Cad Apps](#3d-Cad-Apps)
@@ -1573,14 +1574,35 @@ sudo apt install curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/librecadnovnc.sh | bash
 ## What Librecad Looks Like
 ![](screenshots/librecad.png)
+  
+# Leocad NoVNC  
+<br/>
+<div align="center">
+  <a href="https://leocad.org">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Leocad-icon-512.png/120px-Leocad-icon-512.png" alt="Logo" width="150" height="150">
+  </a>
+  
+  <h1>Leocad</h1>
+    <br/>
+<h3 center "left">LeoCAD is a powerful computer-aided design (CAD) software specifically designed for creating virtual models with LEGO® bricks.</h3>
+</div>
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Install Leocad and run NoVNC using Curl
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/leocadnovnc.sh | bash
+### What Leocad looks like
+![](screenshots/leocad.png)
 # Cross Platform Code Editor Apps
+
 # Vscode NoVNC
 <br/>
 <div align="center">
   <a href="https://openscad.org">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519" alt="Logo" width="150" height="150">
   </a>
-  
   <h1>Vscode</h1>
     <br/>
 <p center "left">Visual Studio Code (VS Code) is a free, cross-platform code editor developed by Microsoft. It is designed to provide a streamlined and efficient coding experience for developers working on various platforms, including Windows, macOS, and Linux</p>
