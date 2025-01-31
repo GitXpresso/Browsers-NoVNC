@@ -1503,5 +1503,5 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
   
   <h1>Freecad</h1>
     <br/>
-<h3 center "left"> </h3>
+<p center "left">FreeCAD is an open-source parametric 3D modeler made primarily to design real-life objects of any size. Parametric modeling allows you to easily modify your design by going back into your model history and changing its parameters.</hp>
 </div>
