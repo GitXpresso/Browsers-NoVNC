@@ -1517,3 +1517,24 @@ sudo apt install curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/freecadnovnc.sh | bash
 ### What freecad looks like
 ![](screenshots/freecad.png)
+# Openscad NoVNC
+
+<br/>
+<div align="center">
+  <a href="https://openscad.org">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/OpenSCAD-logo.png" alt="Logo" width="150" height="150">
+  </a>
+  
+  <h1>Openscad</h1>
+    <br/>
+<h3 center "left">OpenSCAD is software for creating solid 3D CAD objects. It is free software and available for Linux/UNIX, MS Windows and Mac OS X</h3>
+</div>
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Install Openscad and run NoVNC using Curl
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/openscadnovnc.sh | bash
+### What Openscad looks like
+![](screenshots/openscad.png)
