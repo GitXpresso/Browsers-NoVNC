@@ -1478,9 +1478,10 @@ Not going to work on this project until I have all the still working Browsers th
 <br/>
 <div align="center">
   <a href="https://blender.org">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Logo_Blender.svg/512px-Logo_Blender.svg.png?20210528234327" alt="Logo" width="300" height="150">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Blenderlogo.svg/600px-Blenderlogo.svg.png?20150408140327" alt="Logo" width="150" height="150">
   </a>
     <br/>
+  <h1 "center">Blender</h1>
 <h3 center "left">Blender is a free and open-source 3D creation suite. With Blender, you can create 3D visualizations such as still images, 3D animations and VFX shots. You can also edit videos.</h3>
 </div>
 
