@@ -1506,5 +1506,13 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 <p center "left">FreeCAD is an open-source parametric 3D modeler made primarily to design real-life objects of any size. Parametric modeling allows you to easily modify your design by going back into your model history and changing its parameters.</hp>
 </div>
 
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Install freecad and run NoVNC using Curl
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/freecadnovnc.sh | bash
 ### GIf on how to open freecad
 ![](Gifs/freecad.gif)
+### What freecad looks like
+![](screenshots/freecad.png)
