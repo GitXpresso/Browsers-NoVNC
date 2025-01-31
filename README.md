@@ -1463,3 +1463,23 @@ As much linux apps I can find, any collaboration would help, thanks
 Not going to work on this project until I have all the still working Browsers that support linux
 # Set Default x www browser
 
+🚧 UNDER CONSTRUCTION  🚧
+## Table of Contents
+
+<details><summary>3d Software</summary>
+
+[Go to 3d software](#3d-Software-Apps)
+[Blender NoVNC](#Blender-NoVNC)
+
+</details>
+
+# 3d Software Apps
+# Blender NoVNC
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Blender NoVNC using Curl
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/blendernovnc.sh | bash
+```
