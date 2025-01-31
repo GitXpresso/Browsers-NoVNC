@@ -1582,3 +1582,22 @@ sudo apt install curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/vscodenovnc.sh | bash
 ## What Vscode Looks Like
 ![](screenshots/vscode.png)
+# Vscodium
+<div align="center">
+  <a href="https://vscodium.com">
+    <img src="https://vscodium.com/img/codium_cnl.svg" alt="Logo" width="150" height="150">
+  </a>
+  
+  <h1>Vscodium</h1>
+    <br/>
+<h2 center "left">VSCodium is a community-driven, freely-licensed binary distribution of Microsoft’s editor VS Code. </h2>
+</div>
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Install Vscode and run NoVNC using Curl
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/vscodecodium.sh | bash
+## What vscodium looks like
+![](screenshots/vscodium.png)
