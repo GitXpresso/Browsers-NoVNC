@@ -1600,6 +1600,24 @@ sudo apt install curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/leocadnovnc.sh | bash
 ### What Leocad looks like
 ![](screenshots/leocad.png)
+<br/>
+<div align="center">
+  <a href="https://kicad.org">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/KiCad-Logo.svg/120px-KiCad-Logo.svg.png" alt="Logo" height="">
+  </a>
+
+  <br/>
+<h center "left">KiCad is a free and open-source electronics design automation (EDA) suite. It features schematic capture, integrated circuit simulation, printed circuit board (PCB) layout, 3D rendering, and plotting/data export to numerous formats.</h3>
+</div>
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Install Kicad and run NoVNC using Curl
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/kicadnovnc.sh | bash
+### What Kicad looks like
+![](screenshots/kicad.png)
 # Cross Platform Code Editor Apps
 
 # Vscode NoVNC
