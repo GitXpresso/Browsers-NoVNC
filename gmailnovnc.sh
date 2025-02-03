@@ -9,5 +9,6 @@ git clone https://github.com/gitxpresso/linux-novnc.git
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE  -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
 export DISPLAY=:0
-~/gmail-desktop/gmail-desktop --in-process-gpu --display=:0
+sudo ln -s ~/gmail-desktop/gmail-desktop /usr/bin/gmail
+gmail --in-process-gpu
 echo -e "Gmail Desktop and NoVNC has started go to https://localhost:6080 to access NoVNC and Gmail Desktop"
