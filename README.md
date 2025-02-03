@@ -1676,4 +1676,22 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 
 ## What Eclipse IDE Looks Like
 ![](screenshots/eclipse.png)
+<br/>
+<div align="center">
+  <a href="https://netbeans.apache.org/">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Apache_NetBeans_Logo.svg/444px-Apache_NetBeans_Logo.svg.png?20180920122700" alt="Logo" width="150" height="150">
+  </a>
+  <h1>Netbeans</h1>
+    <br/>
+<p center "left">Netbeans is an open-source Integrated Development Environment (IDE). It is used to develop applications with Java, PHP, C++, HTML and many other programming languages. The applications are developed using modules in Java. NetBeans can run on any operating system such as Windows, MacOS, Linux etc.</p>
+</div>
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Install Netbeans and run NoVNC using Curl
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/netbeansnovnc.sh | bash
+## What Netbeans Looks Like
+![](screenshots/netbeans.png)
 # Text editor Software 
