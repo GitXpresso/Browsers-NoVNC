@@ -11,3 +11,4 @@ websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 local
 export DISPLAY=:0
 echo "Vscode has started go to https://localhost:6080 to access NoVNC and Opera, and No it is not opera gx"
 sudo ln -s /usr/share/code/code /usr/bin/startvscode
+startvscode
