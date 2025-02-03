@@ -1482,12 +1482,17 @@ Not going to work on this project until I have all the still working Browsers th
 <details><summary>Text editor Software</summary>
 [Kate NoVNC](Kate-NoVNC) *
 [Kile NoVNC](Kile NoVNC) *
+[SublimeText NoVNC](#SublimeText-NoVNC) *
 
 </details>
 
-<details><summary>Code Editor Platforms</summary>
+<details><summary>Code Editor Platforms AKA Ide</summary>
 [Vscode NoVNC](#Vscode-NoVNC)
 [Vscodium NoVNC](#Vscodium-NoVNC)
+[Devpod NoVNC](#Devpod-NoVNC)
+[Netbeans NoVNC](#Netbeans-NoVNC)
+[Eclipse NoVNC](#Eclipse-NoVNC)
+[KDevelop NoVNC](#KDevelop-NoVNC)
 
 </details>
 
@@ -1654,6 +1659,26 @@ sudo apt install curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/kdevelopnovnc.sh | bash
 ## What KDevelop Looks Like
 ![](screenshots/kdevelop.png)
+# DevPod NoVNC
+<br/>
+<div align="center">
+  <a href="https://devpod.sh">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.b0YKpaaR0LLwFTSxF5rbAQHaCC?rs=1&pid=ImgDetMain" alt="Logo" width=" height="150">
+  </a>
+
+  <br/>
+<h3 center "left">DevPod is a tool used to create reproducible developer environments. Each developer environment runs in a separate container and is specified through a devcontainer.json. DevPod providers can create these containers on the local computer, any reachable remote machine, or in a public or private cloud. It's also possible to extend DevPod and write your own custom providers.</h3>
+</div>
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Devpod NoVNC using Curl
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/devpodnovnc.sh | bash
+
+## What Devpod Looks Like
+![](screenshots/devpod.png)
 # Eclipse NoVNC
 <br/>
 <div align="center">
@@ -1676,6 +1701,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 
 ## What Eclipse IDE Looks Like
 ![](screenshots/eclipse.png)
+# Netbeans NoVNC
 <br/>
 <div align="center">
   <a href="https://netbeans.apache.org/">
