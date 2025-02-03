@@ -5,3 +5,7 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt update
 echo "Installing the required packages in order for the script to work properly"
 sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox tilix dbus-x11 sublime-text
+tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
+websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
+export DISPLAY=:
+sublime-text
