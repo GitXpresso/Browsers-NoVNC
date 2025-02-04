@@ -1739,3 +1739,13 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ## What Netbeans Looks Like
 ![](screenshots/netbeans.png)
 # Text editor Software 
+# Office suite apps
+# LibreOffice
+<br/>
+<div align="center">
+  <a href="https://libreoffice.org/">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/LibreOffice_logo.svg/565px-LibreOffice_logo.svg.png?20220816022856" alt="Logo" width=" height="150">
+  </a>
+    <br/>
+<p center "left">LibreOffice is a powerful, free and private office suite</p>
+</div>
