@@ -1749,3 +1749,11 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
     <br/>
 <p center "left">LibreOffice is a powerful, free and private office suite</p>
 </div>
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Install LibreOffice and run NoVNC using Curl
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/libreofficenovnc.sh | bash
+## What LibreOffice Looks Like
