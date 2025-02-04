@@ -1503,6 +1503,8 @@ Not going to work on this project until I have all the still working Browsers th
 - [Go To Office suite apps](#Office-suite-Applications)
 - [LibreOffice NoVNC](#LibreOffice-NoVNC)
 - [OpenOffice NoVNC](#OpenOffice-NoVNC)
+- [FreeOffice NoVNC](#freeoffice-novnc)
+
 </details>
 
 # 3d Cad Apps
@@ -1785,3 +1787,23 @@ sudo apt install curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/openofficenovnc.sh | bash
 ## What OpenOffice Looks Like
 ![](screenshots/openoffice.png)
+# FreeOffice NoVNC
+<br/>
+<div align="center">
+  <a href="https://freeoffice.com/">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Softmaker_freeoffice_logo.png?20180215235306" alt="Logo" width=" height="150">
+  </a>
+    <br/>
+<p center "left">FreeOffice is a full-featured Office suite that includes word processing, spreadsheet, and presentation software. Developed by SoftMaker, it is compatible with Microsoft Office formats and available for Windows, Mac, and Linux. Best of all, it's completely free for both business and personal use</p>
+</div>
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run FreeOffice Planmaker NoVNC
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/freeofficeplanmakernovnc.sh | bash
+```
+## What FreeOffice Planmaker Looks like
+![](screenshots/freeofficeplanmaker.png)
