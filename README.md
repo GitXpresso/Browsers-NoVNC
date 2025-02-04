@@ -1883,6 +1883,9 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
     <br/>
 </div>
 
+>[!IMPORTANT]
+> error loading icons when wps is launched, I try to fix the error
+
 ### Install curl if you don't have it
 ``` 
 sudo apt install curl
