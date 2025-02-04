@@ -1797,10 +1797,15 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 <p center "left">FreeOffice is a full-featured Office suite that includes word processing, spreadsheet, and presentation software. Developed by SoftMaker, it is compatible with Microsoft Office formats and available for Windows, Mac, and Linux. Best of all, it's completely free for both business and personal use</p>
 </div>
 
-### Install curl if you don't have it
-``` 
-sudo apt install curl
-```
+## FreeOffice Planmaker
+<br/>
+<div align="center">
+  <a href="https://freeoffice.com/">
+    <img src="https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/logos/planmaker.png" alt="Logo" width="90" height="90">
+  </a>
+    <br/>
+</div>
+
 ### Run FreeOffice Planmaker NoVNC
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/freeofficeplanmakernovnc.sh | bash
@@ -1808,7 +1813,14 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ## What FreeOffice Planmaker Looks like
 ![](screenshots/freeofficeplanmaker.png)
 ## FreeOffice Presentations
-![presentations]()
+<br/>
+<div align="center">
+  <a href="https://freeoffice.com/">
+    <img src="https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/logos/presentations.png" alt="Logo" width="90" height="90">
+  </a>
+    <br/>
+</div>
+
 ### Install curl if you don't have it
 ``` 
 sudo apt install curl
@@ -1820,6 +1832,14 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ## What FreeOffice Presentations Looks like
 ![](screenshots/freeofficepresentations.png)
 ## FreeOffice TextMaker
+<br/>
+<div align="center">
+  <a href="https://freeoffice.com/">
+    <img src="https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/logos/textmaker.png" alt="Logo" width="70" height="70">
+  </a>
+    <br/>
+</div>
+
 ### Install curl if you don't have it
 ``` 
 sudo apt install curl
