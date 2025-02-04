@@ -1807,3 +1807,25 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What FreeOffice Planmaker Looks like
 ![](screenshots/freeofficeplanmaker.png)
+## FreeOffice Presentations
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run FreeOffice Presentations NoVNC
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/freeofficepresentationsnovnc.sh | bash
+```
+## What FreeOffice Presentations Looks like
+![](screenshots/freeofficepresentations.png)
+## FreeOffice TextMaker
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run FreeOffice TextMaker NoVNC
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/freeofficetextmakernovnc.sh | bash
+```
+## What FreeOffice TextMaker Looks like
+![](screenshots/freeofficetextmaker.png)
