@@ -1808,6 +1808,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ## What FreeOffice Planmaker Looks like
 ![](screenshots/freeofficeplanmaker.png)
 ## FreeOffice Presentations
+![presentations]()
 ### Install curl if you don't have it
 ``` 
 sudo apt install curl
