@@ -1852,3 +1852,23 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What FreeOffice TextMaker Looks like
 ![](screenshots/freeofficetextmaker.png)
+# OnlyOffice NoVNC
+<br/>
+<div align="center">
+  <a href="https://freeoffice.com/">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/ONLYOFFICE_logo_%28default%29.svg/160px-ONLYOFFICE_logo_%28default%29.svg.png?20200423131206" alt="Logo" width="250" height="">
+  </a>
+  </p> ONLYOFFICE is a secure online office suite that is highly compatible with MS Office formats. It offers document editing and collaboration tools, and can be used as part of ONLYOFFICE Workspace.</p>
+    <br/>
+</div>
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run OnlyOffice NoVNC
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/onlyofficenovnc.sh | bash
+```
+## What OnlyOffice Looks like
+![](screenshots/onlyoffice.png)
