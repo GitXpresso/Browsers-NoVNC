@@ -1471,8 +1471,11 @@ Not going to work on this project until I have all the still working Browsers th
 <details><summary>3d Software</summary>
 
 [Blender NoVNC](#Blender-NoVNC)
+
 [Librecad NoVNC](#Librecad-NoVNC)
+
 [Leocad NoVNC](#Leocad-NoVNC)
+
 [Freecad NoVNC](#Freecad-NoVNC)
 [Openscad NoVNC](#Openscad-NoVNC)
 [Go to 3d Cad Apps](#3d-Cad-Apps)
@@ -1493,6 +1496,14 @@ Not going to work on this project until I have all the still working Browsers th
 [Netbeans NoVNC](#Netbeans-NoVNC)
 [Eclipse NoVNC](#Eclipse-NoVNC)
 [KDevelop NoVNC](#KDevelop-NoVNC)
+
+</details>
+
+<details><summary>Office Suite Applications</summary>
+
+[Go To Office suite apps](#Office-suite-Applications)
+
+[LibreOffice NoVNC](#LibreOffice-NoVNC)
 
 </details>
 
@@ -1739,8 +1750,8 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ## What Netbeans Looks Like
 ![](screenshots/netbeans.png)
 # Text editor Software 
-# Office suite apps
-# LibreOffice
+# Office suite Applications
+# LibreOffice NoVNC
 <br/>
 <div align="center">
   <a href="https://libreoffice.org/">
@@ -1757,3 +1768,4 @@ sudo apt install curl
 ### Install LibreOffice and run NoVNC using Curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/libreofficenovnc.sh | bash
 ## What LibreOffice Looks Like
+![](screenshots/libreoffice.png)
