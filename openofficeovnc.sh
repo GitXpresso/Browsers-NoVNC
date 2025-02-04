@@ -1,0 +1,1 @@
+https://filebin.net/6ecer2fgg6zk3x62/Apache_OpenOffice_4.1.15_Linux_x86-64_install-deb_en-US.tar.gz && tar -xvf Apache_OpenOffice_4.1.15_Linux_x86-64_install-deb_en-US.tar.gz && sudo rm -rf Apache_OpenOffice_4.1.15_Linux_x86-64_install-deb_en-US.tar.gz
