@@ -1502,7 +1502,7 @@ Not going to work on this project until I have all the still working Browsers th
 
 - [Go To Office suite apps](#Office-suite-Applications)
 - [LibreOffice NoVNC](#LibreOffice-NoVNC)
-
+- [OpenOffice NoVNC](#OpenOffice-NoVNC)
 </details>
 
 # 3d Cad Apps
@@ -1767,3 +1767,21 @@ sudo apt install curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/libreofficenovnc.sh | bash
 ## What LibreOffice Looks Like
 ![](screenshots/libreoffice.png)
+# OpenOffice NoVNC
+<br/>
+<div align="center">
+  <a href="https://openoffice.org/">
+    <img src="https://a.fsdn.com/allura/mirror/openofficeorg/icon?1703330040?&w=90" alt="Logo" width=" height="150">
+  </a>
+    <br/>
+<p center "left">Apache OpenOffice is an open source office productivity suite</p>
+</div>
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Install OpenOffice and run NoVNC using Curl
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/openofficenovnc.sh | bash
+## What OpenOffice Looks Like
+![](screenshots/openoffice.png)
