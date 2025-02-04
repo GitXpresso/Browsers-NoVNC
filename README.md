@@ -1506,6 +1506,7 @@ Not going to work on this project until I have all the still working Browsers th
 - [LibreOffice NoVNC](#LibreOffice-NoVNC)
 - [OpenOffice NoVNC](#OpenOffice-NoVNC)
 - [FreeOffice NoVNC](#freeoffice-novnc)
+- [WPS Office NoVNC](#WPS-Office-NoVNC)
 
 </details>
 
@@ -1878,7 +1879,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
   <a href="https://wps.com/">
     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/WPS-logo.svg/512px-WPS-logo.svg.png?20221007170644" alt="Logo" width="250" height="">
   </a>
-  </p> ONLYOFFICE is a secure online office suite that is highly compatible with MS Office formats. It offers document editing and collaboration tools, and can be used as part of ONLYOFFICE Workspace.</p>
+  </p>WPS Office is an integrated office suite that combines Word, PDF, Excel, PowerPoint, and other tools into one powerful toolkit.</p>
     <br/>
 </div>
 
