@@ -1470,40 +1470,38 @@ Not going to work on this project until I have all the still working Browsers th
 
 <details><summary>3d Software</summary>
 
-[Blender NoVNC](#Blender-NoVNC)
-
-[Librecad NoVNC](#Librecad-NoVNC)
-
-[Leocad NoVNC](#Leocad-NoVNC)
-
-[Freecad NoVNC](#Freecad-NoVNC)
-[Openscad NoVNC](#Openscad-NoVNC)
-[Go to 3d Cad Apps](#3d-Cad-Apps)
+- [Blender NoVNC](#Blender-NoVNC)
+- [Librecad NoVNC](#Librecad-NoVNC)
+- [Leocad NoVNC](#Leocad-NoVNC)
+- [Freecad NoVNC](#Freecad-NoVNC)
+- [Openscad NoVNC](#Openscad-NoVNC)
+- [Go to 3d Cad Apps](#3d-Cad-Apps)
 
 </details>
 
 <details><summary>Text editor Software</summary>
-[Kate NoVNC](Kate-NoVNC) *
-[Kile NoVNC](Kile NoVNC) *
-[SublimeText NoVNC](#SublimeText-NoVNC) *
+
+- [Kate NoVNC](#Kate-NoVNC) *
+- [Kile NoVNC](#Kile NoVNC) *
+- [SublimeText NoVNC](#SublimeText-NoVNC) *
 
 </details>
 
 <details><summary>Code Editor Platforms AKA Ide</summary>
-[Vscode NoVNC](#Vscode-NoVNC)
-[Vscodium NoVNC](#Vscodium-NoVNC)
-[Devpod NoVNC](#Devpod-NoVNC)
-[Netbeans NoVNC](#Netbeans-NoVNC)
-[Eclipse NoVNC](#Eclipse-NoVNC)
-[KDevelop NoVNC](#KDevelop-NoVNC)
+
+- [Vscode NoVNC](#Vscode-NoVNC)
+- [Vscodium NoVNC](#Vscodium-NoVNC)
+- [Devpod NoVNC](#Devpod-NoVNC)
+- [Netbeans NoVNC](#Netbeans-NoVNC)
+- [Eclipse NoVNC](#Eclipse-NoVNC)
+- [KDevelop NoVNC](#KDevelop-NoVNC)
 
 </details>
 
 <details><summary>Office Suite Applications</summary>
 
-[Go To Office suite apps](#Office-suite-Applications)
-
-[LibreOffice NoVNC](#LibreOffice-NoVNC)
+- [Go To Office suite apps](#Office-suite-Applications)
+- [LibreOffice NoVNC](#LibreOffice-NoVNC)
 
 </details>
 
