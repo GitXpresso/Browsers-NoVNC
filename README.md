@@ -1875,7 +1875,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 # WPS Office NoVNC
 <br/>
 <div align="center">
-  <a href="https://freeoffice.com/">
+  <a href="https://wps.com/">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/ONLYOFFICE_logo_%28default%29.svg/160px-ONLYOFFICE_logo_%28default%29.svg.png?20200423131206" alt="Logo" width="250" height="">
   </a>
   </p> ONLYOFFICE is a secure online office suite that is highly compatible with MS Office formats. It offers document editing and collaboration tools, and can be used as part of ONLYOFFICE Workspace.</p>
