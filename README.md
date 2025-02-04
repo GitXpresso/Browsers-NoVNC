@@ -1470,12 +1470,13 @@ Not going to work on this project until I have all the still working Browsers th
 
 <details><summary>3d Software</summary>
 
+- [Go to 3d Cad Apps](#3d-Cad-Apps)
 - [Blender NoVNC](#Blender-NoVNC)
 - [Librecad NoVNC](#Librecad-NoVNC)
 - [Leocad NoVNC](#Leocad-NoVNC)
 - [Freecad NoVNC](#Freecad-NoVNC)
 - [Openscad NoVNC](#Openscad-NoVNC)
-- [Go to 3d Cad Apps](#3d-Cad-Apps)
+
 
 </details>
 
@@ -1489,6 +1490,7 @@ Not going to work on this project until I have all the still working Browsers th
 
 <details><summary>Code Editor Platforms AKA Ide</summary>
 
+- [Go To Cross Platform Code Editor Apps](#Cross-Platform-Code-Editor-Apps)
 - [Vscode NoVNC](#Vscode-NoVNC)
 - [Vscodium NoVNC](#Vscodium-NoVNC)
 - [Devpod NoVNC](#Devpod-NoVNC)
