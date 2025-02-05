@@ -18,7 +18,7 @@ Every browser in a novnc server, plain bash no docker. Does not support audio
 <details><summary>Tasks</summary>
   
 `Brave does not work but it does work in a linuxserver openbox kasmvnc session`
-
+- [ ] find a way to have a rootless dockerized novnc container then run steam in the dockerized novnc container
 - [ ] add link to video pn how to have waterfox noVNC automatically start on boot
 - [ ] add all the browsers
 - [ ] finish adding all service files 
