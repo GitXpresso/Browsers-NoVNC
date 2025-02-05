@@ -1,3 +1,0 @@
-#!/bin/bash
-docker build -t steam .
-docker run --rm -it -p 8080:8080 --privileged steam
