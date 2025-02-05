@@ -11,18 +11,17 @@ RUN set -ex; \
       novnc \
       supervisor \
       x11vnc \
-      software-properties-common \
-      apt-transport-https \
-      dirmngr \
-      ca-certificates \
-      curl \
       tigervnc-standalone-server \
       sudo \
-      steam \
       curl \
+      wget \
       xvfb
+# Installing steam
+RUN wget https://steamcdn-a.akamaihd.net/client/installer/steam.deb 
+RUN apt install -y ./steam.deb 
+RUN apt update 
 # Setup demo environment variables
-ENV HOME=/root \
+ENV HOME=/debian \
     DEBIAN_FRONTEND=noninteractive \
     LANG=en_US.UTF-8 \
     LANGUAGE=en_US.UTF-8 \
