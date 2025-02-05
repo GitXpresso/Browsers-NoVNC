@@ -11,9 +11,8 @@ RUN set -ex; \
       novnc \
       supervisor \
       x11vnc \
-      tigervnc-standalone-server \
+      xterm \
       sudo \
-      curl \
       wget \
       xvfb
 # Installing steam
@@ -21,6 +20,7 @@ RUN wget https://steamcdn-a.akamaihd.net/client/installer/steam.deb
 RUN apt install -y ./steam.deb 
 RUN apt update 
 # Setup demo environment variables
+
 ENV HOME=/debian \
     DEBIAN_FRONTEND=noninteractive \
     LANG=en_US.UTF-8 \
@@ -29,7 +29,7 @@ ENV HOME=/debian \
     DISPLAY=:0.0 \
     DISPLAY_WIDTH=1024 \
     DISPLAY_HEIGHT=768 \
-    RUN_STEAM=yes \
+    RUN_XTERM=yes \
     RUN_FLUXBOX=yes
 COPY . /app
 CMD ["/app/entrypoint.sh"]

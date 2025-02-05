@@ -2,7 +2,7 @@
 set -ex
 
 RUN_FLUXBOX=${RUN_FLUXBOX:-yes}
-RUN_STEAM=${RUN_STEAM:-yes}
+RUN_XTERM=${RUN_XTERM:-yes}
 
 case $RUN_FLUXBOX in
   false|no|n|0)
@@ -10,9 +10,9 @@ case $RUN_FLUXBOX in
     ;;
 esac
 
-case $RUN_STEAM in
+case $RUN_XTERM in
   false|no|n|0)
-    rm -f /app/conf.d/steam.conf
+    rm -f /app/conf.d/xterm.conf
     ;;
 esac
 
