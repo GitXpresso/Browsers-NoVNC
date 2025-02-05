@@ -1,0 +1,2 @@
+docker-novnc directory is a test to dockerized all the bash scripts into a dockerized container
+cloned from https://github.com/theasp/docker-novnc
