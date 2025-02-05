@@ -15,14 +15,18 @@ RUN set -ex; \
       sudo \
       wget \
       xvfb
+    
 # Installing steam
 RUN wget https://steamcdn-a.akamaihd.net/client/installer/steam.deb 
 RUN apt install -y ./steam.deb 
 RUN apt update 
+# setting rootless user
+RUN useradd debian
+USER debian
 # Setup demo environment variables
 
 ENV HOME=/debian \
-    DEBIAN_FRONTEND=noninteractive \
+    USER=debian \
     LANG=en_US.UTF-8 \
     LANGUAGE=en_US.UTF-8 \
     LC_ALL=C.UTF-8 \
