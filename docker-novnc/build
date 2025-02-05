@@ -1,0 +1,3 @@
+#!/bin/bash
+docker build -t tornovnc .
+docker run --rm -it -p 8080:8080 tornovnc
