@@ -1514,6 +1514,7 @@ Not going to work on this project until I have all the still working Browsers th
 
 - [Go To Image Editing Applications](#Image-Editing-Applications)
 - [GIMP NoVNC](#GIMP-NoVNC)
+- [Inkscape NoVNC](#Inkscape-NoVNC)
 
 </details>
 
@@ -1909,7 +1910,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 <br/>
 <div align="center">
   <a href="https://gimp.org/">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Gimp-logo.png?20241112221349" alt="Logo" width="250" height="">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Gimp-logo.png?20241112221349" alt="Logo" width="" height="">
   </a>
   </p>GIMP is a free and open source program for photo retouching, image composition and image authoring.</p>
     <br/>
@@ -1926,3 +1927,24 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What GIMP Looks like
 ![](screenshots/gimp.png)
+# Inkscape NoVNC
+<br/>
+<div align="center">
+  <a href="https://inkscape.org/">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Inkscape_Logo.svg/128px-Inkscape_Logo.svg.png?20240726134547" alt="Logo" width="" height="">
+  </a>
+  </p>Inkscape is a Free and open source vector graphics editor for GNU/Linux, Windows and macOS. It offers a rich set of features and is widely used for both artistic and technical illustrations such as cartoons, clip art, logos, typography, diagramming and flowcharting.</p>
+    <br/>
+</div>
+
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Inkscape NoVNC
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/inkscapenovnc.sh | bash
+```
+## What Inkscape Looks like
+![](screenshots/inkscape.png)
