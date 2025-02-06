@@ -1,5 +1,6 @@
 FROM bitnami/minideb:latest
 
+FROM ubuntu AS BUILDER
 RUN apt update && apt install -y wget novnc websockify tigervnc-standalone-server tar openbox libdbus-glib-1-2:amd64 libgtk2.0-0 libasound2
 
 RUN wget https://github.com/GitXpresso/Browsers-NoVNC/releases/download/TarAndDeb/palemoon-33.5.1.linux-x86_64-gtk3.tar.xz  && sudo tar -xvf palemoon-33.5.1.linux-x86_64-gtk3.tar.xz -C /opt/ 
