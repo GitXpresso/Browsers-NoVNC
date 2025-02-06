@@ -1515,6 +1515,7 @@ Not going to work on this project until I have all the still working Browsers th
 - [Go To Image Editing Applications](#Image-Editing-Applications)
 - [GIMP NoVNC](#GIMP-NoVNC)
 - [Inkscape NoVNC](#Inkscape-NoVNC)
+- [Digikam NoVNC](#Digikam-NoVNC)
 
 </details>
 
@@ -1948,3 +1949,24 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Inkscape Looks like
 ![](screenshots/inkscape.png)
+# Digikam
+<br/>
+<div align="center">
+  <a href="https://digikam.org/">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Digikam_Oxygen.svg/128px-Digikam_Oxygen.svg.png?20190204144320" alt="Logo" width="" height="">
+  </a>
+  </p>digiKam is an advanced open-source digital photo management application that runs on Linux, Windows, and macOS. The application provides a comprehensive set of tools for importing, managing, editing, and sharing photos and raw files</p>
+    <br/>
+</div>
+
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Digikam NoVNC
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/digikamnovnc.sh | bash
+```
+## What Digikam Looks like
+![](screenshots/digikam.png)
