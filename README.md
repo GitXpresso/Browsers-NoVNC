@@ -1517,6 +1517,7 @@ Not going to work on this project until I have all the still working Browsers th
 - [Inkscape NoVNC](#Inkscape-NoVNC)
 - [DigiKam NoVNC](#DigiKam-NoVNC)
 - [Fotoxx NoVNC](#Fotoxx-NoVNC)
+- [Pinta NoVNC](#Pinta-NoVNC)
 </details>
 
 # 3d Cad Apps
@@ -2012,3 +2013,23 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Fotoxx Looks like
 ![](screenshots/fotoxx.png)
+# Pinta NoVNC
+<div align="center">
+  <a href="https://pinta-project.com">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Applications-graphics.svg/120px-Applications-graphics.svg.png" alt="Logo" width="" height="">
+  </a>
+  </p>Pinta is a free, open-source bitmap image editor with a versatile range of uses. It can be used as a basic graphics editor or paint tool similar to MS Paint and Paintbrush for Mac.</p>
+    <br/>
+</div>
+
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Pinta NoVNC
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/pintanovnc.sh | bash
+```
+## What Fotoxx Looks like
+![](screenshots/pinta.png)
