@@ -1510,6 +1510,13 @@ Not going to work on this project until I have all the still working Browsers th
 
 </details>
 
+<details><summary>Image Editing Applications</summary>
+
+- [Go To Image Editing Applications](#Image-Editing-Applications)
+- [GIMP NoVNC](#GIMP-NoVNC)
+
+</details>
+
 # 3d Cad Apps
 # Blender NoVNC
 <br/>
@@ -1896,3 +1903,26 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What WPS Office Looks like
 ![](screenshots/wpsoffice.png)
+# Image Editing Applications
+
+# GIMP NoVNC
+<br/>
+<div align="center">
+  <a href="https://gimp.org/">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Gimp-logo.png?20241112221349" alt="Logo" width="250" height="">
+  </a>
+  </p>GIMP is a free and open source program for photo retouching, image composition and image authoring.</p>
+    <br/>
+</div>
+
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run GIMP NoVNC
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/gimpnovnc.sh | bash
+```
+## What GIMP Looks like
+![](screenshots/gimp.png)
