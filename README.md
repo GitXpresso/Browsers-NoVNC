@@ -1516,7 +1516,7 @@ Not going to work on this project until I have all the still working Browsers th
 - [GIMP NoVNC](#GIMP-NoVNC)
 - [Inkscape NoVNC](#Inkscape-NoVNC)
 - [DigiKam NoVNC](#DigiKam-NoVNC)
-
+- [Fotoxx NoVNC](#Fotoxx-NoVNC)
 </details>
 
 # 3d Cad Apps
@@ -1991,3 +1991,24 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Krita Looks like
 ![](screenshots/krita.png)
+# Fotoxx NoVNC
+<br/>
+<div align="center">
+  <a href="">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/FotoxxBanner_180x40.png/120px-FotoxxBanner_180x40.png" alt="Logo" width="" height="">
+  </a>
+  </p>Fotoxx is a free GNU/Linux program for editing photos or other images and managing a large collection. Images can be viewed in scrollable pages of thumbnails (variable size) or singly in a large window. Fotoxx has many editing tools that go beyond changing brightness, contrast and color.</p>
+    <br/>
+</div>
+
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Fotoxx NoVNC
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/fotoxxnovnc.sh | bash
+```
+## What Fotoxx Looks like
+![](screenshots/fotoxx.png)
