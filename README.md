@@ -1518,6 +1518,7 @@ Not going to work on this project until I have all the still working Browsers th
 - [DigiKam NoVNC](#DigiKam-NoVNC)
 - [Fotoxx NoVNC](#Fotoxx-NoVNC)
 - [Pinta NoVNC](#Pinta-NoVNC)
+- [Showfoto NoVNC](#Showfoto-NoVNC)
 </details>
 
 # 3d Cad Apps
@@ -2033,3 +2034,23 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Pinta Looks like
 ![](screenshots/pinta.png)
+# Showfoto NoVNC
+<div align="center">
+  <a href="">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Showfoto_icon.svg/128px-Showfoto_icon.svg.png?20190223180346" alt="Logo" width="" height="">
+  </a>
+  </p>Showfoto is a powerful image editor that allows you to quickly edit images. It can be used to view and edit your photos. Showfoto is the standalone image editor for the digiKam Project..</p>
+    <br/>
+</div>
+
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Showfoto NoVNC
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/showfotonovnc.sh | bash
+```
+## What Showfoto Looks like
+![](screenshots/showfoto.png)
