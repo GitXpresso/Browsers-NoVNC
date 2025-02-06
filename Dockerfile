@@ -1,5 +1,6 @@
 FROM bitnami/minideb:latest
 
+RUN apt-get update && apt-get install -y apt-transport-https
 FROM ubuntu AS BUILDER
 RUN apt update && apt install -y wget novnc websockify tigervnc-standalone-server tar openbox libdbus-glib-1-2:amd64 libgtk2.0-0 libasound2
 
