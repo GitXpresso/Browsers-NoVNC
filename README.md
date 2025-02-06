@@ -1515,7 +1515,7 @@ Not going to work on this project until I have all the still working Browsers th
 - [Go To Image Editing Applications](#Image-Editing-Applications)
 - [GIMP NoVNC](#GIMP-NoVNC)
 - [Inkscape NoVNC](#Inkscape-NoVNC)
-- [Digikam NoVNC](#Digikam-NoVNC)
+- [DigiKam NoVNC](#DigiKam-NoVNC)
 
 </details>
 
@@ -1949,7 +1949,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Inkscape Looks like
 ![](screenshots/inkscape.png)
-# Digikam
+# DigiKam NoVNC
 <br/>
 <div align="center">
   <a href="https://digikam.org/">
@@ -1964,9 +1964,30 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ``` 
 sudo apt install curl
 ```
-### Run Digikam NoVNC
+### Run DigiKam NoVNC
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/digikamnovnc.sh | bash
 ```
-## What Digikam Looks like
+## What DigiKam Looks like
 ![](screenshots/digikam.png)
+# Krita NoVNC
+<br/>
+<div align="center">
+  <a href="https://krita.org/">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Krita_Application_Logo.svg/256px-Krita_Application_Logo.svg.png?20140515223647" alt="Logo" width="" height="">
+  </a>
+  </p>Krita is a professional, free, and open-source painting program. It is designed primarily for digital art and 2D animation. Krita allows you to open, save, edit, and author HDR and scene-referred images. It provides features similar to traditional illustration software like paintbrushes and blenders, making it a popular choice for artists</p>
+    <br/>
+</div>
+
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Krita NoVNC
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/kritanovnc.sh | bash
+```
+## What Krita Looks like
+![](screenshots/krita.png)
