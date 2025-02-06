@@ -5,6 +5,7 @@ sudo apt update
 echo "Installing required packages"
 sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox dbus-x11 tilix libwebkit2gtk-4.1-dev
 git clone https://github.com/gitxpresso/linux-novnc ~/linux-novnc
+cd ~/
 wget https://github.com/loft-sh/devpod/releases/latest/download/DevPod_linux_amd64.AppImage  && sudo chmod u+x ./DevPod_linux_amd64.AppImage && ./DevPod_linux_amd64.AppImage --appimage-extract && sudo rm -rf DevPod_linux_amd64.AppImage
 cd ~/squashfs-root/usr/lib && sudo mv -f * /usr/lib
 sudo ln -s ~/squashfs-root/usr/bin/DevPod /usr/bin/DevPod
