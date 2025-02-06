@@ -2031,5 +2031,5 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/pintanovnc.sh | bash
 ```
-## What Fotoxx Looks like
+## What Pinta Looks like
 ![](screenshots/pinta.png)
