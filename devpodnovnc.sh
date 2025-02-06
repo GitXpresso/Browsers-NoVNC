@@ -18,7 +18,7 @@ Name=DevPod
 Terminal=false
 Type=Application
 EOF
-wget https://filebin.net/nj06u16o8sd0odx1/code_1.96.4-1736991114_amd64.deb && sudo apt install ./code_1.96.4-1736991114_amd64.deb && sudo rm -rf code_1.96.4-1736991114_amd64.deb
+wget https://github.com/GitXpresso/Browsers-NoVNC/releases/download/TarAndDeb/code_1.96.4-1736991114_amd64.deb && sudo apt install -y ./code_1.96.4-1736991114_amd64.deb && sudo rm -rf code_1.96.4-1736991114_amd64.deb
 sudo mv -f ~/DevPod.desktop /usr/share/applications
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
