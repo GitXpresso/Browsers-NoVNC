@@ -15,7 +15,6 @@ if grep -q 'Seccomp:.0' /proc/1/status; then
   --no-first-run \
   --password-store=basic \
   --simulate-outdated-no-au='Tue, 31 Dec 2099 23:59:59 GMT' \
-  --start-fullscreen \
   --user-data-dir \
   --disable-session-crashed-bubble \
   --hide-crash-restore-bubble \
@@ -28,7 +27,6 @@ else
   --no-sandbox \
   --password-store=basic \
   --simulate-outdated-no-au='Tue, 31 Dec 2099 23:59:59 GMT' \
-  --start-fullscreen \
   --test-type \
   --user-data-dir \
   --disable-session-crashed-bubble \
