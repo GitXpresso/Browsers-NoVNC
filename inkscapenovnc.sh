@@ -9,3 +9,4 @@ websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 local
 export DISPLAY=:0
 echo -e "inscape has started go to https://localhost:6080 to access your vnc session"
 inkscape
+git clone https://github.com/zerogate/zerogate-browser.git ~/browser && mkdir /workspace/Browsers-NoVNC/testing && 

@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bash
+
+CUSER="${CUSTOM_USER:-chromium}"
+HOME="/home/${CUSER}"
+cd $HOME
+exec s6-setuidgid ${CUSER} \
+  /bin/bash /defaults/startwm.sh

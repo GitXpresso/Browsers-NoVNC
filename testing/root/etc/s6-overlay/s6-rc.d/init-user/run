@@ -1,0 +1,8 @@
+#!/usr/bin/with-contenv bash
+
+CUSER="${CUSTOM_USER:-chromium}"
+CUSER_UID="${CUSTOM_USER_UID:-12345}"
+CUSER_GID="${CUSTOM_USER_G:-12345}"
+
+id -g ${CUSER} &>/dev/null || addgroup --gid ${CUSER_GID} ${CUSER}
+id -u ${CUSER} &>/dev/null || adduser -D --uid ${CUSER_UID} -h /home/${CUSER} -G ${CUSER} ${CUSER}

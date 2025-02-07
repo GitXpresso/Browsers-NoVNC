@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv bash
+
+CUSER="${CUSTOM_USER:-chromium}"
+
+exec s6-setuidgid ${CUSER} \
+  /usr/bin/pulseaudio \
+    --log-level=0 \
+    --log-target=stderr \
+    --exit-idle-time=-1 > /dev/null 2>&1
