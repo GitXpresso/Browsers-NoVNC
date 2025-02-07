@@ -1,5 +1,6 @@
 FROM ghcr.io/linuxserver/baseimage-kasmvnc:debianbookworm
 
+LABEL org.opencontainers.image.source https://github.com/gitxpresso/browsers-novnc
 # set version label
 ARG BUILD_DATE
 ARG VERSION
