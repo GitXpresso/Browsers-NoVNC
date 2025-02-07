@@ -2062,7 +2062,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 # Rawtherapee NoVNC 
 <div align="center">
   <a href="">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Darktable_icon.svg/512px-Darktable_icon.svg.png?20120823151814" alt="Logo" width="" height="">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/RawTherapee_logo-circle.svg/101px-RawTherapee_logo-circle.svg.png?20210803062947" alt="Logo" width="90" height="">
   </a>
   <h1 align="center">Rawtherapee</h1>
   </p>RawTherapee is a free, open-source photo editing software.</p>
@@ -2125,7 +2125,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 # Photoflow NoVNC
 <div align="center">
   <a href="">
-    <img src="https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/logos/photoflow.png" alt="Logo" width="" height="">
+    <img src="https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/logos/photoflow.png" alt="Logo" width="90" height="">
   </a>
   <h1 align="center">Photoflow</h1>
   </p>PhotoFlow is a non-destructive photo retouching program that provides a complete RAW image editing workflow</p>
