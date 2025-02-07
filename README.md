@@ -301,6 +301,19 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/thoriumnovnc.sh | bash
 ```
+## Run Dockerized Thorium Kasmvnc with Audio
+### First clone this repository if you have not cloned it
+```
+git clone https://github.com/gitxpresso/browsers-novnc ~/browsers-novnc
+```
+### Next cd to the cloned repository  
+``` 
+cd ~/browsers-novnc/thorium
+```
+## Next build and run the dockerfile by running the `build` file
+```
+bash build
+```
 ### Have Thorium automatically starts on boot
 ### Step 1: Clone the repository
 ```
