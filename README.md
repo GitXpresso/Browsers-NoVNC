@@ -306,7 +306,9 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 docker run -p 3000:3000 --name thorium ghcr.io/gitxpresso/browsers-novnc/thoriumkvnc           
 ```
-git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
+### Step 1: Install git and Cloned this repository
+```
+sudo apt update && sudo apt install git -y && git clone https://github.com/gitxpresso/browsers-novnc.git
 ```
 ### Step 2: Go to the cloned directory and edit thorium service "USER" variable on line 13
 > [!TIP]
