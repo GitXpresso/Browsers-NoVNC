@@ -2081,7 +2081,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 # Darktable NoVNC 
 <div align="center">
   <a href="">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Darktable_icon.svg/512px-Darktable_icon.svg.png?20120823151814" alt="Logo" width="" height="">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Darktable_icon.svg/512px-Darktable_icon.svg.png?20120823151814" alt="Logo" width="" height="90">
   </a>
   <h1 align="center">Darktable</h1>
   </p>Darktable is an open-source photography workfhttpslow application and raw developer. It allows photographers to manage digital negatives in a database, view them through a zoomable lighttable, and develop raw images while maintaining non-destructive editing.</p>
@@ -2099,3 +2099,24 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Darktable Looks like
 ![](screenshots/darktable.png)
+# Shotwell NoVNC
+<div align="center">
+  <a href="">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Shotwell_logo.svg/120px-Shotwell_logo.svg.png?20120505091744" alt="Logo" width="" height="">
+  </a>
+  <h1 align="center">Shotwell</h1>
+  </p>Shotwell is an image organizer designed for the GNOME desktop environment. It allows you to import photos from disk or camera, organize them by keywords and events, view them in full-window or fullscreen mode, and share them with others via social networking.</p>
+    <br/>
+</div>
+
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Shotwell NoVNC
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/shotwellnovnc.sh | bash
+```
+## What Shotwell Looks like
+![](screenshots/shotwell.png)
