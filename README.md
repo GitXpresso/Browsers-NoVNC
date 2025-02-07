@@ -1521,6 +1521,8 @@ Not going to work on this project until I have all the still working Browsers th
 - [Showfoto NoVNC](#Showfoto-NoVNC)
 - [Rawtherapee NoVNC](#Rawtherapee-NoVNC)
 - [Darktable NoVNC](#Darktable-NoVNC)
+- [Shotwell NoVNC](#Shotwell-NoVNC)
+- [Photoflow NoVNC](#Photoflow-NoVNC)
 
 </details>
 
@@ -2120,3 +2122,24 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Shotwell Looks like
 ![](screenshots/shotwell.png)
+# Photoflow NoVNC
+<div align="center">
+  <a href="">
+    <img src="https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/logos/photoflow.png" alt="Logo" width="" height="">
+  </a>
+  <h1 align="center">Photoflow</h1>
+  </p>PhotoFlow is a non-destructive photo retouching program that provides a complete RAW image editing workflow</p>
+    <br/>
+</div>
+
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Photoflow NoVNC
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/photoflownovnc.sh | bash
+```
+## What Photoflow Looks like
+![](screenshots/photoflow.png)
