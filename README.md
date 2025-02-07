@@ -1483,7 +1483,7 @@ Not going to work on this project until I have all the still working Browsers th
 <details><summary>Text editor Software</summary>
 
 - [Kate NoVNC](#Kate-NoVNC) *
-- [Kile NoVNC](#Kile NoVNC) *
+- [Kile NoVNC](#Kile-NoVNC) *
 - [SublimeText NoVNC](#SublimeText-NoVNC) *
 
 </details>
@@ -1519,6 +1519,9 @@ Not going to work on this project until I have all the still working Browsers th
 - [Fotoxx NoVNC](#Fotoxx-NoVNC)
 - [Pinta NoVNC](#Pinta-NoVNC)
 - [Showfoto NoVNC](#Showfoto-NoVNC)
+- [Rawtherapee NoVNC](#Rawtherapee-NoVNC)
+- [Darktable NoVNC](#Darktable-NoVNC)
+
 </details>
 
 # 3d Cad Apps
@@ -2054,3 +2057,45 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Showfoto Looks like
 ![](screenshots/showfoto.png)
+# Rawtherapee NoVNC 
+<div align="center">
+  <a href="">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Darktable_icon.svg/512px-Darktable_icon.svg.png?20120823151814" alt="Logo" width="" height="">
+  </a>
+  <h1 align="center">Rawtherapee</h1>
+  </p>RawTherapee is a free, open-source photo editing software.</p>
+    <br/>
+</div>
+
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Rawtherapee NoVNC
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/rawtherapeenovnc.sh | bash
+```
+## What Rawtherapee Looks like
+![](screenshots/rawtherapee.png)
+# Darktable NoVNC 
+<div align="center">
+  <a href="">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Darktable_icon.svg/512px-Darktable_icon.svg.png?20120823151814" alt="Logo" width="" height="">
+  </a>
+  <h1 align="center">Darktable</h1>
+  </p>Darktable is an open-source photography workfhttpslow application and raw developer. It allows photographers to manage digital negatives in a database, view them through a zoomable lighttable, and develop raw images while maintaining non-destructive editing.</p>
+    <br/>
+</div>
+
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Darktable NoVNC
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/darktablenovnc.sh | bash
+```
+## What Darktable Looks like
+![](screenshots/darktable.png)
