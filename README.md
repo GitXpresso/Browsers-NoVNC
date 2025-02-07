@@ -304,18 +304,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ## Run Dockerized Thorium Kasmvnc with Audio
 ### First clone this repository if you have not cloned it
 ```
-git clone https://github.com/gitxpresso/browsers-novnc ~/browsers-novnc
-```
-### Next cd to the cloned repository  
-``` 
-cd ~/browsers-novnc/thorium
-```
-## Next build and run the dockerfile by running the `build` file
-```
-bash build
-```
-### Have Thorium automatically starts on boot
-### Step 1: Clone the repository
+docker run -p 3000:3000 --name thorium ghcr.io/gitxpresso/browsers-novnc/thoriumkvnc           
 ```
 git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
 ```
