@@ -1,0 +1,37 @@
+#!/bin/bash
+
+BIN=/usr/bin/thorium-browser
+
+# Cleanup
+if ! pgrep brave-browser > /dev/null;then
+  rm -f $HOME/.config/thorium-browser/Singleton*
+fi
+
+# Run normally on privved containers or modified un non priv
+if grep -q 'Seccomp:.0' /proc/1/status; then
+  ${BIN} \
+  --user-agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36' \
+  --ignore-gpu-blocklist \
+  --no-first-run \
+  --password-store=basic \
+  --simulate-outdated-no-au='Tue, 31 Dec 2099 23:59:59 GMT' \
+  --start-fullscreen \
+  --user-data-dir \
+  --disable-session-crashed-bubble \
+  --hide-crash-restore-bubble \
+   "$@" > /dev/null 2>&1
+else
+  ${BIN} \
+  --user-agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36' \
+  --ignore-gpu-blocklist \
+  --no-first-run \
+  --no-sandbox \
+  --password-store=basic \
+  --simulate-outdated-no-au='Tue, 31 Dec 2099 23:59:59 GMT' \
+  --start-fullscreen \
+  --test-type \
+  --user-data-dir \
+  --disable-session-crashed-bubble \
+  --hide-crash-restore-bubble \
+   "$@" > /dev/null 2>&1
+fi
