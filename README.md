@@ -1104,7 +1104,11 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/torxpra.sh | bash
 ```
-### Have Mullvad automatically starts on boot
+## Run Tor KasmVNC with audio support
+```
+docker run -p 3000:3000 --name tor --security-opt seccomp=unconfined ghcr.io/gitxpresso/torkasmvnc
+```
+### Have Tor automatically starts on boot
 ### Step 1: Clone the repository
 ```
 git clone https://github.com/gitxpresso/browsers-novnc.git ~/browsers-novnc
