@@ -121,6 +121,10 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/chromenovnc.sh | bash
 ```
+## Run Dockerized Thorium Kasmvnc with Audio
+```
+docker run -p 3000:3000 --name chrome ghcr.io/gitxpresso/chromekasmvnc           
+```
 ### Have Chrome automatically starts on boot
 ### Step 1: Clone the repository
 ```
@@ -180,6 +184,10 @@ sudo apt install curl
 ### Run Brave NoVNC using Curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/bravenovnc.sh | bash
+```
+## Run Dockerized Thorium Kasmvnc with Audio
+```
+docker run -p 3000:3000 --name brave ghcr.io/gitxpresso/bravekasmvnc      
 ```
 ### Have Brave automatically starts on boot
 ### Step 1: Clone the repository
@@ -302,7 +310,6 @@ sudo apt install curl
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/thoriumnovnc.sh | bash
 ```
 ## Run Dockerized Thorium Kasmvnc with Audio
-### First clone this repository if you have not cloned it
 ```
 docker run -p 3000:3000 --name thorium ghcr.io/gitxpresso/browsers-novnc/thoriumkvnc           
 ```
