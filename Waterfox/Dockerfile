@@ -1,6 +1,23 @@
 FROM ghcr.io/linuxserver/baseimage-kasmvnc:debianbookworm
-
 LABEL org.opencontainers.image.source https://github.com/gitxpresso/browsers-novnc
+FROM ghcr.io/linuxserver/baseimage-kasmvnc:ubuntujammy AS opt
+
+ADD https://cdn1.waterfox.net/waterfox/releases/6.5.4/Linux_x86_64/waterfox-6.5.4.tar.bz2 /waterfox-6.5.4.tar.bz2 
+
+FROM ubuntu:jammy AS installer
+
+# Retrieve .NET Runtime
+RUN --mount=from=opt,target=/opt <<EOF
+mkdir -p /dotnet
+tar -oxzf /opt/waterfox-6.5.4.tar.bz2 -C /waterfox
+EOF
+
+FROM ghcr.io/linuxserver/baseimage-kasmvnc:ubuntujammy
+
+
+COPY --from=installer /waterfox /opt/waterfox
+RUN ln -s /opt/waterfox/waterfox /usr/bin/waterfox
+
 # set version label
 ARG BUILD_DATE
 ARG VERSION
