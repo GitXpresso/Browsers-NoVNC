@@ -26,5 +26,5 @@ tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bi
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
 echo "Pale Moon and NoVNC has started Now go to https://localhost:5900 to access tor on the vnc server"
 export DISPLAY=:0
-sudo ln -s ~/palemoon/palemoon /usr/bin/startpalemoo
+sudo ln -s ~/palemoon/palemoon /usr/bin/startpalemoon
 startpalemoon
