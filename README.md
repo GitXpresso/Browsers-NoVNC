@@ -132,7 +132,7 @@ docker rm -f chrome
 ```
 ### Then run the same command but with another variable added
 ```
-docker run -p 3000:3000 --name chrome --security-opt seccomp=unconfined
+docker run -p 3000:3000 --name chrome --security-opt seccomp=unconfined ghcr.io/gitxpresso/chromekasmvnc
 ```
 ### Have Chrome automatically starts on boot
 ### Step 1: Clone the repository
@@ -702,6 +702,19 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/floorpnovnc.sh | bash
 ```
+## Run Dockerized Floorp Kasmvnc with Audio
+```
+docker run -p 3000:3000 --name floorp ghcr.io/gitxpresso/floorpkasmvnc           
+```
+### If you get an openbox error on docker port 3000 then do this
+### First remove the docker container
+```
+docker rm -f floorp
+```
+### Then run the same command but with another variable added
+```
+docker run -p 3000:3000 --name floorp --security-opt seccomp=unconfined ghcr.io/gitxpresso/floorpkasmvnc
+```
 ### Have Floorp automatically starts on boot
 ### Step 1: Clone the repository
 ```
@@ -1146,9 +1159,18 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/torxpra.sh | bash
 ```
-## Run Tor KasmVNC with audio support
+## Run Dockerized Chrome Kasmvnc with Audio
 ```
-docker run -p 3000:3000 --name tor --security-opt seccomp=unconfined ghcr.io/gitxpresso/torkasmvnc
+docker run -p 3000:3000 --name tor ghcr.io/gitxpresso/torkasmvnc           
+```
+### If you get an openbox error on docker port 3000 then do this
+### First remove the docker container
+```
+docker rm -f tor
+```
+### Then run the same command but with another variable added
+```
+docker run -p 3000:3000 --name chrome --security-opt seccomp=unconfined ghcr.io/gitxpresso/torkasmvnc    
 ```
 ### Have Tor automatically starts on boot
 ### Step 1: Clone the repository
