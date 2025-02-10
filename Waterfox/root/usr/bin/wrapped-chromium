@@ -1,10 +1,10 @@
 #!/bin/bash
 
-BIN=/usr/bin/thorium-browser
+BIN=/usr/bin/waterfox
 
 # Cleanup
-if ! pgrep brave-browser > /dev/null;then
-  rm -f $HOME/.config/thorium-browser/Singleton*
+if ! pgrep waterfox > /dev/null;then
+  rm -f $HOME/.config/waterfox/Singleton*
 fi
 
 # Run normally on privved containers or modified un non priv
