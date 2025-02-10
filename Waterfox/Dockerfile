@@ -1,23 +1,6 @@
 FROM ghcr.io/linuxserver/baseimage-kasmvnc:debianbookworm
+
 LABEL org.opencontainers.image.source https://github.com/gitxpresso/browsers-novnc
-FROM ghcr.io/linuxserver/baseimage-kasmvnc:ubuntujammy AS opt
-
-ADD https://cdn1.waterfox.net/waterfox/releases/6.5.4/Linux_x86_64/waterfox-6.5.4.tar.bz2 /waterfox-6.5.4.tar.bz2 
-
-FROM ubuntu:jammy AS installer
-
-# Retrieve .NET Runtime
-RUN --mount=from=opt,target=/opt <<EOF
-mkdir -p /dotnet
-tar -oxzf /opt/waterfox-6.5.4.tar.bz2 -C /waterfox
-EOF
-
-FROM ghcr.io/linuxserver/baseimage-kasmvnc:ubuntujammy
-
-
-COPY --from=installer /waterfox /opt/waterfox
-RUN ln -s /opt/waterfox/waterfox /usr/bin/waterfox
-
 # set version label
 ARG BUILD_DATE
 ARG VERSION
@@ -33,8 +16,11 @@ RUN \
   curl -o \
     /kclient/public/icon.png \
     https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/chromium-logo.png && \  
+    sudo apt install curl apt-transport-https libc6 -y && \
+    curl -fsSL https://download.opensuse.org/repositories/home:hawkeye116477:waterfox/Debian_12/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_hawkeye116477_waterfox.gpg > /dev/null && \
+    echo 'deb https://download.opensuse.org/repositories/home:/hawkeye116477:/waterfox/Debian_12/ /' | sudo tee /etc/apt/sources.list.d/home:hawkeye116477:waterfox.list && \
+    sudo apt install -y waterfox-g && \
     echo "**** cleanup ****" && \
-    sudo dpkg --add-architecture i386 && \
   apt-get autoclean && \
   rm -rf \
     /config/.cache \
