@@ -125,6 +125,15 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 docker run -p 3000:3000 --name chrome ghcr.io/gitxpresso/chromekasmvnc           
 ```
+### If you get an openbox error on docker port 3000 then do this
+### First remove the docker container
+```
+docker rm -f chrome
+```
+### Then run the same command but with another variable added
+```
+docker run -p 3000:3000 --name chrome --security-opt seccomp=unconfined
+```
 ### Have Chrome automatically starts on boot
 ### Step 1: Clone the repository
 ```
@@ -185,9 +194,18 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/bravenovnc.sh | bash
 ```
-## Run Dockerized Thorium Kasmvnc with Audio
+## Run Dockerized Brave Kasmvnc with Audio
 ```
-docker run -p 3000:3000 --name brave ghcr.io/gitxpresso/bravekasmvnc      
+docker run -p 3000:3000 --name brave ghcr.io/gitxpresso/bravekasmvnc           
+```
+### If you get an openbox error on docker port 3000 then do this
+### First remove the docker container
+```
+docker rm -f brave
+```
+### Then run the same command but with another variable added
+```
+docker run -p 3000:3000 --name brave --security-opt seccomp=unconfined ghcr.io/gitxpresso/bravekasmvnc
 ```
 ### Have Brave automatically starts on boot
 ### Step 1: Clone the repository
@@ -311,7 +329,16 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## Run Dockerized Thorium Kasmvnc with Audio
 ```
-docker run -p 3000:3000 --name thorium ghcr.io/gitxpresso/browsers-novnc/thoriumkvnc           
+docker run -p 3000:3000 --name thorium ghcr.io/gitxpresso/thoriumkasmvnc           
+```
+### If you get an openbox error on docker port 3000 then do this
+### First remove the docker container
+```
+docker rm -f thorium
+```
+### Then run the same command but with another variable added
+```
+docker run -p 3000:3000 --name thorium --security-opt seccomp=unconfined ghcr.io/gitxpresso/thoriumkasmvnc
 ```
 ### Step 1: Install git and Cloned this repository
 ```
