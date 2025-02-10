@@ -121,7 +121,7 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/chromenovnc.sh | bash
 ```
-## Run Dockerized Thorium Kasmvnc with Audio
+## Run Dockerized Chrome Kasmvnc with Audio
 ```
 docker run -p 3000:3000 --name chrome ghcr.io/gitxpresso/chromekasmvnc           
 ```
@@ -868,6 +868,14 @@ sudo apt install curl
 ## Run Waterfox NoVNC using curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/waterfoxnovnc.sh | bash
+```
+## Run Dockerized Waterfox Kasmvnc with Audio
+```
+docker run -p 3000:3000 --name waterfox ghcr.io/gitxpresso/waterfoxkasmvnc           
+```
+### If the docker port 3000 gets an openbox error then run this instead
+```
+docker run -p 3000:3000 --name waterfox --security-opt seccomp=unconfined ghcr.io/gitxpresso/waterfoxkasmvnc           
 ```
 ### Have Waterfox automatically starts on boot
 ### Step 1: Clone the repository
