@@ -1600,8 +1600,9 @@ Not going to work on this project until I have all the still working Browsers th
 
 <details<summary>Music Apps</summary>
 
-- [Go To Music Apps[(#Music-Apps)
-- [Audacity NoVNC](#Audacity-NoVNC)
+- [Go To Music Apps](#Music-Apps)
+- [Go To Synthesizers](Synthesizers-Apps]
+- [Audacity NoVNC](#Audacity-KasmVNC)
 
 </details> 
 
@@ -2221,7 +2222,9 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Photoflow Looks like
 ![](screenshots/photoflow.png)
-# Audio Apps
+# Music Apps
+# Synthesizers Apps
+
 # Audacity NoVNC 
 <div align="center">
   <a href="">
