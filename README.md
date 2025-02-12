@@ -2204,7 +2204,6 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
     <br/>
 </div>
 
-
 ### Install curl if you don't have it
 ``` 
 sudo apt install curl
@@ -2215,3 +2214,33 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ```
 ## What Photoflow Looks like
 ![](screenshots/photoflow.png)
+# Audio Apps
+# Audacity 
+<div align="center">
+  <a href="">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Audacity_Logo.svg/128px-Audacity_Logo.svg.png?20121030013421" alt="Logo" width="90" height="">
+  </a>
+  <h1 align="center">Audacity</h1>
+  </p>Audacity is the world's most popular free software for recording and editing audio.</p>
+    <br/>
+</div>
+
+### Install curl if you don't have it
+``` 
+sudo apt install curl
+```
+### Run Audacity NoVNC
+```
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/audacitynovnc.sh | bash
+```
+### Run Audacity Dockerized KasmVNC with Audio if you want audio to work
+```
+docker run -p 3000:3000 ghcr.io/gitxpresso/audacitykasmvnc
+```
+### If you get an openbox error when running `docker run -p 3000:3000 --security-opt seccomp=unconfined ghcr.io/gitxpresso/audacitykasmvnc` then does this
+```
+docker run -p 3000:3000 --security-opt seccomp=unconfined ghcr.io/gitxpresso/audacitykasmvnc
+```
+## What Audacity Looks like
+![](screenshots/audacity.png)
+
