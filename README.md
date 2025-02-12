@@ -1598,6 +1598,13 @@ Not going to work on this project until I have all the still working Browsers th
 
 </details>
 
+<details<summary>Music Apps</summary>
+
+- [Go To Music Apps[(#Music-Apps)
+- [Audacity NoVNC](#Audacity-NoVNC)
+
+</details> 
+
 # 3d Cad Apps
 # Blender NoVNC
 <br/>
@@ -2215,7 +2222,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ## What Photoflow Looks like
 ![](screenshots/photoflow.png)
 # Audio Apps
-# Audacity 
+# Audacity NoVNC 
 <div align="center">
   <a href="">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Audacity_Logo.svg/128px-Audacity_Logo.svg.png?20121030013421" alt="Logo" width="90" height="">
@@ -2229,7 +2236,7 @@ curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/head
 ``` 
 sudo apt install curl
 ```
-### Run Audacity NoVNC
+### Run Audacity NoVNC ❌
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/audacitynovnc.sh | bash
 ```
