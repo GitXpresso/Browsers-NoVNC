@@ -1,5 +1,6 @@
 #!/bin/bash
 # Install Zen Browser to create .deb package
+sudo apt-get wget install build-essential devscripts debhelper -y
 wget https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz && tar -xvf zen.linux-x86_64.tar.xz -C ~/ && sudo rm -f zen.linux-x86_64.tar.xz 
 mkdir ~/zen-1.7.6b
 mkdir -p ~/zen-1.7.6b/DEBIAN
@@ -16,11 +17,11 @@ EOF
 mkdir -p ~/zen-1.7.6b/usr/bin
 mkdir -p ~/zen-1.7.6b/usr/lib/zen
 mkdir -p ~/zen-1.7.6b/usr/lib
-mkdir -p ~/zen-1.7.6b/usr/share/applications
-mkdir -p ~/zen-1.7.6b/usr/share/icons/hicolor/48x48/apps
+mkdir -p ~/zen-1.7.6b/usr/share/applications/
+mkdir -p ~/zen-1.7.6b/usr/share/icons/hicolor/48x48/apps/
 echo -e "copying executable files to zen-1.7.6b"
-ln -s ~/zen/zen ~/zen-1.7.6b/usr/bin
-ln -s ~/zen/zen-bin ~/zen-1.7.6b/usr/bin
+cp -r ~/zen/zen ~/zen-1.7.6b/usr/bin/
+cp -r ~/zen/zen-bin ~/zen-1.7.6b/usr/bin/
 echo "copying zen.png to zen-1.7.6b"
 cat << EOF >~/zen-1.7.6b/usr/share/applications/zen.desktop
 [Desktop Entry]
@@ -38,7 +39,7 @@ MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rd
 Keywords=Browser;
 EOF
 echo "copying zen.png to zen-1.7.6b"
-cp -r ~/zen/* ~/zen-1.7.6b/usr/lib/zen
-cp -r ~/zen/lib*.so ~/zen-1.7.6b/usr/lib
+cp -r ~/zen/* ~/zen-1.7.6b/usr/lib/zen/
+cp -r ~/zen/lib*.so ~/zen-1.7.6b/usr/lib/
 cp -r ~/zen/browser/chrome/icons/default/default48.png ~/zen-1.7.6b/usr/share/icons/hicolor/48x48/apps/zen.png
 dpkg-deb --build ~/zen-1.7.6b
