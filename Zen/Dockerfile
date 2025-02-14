@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-kasmvnc:debianbookworm
+FROM ghcr.io/linuxserver/baseimage-kasmvnc:ubuntujammy
 
 # set version label
 ARG BUILD_DATE
@@ -8,17 +8,17 @@ LABEL maintainer="gitxpresso"
 LABEL org.opencontainers.image.source https://github.com/gitxpresso/browsers-novnc
 
 # title
-ENV TITLE=Zen
-
+ENV TITLE=Lutris
 RUN \
   echo "**** add icon ****" && \
   curl -o \
     /kclient/public/icon.png \
-    https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Zen_Browser_logo_%28red_circles%29.svg/320px-Zen_Browser_logo_%28red_circles%29.svg.png?20241210152321 && \
-  apt-get update && \
+    https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Lutris_Game_Platform_%28Logo%29.svg/256px-Lutris_Game_Platform_%28Logo%29.svg.png?20190914235349 && \  apt-get update && \
   echo "**** install dependencies ****" && \
-  apt install --no-install-recommends -y curl gnupg wget && \
-  wget https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz && tar -xvf zen.linux-x86_64.tar.xz -C ~/ && sudo rm -f zen.linux-x86_64.tar.xz && \
+  sudo dpkg --add-architecture i386 && \
+  apt-get update && \
+  apt install --no-install-recommends -y curl gnupg wget libc6-i386 libc6-dev  libgl1:i386 libdrm2:i386 libgtk2.0-0 libdbus-glib-1-2 dbus-x11 && \
+  wget https://github.com/lutris/lutris/releases/download/v0.5.18/lutris_0.5.18_all.deb  wget https://github.com/lutris/lutris/releases/download/v0.5.18/lutris_0.5.18_all.deb && sudo apt install -y ./lutris_0.5.18_all.deb && sudo rm -rf lutris_0.5.18_all.deb && \  
   echo "**** cleanup ****" && \
   apt-get autoclean && \
   rm -rf \

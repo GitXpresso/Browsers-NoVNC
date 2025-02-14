@@ -1,7 +1,8 @@
 #!/bin/bash
 # Install Zen Browser to create .deb package
 sudo apt-get wget install build-essential devscripts debhelper -y
-wget https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz && tar -xvf zen.linux-x86_64.tar.xz -C ~/ && sudo rm -f zen.linux-x86_64.tar.xz 
+export TAR_URL="https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz"
+wget ${TAR_URL} && tar -xvf zen.linux-x86_64.tar.xz -C ~/ && sudo rm -f zen.linux-x86_64.tar.xz 
 mkdir ~/zen-1.7.6b
 mkdir -p ~/zen-1.7.6b/DEBIAN
 cat << EOF >~/zen-1.7.6b/DEBIAN/control
