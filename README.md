@@ -1488,6 +1488,19 @@ sudo apt install curl
 ```
 curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/zenbrowsernovnc.sh | bash
 ```
+## Run Dockerized Zen Kasmvnc with Audio
+```
+docker run -p 3000:3000 --name zen ghcr.io/gitxpresso/zenkasmvnc           
+```
+### If you get an openbox error on docker port 3000 then do this
+### First remove the docker container
+```
+docker rm -f zen
+```
+### Then run the same command but with another variable added
+```
+docker run -p 3000:3000 --name zen --security-opt seccomp=unconfined ghcr.io/gitxpresso/zenkasmvnc
+```
 ### Have Zen automatically starts on boot
 ### Step 1: Clone the repository
 ```
