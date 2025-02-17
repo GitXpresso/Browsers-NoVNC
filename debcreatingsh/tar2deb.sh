@@ -4,9 +4,9 @@ sudo apt-get install wget build-essential devscripts debhelper -y
 # Edit the Export Variables in order for this file to work successfully
 export TAR_URL="https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz"
 export TAR_DIR="zen"
-export TAR_EXEC="zen"
 export DEB_DIR="zen-1.7.6b"
 export NAME_OF_IMAGE="zen"
+export TAR_EXEC="zen"
 wget -P ~/ ${TAR_URL} && tar -xvf ~/*.tar.xz -C ~/ && sudo rm -f ~/*.tar.xz
 mkdir ~/${DEB_DIR}
 mkdir -p ~/${DEB_DIR}/DEBIAN
