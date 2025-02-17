@@ -1,11 +1,17 @@
 #!/bin/bash
 # Install Zen Browser to create .deb package
 sudo apt-get wget install build-essential devscripts debhelper -y
+# Edit the Export Variables in order for this file to work successfully
 export TAR_URL="https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz"
-wget ${TAR_URL} && tar -xvf zen.linux-x86_64.tar.xz -C ~/ && sudo rm -f zen.linux-x86_64.tar.xz 
-mkdir ~/zen-1.7.6b
-mkdir -p ~/zen-1.7.6b/DEBIAN
-cat << EOF >~/zen-1.7.6b/DEBIAN/control
+export TAR_DIR="zen"
+export TAR_EXEC="zen"
+export DEB_DIR="zen-1.7.6b"
+export NAME_OF_IMAGE="zen"
+wget -P ~/ ${TAR_URL} && tar -xvf ~/*.tar.xz -C ~/ && sudo rm -f ~/*.tar.xz
+mkdir ~/${DEB_DIR}
+mkdir -p ~/${DEB_DIR}/DEBIAN
+# You are going to have to edit the following contents below 
+cat << EOF >~/${DEB_DIR}/DEBIAN/control
 Package: zen
 Version: 1.7.6b
 Section: base
@@ -15,19 +21,20 @@ Maintainer: William G
 Description: Zen browser .deb file
 
 EOF
-mkdir -p ~/zen-1.7.6b/usr/bin
-mkdir -p ~/zen-1.7.6b/usr/lib/zen
-mkdir -p ~/zen-1.7.6b/usr/lib
-mkdir -p ~/zen-1.7.6b/usr/share/applications/
-mkdir -p ~/zen-1.7.6b/usr/share/icons/hicolor/48x48/apps/
+mkdir -p ~/${DEB_DIR}/usr/bin
+mkdir -p ~/${DEB_DIR}/usr/lib/zen
+mkdir -p ~/${DEB_DIR}/usr/lib
+mkdir -p ~/${DEB_DIR}/usr/share/applications/
+mkdir -p ~/${DEB_DIR}/usr/share/icons/hicolor/48x48/apps/
 echo -e "copying executable files to zen-1.7.6b"
-cp -r ~/zen/zen ~/zen-1.7.6b/usr/bin/
-cp -r ~/zen/zen-bin ~/zen-1.7.6b/usr/bin/
+cp -r ~/${TAR_DIR}/${TAR_EXEC} ~/${DEB_DIR}/usr/bin/
 echo "copying zen.png to zen-1.7.6b"
-cat << EOF >~/zen-1.7.6b/usr/share/applications/zen.desktop
+cat << EOF >~/${DEB_DIR}/usr/share/applications/zen.desktop
 [Desktop Entry]
 Version=1.0
-StartupWMClass=zen
+# Edit "zen" to the executable file from the tar
+# Edit zen.png to a diffrent file name if you want
+StartupWMClass=zen 
 Icon=/usr/share/icons/hicolor/48x48/apps/zen.png
 Type=Application
 Categories=Network;WebBrowser;
@@ -40,7 +47,7 @@ MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rd
 Keywords=Browser;
 EOF
 echo "copying zen.png to zen-1.7.6b"
-cp -r ~/zen/* ~/zen-1.7.6b/usr/lib/zen/
-cp -r ~/zen/lib*.so ~/zen-1.7.6b/usr/lib/
-cp -r ~/zen/browser/chrome/icons/default/default48.png ~/zen-1.7.6b/usr/share/icons/hicolor/48x48/apps/zen.png
-dpkg-deb --build ~/zen-1.7.6b
+cp -r ~/${TAR_DIR}/* ~/${DEB_DIR}/usr/lib/zen/
+cp -r ~/${TAR_DIR}/lib*.so ~/${DEB_DIR}/usr/lib/
+cp -r ~/${TAR_DIR}/browser/chrome/icons/default/default48.png ~/${DEB_DIR}/usr/share/icons/hicolor/48x48/apps/${NAME_OF_IMAGE}.png
+dpkg-deb --build ~/${DEB_DIR}
