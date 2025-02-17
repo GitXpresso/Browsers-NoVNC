@@ -1,6 +1,6 @@
 #!/bin/bash
 # Install Zen Browser to create .deb package
-sudo apt-get wget install build-essential devscripts debhelper -y
+sudo apt-get install wget build-essential devscripts debhelper -y
 # Edit the Export Variables in order for this file to work successfully
 export TAR_URL="https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz"
 export TAR_DIR="zen"
