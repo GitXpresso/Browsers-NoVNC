@@ -1,2 +1,6 @@
-
-sudo apt install -y i965-va-driver libasound2 libatk1.0-0 libc6 libcairo-gobject2 libcairo2 libdbus-1-3 libfontconfig1 libfreetype6 libxext6 libxfixes3 libxrandr2 libxrender1 libglib2.0-0 libgtk-3-0 libgcc1 libx11-6 libva2 libva-x11-2 libva-drm2 intel-media-va-driver libavcodec58 libavutil56 libcodec2-1.0 libgsm1 libigdgmm12 libmfx1 libmp3lame0 libogg0 libopus0 libshine3 libsnappy1v5 libsoxr0 libspeex1 libswresample3 libtheora0 libtwolame0 libva-drm2 libva-x11-2 libva2 libvdpau1 libvorbis0a libvorbisenc2 libvpx7 libx264-163 libxvidcore4 mesa-va-drivers mesa-vdpau-drivers ocl-icd-libopencl1 va-driver-all vdpau-driver-all
+#!/bin/bash
+sudo apt update && sudo apt install curl sudo gpg -y
+curl -fsSL https://ppa.ablaze.one/KEY.gpg | sudo gpg --dearmor -o /usr/share/keyrings/Floorp.gpg
+sudo curl -sS --compressed -o /etc/apt/sources.list.d/Floorp.list 'https://ppa.ablaze.one/Floorp.list'
+sudo apt update
+sudo apt install floorp -y
