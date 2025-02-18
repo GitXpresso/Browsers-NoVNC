@@ -3,8 +3,6 @@
 sudo apt-get install wget build-essential devscripts debhelper busybox -y
 # Edit the Export Variables in order for this file to work successfully
 export TAR_URL="https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz"
-export TAR_DIR="zen"
-export NAME_OF_IMAGE="zen"
 export TAR_EXEC="zen"
 export TAR_EXEC2="zen-bin"
 echo "Please enter the url of the tar file" 
@@ -12,6 +10,8 @@ echo -e "example: https://github.com/zen-browser/desktop/releases/download/1.7.6
 echo -n "tar url:"
 read TAR_URL
 wget -P ~/ $TAR_URL && tar -xvf ~/*.tar.xz -C ~/ && sudo rm -f ~/*.tar.xz
+echo -n "Please enter the tar directory name: "
+read TAR-DIR
 echo -n "Please enter your base directory name: "
 read DEB_DIR
 
@@ -53,9 +53,9 @@ MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rd
 Keywords=Browser;
 EOF
 echo "copying zen.png to zen-1.7.6b"
-cp -r ~/${TAR_DIR}/* ~/$DEB_DIR/usr/lib/zen/
-cp -r ~/${TAR_DIR}/lib*.so ~/$DEB_DIR/usr/lib/
-cp -r ~/${TAR_DIR}/browser/chrome/icons/default/default48.png ~/$DEB_DIR/usr/share/icons/hicolor/48x48/apps/${NAME_OF_IMAGE}.png
+cp -r ~/$TAR_DIR/* ~/$DEB_DIR/usr/lib/zen/
+cp -r ~/$TAR_DIR/lib*.so ~/$DEB_DIR/usr/lib/
+cp -r ~/$TAR_DIR/browser/chrome/icons/default/default48.png ~/$DEB_DIR/usr/share/icons/hicolor/48x48/apps/${NAME_OF_IMAGE}.png
 busybox ln -s ~/zen-1.7.6b/usr/lib/zen/${TAR_EXEC}  ~/zen-1.7.6b/usr/bin 
 busybox ln -s ~/zen-1.7.6b/usr/lib/zen/${TAR_EXEC2}  ~/zen-1.7.6b/usr/bin
 dpkg-deb --build ~/$DEB_DIR
