@@ -11,13 +11,17 @@ echo -n "tar url:"
 read TAR_URL
 wget -P ~/ $TAR_URL && tar -xvf ~/*.tar.xz -C ~/ && sudo rm -f ~/*.tar.xz
 echo -n "Please enter the tar directory name: "
-read TAR-DIR
+read TAR_DIR
+echo -n "Please enter the executable file when directory was create from tar file: "
+read TAR_EXEC
 echo -n "Please enter your base directory name: "
 read DEB_DIR
 
 mkdir ~/$DEB_DIR
 mkdir -p ~/$DEB_DIR/DEBIAN
 # You are going to have to edit the following contents below 
+#!/bin/bash
+
 cat << EOF >~/$DEB_DIR/DEBIAN/control
 Package: zen
 Version: 1.7.6b
@@ -40,7 +44,6 @@ cat << EOF >~/$DEB_DIR/usr/share/applications/zen.desktop
 Version=1.0
 # Edit "zen" to the executable file from the tar
 # Edit zen.png to a diffrent file name if you want
-StartupWMClass=zen 
 Icon=/usr/share/icons/hicolor/48x48/apps/zen.png
 Type=Application
 Categories=Network;WebBrowser;
