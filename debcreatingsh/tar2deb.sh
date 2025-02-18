@@ -7,7 +7,9 @@ export TAR_DIR="zen"
 export NAME_OF_IMAGE="zen"
 export TAR_EXEC="zen"
 export TAR_EXEC2="zen-bin"
-echo -n "Please enter the url of the tar file:"
+echo "Please enter the url of the tar file" 
+echo -e "example: https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz"
+echo -n "tar url:"
 read TAR_URL
 wget -P ~/ $TAR_URL && tar -xvf ~/*.tar.xz -C ~/ && sudo rm -f ~/*.tar.xz
 echo -n "Please enter your base directory name: "
