@@ -9,9 +9,7 @@ echo "Please enter the url of the tar file"
 echo -e "example: https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz"
 echo -n "tar url:"
 read TAR_URL
-wget -P ~/ $TAR_URL && tar -xvf ~/*.tar.xz -C ~/ && sudo rm -f ~/*.tar.xz
-echo -n "Please enter the tar directory name: "
-read TAR_DIR
+wget -P ~/ ${TAR_URL} && TAR_DIR=`tar -xvf ~/*.tar.xz -C ~/ | head -1 | cut -f1 -d"/"` && sudo rm -f ~/*.tar.xz
 echo -n "Please enter your base directory name: "
 read DEB_DIR
 
@@ -57,4 +55,6 @@ cp -r ~/$TAR_DIR/lib*.so ~/$DEB_DIR/usr/lib/
 cp -r ~/$TAR_DIR/browser/chrome/icons/default/default48.png ~/$DEB_DIR/usr/share/icons/hicolor/48x48/apps/${NAME_OF_IMAGE}.png
 busybox ln -s ~/zen-1.7.6b/usr/lib/zen/${TAR_EXEC}  ~/zen-1.7.6b/usr/bin 
 busybox ln -s ~/zen-1.7.6b/usr/lib/zen/${TAR_EXEC2}  ~/zen-1.7.6b/usr/bin
+find $TAR_DIR -type f -name "*.png" -exec mv {} ~/$DEB_DIR/usr/share/icons/hicolor/48x48/apps/ \;
 dpkg-deb --build ~/$DEB_DIR
+TAR_DIR=$(ls -td ~/ | head -1)
