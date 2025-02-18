@@ -29,7 +29,7 @@ Description: Zen browser .deb file
 
 EOF
 mkdir -p ~/$DEB_DIR/usr/bin
-mkdir -p ~/$DEB_DIR/usr/lib/zen
+mkdir -p ~/$DEB_DIR/usr/lib/$TAR_DIR
 mkdir -p ~/$DEB_DIR/usr/lib
 mkdir -p ~/$DEB_DIR/usr/share/applications/
 mkdir -p ~/$DEB_DIR/usr/share/icons/hicolor/48x48/apps/
@@ -40,7 +40,6 @@ cat << EOF >~/$DEB_DIR/usr/share/applications/zen.desktop
 Version=1.0
 # Edit "zen" to the executable file from the tar
 # Edit zen.png to a diffrent file name if you want
-StartupWMClass=zen 
 Icon=/usr/share/icons/hicolor/48x48/apps/zen.png
 Type=Application
 Categories=Network;WebBrowser;
