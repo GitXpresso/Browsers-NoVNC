@@ -11,7 +11,7 @@ echo -n "tar url:"
 read TAR_URL
 wget -P ~/ $TAR_URL && tar -xvf ~/*.tar.xz -C ~/ && sudo rm -f ~/*.tar.xz
 echo -n "Please enter the tar directory name: "
-read TAR-DIR
+read TAR_DIR
 echo -n "Please enter your base directory name: "
 read DEB_DIR
 
