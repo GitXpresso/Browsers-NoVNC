@@ -9,7 +9,7 @@ echo "Please enter the url of the tar file"
 echo -e "example: "https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz""
 echo -n "tar url:"
 read TAR_URL
-tarfile=`wget -P ~/ -nv $TAR_URL 2>&1 |cut -d\" -f2` && TAR_DIR=`tar -xvf $tarfile -C ~/ | head -1 |cut -d\" -f1` && sudo rm -f $tarfile
+tarfile=`wget -P ~/ -nv $TAR_URL 2>&1 | cut -d\" -f2` && TAR_DIR=`tar -xvf $tarfile -C ~/ | head -1 | cut -f1 -d"/"` && sudo rm -f $tarfile
 echo -n "enter the name of your package"
 read DEB_DIR
 mkdir ~/$DEB_DIR
@@ -30,9 +30,9 @@ Maintainer: GitXpresso
 Description: .deb file
 
 EOF
-mkdir -p ~/$DEB_DIR/usr/bin
+mkdir -p ~/$DEB_DIR/usr/bin/
 mkdir -p ~/$DEB_DIR/usr/lib/$TAR_DIR
-mkdir -p ~/$DEB_DIR/usr/lib
+mkdir -p ~/$DEB_DIR/usr/lib/
 mkdir -p ~/$DEB_DIR/usr/share/applications/
 mkdir -p ~/$DEB_DIR/usr/share/icons/hicolor/48x48/apps/
 echo -e "copying executable files to zen-1.7.6b"
@@ -54,9 +54,9 @@ MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rd
 Keywords=Browser;
 EOF
 echo "copying zen.png to zen-1.7.6b"
-cp -r ~/${TAR_DIR}/* ~/$DEB_DIR/usr/lib/zen/
-cp -r ~/${TAR_DIR}/lib*.so ~/$DEB_DIR/usr/lib/
-cp -r ~/${TAR_DIR}/browser/chrome/icons/default/default48.png ~/$DEB_DIR/usr/share/icons/hicolor/48x48/apps/${NAME_OF_IMAGE}.png
+cp -r ~/$TAR_DIR/* ~/$DEB_DIR/usr/lib/$TAR_DIR/
+cp -r ~/$TAR_DIR/lib*.so ~/$DEB_DIR/usr/lib/
+cp -r ~/$TAR_DIR/browser/chrome/icons/default/default48.png ~/$DEB_DIR/usr/share/icons/hicolor/48x48/apps/${NAME_OF_IMAGE}.png
 busybox ln -s ~/$DEB_DIR/usr/lib/$TAR_DIR/${TAR_EXEC} ~/$DEB_DIR/usr/bin 
 busybox ln -s ~/$DEB_DIR/usr/lib/$TAR_DIR/${TAR_EXEC2} ~/$DEB_DIR/usr/bin
 dpkg-deb --build ~/$DEB_DIR
