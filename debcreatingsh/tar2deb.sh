@@ -9,7 +9,7 @@ echo "Please enter the url of the tar file"
 echo -e "example: "https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz""
 echo -n "tar url:"
 read TAR_URL
-tarfile=`wget -P ~/ -nv $TAR_URL 2>&1 | cut -d\" -f2` && TAR_DIR=`tar -xvf $tarfile -C ~/ | head -1 | cut -f1 -d"/"` && sudo rm -f $tarfile
+tarfile=`wget -P ~/ -nv $TAR_URL 2>&1 | cut -d\" -f2` && TAR_DIR=`tar -xvf $tarfile -C ~/  | cut -d / -f1 | uniq` && sudo rm -f $tarfile
 echo -n "enter the name of your package"
 read DEB_DIR
 mkdir ~/$DEB_DIR
