@@ -1,5 +1,4 @@
 TAR_EXEC=`find  $TAR_DIR -executable -type f`
-TAR_EXEC=`find  $TAR_DIR -executable -type f`
 
 
 
