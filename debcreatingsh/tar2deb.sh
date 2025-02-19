@@ -6,24 +6,28 @@ export TAR_URL="https://github.com/zen-browser/desktop/releases/download/1.7.6b/
 export TAR_EXEC="zen"
 export TAR_EXEC2="zen-bin"
 echo "Please enter the url of the tar file" 
-echo -e "example: https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz"
+echo -e "example: "https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz""
 echo -n "tar url:"
 read TAR_URL
-wget -P ~/ ${TAR_URL} && TAR_DIR=`tar -xvf ~/*.tar.xz -C ~/ | head -1 | cut -f1 -d"/"` && sudo rm -f ~/*.tar.xz
-echo -n "Please enter your base directory name: "
+tarfile=`wget -P ~/ $TAR_URL 2>&1 |cut -d\" -f2` && TAR_DIR=`tar -xvf $tarfile -C ~/ | head -n 1 | cut -d'/' -f1` && sudo rm -f $tarfile
+echo -n "enter the name of your package"
 read DEB_DIR
-
 mkdir ~/$DEB_DIR
 mkdir -p ~/$DEB_DIR/DEBIAN
 # You are going to have to edit the following contents below 
-cat << EOF >~/$DEB_DIR/DEBIAN/control
-Package: zen
-Version: 1.7.6b
+echo -n "what version do you want your package Description
+echo "$Description" | sed -n 7p
+echo -n "type "Description:" at the beginning then type the version the right of the colon"  
+read -p "what version do you want your package: " Description
+echo "type Description:  
+cat << EOF >>~/$DEB_DIR/DEBIAN/control
+Package: 
+Version: 1.0
 Section: base
 Priority: optional
 Architecture: all
-Maintainer: William G
-Description: Zen browser .deb file
+Maintainer: GitXpresso
+Description: .deb file
 
 EOF
 mkdir -p ~/$DEB_DIR/usr/bin
@@ -50,11 +54,9 @@ MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rd
 Keywords=Browser;
 EOF
 echo "copying zen.png to zen-1.7.6b"
-cp -r ~/$TAR_DIR/* ~/$DEB_DIR/usr/lib/zen/
-cp -r ~/$TAR_DIR/lib*.so ~/$DEB_DIR/usr/lib/
-cp -r ~/$TAR_DIR/browser/chrome/icons/default/default48.png ~/$DEB_DIR/usr/share/icons/hicolor/48x48/apps/${NAME_OF_IMAGE}.png
-busybox ln -s ~/zen-1.7.6b/usr/lib/zen/${TAR_EXEC}  ~/zen-1.7.6b/usr/bin 
-busybox ln -s ~/zen-1.7.6b/usr/lib/zen/${TAR_EXEC2}  ~/zen-1.7.6b/usr/bin
-find $TAR_DIR -type f -name "*.png" -exec mv {} ~/$DEB_DIR/usr/share/icons/hicolor/48x48/apps/ \;
+cp -r ~/${TAR_DIR}/* ~/$DEB_DIR/usr/lib/zen/
+cp -r ~/${TAR_DIR}/lib*.so ~/$DEB_DIR/usr/lib/
+cp -r ~/${TAR_DIR}/browser/chrome/icons/default/default48.png ~/$DEB_DIR/usr/share/icons/hicolor/48x48/apps/${NAME_OF_IMAGE}.png
+busybox ln -s ~/$DEB_DIR/usr/lib/$TAR_DIR/${TAR_EXEC} ~/$DEB_DIR/usr/bin 
+busybox ln -s ~/$DEB_DIR/usr/lib/$TAR_DIR/${TAR_EXEC2} ~/$DEB_DIR/usr/bin
 dpkg-deb --build ~/$DEB_DIR
-TAR_DIR=$(ls -td ~/ | head -1)
