@@ -5,28 +5,39 @@ sudo apt-get install tar wget build-essential devscripts debhelper busybox -y
 export TAR_URL="https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz"
 export TAR_EXEC="zen"
 export TAR_EXEC2="zen-bin"
+N2="Name: "
+N1="$N2 $Name"
+V2="Version: "
+V1="$V2 $Version"
+DS2="Description: "
+DS1="$DS2 $DESCRIPTION"
 echo "Please enter the url of the tar file" 
 echo -n "paste tar download link:"
 read TAR_URL
+VAR="$DS2 $DESCRIPTION"
 tarfile=`wget -P ~/ -nv $TAR_URL 2>&1 | cut -d\" -f2` && TAR_DIR=`tar -xvf $tarfile -C ~/  | cut -d / -f1 | uniq` && sudo rm -f $tarfile
 echo -n "enter the name of your package"
 read DEB_DIR
 mkdir ~/$DEB_DIR
 mkdir -p ~/$DEB_DIR/DEBIAN
 # You are going to have to edit the following contents below 
-echo -n "what version do you want your package Description
-echo "$Description" | sed -n 7p
-echo -n "type "Description:" at the beginning then type the version the right of the colon"  
-read -p "what version do you want your package: " Description
-echo "type Description:  
-cat << EOF >>~/$DEB_DIR/DEBIAN/control
-Package: 
-Version: 1.0
-Section: base
-Priority: optional
-Architecture: all
-Maintainer: GitXpresso
-Description: .deb file
+echo -n "what version do you want your package"
+read -p "what if the version of your package? answer the question below " Version
+read -p "what is your package about? answer the question below or just type anything" DESCRIPTION
+cat << EOF >~/$DEB_DIR/DEBIAN/control
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 EOF
 mkdir -p ~/$DEB_DIR/usr/bin/
