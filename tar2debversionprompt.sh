@@ -1,6 +1,5 @@
-    #!/bin/bash
-
-    while true; do
+clear
+while true; do
         read -p "enter the version of your package: " Version
         if [[ $Version =~ ^[0-9]+$ ]]; then
             clear
@@ -26,6 +25,4 @@
         fi       
         else
             echo "Invalid input. Not a Number, Try Again"
-        fi
-    done
-    echo $Version
+done
