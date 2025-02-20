@@ -1,5 +1,5 @@
 TAR_EXEC=`find  $TAR_DIR -executable -type f`
-Name=$(echo $DEB_DIR | sed 's/[^a-z]*//g')
+Name="$(echo $DEB_DIR | sed 's/[^a-z]*//g')"
 OUTPUT="echo $DEB_DIR | sed 's/[^a-z]*//g')"
 echo "${OUTPUT}"
 
