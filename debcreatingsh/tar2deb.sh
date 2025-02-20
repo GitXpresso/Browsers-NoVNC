@@ -3,7 +3,6 @@
 sudo apt-get install tar wget build-essential devscripts debhelper busybox -y
 clear
 # Edit the Export Variables in order for this file to work successfully
-export TAR_URL="https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz"
 export TAR_EXEC="zen"
 export TAR_EXEC2="zen-bin"
 read -p "Please enter the url of the tar file: " TAR_URL
@@ -17,8 +16,7 @@ echo -n "enter the name of your package: "
 read DEB_DIR
 mkdir ~/$DEB_DIR
 mkdir -p ~/$DEB_DIR/DEBIAN
-# You are going to have to edit the following contents below 
-
+Package="$(echo $DEB_DIR | sed 's/[^a-z]*//g')"
 read -p "what is your package about?; or just type anything: " Description
 cat << EOF >~/$DEB_DIR/DEBIAN/control
 Package: $Package
