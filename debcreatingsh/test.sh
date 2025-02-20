@@ -1,4 +1,5 @@
 TAR_EXEC=`find  $TAR_DIR -executable -type f`
+Name=$(echo $DEB_DIR | sed 's/[^a-z]*//g')
 
 
 cat << EOF >/workspace/Browsers-NoVNC/debcreatingsh/test3.txt
