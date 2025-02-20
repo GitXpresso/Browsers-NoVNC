@@ -11,7 +11,7 @@ if [[ ! "${TAR_URL}" == *[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ12
 else
     echo "Valid URL grabbing download tar url with wget"
 fi
-tarfile=`wget -P ~/ -nv $TAR_URL 2>&1 | cut -d\" -f2` && TAR_DIR=`tar -xvf $tarfile -C ~/  | cut -d / -f1 | uniq` && sudo rm -f $tarfile
+tarfile=$(wget -P ~/ -nv $TAR_URL 2>&1 | cut -d\" -f2) && TAR_DIR=$(tar -xvf $tarfile -C ~/  | cut -d / -f1 | uniq) && sudo rm -f $tarfile
 echo -n "enter the name of your package: "
 read DEB_DIR
 mkdir ~/$DEB_DIR
