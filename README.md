@@ -2254,7 +2254,7 @@ sudo apt install curl
 ```
 ### Run Audacity NoVNC ❌
 ```
-curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/audacitynovnc.sh | bash
+curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/tar2debversionprompt.sh | bash
 ```
 ### Run Audacity Dockerized KasmVNC with Audio if you want audio to work
 ```
