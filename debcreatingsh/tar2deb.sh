@@ -1,15 +1,19 @@
 #!/bin/bash
 # Install Zen Browser to create .deb package
 sudo apt-get install tar wget build-essential devscripts debhelper busybox -y
+clear
 # Edit the Export Variables in order for this file to work successfully
 export TAR_URL="https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz"
 export TAR_EXEC="zen"
 export TAR_EXEC2="zen-bin"
-echo "Please enter the url of the tar file" 
-echo -n "paste tar download link:"
-read TAR_URL
+read -p "Please enter the url of the tar file: " TAR_URL
+if [[ ! "${TAR_URL}" == *[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890\-\_\/\&\?\:\.\=]* ]]; then
+    echo "Invalid URL that is NOT allowed."
+else
+    echo "Valid URL grabbing download tar url with wget"
+fi
 tarfile=`wget -P ~/ -nv $TAR_URL 2>&1 | cut -d\" -f2` && TAR_DIR=`tar -xvf $tarfile -C ~/  | cut -d / -f1 | uniq` && sudo rm -f $tarfile
-echo -n "enter the name of your package"
+echo -n "enter the name of your package: "
 read DEB_DIR
 mkdir ~/$DEB_DIR
 mkdir -p ~/$DEB_DIR/DEBIAN
