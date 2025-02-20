@@ -1,29 +1,31 @@
-echo ${!VAR} >> test2.sh | sed -n 11p
-while read line; do [ -z "$line" ] && continue ;echo ${line##* }; done < test2.sh
+#!/bin/bash
 
-
-cat << EOF >~/$DEB_DIR/DEBIAN/control
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-EOF
-
-
-
-
-grep -oE '[^ ]+$' test2.sh |
-Description:
-
-rev < test2.sh | cut -d" " -f1 | rev | tr -d "." | tr "\n" ","
-Description: test
+while true; do
+    read -p "enter the version of your package: " Version
+    if [[ $Version =~ ^[0-9]+$ ]]; then
+        clear
+        echo "The version of your package you've entered: $Version"
+        if [[ $answer =~ ^[0-9]+$ ]]; then
+        read -p "do you want to change version of your package? (yes/no/y/n)" answer
+        if [ y = "$answer" ]; then
+        echo "changing version of package"
+        clear
+        bash ./test2.sh 
+        elif [ n = "$answer" ]; then
+        echo "not changing package version: $Version"
+        break
+        fi
+        if 
+        [ yes = "$answer" ]; then
+        echo "changing version of package"
+        clear
+        bash ./test2.sh
+        elif [ no = "$answer" ]; then
+        echo "not changing package version: $Version"
+        break
+    fi       
+    else
+        echo "Invalid input. Not a Number, Try Again"
+    fi
+done
+echo $Version

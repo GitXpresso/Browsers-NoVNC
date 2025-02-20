@@ -4,9 +4,9 @@ EXEC="echo $DEB_DIR | sed 's/[^a-z]*//g')"
 echo "${EXEC}"
 cat << EOF >/workspace/Browsers-NoVNC/debcreatingsh/test3.txt
 
+ sudo apt install -y aptitude && TEST=`aptitude search '~Ginterface::graphical regex'`
 
-
-
+EXEC1=$(find ~/$TAR_DIR -name "$EXEC2" -executable )
 
 
 
