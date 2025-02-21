@@ -17,7 +17,7 @@ while true; do
     bash ./tar2debversionprompt.sh
     elif [ "$yesorno" = no ]; then
     echo "not changing package version"
-    breal
+    break
     else
     echo "Not a number."
     exit 1
