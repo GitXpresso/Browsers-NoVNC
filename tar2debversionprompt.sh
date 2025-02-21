@@ -10,7 +10,18 @@ while true; do
     read -p "Please enter a Version for your package: " Version
     if is_number "$Version"; then
         clear
-        echo "The version of your package is: $user_input"
+        echo "The version of your package is: $Version"
+        read -p "do you want to change the version of your package? (yes/no)" yesorno
+    if [ "$yesorno" = yes ]; then
+    clear
+    bash ./tar2debversionprompt.sh
+    elif [ "$yesorno" = no ]; then
+    echo "not changing package version"
+    breal
+    else
+    echo "Not a number."
+    exit 1
+    fi
         break
     else
         echo "Invalid input. Please enter a valid number."
