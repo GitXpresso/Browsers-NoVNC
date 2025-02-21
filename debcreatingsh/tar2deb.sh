@@ -3,6 +3,7 @@
 sudo apt-get install tar wget build-essential devscripts debhelper busybox -y
 clear
 # Edit the Export Variables in order for this file to work successfully
+export TAR_URL="https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz"
 export TAR_EXEC="zen"
 export TAR_EXEC2="zen-bin"
 read -p "Please enter the url of the tar file: " TAR_URL
@@ -11,14 +12,43 @@ if [[ ! "${TAR_URL}" == *[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ12
 else
     echo "Valid URL grabbing download tar url with wget"
 fi
-tarfile=$(wget -P ~/ -nv $TAR_URL 2>&1 | cut -d\" -f2) && TAR_DIR=$(tar -xvf $tarfile -C ~/  | cut -d / -f1 | uniq) && sudo rm -f $tarfile
+tarfile=$(wget -P ~/ -nv $TAR_URL 2>&1 | cut -d\" -f2) && ) && sudo rm -f $tarfile
 echo -n "enter the name of your package: "
 read DEB_DIR
-mkdir ~/$DEB_DIR
+mkdir ~/$DEB_DIR/
 mkdir -p ~/$DEB_DIR/DEBIAN
 Package="$(echo $DEB_DIR | sed 's/[^a-z]*//g')"
 clear
 echo
+#!/bin/bash
+
+# Function to check if input is a number
+is_number() {
+    [[ $1 =~ ^[0-9]+$ ]]
+}
+
+# Prompt user for input
+while true; do
+    read -p "Please enter a Version for your package: " Version
+    if is_number "$Version"; then
+        clear
+        echo "The version of your package is: $Version"
+        read -p "do you want to change the version of your package? (yes/no)" yesorno
+    if [ "$yesorno" = yes ]; then
+    clear
+    bash ./tar2debversionprompt.sh
+    elif [ "$yesorno" = no ]; then
+    echo "not changing package version"
+    break
+    else
+    echo "Not a number."
+    exit 1
+    fi
+        break
+    else
+        echo "Invalid input. Please enter a valid number."
+    fi
+done
 read -p "what is your package about?; or just type anything: " Description
 cat << EOF >~/$DEB_DIR/DEBIAN/control
 Package: $Package
