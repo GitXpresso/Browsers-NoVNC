@@ -19,7 +19,6 @@ compgen -G "~/*.tar.xz" > /dev/null &&
 
 for f in ~/*.tar.xz
 do
-  TAR_DIR=(tar -xvf $tarfile -C ~/ | cut -d / -f1 | uniq)
 done
 TEST="$(compgen -G "~/*.tar.xz" > /dev/null && TAR_DIR=`tar -xvf $tarfile -C ~/ | cut -d / -f1 | uniq`)"
 
