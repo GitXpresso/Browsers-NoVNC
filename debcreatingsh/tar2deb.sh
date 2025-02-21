@@ -66,8 +66,8 @@ mkdir -p ~/$DEB_DIR/usr/lib/$TAR_DIR
 mkdir -p ~/$DEB_DIR/usr/lib/
 mkdir -p ~/$DEB_DIR/usr/share/applications/
 mkdir -p ~/$DEB_DIR/usr/share/icons/hicolor/48x48/apps/
-echo -e "copying executable files to zen-1.7.6b"
-echo "copying zen.png to zen-1.7.6b"
+echo -e "copying executable files to $DEB_DIR"
+echo "copying image files to $DEB_DIR"
 cp -r ~/$TAR_DIR/* ~/$DEB_DIR/usr/lib/$TAR_DIR/
 cp -r ~/$TAR_DIR/lib*.so ~/$DEB_DIR/usr/lib/
 cp -r ~/$TAR_DIR/browser/chrome/icons/default/default48.png ~/$DEB_DIR/usr/share/icons/hicolor/48x48/apps/${NAME_OF_IMAGE}.png
