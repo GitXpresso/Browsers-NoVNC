@@ -1,10 +1,11 @@
 # Function to check if input is a number
 is_letter() {
-    [[ "$1" =~ ^[Aa-Zz]+$ ]];
+    [[ "$1" =~ ^[Aa-Zz ]+$ ]];
 }
+
 # Prompt user for input
 while true; do
-    echo "Please enter your name or some elses name as the maintainer for the package: " 
+    read -p "Please enter your name or some elses name as the maintainer for the package: " Maintainer
     if is_letter "$Maintainer"; then
         clear
         echo "The Maintainer of your package is: $Maintainer"

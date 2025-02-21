@@ -10,7 +10,9 @@ read -p "Please enter the url of the tar file: " TAR_URL
 if [[ ! "${TAR_URL}" == *[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890\.]* ]]; then
     echo "Invalid URL that is NOT allowed."
 else
+    clear
     echo "Valid URL grabbing download tar url with wget"
+    clear
 fi
 tarfile=$(wget -P ~/ -nv $TAR_URL 2>&1 | cut -d\" -f2) && TAR_DIR=$(tar -xvf $tarfile -C ~/ | cut -d / -f1 | uniq) && sudo rm -f $tarfile
 echo -n "enter the name of your package: "
@@ -20,7 +22,6 @@ mkdir -p ~/$DEB_DIR/DEBIAN
 Package="$(echo $DEB_DIR | sed 's/[^a-z]*//g')"
 clear
 echo
-
 # Function to check if input is a number
 is_number() {
     [[ "$1" =~ ^[0-9+\.]+$ ]];
