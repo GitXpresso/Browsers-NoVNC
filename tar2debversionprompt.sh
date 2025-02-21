@@ -8,7 +8,7 @@ is_number() {
 # Prompt user for input
 while true; do
     read -p "Please enter a Version for your package: " Version
-    if is_number "$Version"; then
+    if [[ $Version =~ ^[0-9]+$ ]]; then
         clear
         echo "The version of your package is: $Version"
         read -p "do you want to change the version of your package? (yes/no)" yesorno

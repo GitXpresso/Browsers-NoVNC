@@ -7,7 +7,7 @@ export TAR_URL="https://github.com/zen-browser/desktop/releases/download/1.7.6b/
 export TAR_EXEC="zen"
 export TAR_EXEC2="zen-bin"
 read -p "Please enter the url of the tar file: " TAR_URL
-if [[ ! "${TAR_URL}" == *[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890\-\_\/\&\?\:\.\=]* ]]; then
+if [[ ! "${TAR_URL}" == *[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890\.]* ]]; then
     echo "Invalid URL that is NOT allowed."
 else
     echo "Valid URL grabbing download tar url with wget"
@@ -24,7 +24,7 @@ echo
 
 # Function to check if input is a number
 is_number() {
-    [[ $1 =~ ^[0-9]+$ ]]
+    [[ "$1" =~ ^[0-9+\.]+$ ]];
 }
 
 # Prompt user for input
