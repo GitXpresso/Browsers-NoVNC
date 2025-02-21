@@ -20,7 +20,6 @@ mkdir -p ~/$DEB_DIR/DEBIAN
 Package="$(echo $DEB_DIR | sed 's/[^a-z]*//g')"
 clear
 echo
-#!/bin/bash
 
 # Function to check if input is a number
 is_number() {
