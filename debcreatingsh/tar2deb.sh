@@ -38,6 +38,7 @@ while true; do
     clear
     bash ./tar2debversionprompt.sh
     elif [ "$yesorno" = no ]; then
+    clear
     echo "not changing package version"
     break
     else
