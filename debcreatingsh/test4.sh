@@ -1,23 +1,30 @@
+#!/bin/bash
+
+# Function to check if input is a number
+is_letter() {
+    [[ "$1" =~ ^[Aa-zZ]+$ ]];
+}
+
+# Prompt user for input
 while true; do
-    read -p "enter the version of your package: " Version
-    if [[ $Version =~ ^[0-9]+$ ]]; then
+    read -p "Please enter the name of the maintainer of the package: " Maintainer
+    if is_letter "$Maintainer"; then
         clear
-        echo "The version of your package you've entered: $Version"
+        echo "The name of the maintainer of your package is: $Maintainer"
+        read -p "do you want to change the name of the maintainer of your package? (yes/no)" yesorno
+    if [ "$yesorno" = yes ]; then
+    clear
+    bash ./tar2debversionprompt.sh
+    elif [ "$yesorno" = no ]; then
+    clear
+    echo "not changing package maintainer"
+    break
+    else
+    echo "Not a name."
+    exit 1
+    fi
         break
-        if [[ $answer =~ ^[Aa-z]+$ ]]; then
-        read -p "do you want to change version of your package? (yes/no/y/n)" answer
-        if [ y = "$answer" ]; then
-        echo "test"
-        break
-        elif [ n = "$answer" ]; then
-        echo "test"
-        break
-        fi
-        if
-        else
-        echo "Invalid input. Not a Number, Try Again"
-        fi
+    else
+        echo "Invalid input. Please enter a valid letter."
+    fi
 done
-if [[ $answer =~ ^[Aa-z]+$ ]]; then
-        read -p "do you want to change version of your package? (yes/no/y/n)" answer
-        if [ y = "$answer" ]; then
