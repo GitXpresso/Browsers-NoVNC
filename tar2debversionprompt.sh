@@ -7,8 +7,8 @@ is_number() {
 
 # Prompt user for input
 while true; do
-    read -p "Please enter a number: " user_input
-    if is_number "$user_input"; then
+    read -p "Please enter a Version for your package: " Version
+    if is_number "$Version"; then
         echo "Thank you! You entered the number: $user_input"
         break
     else
