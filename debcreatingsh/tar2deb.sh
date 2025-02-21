@@ -17,7 +17,8 @@ read DEB_DIR
 mkdir ~/$DEB_DIR
 mkdir -p ~/$DEB_DIR/DEBIAN
 Package="$(echo $DEB_DIR | sed 's/[^a-z]*//g')"
-curl -fsSL https://raw.githubusercontent.com/GitXpresso/Browsers-NoVNC/refs/heads/main/tar2debversionprompt.sh | bash
+clear
+echo
 read -p "what is your package about?; or just type anything: " Description
 cat << EOF >~/$DEB_DIR/DEBIAN/control
 Package: $Package
