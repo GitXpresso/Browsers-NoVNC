@@ -15,11 +15,70 @@ else
     clear
 fi
 tarfile=$(wget -P ~/ -nv $TAR_URL 2>&1 | cut -d\" -f2) && TAR_DIR=$(tar -xvf $tarfile -C ~/ | cut -d / -f1 | uniq) && sudo rm -f $tarfile
-echo -n "enter the name of your package: "
-read DEB_DIR
+
+# Function to check if input is a number
+is_letter() {
+    [[ "$1" =~ ^[Aa-zZ]+$ ]];
+}
+
+# Prompt user for input
+while true; do
+    read -p "Please enter the name of your package: " PackageName
+    if is_letter "$PackageName"; then
+        clear
+        echo "The name of your package is: $PackageName"
+        read -p "do you want to change the name of your package? (yes/no) " yesorno
+    if [ "$yesorno" = yes ]; then
+    clear
+    bash ./tar2debpackagenameprompt.sh
+    elif [ "$yesorno" = no ]; then
+    clear
+    echo "not changing name of package"
+    clear
+    break
+    else
+    echo "Not a name."
+    exit 1
+    fi
+        break
+    else
+        echo "Invalid input. Please enter a valid letter."
+    fi
+done
+is_number() {
+    [[ "$1" =~ ^[0-9+\.]+$ ]];
+}
+
+# Prompt user for input
+while true; do
+    read -p "Please enter a Version for your package: " Version
+    if is_number "$Version"; then
+        clear
+        echo "The version of your package is: $Version"
+        read -p "do you want to change the version of your package? (yes/no) " yesorno
+    if [ "$yesorno" = yes ]; then
+    clear
+    bash ./tar2debversionprompt.sh
+    elif [ "$yesorno" = no ]; then
+    clear
+    echo "not changing package version"
+    clear
+    break
+    else
+    echo "Not a number."
+    exit 1
+    fi
+        break
+    else
+        echo "Invalid input. Please enter a valid number."
+    fi
+done
+export $PackageName
+export $Version
+DEB_DIR="$PackageName-$Version"
+export $DEB_DIR
 mkdir ~/$DEB_DIR/
 mkdir -p ~/$DEB_DIR/DEBIAN
-Package="$(echo $DEB_DIR | sed 's/[^a-z]*//g')"
 clear
 echo -e "creating maintainer for ~/$DEB_DIR/DEBIAN/control file"
 # Function to validate and create full name
@@ -58,7 +117,7 @@ while true; do
     if IFS=" " create_full_name "${Maintainer[@]}"; then
         clear
         echo "The Maintainer of your package is: $Maintainer"
-        read -p "do you want to change the maintainer name of your package? (yes/no)" yesorno
+        read -p "do you want to change the maintainer name of your package? (yes/no) " yesorno
     if [ "$yesorno" = yes ]; then
     clear
     bash ./tar2debmaintainerprompt.sh
@@ -75,34 +134,7 @@ while true; do
         echo "Invalid input. Please enter a valid letter."
     fi
 done
-# Function to check if input is a number
-is_number() {
-    [[ "$1" =~ ^[0-9+\.]+$ ]];
-}
-
-# Prompt user for input
-while true; do
-    read -p "Please enter a Version for your package: " Version
-    if is_number "$Version"; then
-        clear
-        echo "The version of your package is: $Version"
-        read -p "do you want to change the version of your package? (yes/no)" yesorno
-    if [ "$yesorno" = yes ]; then
-    clear
-    bash ./tar2debversionprompt.sh
-    elif [ "$yesorno" = no ]; then
-    clear
-    echo "not changing package version"
-    break
-    else
-    echo "Not a number."
-    exit 1
-    fi
-        break
-    else
-        echo "Invalid input. Please enter a valid number."
-    fi
-done
+clear
 read -p "what is your package about?; or just type anything: " Description
 cat << EOF >~/$DEB_DIR/DEBIAN/control
 Package: $Package
