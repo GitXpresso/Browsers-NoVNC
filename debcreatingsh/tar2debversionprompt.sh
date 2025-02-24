@@ -1,3 +1,6 @@
+#!/bin/bash
+
+# Function to check if input is a number
 is_number() {
     [[ "$1" =~ ^[0-9+\.]+$ ]];
 }
@@ -8,14 +11,12 @@ while true; do
     if is_number "$Version"; then
         clear
         echo "The version of your package is: $Version"
-        read -p "do you want to change the version of your package? (yes/no) " yesorno
+        read -p "do you want to change the version of your package? (yes/no)" yesorno
     if [ "$yesorno" = yes ]; then
     clear
     bash ./tar2debversionprompt.sh
     elif [ "$yesorno" = no ]; then
-    clear
     echo "not changing package version"
-    clear
     break
     else
     echo "Not a number."
