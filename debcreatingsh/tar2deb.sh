@@ -212,7 +212,7 @@ mapfile -t executable_files < <(find "$src_dir" -type f -executable -exec sh -c 
 
 # Move the files to the destination directory
 for file in "${executable_files[@]}"; do
-  mv "$file" "$dest_dir"
+  busybox ln -s "$file" "$dest_dir"
 done
 
 # List the files moved and export as a variable
