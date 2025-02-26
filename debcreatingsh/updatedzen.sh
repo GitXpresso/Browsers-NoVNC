@@ -1,55 +1,52 @@
 #!/bin/bash
-# Install Zen Browser to create .deb package
-sudo apt-get install wget build-essential devscripts debhelper busybox -y
-# Edit the Export Variables in order for this file to work successfully
-export TAR_URL="https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz"
-export TAR_DIR="zen"
-export DEB_DIR="zen-1.7.6b"
-export NAME_OF_IMAGE="zen"
-export TAR_EXEC="zen"
-export TAR_EXEC2="zen-bin"
-wget -P ~/ ${TAR_URL} && tar -xvf ~/*.tar.xz -C ~/ && sudo rm -f ~/*.tar.xz
-mkdir ~/${DEB_DIR}
-mkdir -p ~/${DEB_DIR}/DEBIAN
-# You are going to have to edit the following contents below 
-cat << EOF >~/${DEB_DIR}/DEBIAN/control
-Package: zen
-Version: 1.7.6b
-Section: base
-Priority: optional
-Architecture: all
-Maintainer: William G
-Description: Zen browser .deb file
 
-EOF
-mkdir -p ~/${DEB_DIR}/usr/bin
-mkdir -p ~/${DEB_DIR}/usr/lib/zen
-mkdir -p ~/${DEB_DIR}/usr/lib
-mkdir -p ~/${DEB_DIR}/usr/share/applications/
-mkdir -p ~/${DEB_DIR}/usr/share/icons/hicolor/48x48/apps/
-echo -e "copying executable files to zen-1.7.6b"
-echo "copying zen.png to zen-1.7.6b"
-cat << EOF >~/${DEB_DIR}/usr/share/applications/zen.desktop
-[Desktop Entry]
-Version=1.0
-# Edit "zen" to the executable file from the tar
-# Edit zen.png to a diffrent file name if you want
-StartupWMClass=zen 
-Icon=/usr/share/icons/hicolor/48x48/apps/zen.png
-Type=Application
-Categories=Network;WebBrowser;
-Exec=/usr/bin/zen %u
-Name=Zen browser
-Comment=Zen Browser is a free and open-source web browser based on Mozilla Firefox. It focuses on privacy and customizability, and is designed to enhance performance while avoiding the Google Chromium framework.
-Terminal=false
-StartupNotify=true
-MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/qute;
-Keywords=Browser;
-EOF
-echo "copying zen.png to zen-1.7.6b"
-cp -r ~/${TAR_DIR}/* ~/${DEB_DIR}/usr/lib/zen/
-cp -r ~/${TAR_DIR}/lib*.so ~/${DEB_DIR}/usr/lib/
-cp -r ~/${TAR_DIR}/browser/chrome/icons/default/default48.png ~/${DEB_DIR}/usr/share/icons/hicolor/48x48/apps/${NAME_OF_IMAGE}.png
-busybox ln -s ~/zen-1.7.6b/usr/lib/zen/${TAR_EXEC}  ~/zen-1.7.6b/usr/bin 
-busybox ln -s ~/zen-1.7.6b/usr/lib/zen/${TAR_EXEC2}  ~/zen-1.7.6b/usr/bin
-dpkg-deb --build ~/${DEB_DIR}
+# Function to show a loading bar for wget
+show_wget_loading_bar() {
+  while :; do
+    local progress=$(grep -oP '\d+(?=%)' /tmp/wget_progress | tail -1)
+    local bar="#########################"
+    local empty_bar="........................."
+    local steps=30
+    local step=$((progress * steps / 100))
+    printf "\r[%-30s] %d%%" "${bar:0:step}${empty_bar:step}" "$progress"
+    sleep 0.1
+  done
+}
+
+# URL of the file to download
+FILE_URL="https://mirrors.iu13.net/blender/release/Blender4.3/blender-4.3.2-linux-x64.tar.xz"
+
+# Directory to store the downloaded file
+DOWNLOAD_DIR=~/
+
+# Start the download with wget and capture progress
+echo "Downloading the file..."
+start_time=$(date +%s)
+tarfile=$(wget -P ~/ --progress=bar:force "$FILE_URL" 2>&1 | cut -d\" -f2 | tee /tmp/wget_progress ) &
+wget_pid=$!
+clear
+# Start the loading bar
+show_wget_loading_bar &
+loading_pid=$!
+wait $wget_pid
+kill $loading_pid
+
+# Calculate the duration of the download
+end_time=$(date +%s)
+download_duration=$((end_time - start_time))
+
+# Export the path of the downloaded file
+downloaded_file=$(grep -oP '(?<=‘).*?(?=’ is saved)' /tmp/wget_progress | cut -d\" -f2)
+
+# Output the path of the downloaded file and the duration of the download
+echo -e "\nDownload completed in ${download_duration}s."
+echo "Downloaded file: $downloaded_file"
+
+# Clean up the temporary progress file
+rm /tmp/wget_progress
+
+# Export the path of the downloaded file as a variable
+export DOWNLOADED_FILE_PATH="$downloaded_file"
+echo "Exported path: $DOWNLOADED_FILE_PATH"
+
+# URL of the tar file to download

@@ -1,6 +1,6 @@
 #!/bin/bash
 # Install Zen Browser to create .deb package
-sudo apt-get install tar wget build-essential imagemagick devscripts debhelper busybox -y
+sudo apt-get install tar wget build-essential imagemagick devscripts debhelper bc busybox -y
 clear
 # Edit the Export Variables in order for this file to work successfully
 export TAR_URL="https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz"
@@ -16,29 +16,40 @@ fi
 
 # URL of the tar file to download
 
-# Download the file with wget and show a loading bar using echo
-echo "Downloading the file..."
-tarfile=$(wget -P ~/ -nv "$TAR_URL" 2>&1 | cut -d\" -f2)
-
-# Check if the file was downloaded
-if [ -z "$tarfile" ]; then
-  echo "Download failed."
-  exit 1
-fi
-
-# Display a loading bar
+# Function to show a loading bar
 show_loading_bar() {
-  bar="####################"
-  empty_bar="...................."
-  for i in {1..30}; do
-    printf "\r[%-30s] %d%%" "${bar:0:i}${empty_bar:i}" $((i * 5))
-    sleep 0.2
+  local duration=$1
+  bar="#########################"
+  empty_bar="........................."
+  steps=30
+  step_time=$(echo "$duration / $steps" | bc -l)
+
+  for ((i = 1; i <= steps; i++)); do
+    printf "\r[%-30s] %d%%" "${bar:0:i}${empty_bar:i}" $((i * 100 / steps))
+    sleep "$step_time"
   done
   echo -e "\nOperation complete!"
 }
 
-# Start the loading bar
-show_loading_bar &
+# Directory to store the downloaded file
+# URL of the tar file
+# Start the download and measure the time
+echo "Downloading the file..."
+start_time=$(date +%s)
+tarfile=$(wget -P ~/ -nv "$TAR_URL" 2>&1 | cut -d\" -f2)
+end_time=$(date +%s)
+
+# Calculate the duration of the download
+duration=$((end_time - start_time))
+
+# Check if the file was downloaded
+if [ -z "$tarfile" ]; then
+  echo "Download failed. Check the Download URL your pasted."
+  exit 1
+fi
+
+# Start the loading bar in the background
+show_loading_bar "$duration" &
 
 # Extract the tar file
 TAR_DIR=$(tar -xvf $tarfile -C ~/ | cut -d / -f1 | uniq)
@@ -47,11 +58,10 @@ TAR_DIR=$(tar -xvf $tarfile -C ~/ | cut -d / -f1 | uniq)
 wait
 
 # Remove the tar file
-sudo rm -f $tarfile
+sudo rm -f "$tarfile"
 
 # Output the extracted directory
 echo "Extracted directory: $TAR_DIR"
-
 # Function to check if input is a number
 is_letter() {
     [[ "$1" =~ ^[Aa-zZ2]+$ ]];
