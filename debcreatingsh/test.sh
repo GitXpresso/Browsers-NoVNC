@@ -1,54 +1,31 @@
-TAR_EXEC=`find  $TAR_DIR -executable -type f`
-Package="$(echo $DEB_DIR | sed 's/[^a-z]*//g')"
-EXEC="echo $DEB_DIR | sed 's/[^a-z]*//g')"
-echo "${EXEC}"
-cat << EOF >/workspace/Browsers-NoVNC/debcreatingsh/test3.txt
+#!/bin/bash
 
- sudo apt install -y aptitude && TEST=`aptitude search '~Ginterface::graphical regex'`
+# Directory to search for executable files
+DIRECTORY="/path/to/directory"
 
-EXEC1=$(find ~/$TAR_DIR -name "$EXEC2" -executable )
+# Find the first two executable files in the directory
+EXECUTABLES=($(find "$DIRECTORY" -type f -executable | head -n 2))
 
+# Function to check if an executable is a graphical executable
+is_graphical_executable() {
+    file "$1" | grep -qE 'ELF.*(executable|shared object)'; return $?
+}
 
+# Variable to store the graphical executable
+GRAPHICAL_EXECUTABLE=""
 
-find ~/ -type f -name "*.tar.xz" -exec TAR_DIR=$(tar -xvf $tarfile -C ~/  | cut -d / -f1 | uniq) \;
-
-find ~/ -name "*.tar.xz" -print0 | TAR_DIR=$(tar -xvf $tarfile -C ~/ | cut -d / -f1 | uniq)
-compgen -G "~/*.tar.xz" > /dev/null && 
-
-
-
-for f in ~/*.tar.xz
-do
+# Loop through the found executables and check if they are graphical
+for executable in "${EXECUTABLES[@]}"; do
+    if is_graphical_executable "$executable"; then
+        GRAPHICAL_EXECUTABLE="$executable"
+        break
+    fi
 done
-TEST="$(compgen -G "~/*.tar.xz" > /dev/null && TAR_DIR=`tar -xvf $tarfile -C ~/ | cut -d / -f1 | uniq`)"
 
-
-TEST=$(find ~/ -type f -name "*.tar.xz" -print0 | 
-
-EOF
-export TAR_DIR="tar-31"
-printf '%s\n' "${TAR_DIR//[[:digit:]]}" && printf '%s\n' "${TAR_DIR//-}"
-
-export DESCRIPTION="test"
-export DESCRIPTION="test"
-echo $VAR >> test2.sh | sed -n 11p
-
-DS2="Description: "
-VAR="$DS2 $DESCRIPTION"
-
-printf '%s\n' "${TAR_DIR//-}"
-
-echo Description: >> test.sh | sed -n 11p >> test.sh && echo ${!Description} >> test.sh | sed -n 11p
-
-hat
-hat
-hat
-Description:
-Description:
-hat
-Description:
-Description:
-Description:
-Description:
-Description:
-mv -t ~/$DEB_DIR/usr/bin/ $EXEC
+# Export the graphical executable as a variable if found
+if [ -n "$GRAPHICAL_EXECUTABLE" ]; then
+    export GRAPHICAL_EXECUTABLE
+    echo "Graphical executable to run: $GRAPHICAL_EXECUTABLE"
+else
+    echo "No graphical executable files found in the directory."
+fi
