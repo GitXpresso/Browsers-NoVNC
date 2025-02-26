@@ -13,56 +13,59 @@ else
     clear
 fi
 
+#!/bin/bash
 
-# URL of the tar file to download
-
-# Function to show a loading bar
-show_loading_bar() {
-  local duration=$1
-  bar="#########################"
-  empty_bar="........................."
-  steps=30
-  step_time=$(echo "$duration / $steps" | bc -l)
-
-  for ((i = 1; i <= steps; i++)); do
-    printf "\r[%-30s] %d%%" "${bar:0:i}${empty_bar:i}" $((i * 100 / steps))
-    sleep "$step_time"
+# Function to show a progress bar for wget
+show_wget_progress() {
+  while :; do
+    local progress=$(grep -oP '\d+(?=%)' /tmp/wget_progress | tail -1)
+    if [ -z "$progress" ]; then
+      progress=0
+    fi
+    local bar="#########################"
+    local empty_bar="........................."
+    local steps=30
+    local step=$((progress * steps / 100))
+    printf "\rDownloading: [%-30s] %d%%" "${bar:0:step}${empty_bar:step}" "$progress"
+    sleep 0.1
+    if [ "$progress" -eq 100 ]; then
+      break
+    fi
   done
-  echo -e "\nOperation complete!"
 }
 
+# URL of the tar file to download
+TAR_URL="https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz"
+
 # Directory to store the downloaded file
-# URL of the tar file
-# Start the download and measure the time
+DOWNLOAD_DIR=~
+
+# Create a temporary file for progress tracking
+touch /tmp/wget_progress
+
+# Start the download with wget and capture progress
 echo "Downloading the file..."
 start_time=$(date +%s)
-tarfile=$(wget -P ~/ -nv "$TAR_URL" 2>&1 | cut -d\" -f2)
-end_time=$(date +%s)
+{
+  wget -P ~/ --progress=dot "$TAR_URL" 2>&1 | tee /tmp/wget_progress | grep -oP '(?<=Saving to: ).*' > /tmp/tarfile
+  echo "100" >> /tmp/wget_progress  # Ensure the progress is marked as 100% at the end
+} &
+show_wget_progress
+wait $!
 
 # Calculate the duration of the download
-duration=$((end_time - start_time))
+end_time=$(date +%s)
+download_duration=$((end_time - start_time))
+echo -e "\nDownload completed in ${download_duration}s."
 
-# Check if the file was downloaded
-if [ -z "$tarfile" ]; then
-  echo "Download failed. Check the Download URL your pasted."
-  exit 1
-fi
+# Export the path of the downloaded file as a variable
+tarfile=$(cat /tmp/tarfile)
+echo "Downloaded file: $tarfile"
 
-# Start the loading bar in the background
-show_loading_bar "$duration" &
+# Clean up the temporary progress file
+rm /tmp/wget_progress /tmp/tarfile
+TAR_DIR=$(tar -xvf $tarfile -C ~/ | cut -d / -f1 | uniq) && rm -f $tarfile
 
-# Extract the tar file
-TAR_DIR=$(tar -xvf $tarfile -C ~/ | cut -d / -f1 | uniq)
-
-# Wait for the loading bar to finish
-wait
-
-# Remove the tar file
-sudo rm -f "$tarfile"
-
-# Output the extracted directory
-echo "Extracted directory: $TAR_DIR"
-# Function to check if input is a number
 is_letter() {
     [[ "$1" =~ ^[Aa-zZ2]+$ ]];
 }
