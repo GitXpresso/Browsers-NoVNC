@@ -22,9 +22,8 @@ DOWNLOAD_DIR=~/
 # Start the download with wget and capture progress
 echo "Downloading the file..."
 start_time=$(date +%s)
-tarfile=$(wget -P ~/ --progress=bar:force "$FILE_URL" 2>&1 | cut -d\" -f2 | tee /tmp/wget_progress ) &
+wget -P ~/ --progress=bar:force "$FILE_URL" 2>&1 | tee /tmp/wget_progress && clear & 
 wget_pid=$!
-clear
 # Start the loading bar
 show_wget_loading_bar &
 loading_pid=$!
@@ -36,7 +35,7 @@ end_time=$(date +%s)
 download_duration=$((end_time - start_time))
 
 # Export the path of the downloaded file
-downloaded_file=$(grep -oP '(?<=‘).*?(?=’ is saved)' /tmp/wget_progress | cut -d\" -f2)
+tarfile=$(grep -oP '(?<=‘).*?(?=’ is saved)' /tmp/wget_progress | cut -d\" -f2)
 
 # Output the path of the downloaded file and the duration of the download
 echo -e "\nDownload completed in ${download_duration}s."
@@ -46,7 +45,7 @@ echo "Downloaded file: $downloaded_file"
 rm /tmp/wget_progress
 
 # Export the path of the downloaded file as a variable
-export DOWNLOADED_FILE_PATH="$downloaded_file"
+export DOWNLOADED_FILE_PATH="$tarfile"
 echo "Exported path: $DOWNLOADED_FILE_PATH"
 
 # URL of the tar file to download
