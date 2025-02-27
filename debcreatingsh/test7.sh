@@ -1,9 +1,14 @@
-
 #!/bin/bash
+
+search_dir="$HOME/zen/"
 file_types="*.jpg *.jpeg *.png *.bmp"
 
+# Debugging: Print the search directory and file types
+echo "Search directory: $search_dir"
+echo "File types: $file_types"
+
 # Find subdirectory containing more than one image file
-subdirectory=$(find "$search_dir" -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.bmp"\) -printf '%h\n' | sort | uniq -c | awk '$1 > 1 {print $2; exit}')
+subdirectory=$(find "$search_dir" -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.bmp" \) -printf '%h\n' | sort | uniq -c | awk '$1 > 1 {print $2; exit}')
 
 # Check if subdirectory is found
 if [ -z "$subdirectory" ]; then
@@ -13,6 +18,10 @@ fi
 
 # Export the subdirectory as a variable
 export search_dir="$subdirectory"
+
+# Debugging: Print the found subdirectory
+echo "Subdirectory found: $search_dir"
+DEB_DIR="~/zen20/"
 # Function to prompt user for renaming all files
 rename_all_files() {
   local dir="$1"
@@ -37,8 +46,6 @@ rename_each_file() {
     echo "Renamed $file to $new_filename"
   fi
 }
-
-# Directory to search within
 
 # Destination directories for different dimensions
 declare -A dest_dirs=(
@@ -66,7 +73,7 @@ for dir in "${dest_dirs[@]}"; do
 done
 
 # Find image files by dimension and move them to the appropriate directory
-find "$search_dir" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.bmp"\) | while read -r file; do
+find "$search_dir" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.bmp" \) | while read -r file; do
   if identify "$file" > /dev/null 2>&1; then
     dimensions=$(identify -format "%wx%h" "$file")
     dest_dir="${dest_dirs[$dimensions]:-${dest_dirs["unlisted"]}}"
@@ -102,4 +109,5 @@ if [[ "$answer" == "yes" ]]; then
     echo "Invalid choice. No files have been renamed."
   fi
 else
-  echo "Files have not been renamed
+  echo "Files have not been renamed."
+fi

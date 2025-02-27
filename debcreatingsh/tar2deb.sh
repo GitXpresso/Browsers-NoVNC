@@ -12,7 +12,6 @@ else
     echo "Valid URL grabbing download tar url with wget"
     clear
 fi
-#!/bin/bash
 
 # Function to show a progress bar for wget
 show_wget_progress() {
@@ -213,8 +212,7 @@ while true; do
     read -p "Please enter your name or some elses name as the maintainer for the package: " -a Maintainer
     if IFS=" " create_full_name "${Maintainer[@]}"; then
         clear
-        echo "The Maintainer of your package is: $Maintainer"
-        read -p "do you want to change the maintainer name of your package? (yes/no) " yesorno
+        read -p "The Maintainer of your package is: $Maintainer is that correct? if not do you want change it? (yes/no) " yesorno
     if [ "$yesorno" = yes ]; then
     clear
     bash ./tar2debmaintainerprompt.sh
@@ -232,7 +230,7 @@ while true; do
 done
 clear
 read -p "what is your package about?; or just type anything: " Description
-cat << EOF >~/$DEB_DIR/DEBIAN/control
+cat << EOF >~/zen2y-1.2.1/DEBIAN/control
 Package: $PackageName
 Version: $Version
 Section: base
@@ -243,27 +241,12 @@ Description: $Description
 
 EOF
 mkdir -p ~/$DEB_DIR/usr/bin/
-#!/bin/bash
-search_dir="$HOME/$TAR_DIR/"
-
-# Image file types to search for
-file_types="*.jpg *.jpeg *.png *.bmp"
-
-# Find subdirectory containing more than one image file
-subdirectory=$(find "$search_dir" -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.gif" -o -name "*.bmp" \) -printf '%h\n' | sort | uniq -c | awk '$1 > 1 {print $2; exit}')
-
-# Check if subdirectory is found
-if [ -z "$subdirectory" ]; then
-  echo "No subdirectory found containing more than one image file."
-  exit 1
-fi
 
 # Export the subdirectory as a variable
-export src_dir="$subdirectory"
-
+export src_dir="$HOME/zen"
 
 # Define the destination directory
-dest_dir="$HOME/$DEB_DIR/usr/bin/"
+dest_dir="$HOME/zen2y-1.2.1/usr/bin/"
 
 # Ensure the destination directory exists
 
@@ -300,13 +283,12 @@ echo "copying image files to $DEB_DIR"
 cp -r ~/$TAR_DIR/* ~/$DEB_DIR/usr/lib/$TAR_DIR/
 cp -r ~/$TAR_DIR/lib*.so ~/$DEB_DIR/usr/lib/
 #!/bin/bash
-search_dir="$HOME/$TAR_DIR/"
 
-# Image file types to search for
+#!/bin/bash
 file_types="*.jpg *.jpeg *.png *.bmp"
 
 # Find subdirectory containing more than one image file
-subdirectory=$(find "$search_dir" -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.gif" -o -name "*.bmp" \) -printf '%h\n' | sort | uniq -c | awk '$1 > 1 {print $2; exit}')
+subdirectory=$(find "$search_dir" -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.bmp"\) -printf '%h\n' | sort | uniq -c | awk '$1 > 1 {print $2; exit}')
 
 # Check if subdirectory is found
 if [ -z "$subdirectory" ]; then
@@ -316,123 +298,94 @@ fi
 
 # Export the subdirectory as a variable
 export search_dir="$subdirectory"
-
-# Define the source directory
-
-# Define the destination directories for specific dimensions
-dest_dir_8x8="$HOME/$DEB_DIR/usr/share/icons/hicolor/8x8/apps"
-dest_dir_16x16="$HOME/$DEB_DIR/usr/share/icons/hicolor/16x16/apps"
-dest_dir_22x22="$HOME/$DEB_DIR/usr/share/icons/hicolor/22x22/apps"
-dest_dir_24x24="$HOME/$DEB_DIR/usr/share/icons/hicolor/24x24/apps"
-dest_dir_32x32="$HOME/$DEB_DIR/usr/share/icons/hicolor/32x32/apps"
-dest_dir_36x36="$HOME/$DEB_DIR/usr/share/icons/hicolor/36x36/apps"
-dest_dir_42x42="$HOME/$DEB_DIR/usr/share/icons/hicolor/42x42/apps"
-dest_dir_48x48="$HOME/$DEB_DIR/usr/share/icons/hicolor/48x48/apps"
-dest_dir_64x64="$HOME/$DEB_DIR/usr/share/icons/hicolor/64x64/apps"
-dest_dir_72x72="$HOME/$DEB_DIR/usr/share/icons/hicolor/72x72/apps"
-dest_dir_96x96="$HOME/$DEB_DIR/usr/share/icons/hicolor/96x96/apps"
-dest_dir_128x128="$HOME/$DEB_DIR/usr/share/icons/hicolor/128x128/apps"
-dest_dir_192x192="$HOME/$DEB_DIR/usr/share/icons/hicolor/192x192/apps"
-dest_dir_256x256="$HOME/$DEB_DIR/usr/share/icons/hicolor/256x256/apps"
-dest_dir_512x512="$HOME/$DEB_DIR/usr/share/icons/hicolor/512x512/apps"
-dest_dir_unlisted="$HOME/$DEB_DIR/usr/share/unlisted_images"
-# Create destination directories if they do not exist
-mkdir -p "$dest_dir_unlisted"
-mkdir -p "$dest_dir_8x8" "$dest_dir_16x16" "$dest_dir_22x22" "$dest_dir_24x24" "$dest_dir_32x32" "$dest_dir_36x36" "$dest_dir_42x42" "$dest_dir_48x48""$dest_dir_64x64" "$dest_dir_72x72" "$dest_dir_96x96" "$dest_dir_128x128" "$dest_dir_192x192" "$dest_dir_256x256" "$dest_dir_512x512"
-# Image file types to search for
-file_types="*.jpg *.jpeg *.png *.bmp"
-
-# Find subdirectory containing more than one image file
-subdirectory=$(find "$search_dir" -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.gif" -o -name "*.bmp" \) -printf '%h\n' | sort | uniq -c | awk '$1 > 1 {print $2; exit}')
-
-# Check if subdirectory is found
-if [ -z "$subdirectory" ]; then
-  echo "No subdirectory found containing more than one image file."
-  exit 1
-fi
-
-# Export the subdirectory as a variable
-export search_dir="$subdirectory"
-
-# Move the files based on their dimensions
-for file in "$subdirectory"/*; do
+# Function to prompt user for renaming all files
+rename_all_files() {
+  local dir="$1"
+  for file in "$dir"/*; do
     if [[ -f "$file" ]]; then
-        if identify "$file" > /dev/null 2>&1; then
-            dimensions=$(identify -format "%wx%h" "$file")
-            case $dimensions in
-                "8x8")
-                    cp -r "$file" "$dest_dir_8x8"
-                    ;;
-                "16x16")
-                    cp -r "$file" "$dest_dir_16x16"
-                    ;;
-                "22x22")
-                    cp -r "$file" "$dest_dir_22x22"
-                    ;;
-                "24x24")
-                    cp -r "$file" "$dest_dir_24x24"
-                    ;;
-                "32x32")
-                    cp -r "$file" "$dest_dir_32x32"
-                    ;;
-                "36x36")
-                    cp -r "$file" "$dest_dir_36x36"
-                    ;;
-                "42x42")
-                    cp -r "$file" "$dest_dir_42x42"
-                    ;;
-                "48x48")
-                    cp -r "$file" "$dest_dir_48x48"
-                    ;;
-                "64x64")
-                    cp -r "$file" "$dest_dir_64x64"
-                    ;;
-                "72x72")
-                    cp -r "$file" "$dest_dir_72x72"
-                    ;;
-                "96x96")
-                    cp -r "$file" "$dest_dir_96x96"
-                    ;;
-                "128x128")
-                    cp -r "$file" "$dest_dir_128x128"
-                    ;;
-                "192x192")
-                    cp -r "$file" "$dest_dir_192x192"
-                    ;;
-                "256x256")
-                    cp -r "$file" "$dest_dir_256x256"
-                    ;;
-                "512x512")
-                    cp -r "$file" "$dest_dir_22x22"
-                    ;;
-                *)
-                    mv "$file" "$dest_dir_unlisted"
-                    ;;
-            esac
-        fi
+      base_name=$(basename "$file")
+      new_name="$dir/renamed_$base_name"
+      mv -f "$file" "$new_name"
     fi
+  done
+}
+
+# Function to prompt user for renaming each file manually
+rename_each_file() {
+  local file="$1"
+  read -p "Do you want to rename $file? (y/n): " response
+  if [[ "$response" =~ ^[Yy]$ ]]; then
+    read -p "Enter the new base name for the file (without extension): " new_base_name
+    local extension="${file##*.}"
+    new_filename="$(dirname "$file")/${new_base_name}.${extension}"
+    mv -f "$file" "$new_filename"
+    echo "Renamed $file to $new_filename"
+  fi
+}
+
+# Directory to search within
+
+# Destination directories for different dimensions
+declare -A dest_dirs=(
+  ["8x8"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/8x8/apps/"
+  ["16x16"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/16x16/apps/"
+  ["22x22"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/22x22/apps/"
+  ["24x24"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/24x24/apps/"
+  ["32x32"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/32x32/apps/"
+  ["36x36"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/36x36/apps/"
+  ["42x42"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/42x42/apps/"
+  ["48x48"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/48x48/apps/"
+  ["64x64"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/64x64/apps/"
+  ["72x72"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/72x72/apps/"
+  ["96x96"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/96x96/apps/"
+  ["128x128"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/128x128/apps/"
+  ["192x192"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/192x192/apps/"
+  ["256x256"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/256x256/apps/"
+  ["512x512"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/512x512/apps/"
+  ["unlisted"]="$HOME/$DEB_DIR/usr/share/unlisted_dimensions"
+)
+
+# Create the destination directories if they don't exist
+for dir in "${dest_dirs[@]}"; do
+  mkdir -p "$dir"
 done
 
-# List the files moved
-echo "Files moved to respective directories based on their dimensions."
+# Find image files by dimension and move them to the appropriate directory
+find "$search_dir" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.bmp"\) | while read -r file; do
+  if identify "$file" > /dev/null 2>&1; then
+    dimensions=$(identify -format "%wx%h" "$file")
+    dest_dir="${dest_dirs[$dimensions]:-${dest_dirs["unlisted"]}}"
+    mv "$file" "$dest_dir"
+    echo "Moved $file to $dest_dir"
+  fi
+done
 
 # Prompt the user for renaming the files
 echo "Do you want to rename the files (excluding the file extensions)? (yes/no)"
 read answer
 
 if [[ "$answer" == "yes" ]]; then
-    echo "Renaming files..."
-    for dir in "$dest_dir_8x8" "$dest_dir_16x16" "$dest_dir_22x22" "$dest_dir_24x24" "$dest_dir_32x32" "$dest_dir_36x36" "$dest_dir_42x42" "$dest_dir_48x48""$dest_dir_64x64" "$dest_dir_72x72" "$dest_dir_96x96" "$dest_dir_128x128" "$dest_dir_192x192" "$dest_dir_256x256" "$dest_dir_512x512" "$dest_dir_unlisted"; do
-        for file in "$dir"/*; do
-            if [[ -f "$file" ]]; then
-                base_name=$(basename "$file")
-                new_name="$dir/renamed_$base_name"
-                mv -f "$file" "$new_name"
-            fi
-        done
+  echo "Do you want to rename all files to a single name or rename each file manually? (all/manual)"
+  read rename_choice
+  if [[ "$rename_choice" == "all" ]]; then
+    echo "Renaming all files..."
+    for dir in "${dest_dirs[@]}"; do
+      rename_all_files "$dir"
     done
-    echo "Files have been renamed."
+    echo "All files have been renamed."
+  elif [[ "$rename_choice" == "manual" ]]; then
+    echo "Renaming files manually..."
+    for dir in "${dest_dirs[@]}"; do
+      for file in "$dir"/*; do
+        if [[ -f "$file" ]]; then
+          rename_each_file "$file"
+        fi
+      done
+    done
+    echo "Files have been renamed manually."
+  else
+    echo "Invalid choice. No files have been renamed."
+  fi
 else
-    echo "Files have not been renamed."
-fi
+echo "Files have not been renamed
 dpkg-deb --build ~/$DEB_DIR

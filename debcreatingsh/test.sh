@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Directory to search for executable files
-DIRECTORY="/path/to/directory"
+DIRECTORY="$HOME/zen"
 
 # Find the first two executable files in the directory
 EXECUTABLES=($(find "$DIRECTORY" -type f -executable | head -n 2))
