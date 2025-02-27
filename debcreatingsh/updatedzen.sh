@@ -103,4 +103,4 @@ echo -e "\nExtraction completed in ${extraction_duration}s."
 # Export the directory created from the extracted tar file
 echo "$TAR_DIR"
 # Clean up the temporary tar progress files
-rm /tmp/tar_progress /tmp/tar_dir
+rm /tmp/tar_progress 
