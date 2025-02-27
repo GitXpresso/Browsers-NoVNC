@@ -230,7 +230,7 @@ while true; do
 done
 clear
 read -p "what is your package about?; or just type anything: " Description
-cat << EOF >~/zen2y-1.2.1/DEBIAN/control
+cat << EOF >~/$DEB_DIR/DEBIAN/control
 Package: $PackageName
 Version: $Version
 Section: base
