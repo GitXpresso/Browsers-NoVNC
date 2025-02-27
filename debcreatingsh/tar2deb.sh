@@ -243,33 +243,6 @@ EOF
 mkdir -p ~/$DEB_DIR/usr/bin/
 
 # Export the subdirectory as a variable
-export src_dir="$HOME/zen"
-
-# Define the destination directory
-dest_dir="$HOME/zen2y-1.2.1/usr/bin/"
-
-# Ensure the destination directory exists
-
-# Print the variables to the user
-echo "Source directory: $src_dir"
-echo "Destination directory: $dest_dir"
-
-# Find executable files excluding binary files and store them in an array
-mapfile -t executable_files < <(find "$src_dir" -type f -executable -exec sh -c 'file -b "$1" | grep -q "text" && echo "$1"' _ {} \;)
-
-# Move the files to the destination directory
-for file in "${executable_files[@]}"; do
-  busybox ln -s "$file" "$dest_dir"
-done
-
-# List the files moved and export as a variable
-echo "Files moved to $dest_dir:"
-for file in "${executable_files[@]}"; do
-  base_name=$(basename "$file")
-  new_path="$dest_dir/$base_name"
-  echo "$new_path"
-  exported_files+=("$new_path")
-done
 
 # Export the filenames as a variable
 export FILES_MOVED="${exported_files[*]}"
@@ -284,11 +257,15 @@ cp -r ~/$TAR_DIR/* ~/$DEB_DIR/usr/lib/$TAR_DIR/
 cp -r ~/$TAR_DIR/lib*.so ~/$DEB_DIR/usr/lib/
 #!/bin/bash
 
-#!/bin/bash
+search_dir="$HOME/zen/"
 file_types="*.jpg *.jpeg *.png *.bmp"
 
+# Debugging: Print the search directory and file types
+echo "Search directory: $search_dir"
+echo "File types: $file_types"
+
 # Find subdirectory containing more than one image file
-subdirectory=$(find "$search_dir" -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.bmp"\) -printf '%h\n' | sort | uniq -c | awk '$1 > 1 {print $2; exit}')
+subdirectory=$(find "$search_dir" -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.bmp" \) -printf '%h\n' | sort | uniq -c | awk '$1 > 1 {print $2; exit}')
 
 # Check if subdirectory is found
 if [ -z "$subdirectory" ]; then
@@ -297,33 +274,13 @@ if [ -z "$subdirectory" ]; then
 fi
 
 # Export the subdirectory as a variable
-export search_dir="$subdirectory"
-# Function to prompt user for renaming all files
-rename_all_files() {
-  local dir="$1"
-  for file in "$dir"/*; do
-    if [[ -f "$file" ]]; then
-      base_name=$(basename "$file")
-      new_name="$dir/renamed_$base_name"
-      mv -f "$file" "$new_name"
-    fi
-  done
-}
+export source_dir="$subdirectory"
+#!/bin/bash
 
-# Function to prompt user for renaming each file manually
-rename_each_file() {
-  local file="$1"
-  read -p "Do you want to rename $file? (y/n): " response
-  if [[ "$response" =~ ^[Yy]$ ]]; then
-    read -p "Enter the new base name for the file (without extension): " new_base_name
-    local extension="${file##*.}"
-    new_filename="$(dirname "$file")/${new_base_name}.${extension}"
-    mv -f "$file" "$new_filename"
-    echo "Renamed $file to $new_filename"
-  fi
+# Function to get image dimensions
+get_dimensions() {
+    identify -format "%wx%h" "$1" 2>/dev/null
 }
-
-# Directory to search within
 
 # Destination directories for different dimensions
 declare -A dest_dirs=(
@@ -350,42 +307,54 @@ for dir in "${dest_dirs[@]}"; do
   mkdir -p "$dir"
 done
 
-# Find image files by dimension and move them to the appropriate directory
-find "$search_dir" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.bmp"\) | while read -r file; do
-  if identify "$file" > /dev/null 2>&1; then
-    dimensions=$(identify -format "%wx%h" "$file")
-    dest_dir="${dest_dirs[$dimensions]:-${dest_dirs["unlisted"]}}"
-    mv "$file" "$dest_dir"
-    echo "Moved $file to $dest_dir"
-  fi
+# Prompt for source directory
+
+# Find and group images by dimensions
+declare -A image_groups
+while IFS= read -r -d '' file; do
+    dimensions=$(get_dimensions "$file")
+    if [ -n "$dimensions" ]; then
+        if [[ -n "${dest_dirs[$dimensions]}" ]]; then
+            dest_dir="${dest_dirs[$dimensions]}"
+        else
+            dest_dir="${dest_dirs["unlisted"]}"
+        fi
+        image_groups["$dimensions"]+="$file "
+    fi
+done < <(find "$source_dir" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.gif" \) -print0)
+
+# Move images to destination directories
+for dimensions in "${!image_groups[@]}"; do
+    if [[ -n "${dest_dirs[$dimensions]}" ]]; then
+        dimension_path="${dest_dirs[$dimensions]}"
+    else
+        dimension_path="${dest_dirs["unlisted"]}"
+    fi
+    for file in ${image_groups[$dimensions]}; do
+        mv "$file" "$dimension_path/"
+    done
 done
 
-# Prompt the user for renaming the files
-echo "Do you want to rename the files (excluding the file extensions)? (yes/no)"
-read answer
-
-if [[ "$answer" == "yes" ]]; then
-  echo "Do you want to rename all files to a single name or rename each file manually? (all/manual)"
-  read rename_choice
-  if [[ "$rename_choice" == "all" ]]; then
-    echo "Renaming all files..."
-    for dir in "${dest_dirs[@]}"; do
-      rename_all_files "$dir"
+# Prompt to rename files
+read -p "Do you want to rename all images by dimension (yes/no)? " rename_all
+if [[ "$rename_all" == "yes" ]]; then
+    for dimensions in "${!image_groups[@]}"; do
+        dimension_path="${dest_dirs[$dimensions]}"
+        for file in "$dimension_path/"*; do
+            mv "$file" "$dimension_path/$dimensions-$(basename "$file")"
+        done
     done
-    echo "All files have been renamed."
-  elif [[ "$rename_choice" == "manual" ]]; then
-    echo "Renaming files manually..."
-    for dir in "${dest_dirs[@]}"; do
-      for file in "$dir"/*; do
-        if [[ -f "$file" ]]; then
-          rename_each_file "$file"
-        fi
-      done
-    done
-    echo "Files have been renamed manually."
-  else
-    echo "Invalid choice. No files have been renamed."
-  fi
 else
-echo "Files have not been renamed
+    read -p "Do you want to rename each image manually by dimension (yes/no)? " rename_each
+    if [[ "$rename_each" == "yes" ]]; then
+        for dimensions in "${!image_groups[@]}"; do
+            dimension_path="${dest_dirs[$dimensions]}"
+            for file in "$dimension_path/"*; do
+                read -p "Enter new name for $file (excluding file extension): " new_name
+                mv "$file" "$dimension_path/$new_name.${file##*.}"
+            done
+        done
+    fi
+fi
+
 dpkg-deb --build ~/$DEB_DIR
