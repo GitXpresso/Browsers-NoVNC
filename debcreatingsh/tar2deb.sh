@@ -18,7 +18,8 @@ while true; do
     fi
 done
 
-tarfile=$(wget -P ~/ -nv $TAR_URL 2>&1 | cut -d\" -f2 ) && TAR_DIR=$(tar -xvf "$tarfile" -C ~/ | cut -d / -f1 | uniq) && sudo rm -rf $tarfile
+tarfile=$(wget -P ~/ -nv $TAR_URL 2>&1 | cut -d\" -f2 ) && TAR_DIR=$(tar -xvf $tarfile -C ~/ | cut -d / -f1 | uniq) 
+rm -f $tarfile
 
 is_letter() {
     [[ "$1" =~ ^[Aa-zZ2]+$ ]];
