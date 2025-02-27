@@ -4,14 +4,19 @@ sudo apt-get install tar wget build-essential imagemagick devscripts debhelper b
 clear
 # Edit the Export Variables in order for this file to work successfully
 export TAR_URL="https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz"
-read -p "Please enter the url of the tar file: " TAR_URL
-if [[ ! "${TAR_URL}" == *[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890\.]* ]]; then
-    echo "Invalid URL that is NOT allowed."
-else
-    clear
-    echo "Valid URL grabbing download tar url with wget"
-    clear
-fi
+
+while true; do
+    read -p "Please enter the URL of the tar file: " TAR_URL
+    if [[ -z "$TAR_URL" ]]; then
+        echo "URL cannot be empty. Please enter a valid URL."
+    elif [[ ! "$TAR_URL" =~ ^https?://[a-zA-Z0-9./-]+$ ]]; then
+        echo "Invalid URL format. Please enter a valid URL."
+    else
+        clear
+        echo "Valid URL. Grabbing download tar URL with wget."
+        break
+    fi
+done
 
 # Function to show a progress bar for wget
 show_wget_progress() {
@@ -42,7 +47,7 @@ touch /tmp/wget_progress
 # Start the download with wget and capture progress
 echo "Downloading the file..."
 start_time=$(date +%s)
-wget -P ~/ --progress=dot "$TAR_URL" 2>&1 | tee /tmp/wget_progress
+wget -P ~/ --progress=dot "$TAR_URL" 2>&1 | tee /tmp/wget_progress >> /dev/null
 echo "100" >> /tmp/wget_progress  # Ensure the progress is marked as 100% at the end
 
 # Show the wget progress
@@ -55,7 +60,7 @@ download_duration=$((end_time - start_time))
 echo -e "\nDownload completed in ${download_duration}s."
 
 # Export the path of the downloaded file as a variable using the specific command
-tarfile=$(wget -P ~/ -nv $TAR_URL 2>&1 | cut -d\" -f2)
+tarfile=$(wget -P ~/ -nv $TAR_URL 2>&1 | tee /tmp/wget_progress | cut -d\" -f2 )
 echo "Downloaded file: $tarfile"
 
 # Clean up the wget progress file
@@ -88,6 +93,7 @@ show_tar_progress() {
     if [ "$percentage" -eq 100 ]; then
       break
     fi
+    else
   done
 }
 
@@ -101,7 +107,6 @@ total_files=$(tar -tf "$tarfile" | wc -l)
 
 # Start the extraction with tar, capture progress, and export the tar directory
 TAR_DIR=$(tar -xvf "$tarfile" -C ~/ | tee /tmp/tar_progress | cut -d / -f1 | uniq)
-
 # Show the tar extraction progress
 show_tar_progress
 wait $!
@@ -135,10 +140,7 @@ while true; do
     echo "not changing name of package"
     clear
     break
-    else
-    echo "Not a name."
     fi
-        break
     else
         echo "Invalid input. Please enter a valid letter."
     fi
