@@ -243,6 +243,7 @@ if [[ "$rename_all" == "yes" ]]; then
     for dimensions in "${!image_groups[@]}"; do
         dimension_path="${dest_dirs[$dimensions]}"
         for file in "$dimension_path/"*; do
+            read -p "Enter new name for $file (excluding file extension): " new_name
             mv "$file" "$dimension_path/$dimensions-$(basename "$file")"
         done
     done
@@ -259,4 +260,3 @@ else
     fi
 fi
 
-dpkg-deb --build ~/$DEB_DIR
