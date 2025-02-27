@@ -184,6 +184,9 @@ get_dimensions() {
     identify -format "%wx%h" "$1" 2>/dev/null
 }
 
+# Source directory (replace this variable with the actual source directory path)
+source_dir="/path/to/source/directory"
+
 # Destination directories for different dimensions
 declare -A dest_dirs=(
   ["8x8"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/8x8/apps/"
@@ -208,8 +211,6 @@ declare -A dest_dirs=(
 for dir in "${dest_dirs[@]}"; do
   mkdir -p "$dir"
 done
-
-# Prompt for source directory
 
 # Find and group images by dimensions
 declare -A image_groups
@@ -241,22 +242,23 @@ done
 read -p "Do you want to rename all images by dimension (yes/no)? " rename_all
 if [[ "$rename_all" == "yes" ]]; then
     for dimensions in "${!image_groups[@]}"; do
-        dimension_path="${dest_dirs[$dimensions]}"
+        if [[ -n "${dest_dirs[$dimensions]}" ]]; then
+            dimension_path="${dest_dirs[$dimensions]}"
+        else
+            dimension_path="${dest_dirs["unlisted"]}"
+        fi
         for file in "$dimension_path/"*; do
-            read -p "Enter new name for $file (excluding file extension): " new_name
             mv "$file" "$dimension_path/$dimensions-$(basename "$file")"
         done
     done
-else
+elif [[ "$rename_all" == "no" ]]; then
     read -p "Do you want to rename each image manually by dimension (yes/no)? " rename_each
     if [[ "$rename_each" == "yes" ]]; then
         for dimensions in "${!image_groups[@]}"; do
-            dimension_path="${dest_dirs[$dimensions]}"
-            for file in "$dimension_path/"*; do
-                read -p "Enter new name for $file (excluding file extension): " new_name
-                mv "$file" "$dimension_path/$new_name.${file##*.}"
-            done
-        done
-    fi
-fi
-
+            if [[ -n "${dest_dirs[$dimensions]}" ]]; then
+                dimension_path="${dest_dirs[$dimensions]}"
+            else
+            echo "not renaming any files"
+            break
+            fi
+     done
