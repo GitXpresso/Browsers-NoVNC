@@ -19,7 +19,7 @@ BBlue=$(tput setaf 4; tput bold)
 BPurple=$(tput setaf 5; tput bold)
 BCyan=$(tput setaf 6; tput bold)
 BWhite=$(tput setaf 7; tput bold)
-echo "${BBlack}installing required packages"
+echo -e "${BBlack}installing required packages ${NoColor}"
 # Install Zen Browser to create .deb package
 sudo apt-get install tar wget build-essential imagemagick devscripts debhelper bc busybox -y
 clear
@@ -167,7 +167,26 @@ mkdir -p ~/$DEB_DIR/usr/bin/
 
 # Export the subdirectory as a variable
 find $HOME/$TAR_DIR -type f -exec file {} + | grep -i 'executable' | grep -vi 'binary' | cut -d: -f1 | while read -r file; do busybox ln -s "$file" $HOME/$DEB_DIR/usr/bin/; done
+#!/bin/bash
 
+# Directory to search
+directory="/path/to/your/directory"
+
+# List of specific files to remove (modify the list as needed)
+files_to_remove=("glxtest" "file2.log" "file3.conf")
+
+# Check and remove files
+for file in "${files_to_remove[@]}"; do
+    if [ -e "$directory/$file" ]; then
+        rm "$directory/$file"
+        echo "Removed: $directory/$file"
+    else
+        echo "File not found: $directory/$file"
+    fi
+done
+
+# Display a message indicating the operation is complete
+echo "removed uneeded files: $files_to_remove" 
 mkdir -p ~/$DEB_DIR/usr/lib/$TAR_DIR
 mkdir -p ~/$DEB_DIR/usr/lib/
 mkdir -p ~/$DEB_DIR/usr/share/applications/
