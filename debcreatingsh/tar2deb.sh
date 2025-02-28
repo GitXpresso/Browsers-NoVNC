@@ -183,21 +183,21 @@ get_dimensions() {
 
 # Destination directories for different dimensions
 declare -A dest_dirs=(
-  ["8x8"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/8x8/apps/"
-  ["16x16"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/16x16/apps/"
-  ["22x22"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/22x22/apps/"
-  ["24x24"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/24x24/apps/"
-  ["32x32"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/32x32/apps/"
-  ["36x36"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/36x36/apps/"
-  ["42x42"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/42x42/apps/"
-  ["48x48"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/48x48/apps/"
-  ["64x64"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/64x64/apps/"
-  ["72x72"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/72x72/apps/"
-  ["96x96"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/96x96/apps/"
-  ["128x128"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/128x128/apps/"
-  ["192x192"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/192x192/apps/"
-  ["256x256"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/256x256/apps/"
-  ["512x512"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/512x512/apps/"
+  ["8x8"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/8x8/apps"
+  ["16x16"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/16x16/apps"
+  ["22x22"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/22x22/apps"
+  ["24x24"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/24x24/apps"
+  ["32x32"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/32x32/apps"
+  ["36x36"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/36x36/apps"
+  ["42x42"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/42x42/apps"
+  ["48x48"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/48x48/apps"
+  ["64x64"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/64x64/apps"
+  ["72x72"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/72x72/apps"
+  ["96x96"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/96x96/apps"
+  ["128x128"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/128x128/apps"
+  ["192x192"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/192x192/apps"
+  ["256x256"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/256x256/apps"
+  ["512x512"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/512x512/apps"
   ["unlisted"]="$HOME/$DEB_DIR/usr/share/unlisted_dimensions"
 )
 
@@ -232,25 +232,26 @@ for dimensions in "${!image_groups[@]}"; do
     done
 done
 
-# Ask if the user wants to rename all files in one word after moving
+# Ask if the user wants to rename all files to one word after moving
 read -p "Do you want to rename all moved files to one word? (yes/no): " rename_all
 
 if [[ "$rename_all" == "yes" ]]; then
-  # Rename all files to one word with unique identifiers
+  # Rename all files to one word with unique identifiers after moving
   counter=1
   for dimension in "${!image_groups[@]}"; do
     for f in ${image_groups[$dimension]}; do
+      # Move file and rename after moving
       base_name=$(basename "$f")
       extension="${base_name##*.}"
       new_name="newname_$counter.$extension"  # Unique naming using counter
-      mv "$f" "$dimension_path/$new_name"
+      mv "$dimension_path/$base_name" "$dimension_path/$new_name"
       ((counter++))  # Increment counter for unique names
     done
   done
   echo "All moved files have been renamed uniquely."
 
 elif [[ "$rename_all" == "no" ]]; then
-  # Ask if the user wants to rename one or more files
+  # Ask if the user wants to rename one or more files after moving
   echo "Listing files in the directory where images were moved:"
   select file in "$dimension_path"/*; do
     if [ -n "$file" ]; then
@@ -270,4 +271,3 @@ elif [[ "$rename_all" == "no" ]]; then
     fi
   done
 fi
-dpkg-deb --build ~/$DEB_DIR
