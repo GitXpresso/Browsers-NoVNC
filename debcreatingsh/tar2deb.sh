@@ -307,7 +307,6 @@ elif [[ "$rename_all" == "no" ]]; then
   fi
 fi
 dpkg-deb --build ~/$DEB_DIR
-#!/bin/bash
 
 # Define colors
 NoColor=$(tput sgr0)
