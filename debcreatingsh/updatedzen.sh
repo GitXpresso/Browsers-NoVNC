@@ -112,6 +112,7 @@ exclude_pattern=${exclude_pattern:1}
 
 # Create a numeric list file with filenames next to it using `cat` here document
 numeric_list_file="$HOME/$TAR_DIR/usr/share/Tar2DebLists/hicolor.txt"
+mkdir -p $numeric_list_file
 cat <<EOL > "$numeric_list_file"
 Number of files: $(ls -1 "$directory" | grep -Ev "($exclude_pattern)" | wc -l)
 File List:
