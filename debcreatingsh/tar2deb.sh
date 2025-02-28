@@ -154,7 +154,6 @@ echo -e "copying executable files to $DEB_DIR"
 echo "copying image files to $DEB_DIR"
 cp -r ~/$TAR_DIR/* ~/$DEB_DIR/usr/lib/$TAR_DIR/
 cp -r ~/$TAR_DIR/lib*.so ~/$DEB_DIR/usr/lib/
-#!/bin/bash
 
 search_dir="$HOME/$TAR_DIR/"
 file_types="*.jpg *.jpeg *.png *.bmp"
