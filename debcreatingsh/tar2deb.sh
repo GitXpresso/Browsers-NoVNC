@@ -286,5 +286,8 @@ elif [[ "$rename_all" == "no" ]]; then
   fi
 fi
 dpkg-deb --build ~/$DEB_DIR
+
 debfile="$HOME/$DEB_DIR.deb"
-read -p "do you want rename this "$debfile" "
+colors
+read -p "do you want rename this ${BBlack}"$debfile" ${NoColor} file? "
+
