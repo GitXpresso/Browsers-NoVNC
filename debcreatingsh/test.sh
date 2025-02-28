@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the directory to search
-specified_directory="$HOME/$TAR_DIR"
+specified_directory="$HOME/zen"
 
 # Check for a .desktop file in the specified directory
 desktop_file=$(find "$specified_directory" -maxdepth 1 -type f -iname "*.desktop")
@@ -18,7 +18,8 @@ else
 
     if [[ -n "$executable_file" ]]; then
       # Create a .desktop file with the found executable
-      desktop_filename="$specified_directory/$(basename "$executable_file").desktop"
+      read -p "what do you want the desktop filename be? don't include .desktop: " desktoprename
+      desktop_filename="$specified_directory/$desktoprename.desktop"
       echo "Creating .desktop file for $executable_file..."
 
       cat > "$desktop_filename" <<EOL
@@ -28,11 +29,12 @@ Name=Custom Application
 Exec=$executable_file
 Icon=application-icon
 Terminal=false
-Type=Application
+Type=Application,Other,Internet
 Categories=Utility;
 EOL
 
       echo ".desktop file created at $desktop_filename"
+      sudo mv -f $desktop_filename /usr/share/applications
     else
       echo "No graphical executable found. Aborting desktop creation."
     fi

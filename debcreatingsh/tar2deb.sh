@@ -166,7 +166,7 @@ EOF
 mkdir -p ~/$DEB_DIR/usr/bin/
 
 # Export the subdirectory as a variable
-find $HOME/$TAR_DIR -type f -exec file {} + | grep -i 'executable' | grep -vi 'binary' | cut -d: -f1 | while read -r file; do mv "$file" $HOME/$DEB_DIR/usr/bin/; done
+find $HOME/$TAR_DIR -type f -exec file {} + | grep -i 'executable' | grep -vi 'binary' | cut -d: -f1 | while read -r file; do busybox ln -s "$file" $HOME/$DEB_DIR/usr/bin/; done
 
 mkdir -p ~/$DEB_DIR/usr/lib/$TAR_DIR
 mkdir -p ~/$DEB_DIR/usr/lib/
