@@ -135,7 +135,7 @@ while true; do
     read -p "Please enter your name or some elses name as the maintainer for the package: " -a Maintainer
     if IFS=" " create_full_name "${Maintainer[@]}"; then
         clear
-        read -p "The Maintainer of your package is: $Maintainer is that correct? if not do you want change it? (yes/no) " yesorno
+        read -p "The Maintainer of your package is: ${BBlack}$Maintainer${NoColor} is that correct? if not do you want change it? (yes/no) " yesorno
     if [ "$yesorno" = yes ]; then
     clear
     bash ./tar2debmaintainerprompt.sh
