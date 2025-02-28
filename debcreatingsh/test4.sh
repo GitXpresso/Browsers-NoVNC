@@ -1,7 +1,4 @@
 #!/bin/bash
-git config --global user.name "William ."
-
-git config --global user.email "wg9797@outlook.com"
 
 # Define the directory to search for files and the directory where the .desktop file should be created
 TARGET_DIR="$HOME/zen"
