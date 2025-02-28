@@ -1,52 +1,60 @@
 #!/bin/bash
 
-# Directory to search for the .desktop file
-# Name of the .desktop file to check
-desktop_file_name="*.desktop"
-# Path to the .desktop file
-desktop_file_path="$search_dir/$desktop_file_name"
 
-# Check if the .desktop file exists
-if [[ ! -f "$desktop_file_path" ]]; then
-  # Prompt the user if they want to create the .desktop file
-  read -p "The .desktop file is not found. Do you want to create it? (yes/no): " answer
-  
-  if [[ "$answer" == "yes" ]]; then
-    # Directory containing the executable file
-    exec_dir="/path/to/executable/directory"
-    # Find the executable file in the directory
-    executable=$(find "$exec_dir" -maxdepth 1 -type f -executable -print -quit)
+# Define the directory to search for files and the directory where the .desktop file should be created
+TARGET_DIR="$HOME/zen"
+DESKTOP_DIR=$HOME"
 
-    if [[ -n "$executable" ]]; then
-      # Check if the executable is a graphical application
-      if file "$executable" | grep -q "ELF.*executable"; then
-        # Create the graphical .desktop file
-        cat > "$desktop_file_path" << EOL
-[Desktop Entry]
-Name=My Application
-Exec=$executable
-Icon=/path/to/icon.png
-Terminal=false
-Type=Application
-EOL
-        echo "Graphical .desktop file created at $desktop_file_path"
-      else
-        # Create a non-graphical .desktop file
-        cat > "$desktop_file_path" << EOL
-[Desktop Entry]
-Name=My Application
-Exec=$executable
-Terminal=true
-Type=Application
-EOL
-        echo "Non-graphical .desktop file created at $desktop_file_path"
-      fi
-    else
-      echo "No executable file found in $exec_dir"
+# Function to find the graphical executable
+find_graphical_executable() {
+    for file in "$TARGET_DIR"/*; do
+        if [[ -x "$file" && $(file "$file" | grep -i 'executable') ]]; then
+            # Return the first executable found (could be enhanced for finding the most common type of executable)
+            echo "$file"
+            return
+        fi
+    done
+    echo ""
+}
+
+# Check if a .desktop file exists in the specified directory
+if [[ ! -f "$DESKTOP_DIR/$(basename "$TARGET_DIR").desktop" ]]; then
+    graphical_exec=$(find_graphical_executable)
+
+    if [[ -z "$graphical_exec" ]]; then
+        echo "No graphical executable found in the directory."
+        exit 1
     fi
-  else
-    echo ".desktop file creation skipped."
-  fi
+
+    # Ask user if they want to create a .desktop file
+    while true; do
+        read -p "Do you want to create a .desktop file for $graphical_exec? (yes/no): " create_choice
+        if [[ "$create_choice" == "yes" || "$create_choice" == "y" ]]; then
+            read -p "Enter the filename for the .desktop file: " filename
+            desktop_file="$DESKTOP_DIR/$filename.desktop"
+            echo "Creating $desktop_file..."
+
+            # Create the .desktop file
+            echo "[Desktop Entry]" > "$desktop_file"
+            echo "Version=1.0" >> "$desktop_file"
+            echo "Name=$(basename "$graphical_exec")" >> "$desktop_file"
+            echo "Comment=Generated .desktop file" >> "$desktop_file"
+            echo "Exec=$graphical_exec" >> "$desktop_file"
+            echo "Icon=" >> "$desktop_file"  # Optionally add an icon
+            echo "Terminal=false" >> "$desktop_file"
+            echo "Type=Application" >> "$desktop_file"
+            chmod +x "$desktop_file"
+            echo ".desktop file created successfully!"
+            break
+        elif [[ "$create_choice" == "no" || "$create_choice" == "n" ]]; then
+            echo "Skipping creation of .desktop file."
+            break
+        else
+            echo "Invalid input. Please answer 'yes' or 'no'."
+        fi
+    done
 else
-  echo ".desktop file already exists at $desktop_file_path"
+    echo ".desktop file already exists in $DESKTOP_DIR"
 fi
+
+# Continue with other parts of the script if needed
