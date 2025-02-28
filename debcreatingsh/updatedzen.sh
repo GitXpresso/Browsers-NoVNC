@@ -2,13 +2,13 @@
 
 # Directory to check
 DEB_DIR="zen2deb-1.0.0"
-declare -A dest_dirs48x48=(
+
 directory="$HOME/$DEB_DIR/usr/share/icons/hicolor/48x48/apps"
 directory2="$HOME/$DEB_DIR/usr/lib/tar2debNumbericList"
 
-for dir in "${dest_dirs48x48[@]}"; do
-  mkdir -p "$dir"
-done
+mkdir -p "$directory" 
+mkdir -p "$directory2" 
+
 # Count the number of files in the directory
 file_count=$(ls -1 "$directory" | wc -l)
 echo "Number of files in the directory: $file_count"
