@@ -155,6 +155,8 @@ echo "copying image files to $DEB_DIR"
 cp -r ~/$TAR_DIR/* ~/$DEB_DIR/usr/lib/$TAR_DIR/
 cp -r ~/$TAR_DIR/lib*.so ~/$DEB_DIR/usr/lib/
 
+#!/bin/bash
+
 search_dir="$HOME/$TAR_DIR/"
 file_types="*.jpg *.jpeg *.png *.bmp"
 
@@ -173,15 +175,13 @@ fi
 
 # Export the subdirectory as a variable
 export source_dir="$subdirectory"
-#!/bin/bash
+
+# The part of the script that deals with dimensions and moving files follows
 
 # Function to get image dimensions
 get_dimensions() {
     identify -format "%wx%h" "$1" 2>/dev/null
 }
-
-# Source directory (replace this variable with the actual source directory path)
-source_dir="/path/to/source/directory"
 
 # Destination directories for different dimensions
 declare -A dest_dirs=(
@@ -233,5 +233,41 @@ for dimensions in "${!image_groups[@]}"; do
         mv "$file" "$dimension_path/"
     done
 done
-echo "$file"
-# Prompt to rename files
+
+# Ask if the user wants to rename all files in one word after moving
+read -p "Do you want to rename all moved files to one word? (yes/no): " rename_all
+
+if [[ "$rename_all" == "yes" ]]; then
+  # Rename all files to one word
+  for file in "${image_groups[@]}"; do
+    for f in $file; do
+      base_name=$(basename "$f")
+      extension="${base_name##*.}"
+      new_name="newname.$extension"  # Set the new name you want for all files
+      mv "$f" "$dimension_path/$new_name"
+    done
+  done
+  echo "All moved files have been renamed."
+
+elif [[ "$rename_all" == "no" ]]; then
+  # Ask if the user wants to rename one or more files
+  echo "Listing files in the directory where images were moved:"
+  select file in "$dimension_path"/*; do
+    if [ -n "$file" ]; then
+      # Rename the selected file
+      read -p "Enter the new name for the selected file (without extension): " new_name
+      extension="${file##*.}"
+      mv "$file" "$dimension_path/$new_name.$extension"
+      echo "File renamed to $new_name.$extension"
+      
+      # Ask if the user wants to rename another file
+      read -p "Do you want to rename another file? (yes/no): " rename_another
+      if [[ "$rename_another" == "no" ]]; then
+        break
+      fi
+    else
+      echo "Invalid selection. Please select a valid file."
+    fi
+  done
+fi
+dpkg-deb --build ~/$DEB_DIR
