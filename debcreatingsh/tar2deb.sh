@@ -173,7 +173,7 @@ find $HOME/$TAR_DIR -type f -exec file {} + | grep -i 'executable' | grep -vi 'b
 directory="$HOME/$DEB_DIR/usr/bin"
 
 # List of specific files to remove (modify the list as needed)
-files_to_remove=("glxtest" "updater" "vaapitestf" "pingsender")
+files_to_remove=("glxtest" "updater" "vaapitest" "pingsender")
 
 # Check and remove files
 for file in "${files_to_remove[@]}"; do
