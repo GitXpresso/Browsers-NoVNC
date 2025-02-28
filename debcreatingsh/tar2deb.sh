@@ -275,15 +275,14 @@ done
 read -p "Do you want to rename all moved files to one word? (yes/no): " rename_all
 
 if [[ "$rename_all" == "yes" ]]; then
-  # Rename all files to one word with unique identifiers after moving
-  counter=1
   for dimension in "${!image_groups[@]}"; do
     for f in ${image_groups[$dimension]}; do
       # Rename after moving, no renaming during move
       base_name=$(basename "$f")
       extension="${base_name##*.}"
-      new_name="newname_$counter.$extension"  # Unique naming using counter
-      mv "$dimension_path/$base_name" "$dimension_path/$new_name"
+      read -p "what is your name for all the filenames?  " new_name
+      filename="$new_name.$extension"  # Unique naming using counter
+      mv "$dimension_path/$base_name" "$dimension_path/$filename"
       ((counter++))  # Increment counter for unique names
     done
   done
