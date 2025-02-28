@@ -155,8 +155,6 @@ echo "copying image files to $DEB_DIR"
 cp -r ~/$TAR_DIR/* ~/$DEB_DIR/usr/lib/$TAR_DIR/
 cp -r ~/$TAR_DIR/lib*.so ~/$DEB_DIR/usr/lib/
 
-#!/bin/bash
-
 search_dir="$HOME/$TAR_DIR/"
 file_types="*.jpg *.jpeg *.png *.bmp"
 
@@ -238,16 +236,18 @@ done
 read -p "Do you want to rename all moved files to one word? (yes/no): " rename_all
 
 if [[ "$rename_all" == "yes" ]]; then
-  # Rename all files to one word
-  for file in "${image_groups[@]}"; do
-    for f in $file; do
+  # Rename all files to one word with unique identifiers
+  counter=1
+  for dimension in "${!image_groups[@]}"; do
+    for f in ${image_groups[$dimension]}; do
       base_name=$(basename "$f")
       extension="${base_name##*.}"
-      new_name="newname.$extension"  # Set the new name you want for all files
+      new_name="newname_$counter.$extension"  # Unique naming using counter
       mv "$f" "$dimension_path/$new_name"
+      ((counter++))  # Increment counter for unique names
     done
   done
-  echo "All moved files have been renamed."
+  echo "All moved files have been renamed uniquely."
 
 elif [[ "$rename_all" == "no" ]]; then
   # Ask if the user wants to rename one or more files
