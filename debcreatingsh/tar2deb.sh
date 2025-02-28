@@ -159,7 +159,7 @@ cp -r ~/$TAR_DIR/* ~/$DEB_DIR/usr/lib/$TAR_DIR/
 cp -r ~/$TAR_DIR/lib*.so ~/$DEB_DIR/usr/lib/
 #!/bin/bash
 
-search_dir="$HOME/zen/"
+search_dir="$HOME/$TAR_DIR/"
 file_types="*.jpg *.jpeg *.png *.bmp"
 
 # Debugging: Print the search directory and file types
@@ -237,28 +237,5 @@ for dimensions in "${!image_groups[@]}"; do
         mv "$file" "$dimension_path/"
     done
 done
-
+echo "$file"
 # Prompt to rename files
-read -p "Do you want to rename all images by dimension (yes/no)? " rename_all
-if [[ "$rename_all" == "yes" ]]; then
-    for dimensions in "${!image_groups[@]}"; do
-        if [[ -n "${dest_dirs[$dimensions]}" ]]; then
-            dimension_path="${dest_dirs[$dimensions]}"
-        else
-            dimension_path="${dest_dirs["unlisted"]}"
-        fi
-        for file in "$dimension_path/"*; do
-            mv "$file" "$dimension_path/$dimensions-$(basename "$file")"
-        done
-    done
-elif [[ "$rename_all" == "no" ]]; then
-    read -p "Do you want to rename each image manually by dimension (yes/no)? " rename_each
-    if [[ "$rename_each" == "yes" ]]; then
-        for dimensions in "${!image_groups[@]}"; do
-            if [[ -n "${dest_dirs[$dimensions]}" ]]; then
-                dimension_path="${dest_dirs[$dimensions]}"
-            else
-            echo "not renaming any files"
-            break
-            fi
-     done
