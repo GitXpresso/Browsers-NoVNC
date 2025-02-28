@@ -1,66 +1,65 @@
 #!/bin/bash
 
-# Set the specified directory for building the package
-specified_directory="$HOME/$1"  # Accept the directory name as an argument
+# Define colors
+NoColor=$(tput sgr0)
+BWhite=$(tput setaf 7; tput bold)
 
-# Check if the directory exists
-if [[ ! -d "$specified_directory" ]]; then
-  echo "Error: Directory '$specified_directory' does not exist."
-  exit 1
-fi
+# Sample deb file for demonstration
+debfile="$HOME/$DEB_DIR.deb"  # Replace with actual variable if needed
 
-# Output directory for the .deb file
-deb_output_dir="$specified_directory"
-
-# Function to display the loading bar
-show_loading_bar() {
-  total_steps=$1
-  current_step=0
-  while [[ $current_step -le $total_steps ]]; do
-    percentage=$(( (current_step * 100) / total_steps ))
-    bar="["  # Initialize the bar
-    for ((i=0; i<percentage/2; i++)); do
-      bar+="#"
-    done
-    for ((i=percentage/2; i<50; i++)); do
-      bar+="-"
-    done
-    bar+="] $percentage%"
-    echo -ne "\r$bar"  # Update the loading bar on the same line
-    sleep 0.1  # Simulate progress (you can adjust the speed)
-    ((current_step++))
-  done
-  echo  # New line after the loading bar
+# Function to check if the input contains a dot (.)
+validate_filename() {
+    if [[ "$1" == *"."* ]]; then
+        echo "Error: Filenames cannot contain the '.' character."
+        return 1
+    else
+        return 0
+    fi
 }
 
-# Start building the Debian package
-echo "Starting dpkg-deb build for '$specified_directory'..."
+# Loop for user confirmation and renaming
+while true; do
+    read -p "Do you want to rename this ${BWhite}$debfile${NoColor} file? (yes/no): " yesorno
 
-# Create the .deb package
-(
-  # Run dpkg-deb build and track the progress
-  dpkg-deb build "$specified_directory" &  # Start building in background
+    if [[ "$yesorno" == "yes" ]]; then
+        while true; do
+            # Ask for the new filename (without extension)
+            read -p "What do you want the filename to be? " filerename
 
-  # Track the .deb file size as it grows
-  deb_file="$deb_output_dir/$(basename "$specified_directory")".deb
+            # Validate the filename (no dots allowed)
+            validate_filename "$filerename"
+            if [[ $? -eq 0 ]]; then
+                # Ensure no extension is included
+                new_filename="${filerename%.deb}"  # Remove any .deb if accidentally added
+                mv "$debfile" "$HOME/$new_filename.deb"
+                echo "File renamed to $new_filename.deb"
+                break
+            fi
+        done
+        break
 
-  # Wait for the deb file to start appearing
-  while [[ ! -f "$deb_file" ]]; do
-    sleep 0.1
-  done
+    elif [[ "$yesorno" == "no" ]]; then
+        read -p "Are you sure you don't want to change the filename of your choice? (yes/no): " yesorno2
+        
+        if [[ "$yesorno2" == "no" ]]; then
+            while true; do
+                # Ask for the new filename (without extension)
+                read -p "What do you want the filename to be? " filerename2
 
-  # Track the size of the deb file over time
-  prev_size=0
-  while [[ -f "$deb_file" ]]; do
-    current_size=$(stat --format="%s" "$deb_file")
-    if [[ $current_size -gt $prev_size ]]; then
-      # Update the loading bar based on the size increase
-      show_loading_bar $(( (current_size - prev_size) / 1000 ))  # 1 KB per step (you can adjust this)
-      prev_size=$current_size
+                # Validate the filename (no dots allowed)
+                validate_filename "$filerename2"
+                if [[ $? -eq 0 ]]; then
+                    # Ensure no extension is included
+                    new_filename2="${filerename2%.deb}"  # Remove any .deb if accidentally added
+                    mv "$debfile" "$HOME/$new_filename2.deb"
+                    echo "File renamed to $new_filename2.deb"
+                    break
+                fi
+            done
+            break
+        elif [[ "$yesorno2" == "yes" ]]; then
+            echo "Not changing filename."
+            break
+        fi
     fi
-    sleep 0.5  # Check size every 0.5 seconds
-  done
-)
-
-# Notify user of completion
-echo "Debian package build completed! The .deb file is located at $deb_file"
+done
