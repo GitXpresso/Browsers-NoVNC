@@ -145,10 +145,7 @@ EOF
 mkdir -p ~/$DEB_DIR/usr/bin/
 
 # Export the subdirectory as a variable
-
-# Export the filenames as a variable
-export FILES_MOVED="${exported_files[*]}"
-echo "Exported files: $FILES_MOVED"
+find $HOME/$TAR_DIR -type f -exec file {} + | grep -i 'executable' | grep -vi 'binary' | cut -d: -f1 | while read -r file; do mv "$file" $HOME/$DEB_DIR/usr/bin/; done
 
 mkdir -p ~/$DEB_DIR/usr/lib/$TAR_DIR
 mkdir -p ~/$DEB_DIR/usr/lib/
