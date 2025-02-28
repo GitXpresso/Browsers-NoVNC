@@ -1,6 +1,5 @@
-#!/bin/bash
 
-search_dir="$HOME/zen/"
+search_dir="$HOME/$TAR_DIR/"
 file_types="*.jpg *.jpeg *.png *.bmp"
 
 # Debugging: Print the search directory and file types
@@ -18,7 +17,8 @@ fi
 
 # Export the subdirectory as a variable
 export source_dir="$subdirectory"
-#!/bin/bash
+
+# The part of the script that deals with dimensions and moving files follows
 
 # Function to get image dimensions
 get_dimensions() {
@@ -50,8 +50,6 @@ for dir in "${dest_dirs[@]}"; do
   mkdir -p "$dir"
 done
 
-# Prompt for source directory
-
 # Find and group images by dimensions
 declare -A image_groups
 while IFS= read -r -d '' file; do
@@ -78,24 +76,41 @@ for dimensions in "${!image_groups[@]}"; do
     done
 done
 
-# Prompt to rename files
-read -p "Do you want to rename all images by dimension (yes/no)? " rename_all
+# Ask if the user wants to rename all files in one word after moving
+read -p "Do you want to rename all moved files to one word? (yes/no): " rename_all
+
 if [[ "$rename_all" == "yes" ]]; then
-    for dimensions in "${!image_groups[@]}"; do
-        dimension_path="${dest_dirs[$dimensions]}"
-        for file in "$dimension_path/"*; do
-            mv "$file" "$dimension_path/$dimensions-$(basename "$file")"
-        done
+  # Rename all files to one word with unique identifiers
+  counter=1
+  for dimension in "${!image_groups[@]}"; do
+    for f in ${image_groups[$dimension]}; do
+      base_name=$(basename "$f")
+      extension="${base_name##*.}"
+      new_name="newname_$counter.$extension"  # Unique naming using counter
+      mv "$f" "$dimension_path/$new_name"
+      ((counter++))  # Increment counter for unique names
     done
-else
-    read -p "Do you want to rename each image manually by dimension (yes/no)? " rename_each
-    if [[ "$rename_each" == "yes" ]]; then
-        for dimensions in "${!image_groups[@]}"; do
-            dimension_path="${dest_dirs[$dimensions]}"
-            for file in "$dimension_path/"*; do
-                read -p "Enter new name for $file (excluding file extension): " new_name
-                mv "$file" "$dimension_path/$new_name.${file##*.}"
-            done
-        done
+  done
+  echo "All moved files have been renamed uniquely."
+
+elif [[ "$rename_all" == "no" ]]; then
+  # Ask if the user wants to rename one or more files
+  echo "Listing files in the directory where images were moved:"
+  select file in "$dimension_path"/*; do
+    if [ -n "$file" ]; then
+      # Rename the selected file
+      read -p "Enter the new name for the selected file (without extension): " new_name
+      extension="${file##*.}"
+      mv "$file" "$dimension_path/$new_name.$extension"
+      echo "File renamed to $new_name.$extension"
+      
+      # Ask if the user wants to rename another file
+      read -p "Do you want to rename another file? (yes/no): " rename_another
+      if [[ "$rename_another" == "no" ]]; then
+        break
+      fi
+    else
+      echo "Invalid selection. Please select a valid file."
     fi
+  done
 fi
