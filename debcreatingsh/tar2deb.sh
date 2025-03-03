@@ -75,7 +75,7 @@ while true; do
     read -p "Please enter a Version for your package: " Version
     if is_number "$Version"; then
         clear
-        echo "The version of your package is: ${BBlack}$Version{$NoColor}"
+        echo "The version of your package is: ${BBlack}$Version${NoColor}"
         read -p "do you want to change the version of your package? (yes/no) " yesorno
     if [ "$yesorno" = yes ]; then
     clear
@@ -388,7 +388,7 @@ echo "Main executable found: $MAIN_EXEC"
 desktop_file=$(find "$target_dir" -type f -name "*.desktop")
 
 if [[ -z "$desktop_file" ]]; then
-    read -p "No .desktop file found. Do you want to create one? (yes/no): " create_desktop
+    read -p "${BBlack}No .desktop file found. Do you want to create one?${NoColor}(yes/no): " create_desktop
     if [[ "$create_desktop" == "yes" ]]; then
         # Ask if the user wants to choose an icon
         read -p "Do you want to pick an icon for the desktop file? (yes/no): " pick_icon
