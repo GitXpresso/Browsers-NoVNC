@@ -450,7 +450,8 @@ if [[ -z "$desktop_file" ]]; then
 fi
 echo "${BBlack}Building Deb File${NoColor}"
 dpkg-deb --build ~/$DEB_DIR
-
+debfile="$HOME/$DEB_DIR.deb"
+sudo chmod 644 $debfile
 # Define colors
 NoColor=$(tput sgr0)
 BWhite=$(tput setaf 7; tput bold)
