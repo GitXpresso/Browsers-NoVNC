@@ -194,7 +194,14 @@ mkdir -p ~/$DEB_DIR/usr/share/applications/
 echo -e "copying executable files to $DEB_DIR"
 echo "copying image files to $DEB_DIR"
 cp -r ~/$TAR_DIR/* ~/$DEB_DIR/usr/lib/$TAR_DIR/
-cp -r ~/$TAR_DIR/lib*.so ~/$DEB_DIR/usr/lib/
+# Check if at least one directory matching ~/blender* exists
+if ls -d "$HOME"/blender* &>/dev/null; then
+    echo "Blender directory found. Copying shared libraries..."
+    cp -r "$HOME/$TAR_DIR/lib/"lib*.so "$HOME/$DEB_DIR/usr/lib/"
+else
+    echo "Blender directory not found. Copying libraries from a different path..."
+    cp -r "$HOME/$TAR_DIR/"lib*.so "$HOME/$DEB_DIR/usr/lib/"
+fi
 search_dir="$HOME/$TAR_DIR/"
 file_types="*.jpg *.jpeg *.png *.bmp *.svg"
 
@@ -255,7 +262,7 @@ while IFS= read -r -d '' file; do
         fi
         image_groups["$dimensions"]+="$file"$'\n'
     fi
-done < <(find "$source_dir" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.gif" \) -print0)
+done < <(find "$source_dir" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.svg" \) -print0)
 
 # Move images to destination directories
 for dimensions in "${!image_groups[@]}"; do
