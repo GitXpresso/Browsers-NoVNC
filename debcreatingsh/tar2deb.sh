@@ -162,7 +162,7 @@ Description: $Description
 
 EOF
 mkdir -p ~/$DEB_DIR/usr/bin/
-find $HOME/$TAR_DIR -type f -exec file {} + | grep -i 'executable' | grep -vi 'binary' | cut -d: -f1 | grep -v -E 'glxtest|updater|vaapitest|pingsender|plugin-container|run-mozilla.sh' | while read -r file; do busybox ln -s "$file" $HOME/$DEB_DIR/usr/bin/; done
+find $HOME/$TAR_DIR -type f -exec file {} + | grep -i 'executable' | grep -vi 'binary' | cut -d: -f1 | grep -v -E 'glxtest|updater|vaapitest|pingsender|plugin-container|run-mozilla.sh|*.py' | while read -r file; do busybox ln -s "$file" $HOME/$DEB_DIR/usr/bin/; done
 CHECK_DIR1="$HOME/palemoon*"
 CHECK_DIR2="$HOME/basilisk*"
 
@@ -196,19 +196,18 @@ echo "copying image files to $DEB_DIR"
 cp -r ~/$TAR_DIR/* ~/$DEB_DIR/usr/lib/$TAR_DIR/
 cp -r ~/$TAR_DIR/lib*.so ~/$DEB_DIR/usr/lib/
 search_dir="$HOME/$TAR_DIR/"
-file_types="*.jpg *.jpeg *.png *.bmp"
+file_types="*.jpg *.jpeg *.png *.bmp *.svg"
 
 # Debugging: Print the search directory and file types
 echo "Search directory: $search_dir"
 echo "File types: $file_types"
 
 # Find subdirectory containing more than one image file
-subdirectory=$(find "$search_dir" -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.bmp" \) -printf '%h\n' | sort | uniq -c | awk '$1 > 1 {print $2; exit}')
+subdirectory=$(find "$search_dir" -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.bmp" -o -name "*.svg"\) -printf '%h\n' | sort | uniq -c | awk '$1 > 1 {print $2; exit}')
 
 # Check if subdirectory is found
 if [ -z "$subdirectory" ]; then
   echo "No subdirectory found containing more than one image file."
-  exit 1
 fi
 
 # Export the subdirectory as a variable
