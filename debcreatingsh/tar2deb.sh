@@ -21,7 +21,7 @@ BCyan=$(tput setaf 6; tput bold)
 BWhite=$(tput setaf 7; tput bold)
 echo -e "${BBlack}installing required packages${NoColor}"
 # Install Zen Browser to create .deb package
-sudo apt-get install tar wget build-essential imagemagick devscripts debhelper curl cat bash busybox libasound-dev -y
+sudo apt-get install tar wget build-essential imagemagick devscripts debhelper curl bash busybox libasound-dev -y
 clear
 # Edit the Export Variables in order for this file to work successfully
 while true; do
