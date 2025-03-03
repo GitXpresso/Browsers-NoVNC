@@ -1,116 +1,83 @@
+#!/bin/bash
 
-search_dir="$HOME/$TAR_DIR/"
-file_types="*.jpg *.jpeg *.png *.bmp"
+# Set the target directory (Change this to your target directory)
+target_dir="$HOME/specific_directory"
 
-# Debugging: Print the search directory and file types
-echo "Search directory: $search_dir"
-echo "File types: $file_types"
-
-# Find subdirectory containing more than one image file
-subdirectory=$(find "$search_dir" -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.bmp" \) -printf '%h\n' | sort | uniq -c | awk '$1 > 1 {print $2; exit}')
-
-# Check if subdirectory is found
-if [ -z "$subdirectory" ]; then
-  echo "No subdirectory found containing more than one image file."
-  exit 1
-fi
-
-# Export the subdirectory as a variable
-export source_dir="$subdirectory"
-
-# The part of the script that deals with dimensions and moving files follows
-
-# Function to get image dimensions
-get_dimensions() {
-    identify -format "%wx%h" "$1" 2>/dev/null
+# Find the most linked graphical executable
+find_main_executable() {
+    find "$target_dir" -type f -executable ! -name "*.sh" ! -name "*.so" | while read -r file; do
+        links=$(ldd "$file" 2>/dev/null | wc -l)
+        echo "$links $file"
+    done | sort -nr | awk 'NR==1{print $2}'
 }
 
-# Destination directories for different dimensions
-declare -A dest_dirs=(
-  ["8x8"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/8x8/apps/"
-  ["16x16"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/16x16/apps/"
-  ["22x22"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/22x22/apps/"
-  ["24x24"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/24x24/apps/"
-  ["32x32"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/32x32/apps/"
-  ["36x36"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/36x36/apps/"
-  ["42x42"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/42x42/apps/"
-  ["48x48"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/48x48/apps/"
-  ["64x64"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/64x64/apps/"
-  ["72x72"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/72x72/apps/"
-  ["96x96"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/96x96/apps/"
-  ["128x128"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/128x128/apps/"
-  ["192x192"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/192x192/apps/"
-  ["256x256"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/256x256/apps/"
-  ["512x512"]="$HOME/$DEB_DIR/usr/share/icons/hicolor/512x512/apps/"
-  ["unlisted"]="$HOME/$DEB_DIR/usr/share/unlisted_dimensions"
-)
+main_executable=$(find_main_executable)
 
-# Create the destination directories if they don't exist
-for dir in "${dest_dirs[@]}"; do
-  mkdir -p "$dir"
-done
-
-# Find and group images by dimensions
-declare -A image_groups
-while IFS= read -r -d '' file; do
-    dimensions=$(get_dimensions "$file")
-    if [ -n "$dimensions" ]; then
-        if [[ -n "${dest_dirs[$dimensions]}" ]]; then
-            dest_dir="${dest_dirs[$dimensions]}"
-        else
-            dest_dir="${dest_dirs["unlisted"]}"
-        fi
-        image_groups["$dimensions"]+="$file "
-    fi
-done < <(find "$source_dir" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.gif" \) -print0)
-
-# Move images to destination directories
-for dimensions in "${!image_groups[@]}"; do
-    if [[ -n "${dest_dirs[$dimensions]}" ]]; then
-        dimension_path="${dest_dirs[$dimensions]}"
-    else
-        dimension_path="${dest_dirs["unlisted"]}"
-    fi
-    for file in ${image_groups[$dimensions]}; do
-        mv "$file" "$dimension_path/"
-    done
-done
-
-# Ask if the user wants to rename all files in one word after moving
-read -p "Do you want to rename all moved files to one word? (yes/no): " rename_all
-
-if [[ "$rename_all" == "yes" ]]; then
-  # Rename all files to one word with unique identifiers
-  counter=1
-  for dimension in "${!image_groups[@]}"; do
-    for f in ${image_groups[$dimension]}; do
-      base_name=$(basename "$f")
-      extension="${base_name##*.}"
-      new_name="newname_$counter.$extension"  # Unique naming using counter
-      mv "$f" "$dimension_path/$new_name"
-      ((counter++))  # Increment counter for unique names
-    done
-  done
-  echo "All moved files have been renamed uniquely."
-
-elif [[ "$rename_all" == "no" ]]; then
-  # Ask if the user wants to rename one or more files
-  echo "Listing files in the directory where images were moved:"
-  select file in "$dimension_path"/*; do
-    if [ -n "$file" ]; then
-      # Rename the selected file
-      read -p "Enter the new name for the selected file (without extension): " new_name
-      extension="${file##*.}"
-      mv "$file" "$dimension_path/$new_name.$extension"
-      echo "File renamed to $new_name.$extension"
-      
-      # Ask if the user wants to rename another file
-      read -p "Do you want to rename another file? (yes/no): " rename_another
-      if [[ "$rename_another" == "no" ]]; then
-        break
-      fi
-    else
-      echo "Invalid selection. Please select a valid file."
-    fi
-  done
+# Check if an executable was found
+if [[ -z "$main_executable" ]]; then
+    echo "No graphical executable found."
+    exit 1
 fi
+
+export MAIN_EXEC="$main_executable"
+echo "Main executable found: $MAIN_EXEC"
+
+# Check if a desktop file exists
+desktop_file=$(find "$target_dir" -type f -name "*.desktop")
+
+if [[ -z "$desktop_file" ]]; then
+    read -p "No .desktop file found. Do you want to create one? (yes/no): " create_desktop
+    if [[ "$create_desktop" == "yes" ]]; then
+        # Ask if the user wants to choose an icon
+        read -p "Do you want to pick an icon for the desktop file? (yes/no): " pick_icon
+        icon_path=""
+
+        if [[ "$pick_icon" == "yes" ]]; then
+            echo "Creating a list of available images:"
+            images_list=()
+            counter=1
+
+            # Find image files
+            for img in "$target_dir"/*.{png,jpg,jpeg,svg}; do
+                if [[ -f "$img" ]]; then
+                    images_list+=("$img")
+                    echo "$counter. $(basename "$img")"
+                    ((counter++))
+                fi
+            done
+
+            # Ask user to select an image
+            if [[ ${#images_list[@]} -gt 0 ]]; then
+                while true; do
+                    read -p "Enter the number of the image you want to use as an icon (or 'q' to skip): " selected_number
+                    if [[ "$selected_number" == "q" ]]; then
+                        break
+                    elif [[ "$selected_number" -ge 1 && "$selected_number" -le ${#images_list[@]} ]]; then
+                        icon_path="${images_list[$selected_number-1]}"
+                        echo "Icon selected: $icon_path"
+                        break
+                    else
+                        echo "Invalid selection. Try again."
+                    fi
+                done
+            else
+                echo "No image files found."
+            fi
+        fi
+
+        # Create .desktop file
+        desktop_file_path="$target_dir/$(basename "$MAIN_EXEC" .sh).desktop"
+        echo "[Desktop Entry]" > "$desktop_file_path"
+        echo "Type=Application" >> "$desktop_file_path"
+        echo "Name=$(basename "$MAIN_EXEC")" >> "$desktop_file_path"
+        echo "Exec=$MAIN_EXEC" >> "$desktop_file_path"
+        [[ -n "$icon_path" ]] && echo "Icon=$icon_path" >> "$desktop_file_path"
+        echo "Terminal=false" >> "$desktop_file_path"
+        echo "Categories=Utility;" >> "$desktop_file_path"
+
+        chmod +x "$desktop_file_path"
+        echo "Desktop file created at: $desktop_file_path"
+    fi
+fi
+
+echo "Continuing with the rest of the script..."
