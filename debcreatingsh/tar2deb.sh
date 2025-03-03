@@ -165,9 +165,29 @@ Description: $Description
 EOF
 mkdir -p ~/$DEB_DIR/usr/bin/
 find $HOME/$TAR_DIR -type f -exec file {} + | grep -i 'executable' | grep -vi 'binary' | cut -d: -f1 | grep -v -E 'glxtest|updater|vaapitest|pingsender|plugin-container|run-mozilla.sh' | while read -r file; do busybox ln -s "$file" $HOME/$DEB_DIR/usr/bin/; done
+CHECK_DIR1="$HOME/palemoon*"
+CHECK_DIR2="$HOME/basilisk*"
 
-# Specify the directories to check
+# Specify the word to search for in the second directory
 
+# Check if the first directory exists
+if [ -d "$CHECK_DIR1" ]; then
+    echo "Directory found: $CHECK_DIR1. Installing required packages..."
+
+    # Update package lists and install the required packages
+    sudo apt update
+    sudo apt install -y libgtk-3-0 libdbus-glib-1-2 libstdc++6 libx11-6 libx11-xcb1 yaru-theme-gtk yaru-theme-icon yaru-theme-sound
+    echo "Packages installed successfully."
+fi 
+# Check if the second directory exists
+if [ -d "$CHECK_DIR2" ]; then
+    # Check if any files in the second directory contain the specific word
+        sudo apt install -y libgtk-3-0 libdbus-glib-1-2 libstdc++6 libx11-6 libx11-xcb1 yaru-theme-gtk yaru-theme-icon yaru-theme-sound
+
+        echo "Additional packages installed successfully."
+else
+    echo "Second directory not found: $CHECK_DIR2. No packages installed."
+fi
 # Display a message indicating the operation is complete
 echo "removed uneeded files: $files_to_remove" 
 mkdir -p ~/$DEB_DIR/usr/lib/$TAR_DIR
