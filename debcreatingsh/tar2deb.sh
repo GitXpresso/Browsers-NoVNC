@@ -164,45 +164,9 @@ Description: $Description
 
 EOF
 mkdir -p ~/$DEB_DIR/usr/bin/
-
-# Export the subdirectory as a variable
 find $HOME/$TAR_DIR -type f -exec file {} + | grep -i 'executable' | grep -vi 'binary' | cut -d: -f1 | grep -v -E 'glxtest|updater|vaapitest|pingsender|plugin-container|run-mozilla.sh' | while read -r file; do busybox ln -s "$file" $HOME/$DEB_DIR/usr/bin/; done
 
 # Specify the directories to check
-CHECK_DIR1="$HOME/palemoon"
-CHECK_DIR2="$HOME/"
-
-# Specify the word to search for in the second directory
-SPECIFIC_WORD="basilisk"
-
-# Check if the first directory exists
-if [ -d "$CHECK_DIR1" ]; then
-    echo "Directory found: $CHECK_DIR1. Installing required packages..."
-
-    # Update package lists and install the required packages
-    sudo apt update
-    sudo apt install -y libgtk-3-0 libdbus-glib-1-2 libstdc++6 libx11-6 libx11-xcb1
-    echo "Packages installed successfully."
-fi 
-# Check if the second directory exists
-if [ -d "$CHECK_DIR2" ]; then
-    # Check if any files in the second directory contain the specific word
-    if grep -Rl "$SPECIFIC_WORD" "$CHECK_DIR2" > /dev/null 2>&1; then
-        echo "Directory found: $CHECK_DIR2. The word '$SPECIFIC_WORD' is found in its files."
-
-        # If the word is found, perform the desired action (e.g., install packages)
-        echo "Installing additional required packages for directory containing '$SPECIFIC_WORD'..."
-
-        # You can install different packages here if needed
-        sudo apt install -y libgtk-3-0 libdbus-glib-1-2 libstdc++6 libx11-6 libx11-xcb1 yaru-theme-gtk yaru-theme-icon yaru-theme-sound
-
-        echo "Additional packages installed successfully."
-    else
-        echo "Directory found: $CHECK_DIR2, but the word '$SPECIFIC_WORD' is not found in any of its files. No additional action taken."
-    fi
-else
-    echo "Second directory not found: $CHECK_DIR2. No packages installed."
-fi
 
 # Display a message indicating the operation is complete
 echo "removed uneeded files: $files_to_remove" 

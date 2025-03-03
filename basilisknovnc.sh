@@ -6,7 +6,7 @@ sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox
 cd ~/
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
-wget https://dl.basilisk-browser.org/basilisk-20250103024732.linux-x86_64-gtk2.tar.xz && tar -xvf basilisk-20250103024732.linux-x86_64-gtk2.tar.xz -C ~/ && sudo rm -rf basilisk-20250103024732.linux-x86_64-gtk2.tar.xz
+wget https://dl.basilisk-browser.org/basilisk-20250220145130.linux-x86_64-gtk.tar.xz && tar -xvf basilisk-20250103024732.linux-x86_64-gtk2.tar.xz -C ~/ && sudo rm -rf basilisk-20250103024732.linux-x86_64-gtk2.tar.xz
 cat << EOF > ~/basilisk.desktop
 [Desktop Entry]
 Version=1.0
