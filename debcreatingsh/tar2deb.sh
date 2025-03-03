@@ -21,11 +21,9 @@ BCyan=$(tput setaf 6; tput bold)
 BWhite=$(tput setaf 7; tput bold)
 echo -e "${BBlack}installing required packages${NoColor}"
 # Install Zen Browser to create .deb package
-sudo apt-get install tar wget build-essential imagemagick devscripts debhelper bc busybox libasound-dev -y
+sudo apt-get install tar wget build-essential imagemagick devscripts debhelper curl cat bash busybox libasound-dev -y
 clear
 # Edit the Export Variables in order for this file to work successfully
-export TAR_URL="https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz"
-
 while true; do
     read -p "Please enter the URL of the tar file: " TAR_URL
     if [[ -z "$TAR_URL" ]]; then
@@ -445,8 +443,7 @@ if [[ -z "$desktop_file" ]]; then
         echo "Desktop file created at: $desktop_file_path"
     fi
 fi
-
-echo "Continuing with the rest of the script..."
+echo "${BBlack}Building Deb File${NoColor}"
 dpkg-deb --build ~/$DEB_DIR
 
 # Define colors
