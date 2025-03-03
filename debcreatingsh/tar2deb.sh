@@ -51,7 +51,7 @@ while true; do
     read -p "Please enter the name of your package: " PackageName
     if is_letter "$PackageName"; then
         clear
-        echo "The name of your package is: $PackageName"
+        echo "The name of your package is: ${BBlack}$PackageName${NoColor}"
         read -p "do you want to change the name of your package? (yes/no) " yesorno
     if [ "$yesorno" = yes ]; then
     clear
@@ -194,7 +194,6 @@ echo -e "copying executable files to $DEB_DIR"
 echo "copying image files to $DEB_DIR"
 cp -r ~/$TAR_DIR/* ~/$DEB_DIR/usr/lib/$TAR_DIR/
 cp -r ~/$TAR_DIR/lib*.so ~/$DEB_DIR/usr/lib/
-
 search_dir="$HOME/$TAR_DIR/"
 file_types="*.jpg *.jpeg *.png *.bmp"
 
@@ -254,7 +253,7 @@ while IFS= read -r -d '' file; do
         else
             dest_dir="${dest_dirs["unlisted"]}"
         fi
-        image_groups["$dimensions"]+="$file "
+        image_groups["$dimensions"]+="$file"$'\n'
     fi
 done < <(find "$source_dir" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.gif" \) -print0)
 
@@ -265,9 +264,9 @@ for dimensions in "${!image_groups[@]}"; do
     else
         dimension_path="${dest_dirs["unlisted"]}"
     fi
-    for file in ${image_groups[$dimensions]}; do
-        mv "$file" "$dimension_path/"
-    done
+    while IFS= read -r file; do
+        [[ -f "$file" ]] && mv "$file" "$dimension_path/"
+    done <<< "${image_groups[$dimensions]}"
 done
 
 # Prompt user if they want to rename all files in all subdirectories
@@ -340,7 +339,6 @@ if [[ "$rename_individual" == "yes" ]]; then
         done
     done
 fi
-
 dpkg-deb --build ~/$DEB_DIR
 
 # Define colors
