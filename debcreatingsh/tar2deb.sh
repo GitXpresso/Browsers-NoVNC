@@ -194,6 +194,7 @@ echo -e "copying executable files to $DEB_DIR"
 echo "copying image files to $DEB_DIR"
 cp -r ~/$TAR_DIR/* ~/$DEB_DIR/usr/lib/$TAR_DIR/
 cp -r ~/$TAR_DIR/lib*.so ~/$DEB_DIR/usr/lib/
+
 search_dir="$HOME/$TAR_DIR/"
 file_types="*.jpg *.jpeg *.png *.bmp"
 
@@ -212,8 +213,6 @@ fi
 
 # Export the subdirectory as a variable
 export source_dir="$subdirectory"
-
-# The part of the script that deals with dimensions and moving files follows
 
 # Function to get image dimensions
 get_dimensions() {
@@ -271,64 +270,77 @@ for dimensions in "${!image_groups[@]}"; do
     done
 done
 
-# Ask if the user wants to rename all files to one word after moving
-read -p "Do you want to rename all moved files to one word? (yes/no): " rename_all
+# Prompt user if they want to rename all files in all subdirectories
+read -p "Do you want to rename all files in subdirectories into one name? (yes/no): " rename_all
 
 if [[ "$rename_all" == "yes" ]]; then
-  for dimension in "${!image_groups[@]}"; do
-    for f in ${image_groups[$dimension]}; do
-      # Rename after moving, no renaming during move
-      base_name=$(basename "$f")
-      extension="${base_name##*.}"
-      read -p "what is your name for all the filenames?  " new_name
-      filename="$new_name.$extension"  # Unique naming using counter
-      mv "$dimension_path/$base_name" "$dimension_path/$filename"
-      ((counter++))  # Increment counter for unique names
-    done
-  done
-  echo "All moved files have been renamed uniquely."
-
-elif [[ "$rename_all" == "no" ]]; then
-  # Ask if the user wants to rename one or more files after moving
-  read -p "Do you want to rename individual files from a numerical list? (yes/no): " rename_individual
-
-  elif [[ "$rename_individual" == "yes" ]]; then
-    # Generate a numerical list of files sorted alphabetically
-    echo "Creating numerical list of files:"
-    files_list=()
+    read -p "Enter the base name for all files: " base_name
     counter=1
-    for file in "$dimension_path"/*; do
-      files_list+=("$file")
-      echo "$counter. $(basename "$file")"
-      ((counter++))
+
+    for dir in "${dest_dirs[@]}"; do
+        for file in "$dir"/*; do
+            if [[ -f "$file" ]]; then
+                extension="${file##*.}"
+                mv "$file" "$dir/$base_name_$counter.$extension"
+                ((counter++))
+            fi
+        done
     done
+    echo "All files renamed successfully."
+    exit 0
+fi
 
-    # Ask the user to select multiple files by number
-    while true; do
-      read -p "Enter the numbers of the files you want to rename (comma-separated, or 'q' to quit): " selected_numbers
-      if [[ "$selected_numbers" == "q" ]]; then
-        break
-      fi
+# If user said no, ask if they want to rename individual files
+read -p "Do you want to rename specific files instead? (yes/no): " rename_individual
 
-      # Convert input into an array
-      IFS=',' read -r -a selected_array <<< "$selected_numbers"
-
-      for selected_number in "${selected_array[@]}"; do
-        # Trim whitespace
-        selected_number=$(echo "$selected_number" | xargs)
-
-        # Validate number selection
-        if [[ "$selected_number" =~ ^[0-9]+$ ]] && [[ "$selected_number" -ge 1 && "$selected_number" -le ${#files_list[@]} ]]; then
-          selected_file="${files_list[$selected_number-1]}"
-          read -p "Enter the new name for '$(basename "$selected_file")' (without extension): " new_name
-          extension="${selected_file##*.}"
-          mv "$selected_file" "$dimension_path/$new_name.$extension"
-          echo "File renamed to $new_name.$extension"
-        else
-          echo "Invalid selection: $selected_number. Please choose a valid number."
+if [[ "$rename_individual" == "yes" ]]; then
+    for dir in "${dest_dirs[@]}"; do
+        if [[ ! -d "$dir" ]]; then
+            continue
         fi
-      done
+
+        files_list=()
+        counter=1
+
+        # List files numerically
+        for file in "$dir"/*; do
+            if [[ -f "$file" ]]; then
+                files_list+=("$file")
+                echo "$counter. $(basename "$file")"
+                ((counter++))
+            fi
+        done
+
+        # If no files found, skip to next folder
+        if [[ ${#files_list[@]} -eq 0 ]]; then
+            continue
+        fi
+
+        while true; do
+            read -p "Enter the number of the file to rename (or 'q' to quit): " selected_number
+            if [[ "$selected_number" == "q" ]]; then
+                break
+            fi
+
+            if [[ "$selected_number" =~ ^[0-9]+$ ]] && (( selected_number >= 1 && selected_number <= ${#files_list[@]} )); then
+                selected_file="${files_list[$selected_number-1]}"
+                read -p "Enter the new name for '$(basename "$selected_file")' (without extension): " new_name
+                extension="${selected_file##*.}"
+
+                if [[ -e "$dir/$new_name.$extension" ]]; then
+                    echo "Error: A file named '$new_name.$extension' already exists!"
+                    continue
+                fi
+
+                mv "$selected_file" "$dir/$new_name.$extension"
+                echo "File renamed to $new_name.$extension"
+            else
+                echo "Invalid selection. Please choose a valid number."
+            fi
+        done
     done
+fi
+
 dpkg-deb --build ~/$DEB_DIR
 
 # Define colors
