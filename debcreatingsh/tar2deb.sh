@@ -292,7 +292,7 @@ fi
 # If user said no, ask if they want to rename individual files
 read -p "Do you want to rename specific files instead? (yes/no): " rename_individual
 
-elif [[ "$rename_individual" == "yes" ]]; then
+if [[ "$rename_individual" == "yes" ]]; then
     # Generate a single numerical list of all files across dimension folders
     echo "Creating numerical list of all files:"
     files_list=()
