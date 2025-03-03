@@ -173,7 +173,7 @@ CHECK_DIR1="$HOME/palemoon"
 CHECK_DIR2="$HOME/"
 
 # Specify the word to search for in the second directory
-SPECIFIC_WORD="your-specific-word"
+SPECIFIC_WORD="basilisk"
 
 # Check if the first directory exists
 if [ -d "$CHECK_DIR1" ]; then
@@ -181,7 +181,7 @@ if [ -d "$CHECK_DIR1" ]; then
 
     # Update package lists and install the required packages
     sudo apt update
-    sudo apt install -y libdbus-glib-1-2
+    sudo apt install -y libgtk-3-0 libdbus-glib-1-2 libstdc++6 libx11-6 libx11-xcb1
     echo "Packages installed successfully."
 fi
 
@@ -195,7 +195,7 @@ if [ -d "$CHECK_DIR2" ]; then
         echo "Installing additional required packages for directory containing '$SPECIFIC_WORD'..."
 
         # You can install different packages here if needed
-        sudo apt install -y some-other-package
+        sudo apt install -y libgtk-3-0 libdbus-glib-1-2 libstdc++6 libx11-6 libx11-xcb1
 
         echo "Additional packages installed successfully."
     else
