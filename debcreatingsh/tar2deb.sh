@@ -21,7 +21,7 @@ BCyan=$(tput setaf 6; tput bold)
 BWhite=$(tput setaf 7; tput bold)
 echo -e "${BBlack}installing required packages${NoColor}"
 # Install Zen Browser to create .deb package
-sudo apt-get install tar wget build-essential imagemagick devscripts debhelper bc busybox -y
+sudo apt-get install tar wget build-essential imagemagick devscripts debhelper bc busybox libasound-dev -y
 clear
 # Edit the Export Variables in order for this file to work successfully
 export TAR_URL="https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz"
@@ -183,8 +183,7 @@ if [ -d "$CHECK_DIR1" ]; then
     sudo apt update
     sudo apt install -y libgtk-3-0 libdbus-glib-1-2 libstdc++6 libx11-6 libx11-xcb1
     echo "Packages installed successfully."
-fi
-
+fi 
 # Check if the second directory exists
 if [ -d "$CHECK_DIR2" ]; then
     # Check if any files in the second directory contain the specific word
@@ -195,7 +194,7 @@ if [ -d "$CHECK_DIR2" ]; then
         echo "Installing additional required packages for directory containing '$SPECIFIC_WORD'..."
 
         # You can install different packages here if needed
-        sudo apt install -y libgtk-3-0 libdbus-glib-1-2 libstdc++6 libx11-6 libx11-xcb1
+        sudo apt install -y libgtk-3-0 libdbus-glib-1-2 libstdc++6 libx11-6 libx11-xcb1 yaru-theme-gtk yaru-theme-icon yaru-theme-sound
 
         echo "Additional packages installed successfully."
     else
