@@ -167,13 +167,12 @@ mkdir -p ~/$DEB_DIR/usr/bin/
 
 # Export the subdirectory as a variable
 find $HOME/$TAR_DIR -type f -exec file {} + | grep -i 'executable' | grep -vi 'binary' | cut -d: -f1 | while read -r file; do busybox ln -s "$file" $HOME/$DEB_DIR/usr/bin/; done
-#!/bin/bash
 
 # Directory to search
 directory="$HOME/$DEB_DIR/usr/bin"
 
 # List of specific files to remove (modify the list as needed)
-files_to_remove=("glxtest" "updater" "vaapitest" "pingsender")
+files_to_remove=("glxtest" "updater" "vaapitest" "pingsender" "plugin-container" "run-mozilla.sh")
 
 # Check and remove files
 for file in "${files_to_remove[@]}"; do
