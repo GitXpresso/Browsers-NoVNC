@@ -210,8 +210,7 @@ echo "Search directory: $search_dir"
 echo "File types: $file_types"
 
 # Find subdirectory containing more than one image file
-subdirectory=$(find "$search_dir" -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.bmp" -o -name "*.svg"\) -printf '%h\n' | sort | uniq -c | awk '$1 > 1 {print $2; exit}')
-
+subdirectory=$(find "$search_dir" -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.bmp" -o -name "*.svg" \) -printf '%h\n' | sort | uniq -c | awk '$1 > 1 {print $2; exit}')
 # Check if subdirectory is found
 if [ -z "$subdirectory" ]; then
   echo "No subdirectory found containing more than one image file."
