@@ -162,7 +162,7 @@ Description: $Description
 
 EOF
 mkdir -p ~/$DEB_DIR/usr/bin/
-find $HOME/$TAR_DIR -type f -exec file {} + | grep -i 'executable' | grep -vi 'binary' | cut -d: -f1 | grep -v -E 'glxtest|updater|vaapitest|pingsender|plugin-container|run-mozilla.sh|*.py' | while read -r file; do busybox ln -s "$file" $HOME/$DEB_DIR/usr/bin/; done
+find $HOME/$TAR_DIR -type f -exec file {} + | grep -i 'executable' | grep -vi 'binary' | cut -d: -f1 | grep -v -E 'glxtest|updater|vaapitest|pingsender|plugin-container|run-mozilla.sh|*.py|blender-softwaregl|blender-system-info.sh|blender-thumbnailer'| while read -r file; do busybox ln -s "$file" $HOME/$DEB_DIR/usr/bin/; done
 CHECK_DIR1="$HOME/palemoon*"
 CHECK_DIR2="$HOME/basilisk*"
 
