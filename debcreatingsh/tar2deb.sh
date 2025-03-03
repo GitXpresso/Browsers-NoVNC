@@ -292,7 +292,7 @@ elif [[ "$rename_all" == "no" ]]; then
   # Ask if the user wants to rename one or more files after moving
   read -p "Do you want to rename individual files from a numerical list? (yes/no): " rename_individual
 
-  if [[ "$rename_individual" == "yes" ]]; then
+  elif [[ "$rename_individual" == "yes" ]]; then
     # Generate a numerical list of files sorted alphabetically
     echo "Creating numerical list of files:"
     files_list=()
@@ -303,27 +303,32 @@ elif [[ "$rename_all" == "no" ]]; then
       ((counter++))
     done
 
-    # Ask the user to select files by number
+    # Ask the user to select multiple files by number
     while true; do
-      read -p "Enter the number of the file you want to rename (or 'q' to quit): " selected_number
-      if [[ "$selected_number" == "q" ]]; then
+      read -p "Enter the numbers of the files you want to rename (comma-separated, or 'q' to quit): " selected_numbers
+      if [[ "$selected_numbers" == "q" ]]; then
         break
-      elif [[ "$selected_number" -ge 1 && "$selected_number" -le ${#files_list[@]} ]]; then
-        # Rename the selected file
-        selected_file="${files_list[$selected_number-1]}"
-        read -p "Enter the new name for '$selected_file' (without extension): " new_name
-        extension="${selected_file##*.}"
-        mv "$selected_file" "$dimension_path/$new_name.$extension"
-        echo "File renamed to $new_name.$extension"
-      else
-        echo "Invalid selection. Please choose a valid number."
       fi
-    done
 
-  elif [[ "$rename_individual" == "no" ]]; then
-    echo "Skipping renaming process."
-  fi
-fi
+      # Convert input into an array
+      IFS=',' read -r -a selected_array <<< "$selected_numbers"
+
+      for selected_number in "${selected_array[@]}"; do
+        # Trim whitespace
+        selected_number=$(echo "$selected_number" | xargs)
+
+        # Validate number selection
+        if [[ "$selected_number" =~ ^[0-9]+$ ]] && [[ "$selected_number" -ge 1 && "$selected_number" -le ${#files_list[@]} ]]; then
+          selected_file="${files_list[$selected_number-1]}"
+          read -p "Enter the new name for '$(basename "$selected_file")' (without extension): " new_name
+          extension="${selected_file##*.}"
+          mv "$selected_file" "$dimension_path/$new_name.$extension"
+          echo "File renamed to $new_name.$extension"
+        else
+          echo "Invalid selection: $selected_number. Please choose a valid number."
+        fi
+      done
+    done
 dpkg-deb --build ~/$DEB_DIR
 
 # Define colors
