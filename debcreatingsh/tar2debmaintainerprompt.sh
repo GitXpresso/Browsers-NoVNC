@@ -1,4 +1,6 @@
 #!/bin/bash
+BBlack=$(tput setaf 0; tput bold)
+NoColor=$(tput sgr0)
 
 # Function to validate and create full name
 create_full_name() {
@@ -35,8 +37,8 @@ while true; do
     read -p "Please enter your name or some elses name as the maintainer for the package: " -a Maintainer
     if IFS=" " create_full_name "${Maintainer[@]}"; then
         clear
-        echo "The Maintainer of your package is: $Maintainer"
-        read -p "do you want to change the maintainer name of your package? (yes/no)" yesorno
+        echo "The Maintainer of your package is: ${BBlack}$Maintainer${NoColor}"
+        read -p "do you want to change the maintainer name of your package? (yes/no) " yesorno
     if [ "$yesorno" = yes ]; then
     clear
     bash ./tar2debmaintainerprompt.sh

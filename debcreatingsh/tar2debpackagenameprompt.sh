@@ -1,3 +1,6 @@
+#!/bin/bash
+BBlack=$(tput setaf 0; tput bold)
+NoColor=$(tput sgr0)
 # Function to check if input is a number
 is_letter() {
     [[ "$1" =~ ^[Aa-zZ]+$ ]];
@@ -8,7 +11,7 @@ while true; do
     read -p "Please enter the name of your package: " PackageName
     if is_letter "$PackageName"; then
         clear
-        echo "The name of your package is: $PackageName"
+        echo "The name of your package is: ${BBlack}$PackageName${NoColor}"
         read -p "do you want to change the name of your package? (yes/no) " yesorno
     if [ "$yesorno" = yes ]; then
     clear
