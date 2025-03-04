@@ -87,7 +87,10 @@ incoming = /upload
 login = $LAUNCHPAD_USER
 passphrase = 
 EOF
-
+cat <<EOF > ~/.dput.cf
+method = sftp
+login = ~gitxpresso
+EOF
 # Upload the package to Launchpad PPA
 echo "Uploading the package to Launchpad..."
 dput ppa:/"${PROJECT_NAME}"_1.0-1_amd64.changes
