@@ -1,0 +1,8 @@
+Source: mypackage
+Section: utils
+Priority: optional
+Maintainer: Your Name <your-email@example.com>
+Build-Depends: debhelper (>= 12), make
+Depends: ${shlibs:Depends}, ${misc:Depends}, wget
+Description: My Package that uses wget for downloading files
+ A short description of your package goes here.
