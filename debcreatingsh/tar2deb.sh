@@ -37,36 +37,6 @@ while true; do
     fi
 done
 
-FILENAME=$(basename "$TAR_URL")
-
-DEST_FILE="$HOME/$FILENAME"
-
-# Create destination directory if it doesn't exist
-
-# Download the file, show progress, and export the destination path as a variable
-wget -P ~/ -nv --progress=bar:force "$TAR_URL" 2>&1 | tee /dev/null | sed -u 's/\([0-9]*\)%/\1%/' | awk '{print "\rDownloading: "$0; fflush();}' > /dev/null
-
-# Export the downloaded file's path
-export tarfile="$DEST_FILE"
-
-# Output the downloaded file path
-TAR_DIR=$(tar -xvf $tarfile -C ~/ | cut -d / -f1 | uniq) &
-
-# Get the process ID (PID) of tar
-pid=$!
-
-# Loading animation
-spin='-\|/'
-i=0
-
-while kill -0 $pid 2>/dev/null; do
-    i=$(( (i+1) %4 ))
-    printf "\rExtracting... ${spin:$i:1}"
-    sleep 0.1
-done
-
-printf "\nExtraction complete!\n"
-rm -rf $tarfile
 is_letter() {
     [[ "$1" =~ ^[Aa-zZ2]+$ ]];
 }
@@ -222,13 +192,49 @@ echo -e "copying executable files to $DEB_DIR"
 echo "copying image files to $DEB_DIR"
 cp -r ~/$TAR_DIR/* ~/$DEB_DIR/usr/lib/$TAR_DIR/
 # Check if at least one directory matching ~/blender* exists
-if ls -d "$HOME"/blender* &>/dev/null; then
-    echo "Blender directory found. Copying shared libraries..."
-    cp -r "$HOME/$TAR_DIR/lib/"lib*.so "$HOME/$DEB_DIR/usr/lib/"
-else
-    echo "Blender directory not found. Copying libraries from a different path..."
-    cp -r "$HOME/$TAR_DIR/"lib*.so "$HOME/$DEB_DIR/usr/lib/"
+#!/bin/bash
+# Define the main directory to search in
+SEARCH_DIR="$HOME/$TAR_DIR/"
+
+# Ensure the directory exists
+if [ ! -d "$SEARCH_DIR" ]; then
+    echo "Error: Directory $SEARCH_DIR does not exist."
+    exit 1
 fi
+
+# Function to count binary files in a given directory
+count_binaries() {
+    find "$1" -maxdepth 1 -type f -exec file --mime {} + 2>/dev/null | 
+    grep -E "application/x-executable|application/x-sharedlib" | 
+    wc -l
+}
+
+# Check binaries in the main directory itself
+MAIN_BIN_COUNT=$(count_binaries "$SEARCH_DIR")
+
+# Find subdirectory with the most binaries
+MOST_BINARIES_SUBDIR=""
+MAX_BIN_COUNT=0
+
+while IFS= read -r subdir; do
+    BIN_COUNT=$(count_binaries "$subdir")
+
+    if [ "$BIN_COUNT" -gt "$MAX_BIN_COUNT" ]; then
+        MAX_BIN_COUNT="$BIN_COUNT"
+        MOST_BINARIES_SUBDIR="$subdir"
+    fi
+done < <(find "$SEARCH_DIR" -mindepth 1 -maxdepth 1 -type d)
+
+# Compare with the main directory
+if [ "$MAIN_BIN_COUNT" -ge "$MAX_BIN_COUNT" ]; then
+    MOST_BINARIES_SUBDIR="$SEARCH_DIR"
+fi
+
+# Export the result as a variable
+export MOST_BINARIES_SUBDIR
+
+# Output the result
+cp ${MOST_BINARIES_SUBDIR}*.so $HOME/$DEB_DIR/usr/lib
 search_dir="$HOME/$TAR_DIR/"
 file_types="*.jpg *.jpeg *.png *.bmp *.svg"
 
