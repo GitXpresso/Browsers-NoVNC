@@ -34,17 +34,6 @@ check_tar_validity() {
 }
 
 # Function for loading animation
-spin_bar1() {
-    pid=$!
-    spin='-\|/'
-    i=0
-    while kill -0 $pid 2>/dev/null; do
-        i=$(( (i+1) %4 ))
-        printf "\rExtracting... ${spin:$i:1}"
-        sleep 0.1
-    done
-}
-
 # Prompt the user for the URL of the tar file
 while true; do
     read -p "Please enter the URL of the tar file: " TAR_URL
@@ -57,6 +46,7 @@ while true; do
     else
         clear
         echo "Valid URL. Grabbing download tar URL with wget."
+        clear
         break
     fi
 done
@@ -66,11 +56,16 @@ FILENAME=$(basename "$TAR_URL")
 DEST_FILE="$HOME/$FILENAME"
 
 # Download the file using wget
-wget -P ~/ -nv --progress=bar:force "$TAR_URL" 2>&1 | tee /dev/null | sed -u 's/\([0-9]*\)%/\1%/' | awk '{print "\rDownloading: "$0; fflush();}' > /dev/null
-
+wget -P ~/ -nv --progress=bar:force "$TAR_URL" 2>&1 | tee /dev/null | sed -u 's/\([0-9]*\)%/\1%/' | awk '{print "\rDownloading: "$0; fflush();}' > /dev/null &
+pid=$!
+spin='-\|/'
+i=0
+while kill -0 $pid 2>/dev/null; do
+    i=$(( (i+1) %4 ))
+    printf "\rDownloading Tar file using wget...${spin:$i:1}"
+    sleep 0.1
+done
 # Call loading animation in the background
-spin_bar1
-
 # Check if the tar file is valid before proceeding
 if ! check_tar_validity "$DEST_FILE"; then
     echo "Error: The downloaded file is not a valid tar file. run tar2deb again and try again with a valid url, Exiting."
@@ -78,10 +73,17 @@ if ! check_tar_validity "$DEST_FILE"; then
 fi
 
 # Extract the tar file if it's valid
-echo "Extracting tar file..."
-TAR_DIR=$(tar -xvf "$DEST_FILE" -C ~/ | cut -d / -f1 | uniq)
+TAR_DIR=$(tar -xvf ~/downloads/zen.linux-x86_64.tar.xz -C ~/ | cut -d / -f1 | uniq) &
+pid=$!
 
-# Export the extracted directory as a variable
+spin='-\|/'
+i=0
+while kill -0 $pid 2>/dev/null; do
+    i=$(( (i+1) %4 ))
+    clear
+    printf "\rExtracting Tar file... ${spin:$i:1}"
+    sleep 0.1
+done
 export tarfile="$DEST_FILE"
 
 # Output the downloaded and extracted file paths
@@ -89,7 +91,6 @@ export tarfile="$DEST_FILE"
 # Clean up by removing the tar file
 rm -rf "$DEST_FILE"
 printf "\nExtraction complete!\n"
-
 is_letter() {
     [[ "$1" =~ ^[Aa-zZ2]+$ ]];
 }
