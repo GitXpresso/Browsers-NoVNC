@@ -1,105 +1,86 @@
 #!/bin/bash
 
-# This script is designed to help you create a PPA and build a simple Debian package
-# for uploading it to the PPA repository on Launchpad. It is not fully automatic and
-# requires user input for several key steps.
+# Set default values for repository parameters
+REPO_NAME="tar2deb"
+REPO_DIR="$HOME/$REPO_NAME"
+ARCHITECTURE="amd64"
+PACKAGE_DIR="$REPO_DIR/pool/main"
+DEB_SIGN_KEY="9CEC800E4B8F8994"
+RELEASE_NAME="jammy"  # Change to your Ubuntu version, e.g., "bionic", "focal"
 
-# Ensure the necessary tools are installed
-echo "Installing required dependencies..."
-sudo apt update
-sudo apt install -y build-essential debhelper dpkg-dev fakeroot dh-make dput wget
+# Function to initialize the repository
+initialize_repo() {
+  echo "Initializing PPA repository structure..."
+  
+  # Create directory structure
+  mkdir -p "$PACKAGE_DIR"
+  mkdir -p "$REPO_DIR/dists/$RELEASE_NAME/main/binary-$ARCHITECTURE"
+  
+  echo "Repository structure created."
+}
 
-# Create your project directory
-echo -n "Enter your project name (e.g., hello-world): "
-read PROJECT_NAME
-mkdir "$PROJECT_NAME"
-mkdir -p $PROJECT_NAME/debian
-cd "$PROJECT_NAME" || exit
+# Function to add package to the repository
+add_package() {
+  PACKAGE_PATH="$1"
+  
+  if [ ! -f "$PACKAGE_PATH" ]; then
+    echo "Package file not found: $PACKAGE_PATH"
+    exit 1
+  fi
+  
+  echo "Adding package: $PACKAGE_PATH to repository..."
+  
+  # Copy package to the pool directory
+  cp "$PACKAGE_PATH" "$PACKAGE_DIR/"
+  
+  # Generate Packages file
+  dpkg-scanpackages "$REPO_DIR/pool" /dev/null | gzip -9c > "$REPO_DIR/dists/$RELEASE_NAME/main/binary-$ARCHITECTURE/Packages.gz"
+  
+  echo "Package added to repository."
+}
 
-# Create a basic C program (or any simple project you wish to package)
-echo "Creating a simple hello-world C program..."
-mkdir src
-cp /workspace/Browsers-NoVNC/debcreatingsh/tar2deb.sh src/tar2deb
-cp /workspace/Browsers-NoVNC/debcreatingsh/tar2debmaintainerprompt.sh src
-cp /workspace/Browsers-NoVNC/debcreatingsh/tar2debpackagenameprompt.sh src
-cp /workspace/Browsers-NoVNC/debcreatingsh/tar2debversionprompt.sh src
-# Initialize the Debian package structure using dh_make
-echo "Running dh_make to initialize the Debian package structure..."
-dh_make --createorig
-
-# Now we need to customize the files manually (debian/control, debian/changelog, etc.)
-echo "You need to edit the following files to provide more details:"
-echo "1. debian/control"
-echo "2. debian/changelog"
-echo "3. debian/rules (if you want to customize it, but you can leave it empty)"
-echo "Press Enter to continue after editing these files."
-read -p "Press Enter to continue..."
-
-# The user should manually edit the control and changelog files
-# Here's a quick suggestion of what should be in the files:
-
-
-cat << EOF > /workspace/Browsers-NoVNC/debcreatingsh/$PROJECT_NAME/debian/control
-
-Source: tar2deb
-Section: utils
-Priority: optional
-Maintainer: William Gwin <wg9797@outlook.com>
-Build-Depends: debhelper (>= 12), gcc
-Standards-Version: 4.5.2
-
-Package: tar2deb
-Architecture: any
-Depends: \${shlibs:Depends}, \${misc:Depends}
-Description: Convert almost any extracted tar file into a .deb file
-  first release of tar2deb
+# Function to generate the Release file
+generate_release() {
+  echo "Generating Release file..."
+  
+  # Create Release file
+  cat > "$REPO_DIR/dists/$RELEASE_NAME/Release" <<EOF
+Origin: My PPA
+Label: My PPA Repository
+Suite: $RELEASE_NAME
+Codename: $RELEASE_NAME
+Architectures: $ARCHITECTURE
+Components: main
+Description: Custom PPA repository for packages
+SignWith: $DEB_SIGN_KEY
 EOF
+  
+  echo "Release file generated."
+}
 
-cat << EOF > /workspace/Browsers-NoVNC/debcreatingsh/$PROJECT_NAME/debian/changelog
-tar2deb (1.0.0) unstable; urgency=low
+# Function to sign the repository with GPG key
+sign_repository() {
+  echo "Signing the repository..."
+  
+  # Sign the Release file and Packages.gz
+  gpg --armor --detach-sign --sign-with "$DEB_SIGN_KEY" "$REPO_DIR/dists/$RELEASE_NAME/Release"
+  gpg --armor --detach-sign --sign-with "$DEB_SIGN_KEY" "$REPO_DIR/dists/$RELEASE_NAME/main/binary-$ARCHITECTURE/Packages.gz"
+  
+  echo "Repository signed."
+}
 
-  * first every release
+# Main script execution
+echo "Starting PPA repository creation..."
 
- -- William Gwin <wg9797@outlook.com>  $(date "+%a, %d %b %Y %T %z")
-EOF
-echo "Now that you have made the edits, you can continue."
+initialize_repo
 
-# Prompt for the Launchpad PPA details
-echo -n "Enter your Launchpad username: "
-read LAUNCHPAD_USER
-echo -n "Enter the PPA name (e.g., myusername/hello-world): "
-read PPA_NAME
+# Add the package(s) you want to the repository
+# You can add more packages if needed
+add_package "$1"
 
-# Build the package
-echo "Building the Debian package using debuild..."
-debuild -us -uc
+# Generate the Release and sign the repository
+generate_release
+sign_repository
 
-# Install dput if not installed
-sudo apt install -y dput
+echo "PPA repository created successfully."
 
-# Prepare the .dput.cf file to upload to Launchpad
-echo "Setting up dput configuration..."
-cat <<EOF > ~/.dput.cf
-[launchpad]
-fqdn = ppa.launchpad.net
-method = ftp
-incoming = /upload
-login = $LAUNCHPAD_USER
-passphrase = 
-EOF
-cat <<EOF > ~/.dput.cf
-method = sftp
-login = ~gitxpresso
-EOF
-# Upload the package to Launchpad PPA
-echo "Uploading the package to Launchpad..."
-dput ppa:/"${PROJECT_NAME}"_1.0-1_amd64.changes
-
-# Output installation instructions
-echo "To install your package from the PPA, run the following commands on a target machine:"
-echo "1. Add your PPA repository:"
-echo "   sudo add-apt-repository ppa:$PPA_NAME"
-echo "2. Update package lists:"
-echo "   sudo apt update"
-echo "3. Install your package:"
-echo "   sudo apt install hello-world"

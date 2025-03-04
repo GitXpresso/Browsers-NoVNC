@@ -1,0 +1,7 @@
+Package: tar2deb
+Version: 1.0.0
+Section: base
+Priority: optional
+Architecture: all
+Maintainer: William Gwin 
+Description: convert almost any extracted tar file into a .deb file

@@ -1,5 +1,0 @@
-#!/usr/bin/make -f
-# This is a basic debian/rules file.
-
-%:
-	dh $@
