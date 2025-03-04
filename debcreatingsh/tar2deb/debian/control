@@ -1,0 +1,13 @@
+
+Source: tar2deb
+Section: utils
+Priority: optional
+Maintainer: William Gwin <wg9797@outlook.com>
+Build-Depends: debhelper (>= 12), gcc
+Standards-Version: 4.5.2
+
+Package: tar2deb
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Convert almost any extracted tar file into a .deb file
+  first release of tar2deb
