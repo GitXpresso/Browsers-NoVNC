@@ -1,8 +1,10 @@
-Source: mypackage
-Section: utils
+Source: tar2deb
+Maintainer: William G <wg9797@outlook.com>
+Section: base
 Priority: optional
-Maintainer: Your Name <your-email@example.com>
-Build-Depends: debhelper (>= 12), make
-Depends: ${shlibs:Depends}, ${misc:Depends}, wget
-Description: My Package that uses wget for downloading files
- A short description of your package goes here.
+Version: 1.0.0
+Build-Depends: debhelper (>= 12)
+Package: tar2deb
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, wget, build-essential, imagemagick, devscripts, debhelper, curl, bash, busybox, libasound-dev
+Description: convert almost any extracted tar file into a .deb file
