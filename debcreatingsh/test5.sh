@@ -23,7 +23,7 @@ fi
 # Function to initialize the PPA repository structure
 initialize_repo() {
     echo "Initializing repository structure..."
-    
+    mkdir -p "$REPO_DIR"
     mkdir -p "$REPO_DIR/pool/main"
     mkdir -p "$REPO_DIR/dists/$RELEASE_NAME/main/binary-$ARCHITECTURE"
     
