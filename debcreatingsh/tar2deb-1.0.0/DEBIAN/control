@@ -1,7 +1,17 @@
 Package: tar2deb
 Version: 1.0.0
-Section: base
+Architecture: amd64
+Maintainer: William Gwin <wg9797@outlook.com>
+Installed-Size: 1024
+Depends: libc6 (>= 2.15),
+         wget,
+         tar,
+         imagemagick,
+         devscripts,
+         build-essential,
+         debhelper,
+         libasound-dev,
+         busybox
+Section: utils
 Priority: optional
-Architecture: all
-Maintainer: William Gwin 
-Description: convert almost any extracted tar file into a .deb file
+Description: convert almost any extracted tarfile into a debian file
