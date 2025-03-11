@@ -14,7 +14,11 @@ Every browser in a novnc server, plain bash no docker. Does not support audio
 >
 > No Asterisks(*) next to the anchored link means it has the about the browser, logo of the browser, and what the browser looks like in NoVNC session
 
-  
+<details><summary>Other Projects</summary>
+
+- [Tar2Deb](https://github.com/gitxpresso/tar2deb) # Convert almost any extracted tar file into a installable .deb file
+
+</details>  
 <details><summary>Tasks</summary>
   
 `Brave does not work but it does work in a linuxserver openbox kasmvnc session`
