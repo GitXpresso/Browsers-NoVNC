@@ -4,8 +4,6 @@ sudo apt update
 echo "Installing the required packages in order for the script to work properly"
 sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox kdialog zenity tilix apt-utils libdbus-glib-1-2:amd64 libgtk2.0-0
 cd ~/
-tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
-websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
 wget https://dl.basilisk-browser.org/basilisk-20250220145130.linux-x86_64-gtk.tar.xz && tar -xvf basilisk-20250103024732.linux-x86_64-gtk2.tar.xz -C ~/ && sudo rm -rf basilisk-20250103024732.linux-x86_64-gtk2.tar.xz
 cat << EOF > ~/basilisk.desktop
 [Desktop Entry]
@@ -23,6 +21,20 @@ MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rd
 Keywords=Browser;
 EOF
 sudo mv ~/basilisk.desktop /usr/share/applications/
+read -p "do you want to add a password to the novnc server? (yes/no)" yesorno
+if [[ "$yesorno" = "yes" ]]; then
+vncpasswd
+tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE  -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
+websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
 export DISPLAY=:0
 sudo ln -s ~/basilisk/basilisk /usr/bin/startbasilisk
 startbasilisk
+elif [[ "$yesorno" = "no" ]]; then
+tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
+websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
+export DISPLAY=:0
+sudo ln -s ~/basilisk/basilisk /usr/bin/startbasilisk
+startbasilisk
+else
+echo "invalid input"
+fi
