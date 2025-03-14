@@ -37,4 +37,5 @@ sudo ln -s ~/basilisk/basilisk /usr/bin/startbasilisk
 startbasilisk
 else
 echo "invalid input"
+exit 1
 fi
