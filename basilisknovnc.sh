@@ -21,7 +21,7 @@ MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rd
 Keywords=Browser;
 EOF
 sudo mv ~/basilisk.desktop /usr/share/applications/
-read -p "do you want to add a password to the novnc server? (yes/no)" yesorno
+read -p "do you want to add a password to the novnc server? (yes/no) " yesorno
 if [[ "$yesorno" = "yes" ]]; then
 vncpasswd
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE  -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
