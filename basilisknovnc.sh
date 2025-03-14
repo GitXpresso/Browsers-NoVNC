@@ -4,7 +4,7 @@ sudo apt update
 echo "Installing the required packages in order for the script to work properly"
 sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox kdialog zenity tilix apt-utils libdbus-glib-1-2:amd64 libgtk2.0-0
 cd ~/
-wget https://dl.basilisk-browser.org/basilisk-20250220145130.linux-x86_64-gtk.tar.xz && tar -xvf basilisk-20250103024732.linux-x86_64-gtk2.tar.xz -C ~/ && sudo rm -rf basilisk-20250103024732.linux-x86_64-gtk2.tar.xz
+wget -P ~/ https://dl.basilisk-browser.org/basilisk-20250220145130.linux-x86_64-gtk3.tar.xz && tar -xvf ~/basilisk-20250220145130.linux-x86_64-gtk3.tar.xz -C ~/ && sudo rm -rf ~/basilisk-20250220145130.linux-x86_64-gtk3.tar.xz
 cat << EOF > ~/basilisk.desktop
 [Desktop Entry]
 Version=1.0
