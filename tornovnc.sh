@@ -4,7 +4,7 @@ sudo apt update
 echo "Installing the required packages in order for the script to work properly"
 sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox kdialog zenity tilix apt-utils
 cd ~/
-wget https://www.torproject.org/dist/torbrowser/14.0.6/tor-browser-linux-x86_64-14.0.6.tar.xz && tar -xvf tor-browser-linux-x86_64-14.0.6.tar.xz -C ~/ && sudo rm -rf tor-browser-linux-x86_64-14.0.6.tar.xz
+wget https://www.torproject.org/dist/torbrowser/14.0.7/tor-browser-linux-x86_64-14.0.7.tar.xz && tar -xvf tor-browser-linux-x86_64-14.0.6.tar.xz -C ~/ && sudo rm -rf tor-browser-linux-x86_64-14.0.6.tar.xz
 cat << EOF > ~/torbrowser.desktop
 [Desktop Entry]
 Version=1.0
