@@ -13,7 +13,7 @@ fi
 }
 arch=$(uname -p)
 if [ "$arch" = "x86_64" ]; then
-wget https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz && sudo tar -xvf zen.linux-x86_64.tar.xz -C /usr/lib && sudo rm -rf zen.linux-x86_64.tar.xz
+wget https://github.com/zen-browser/desktop/releases/download/1.9b/zen.linux-x86_64.tar.xz && sudo tar -xvf zen.linux-x86_64.tar.xz -C /usr/lib && sudo rm -rf zen.linux-x86_64.tar.xz
 else
 read -p "your linux architecture is not "x86_64" do you still want to continue? (yes/no) " yesorno
 yesorno
