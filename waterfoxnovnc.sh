@@ -22,9 +22,18 @@ MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rd
 Keywords=Browser;
 EOF
 sudo mv -f ~/waterfox.desktop /usr/share/applications/
-tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
+read -p "do you want to add a password to the novnc server? (yes/no) " yesorno
+if [[ "$yesorno" = "yes" ]]; then
+vncpasswd
+tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE  -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
-echo "Finished, Now go to https://localhost:5900 to access waterfox in the vnc server"
 sudo ln -s /usr/lib/waterfox/waterfox /usr/bin/startwaterfox
 export DISPLAY=:0
 startwaterfox
+elif [[ "$yesorno" = "no" ]]; then
+tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
+websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
+sudo ln -s /usr/lib/waterfox/waterfox /usr/bin/startwaterfox
+export DISPLAY=:0
+startwaterfox
+else

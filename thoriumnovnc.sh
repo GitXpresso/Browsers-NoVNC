@@ -282,8 +282,18 @@ Name=Open in Dark Mode
 Exec=/usr/bin/thorium-browser --no-sandbox --test-type --disable-dev-shm-usage --force-dark-mode %U
 EOF
 sudo rm -rf /usr/share/applications/thorium-browser.desktop && sudo mv -f ~/thorium-browser.desktop /usr/share/applications
+read -p "do you want to add a password to the novnc server? (yes/no) " yesorno
+if [[ "$yesorno" = "yes" ]]; then
+vncpasswd
+tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE  -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
+websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
+export DISPLAY=:0
+echo -e "thorium has started go to https://localhost:6080 to access your vnc session"
+thorium-browser --in-process-gpu --start-maximized --display=:0
+elif [[ "$yesorno" = "no" ]]; then
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
 export DISPLAY=:0
 echo -e "thorium has started go to https://localhost:6080 to access your vnc session"
 thorium-browser --in-process-gpu --start-maximized --display=:0
+else

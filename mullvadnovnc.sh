@@ -9,7 +9,17 @@ echo -e "Installing the package(mullvad)"
 sudo apt update
 sudo apt install mullvad-browser -y
 cd ~/
+read -p "do you want to add a password to the novnc server? (yes/no) " yesorno
+if [[ "$yesorno" = "yes" ]]; then
+vncpasswd
+tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE  -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
+websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
+echo "Mullvad browser has started go to https://localhost:5900 to access mullvad"
+mullvad-browser --start-maximized --display=:0
+echo "Opera started go to https://localhost:6080 to access NoVNC and Opera, and No it is not opera gx"
+elif [[ "$yesorno" = "no" ]]; then
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
-mullvad-browser --start-maximized --display=:0
 echo "Mullvad browser has started go to https://localhost:5900 to access mullvad"
+mullvad-browser --start-maximized --display=:0
+else

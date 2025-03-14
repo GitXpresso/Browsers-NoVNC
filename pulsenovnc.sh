@@ -22,8 +22,18 @@ MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rd
 Keywords=Browser;
 EOF
 sudo mv ~/pulse.desktop /usr/share/applications/
+read -p "do you want to add a password to the novnc server? (yes/no) " yesorno
+if [[ "$yesorno" = "yes" ]]; then
+vncpasswd
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE  -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
 sudo ln -s ~/pulse-browser/pulse-browser /usr/bin/startpulse
 export DISPLAY=:0
 startpulse
+elif [[ "$yesorno" = "no" ]]; then
+tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
+websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
+sudo ln -s ~/pulse-browser/pulse-browser /usr/bin/startpulse
+export DISPLAY=:0
+startpulse
+else

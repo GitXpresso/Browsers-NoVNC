@@ -22,9 +22,18 @@ Keywords=Browser;
 EOF
 sudo mv -f ~/torbrowser.desktop /usr/share/applications/
 git clone https://github.com/gitxpresso/linux-novnc.git ~/linux-novnc
-tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
+read -p "do you want to add a password to the novnc server? (yes/no) " yesorno
+if [[ "$yesorno" = "yes" ]]; then
+vncpasswd
+tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE  -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
-echo "Tor and NoVNC has started Now go to https://localhost:5900 to access tor on the vnc server"
 sudo ln -s ~/tor-browser/Browser/start-tor-browser /usr/bin/starttor
 export DISPLAY=:0
 starttor
+elif [[ "$yesorno" = "no" ]]; then
+tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
+websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
+sudo ln -s ~/tor-browser/Browser/start-tor-browser /usr/bin/starttor
+export DISPLAY=:0
+starttor
+else

@@ -5,8 +5,18 @@ echo "Installing the required packages in order for the script to work properly"
 sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox dialog tilix dbus-x11
 cd ~/
 wget https://github.com/GitXpresso/Browsers-NoVNC/releases/download/TarAndDeb/opera-stable_116.0.5366.71_amd64.deb && sudo apt install -y ./opera-stable_116.0.5366.71_amd64.deb && sudo rm -f opera-stable_116.0.5366.71_amd64.deb 
+read -p "do you want to add a password to the novnc server? (yes/no) " yesorno
+if [[ "$yesorno" = "yes" ]]; then
+vncpasswd
+tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE  -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
+websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
+export DISPLAY=:0
+opera-stable  --no-sandbox --test-type --disable-dev-shm-usage --start-maximized --display=:0
+echo "Opera started go to https://localhost:6080 to access NoVNC and Opera, and No it is not opera gx"
+elif [[ "$yesorno" = "no" ]]; then
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
 export DISPLAY=:0
 opera-stable  --no-sandbox --test-type --disable-dev-shm-usage --start-maximized --display=:0
 echo "Opera started go to https://localhost:6080 to access NoVNC and Opera, and No it is not opera gx"
+else

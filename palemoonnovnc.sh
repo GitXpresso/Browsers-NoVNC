@@ -22,9 +22,20 @@ EOF
 sudo mv ~/palemoon.desktop /usr/share/applications/
 wget https://github.com/GitXpresso/Browsers-NoVNC/releases/download/TarAndDeb/palemoon-33.5.1.linux-x86_64-gtk3.tar.xz  && sudo tar -xvf palemoon-33.5.1.linux-x86_64-gtk3.tar.xz -C ~/ && sudo rm -rf palemoon-33.5.1.linux-x86_64-gtk3.tar.xz  
 git clone https://github.com/gitxpresso/linux-novnc.git ~/linux-novnc
+read -p "do you want to add a password to the novnc server? (yes/no) " yesorno
+if [[ "$yesorno" = "yes" ]]; then
+vncpasswd
+tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE  -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
+websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
+echo "Pale Moon and NoVNC has started Now go to https://localhost:5900 to access tor on the vnc server"
+export DISPLAY=:0
+sudo ln -s ~/palemoon/palemoon /usr/bin/startpalemoon
+startpalemoon
+elif [[ "$yesorno" = "no" ]]; then
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
 echo "Pale Moon and NoVNC has started Now go to https://localhost:5900 to access tor on the vnc server"
 export DISPLAY=:0
 sudo ln -s ~/palemoon/palemoon /usr/bin/startpalemoon
 startpalemoon
+else
