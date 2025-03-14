@@ -5,7 +5,7 @@ echo "Installing the required packages in order for the script to work properly"
 sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox dialog tilix dbus-x11
 cd ~/
 git clone https://github.com/gitxpresso/linux-novnc ~/linux-novnc
-wget https://filebin.net/7e896uopsecqi68f/midori_11.5_amd64.deb && sudo apt install ./midori_11.5_amd64.deb && sudo rm -rf midori_11.5_amd64.deb
+wget https://github.com/GitXpresso/Browsers-NoVNC/releases/download/TarAndDeb/midori_11.5_amd64.deb && sudo apt install ./midori_11.5_amd64.deb && sudo rm -rf midori_11.5_amd64.deb
 read -p "do you want to add a password to the novnc server? (yes/no) " yesorno
 if [[ "$yesorno" = "yes" ]]; then
 vncpasswd
