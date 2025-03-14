@@ -6,7 +6,16 @@ sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox
 cd ~/
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
+read -p "do you want to add a password to the novnc server? (yes/no) " yesorno
+if [[ "$yesorno" = "yes" ]]; then
+vncpasswd
+tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE  -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
+websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
 export DISPLAY=:0
-echo -e "inscape has started go to https://localhost:6080 to access your vnc session"
 inkscape
-git clone https://github.com/zerogate/zerogate-browser.git ~/browser && mkdir /workspace/Browsers-NoVNC/testing && 
+elif [[ "$yesorno" = "no" ]]; then
+tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
+websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
+export DISPLAY=:0
+inkscape
+else

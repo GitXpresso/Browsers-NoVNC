@@ -13,7 +13,6 @@ websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 local
 export DISPLAY=:0
 echo -e "netbeans has started go to https://localhost:6080 to access your vnc session"
 netbeans
-echo "Opera started go to https://localhost:6080 to access NoVNC and Opera, and No it is not opera gx"
 elif [[ "$yesorno" = "no" ]]; then
 tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900

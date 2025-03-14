@@ -21,8 +21,26 @@ BCyan=$(tput setaf 6; tput bold)
 BWhite=$(tput setaf 7; tput bold)
 echo -e "${BBlack}installing required packages${NoColor}"
 # Install Zen Browser to create .deb package
+# List of packages to check and install
+packages=("tar" "wget" "build-essential" "imagemagick" "devscripts" "debhelper" "curl" "bash" "busybox" "libasound-dev")
+
+# Update package list
 sudo apt update
-sudo apt-get install tar wget build-essential imagemagick devscripts debhelper curl busybox libasound-dev -y
+clear
+# Loop through each package
+for package in "${packages[@]}"; do
+    # Check if the package is installed
+    dpkg -l | grep -qw "$package"
+    
+    if [ $? -eq 0 ]; then
+        echo "$package is already installed. Skipping."
+    else
+        echo "$package is not installed. Installing..."
+        sudo apt install -y "$package"
+    fi
+    sleep 0.2
+
+done
 clear
 # Edit the Export Variables in order for this file to work successfully
 #!/bin/bash
@@ -53,8 +71,8 @@ while true; do
 done
 
 # Get the filename and destination path
-FILENAME=$(basename "$TAR_URL")
-DEST_FILE="$HOME/$FILENAME"
+tarfile=$(basename "$TAR_URL")
+DEST_FILE="$HOME/$tarfile"
 
 # Download the file using wget
 wget -P ~/ -nv --progress=bar:force "$TAR_URL" 2>&1 | tee /dev/null | sed -u 's/\([0-9]*\)%/\1%/' | awk '{print "\rDownloading: "$0; fflush();}' > /dev/null &
@@ -69,12 +87,13 @@ done
 # Call loading animation in the background
 # Check if the tar file is valid before proceeding
 if ! check_tar_validity "$DEST_FILE"; then
-    echo "Error: The downloaded file is not a valid tar file. run tar2deb again and try again with a valid url, Exiting."
+    clear
+    echo "Error: The downloaded file is not a valid url, executable tar2deb with valid download url"
     exit 1
 fi
 
 # Extract the tar file if it's valid
-TAR_DIR=$(tar -xvf ~/downloads/zen.linux-x86_64.tar.xz -C ~/ | cut -d / -f1 | uniq) &
+TAR_DIR=$(tar -xvf ~/$tarfile -C ~/ | cut -d / -f1 | uniq) &
 pid=$!
 
 spin='-\|/'
@@ -92,6 +111,7 @@ export tarfile="$DEST_FILE"
 # Clean up by removing the tar file
 rm -rf "$DEST_FILE"
 printf "\nExtraction complete!\n"
+clear
 is_letter() {
     [[ "$1" =~ ^[Aa-zZ2]+$ ]];
 }
@@ -105,7 +125,7 @@ while true; do
         read -p "do you want to change the name of your package? (yes/no) " yesorno
     if [ "$yesorno" = yes ]; then
     clear
-    bash ./tar2debpackagenameprompt.sh
+    bash ./tar2debpackagename.sh
     elif [ "$yesorno" = no ]; then
     clear
     echo "not changing name of package"
@@ -213,11 +233,12 @@ Maintainer: $Name
 Description: $Description
 
 EOF
+find "$HOME/$TAR_DIR" -type f -exec file {} + | grep -i 'executable' | grep -vi 'binary' | cut -d: -f1 | grep -v -E 'glxtest|updater|vaapitest|pingsender|plugin-container|run-mozilla.sh|blender-softwaregl|blender-system-info.sh|blender-thumbnailer|*.py|*.rs|execdesktop|lyrebird|snowflake-client|*.desktop|firefox.real|abicheck|conjure-client' | while read -r file; do busybox ln -s "$file" "$HOME/$DEB_DIR/usr/bin/"; done
+if [[ -f "$HOME/$TAR_DIR/usr/bin/start-tor-browser" ]]; then
+mv "$HOME/$TAR_DIR/usr/bin/start-tor-browser" "$HOME/tor-14.0.7/usr/bin/tor-browser"
+fi
 mkdir -p ~/$DEB_DIR/usr/bin/
-find $HOME/$TAR_DIR -type f -exec file {} + | grep -i 'executable' | grep -vi 'binary' | cut -d: -f1 | grep -v -E 'glxtest|updater|vaapitest|pingsender|plugin-container|run-mozilla.sh|*.py|blender-softwaregl|blender-system-info.sh|blender-thumbnailer'| while read -r file; do busybox ln -s "$file" $HOME/$DEB_DIR/usr/bin/; done
-CHECK_DIR1="$HOME/palemoon*"
-CHECK_DIR2="$HOME/basilisk*"
-
+find "$HOME/$TAR_DIR" -type f -exec file {} + | grep -i 'executable' | grep -vi 'binary' | cut -d: -f1 | grep -v -E 'glxtest|updater|vaapitest|pingsender|plugin-container|run-mozilla.sh|blender-softwaregl|blender-system-info.sh|blender-thumbnailer|*.py|*.rs' | while read -r file; do busybox ln -s "$file" "$HOME/$DEB_DIR/usr/bin/"; done
 # Specify the word to search for in the second directory
 
 # Check if the first directory exists
