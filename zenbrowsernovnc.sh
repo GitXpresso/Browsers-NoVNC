@@ -6,14 +6,14 @@ sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox
 cd ~/
 yesorno() {
 if [ "$yesorno" = "yes" ]; then
-wget https://github.com/zen-browser/desktop/releases/download/1.7.6b/zen.linux-x86_64.tar.xz && sudo tar -xvf zen.linux-x86_64.tar.xz -C /usr/lib && sudo rm -rf zen.linux-x86_64.tar.xz
+wget https://github.com/zen-browser/desktop/releases/download/1.10b/zen.linux-x86_64.tar.xz && sudo tar -xvf zen.linux-x86_64.tar.xz -C /usr/lib && sudo rm -rf zen.linux-x86_64.tar.xz
 elif [[ "$yesorno" = "no" ]]; then
 exit 1
 fi
 }
 arch=$(uname -p)
 if [ "$arch" = "x86_64" ]; then
-wget https://github.com/zen-browser/desktop/releases/download/1.9b/zen.linux-x86_64.tar.xz && sudo tar -xvf zen.linux-x86_64.tar.xz -C /usr/lib && sudo rm -rf zen.linux-x86_64.tar.xz
+wget https://github.com/zen-browser/desktop/releases/download/1.10b/zen.linux-x86_64.tar.xz && sudo tar -xvf zen.linux-x86_64.tar.xz -C /usr/lib && sudo rm -rf zen.linux-x86_64.tar.xz
 else
 read -p "your linux architecture is not "x86_64" do you still want to continue? (yes/no) " yesorno
 yesorno
@@ -21,7 +21,7 @@ fi
 git clone https://github.com/gitxpresso/linux-novnc.git
 cat << EOF > ~/zen.desktop
 [Desktop Entry]
-Version=1.0
+Version=1.10b
 StartupWMClass=zen
 Icon=/usr/lib/zen/browser/chrome/icons/default/default48.png
 Type=Application
