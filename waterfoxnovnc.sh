@@ -38,3 +38,6 @@ sudo ln -s /usr/lib/waterfox/waterfox /usr/bin/startwaterfox
 export DISPLAY=:0
 startwaterfox
 else
+echo "invalid option"
+exit 1
+fi
