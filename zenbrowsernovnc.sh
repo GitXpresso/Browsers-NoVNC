@@ -35,6 +35,7 @@ MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rd
 Keywords=Browser;
 EOF
 sudo mv ~/zen.desktop /usr/share/applications/
+clear
 read -p "do you want to add a password to the novnc server? (yes/no) " yesorno
 if [[ "$yesorno" = "yes" ]]; then
 vncpasswd
