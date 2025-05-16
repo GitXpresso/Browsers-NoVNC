@@ -3,18 +3,23 @@ if [ ! ~/.bash_history ]; then
    touch ~/.bash_history
    history -w ~/.bash_history
 fi
-if grep 'sudo apt update' ~/.bash_history; then
+if grep -o -q 'sudo apt update' ~/.bash_history; then
     echo "System is already updated"
+    sleep 0.5
+    clear
 else
 echo "Updating Your System"
 sudo apt update 
 echo "sudo apt update" >> ~/.bash_history
+sleep 0.5
+clear
 fi
 echo "Installing the required packages in order for the script to work properly"
 sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox kdialog zenity tilix apt-utils
-cd ~/
+sleep 0.5
+clear
 if [ ! -d "$HOME/tor-browser" ]; then
-    wget https://www.torproject.org/dist/torbrowser/14.5.1/tor-browser-linux-x86_64-14.5.1.tar.xz && tar -xvf tor-browser-linux-x86_64-14.5.1.tar.xz -C ~/ && sudo rm -rf tor-browser-linux-x86_64-14.5.1.tar.xz
+    wget --show-progress -q -P ~/ https://www.torproject.org/dist/torbrowser/14.5.1/tor-browser-linux-x86_64-14.5.1.tar.xz && tar -xvf tor-browser-linux-x86_64-14.5.1.tar.xz -C ~/ && sudo rm -rf tor-browser-linux-x86_64-14.5.1.tar.xz
 else 
 echo "Tor Browser is already installed."
 fi
@@ -34,17 +39,26 @@ MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rd
 Keywords=Browser;
 EOF
 sudo mv -f ~/torbrowser.desktop /usr/share/applications/
+if [ ! -d "$HOME/linux-novnc" ]; then
 git clone https://github.com/gitxpresso/linux-novnc.git ~/linux-novnc
+sleep 0.5
+clear
+else
+echo "linux-novnc exists."
+sleep 0.5
+clear
+fi
 sudo lsof -n -i | grep 6080 >/dev/null 2>&1
 if [[ $? -eq 0 ]]; then
     echo "novnc is already running..."
-    read -p "do you want to start tor browser? (yes/no) " yesorno
-    if [[ "$yesorno" = "yes" ]]; then
+    read -p "do you want to start tor browser? (yes/no) " yesorno2
+    if [[ "$yesorno2" = "yes" ]]; then
     export DISPLAY=:0
     sudo ln -s ~/tor-browser/Browser/start-tor-browser /usr/bin/starttor
     starttor
-    elif [[ "$yesorno" = "no" ]]; then
+    elif [[ "$yesorno2" = "no" ]]; then
     exit 1
+fi
 else 
 read -p "do you want to add a password to the novnc server? (yes/no) " yesorno
 if [[ "$yesorno" = "yes" ]]; then
