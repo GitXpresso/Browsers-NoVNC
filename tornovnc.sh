@@ -59,7 +59,6 @@ if [[ $? -eq 0 ]]; then
     elif [[ "$yesorno2" = "no" ]]; then
     exit 1
 fi
-else 
 read -p "do you want to add a password to the novnc server? (yes/no) " yesorno
 if [[ "$yesorno" = "yes" ]]; then
 vncpasswd
@@ -77,4 +76,5 @@ starttor
 else
    echo "invalid input"
     exit 1
+fi
 fi
