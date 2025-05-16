@@ -15,9 +15,67 @@ sleep 0.5
 clear
 fi
 echo "Installing the required packages in order for the script to work properly"
-sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox kdialog zenity tilix apt-utils
-sleep 0.5
-clear
+if [ -f /usr/bin/wget ]; then
+    echo "wget is already installed."
+else
+    sudo apt install -y wget
+    sleep 0.5
+    clear
+fi
+if [ -f /usr/bin/novnc ]; then
+    echo "novnc is already installed."
+else
+    sudo apt install -y novnc
+    sleep 0.5
+    clear
+fi
+if [ -f /usr/bin/websockify ]; then
+    echo "websockify is already installed."
+else
+    sudo apt install -y websockify
+    sleep 0.5
+    clear
+fi
+if [ -f /usr/bin/tigervnc-standalone-server ]; then
+    echo "tigervnc-standalone-server is already installed."
+else
+    sudo apt install -y tigervnc-standalone-server
+    sleep 0.5
+    clear
+fi
+if [ -f /usr/bin/tar ]; then
+    echo "tar is already installed."
+else
+    sudo apt install -y tar
+    sleep 0.5
+    clear
+fi
+if [ -f /usr/bin/openbox ]; then
+    echo "openbox is already installed."
+else
+    sudo apt install -y openbox
+    sleep 0.5
+    clear
+fi
+if [ -f /usr/bin/kdialog ]; then
+    echo "kdialog is already installed."
+else
+    sudo apt install -y kdialog
+    sleep 0.5
+    clear
+fi
+if [ -f /usr/bin/zenity ]; then
+    echo "zenity is already installed."
+else
+    sudo apt install -y zenity
+    sleep 0.5
+    clear
+fi
+if [ -f /usr/bin/tilix ]; then
+    echo "tilix is already installed."
+else
+    sudo apt install -y tilix
+fi
 if [ ! -d "$HOME/tor-browser" ]; then
     wget --show-progress -q -P ~/ https://www.torproject.org/dist/torbrowser/14.5.1/tor-browser-linux-x86_64-14.5.1.tar.xz && tar -xvf tor-browser-linux-x86_64-14.5.1.tar.xz -C ~/ && sudo rm -rf tor-browser-linux-x86_64-14.5.1.tar.xz
 else 
