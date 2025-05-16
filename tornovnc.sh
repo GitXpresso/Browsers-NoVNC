@@ -4,7 +4,7 @@ sudo apt update
 echo "Installing the required packages in order for the script to work properly"
 sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox kdialog zenity tilix apt-utils
 cd ~/
-wget https://www.torproject.org/dist/torbrowser/14.0.7/tor-browser-linux-x86_64-14.0.7.tar.xz && tar -xvf tor-browser-linux-x86_64-14.0.6.tar.xz -C ~/ && sudo rm -rf tor-browser-linux-x86_64-14.0.6.tar.xz
+https://www.torproject.org/dist/torbrowser/14.5.1/tor-browser-linux-x86_64-14.5.1.tar.xz && tar -xvf tor-browser-linux-x86_64-14.5.1.tar.xz -C ~/ && sudo rm -rf tor-browser-linux-x86_64-14.5.1.tar.xz
 cat << EOF > ~/torbrowser.desktop
 [Desktop Entry]
 Version=1.0
@@ -25,7 +25,7 @@ git clone https://github.com/gitxpresso/linux-novnc.git ~/linux-novnc
 read -p "do you want to add a password to the novnc server? (yes/no) " yesorno
 if [[ "$yesorno" = "yes" ]]; then
 vncpasswd
-tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE  -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
+tigervncserver  -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
 websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
 sudo ln -s ~/tor-browser/Browser/start-tor-browser /usr/bin/starttor
 export DISPLAY=:0
