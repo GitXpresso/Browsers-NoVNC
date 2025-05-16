@@ -13,10 +13,10 @@ fi
 echo "Installing the required packages in order for the script to work properly"
 sudo apt install -y wget novnc websockify tigervnc-standalone-server tar openbox kdialog zenity tilix apt-utils
 cd ~/
-if [ -f "~/tor-browser" ]; then
-    echo "Tor Browser is already installed."
-else
+if [ ! -d "$HOME/tor-browser" ]; then
     wget https://www.torproject.org/dist/torbrowser/14.5.1/tor-browser-linux-x86_64-14.5.1.tar.xz && tar -xvf tor-browser-linux-x86_64-14.5.1.tar.xz -C ~/ && sudo rm -rf tor-browser-linux-x86_64-14.5.1.tar.xz
+else 
+echo "Tor Browser is already installed."
 fi
 cat << EOF > ~/torbrowser.desktop
 [Desktop Entry]
