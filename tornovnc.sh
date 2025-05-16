@@ -39,6 +39,12 @@ sudo lsof -n -i | grep 6080 | head -1 >dev/null 2>&1
 
 if [[ $? -eq 0 ]]; then
     echo "novnc is already running..."
+    read -p "do you want to start tor browser? (yes/no) " yesorno
+    if [[ "$yesorno" = "yes" ]]; then
+    export DISPLAY=:0
+    sudo ln -s ~/tor-browser/Browser/start-tor-browser /usr/bin/starttor
+    starttor
+    elif [[ "$yesorno" = "no" ]]; then
     exit 1
 else 
 read -p "do you want to add a password to the novnc server? (yes/no) " yesorno
