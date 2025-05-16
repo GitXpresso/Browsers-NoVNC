@@ -35,8 +35,7 @@ Keywords=Browser;
 EOF
 sudo mv -f ~/torbrowser.desktop /usr/share/applications/
 git clone https://github.com/gitxpresso/linux-novnc.git ~/linux-novnc
-sudo lsof -n -i | grep 6080 | head -1 >dev/null 2>&1
-
+sudo lsof -n -i | grep 6080 >/dev/null 2>&1
 if [[ $? -eq 0 ]]; then
     echo "novnc is already running..."
     read -p "do you want to start tor browser? (yes/no) " yesorno
