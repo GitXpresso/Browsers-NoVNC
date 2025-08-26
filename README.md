@@ -1,6 +1,5 @@
 # Browsers-NoVNC
 Every browser in a novnc server, plain bash no docker. Does not support audio
-[]: update scripts and latest releases
 ***More than just Browsers***
 ## Table of Contents
 >[!IMPORTANT]
@@ -25,6 +24,8 @@ Every browser in a novnc server, plain bash no docker. Does not support audio
 - [ ] find a way to have a rootless dockerized novnc container then run steam in the dockerized novnc container
 - [ ] add link to video pn how to have waterfox noVNC automatically start on boot
 - [ ] add all the browsers
+- [ ] update scripts
+- [ ] add the latest releaases
 - [ ] finish adding all service files 
 - [ ] use winehq to install browsers that dont work 
 - [ ] use winehq to have opera gx in a browser
