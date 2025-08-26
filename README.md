@@ -1,6 +1,6 @@
 # Browsers-NoVNC
 Every browser in a novnc server, plain bash no docker. Does not support audio
-
+[]: update scripts and latest releases
 ***More than just Browsers***
 ## Table of Contents
 >[!IMPORTANT]
