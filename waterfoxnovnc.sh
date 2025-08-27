@@ -8,7 +8,7 @@ echo "Updating Your System"
 sudo apt update
 echo "Installing the required packages in order for the script to work properly"
 fi
-pkgs=( "wget" "novnc" "websockify" "tigervnc-standalone-server" "dbus-x11" "tar" "openbox" "tilix" "libasound-dev" )g
+pkgs=( "wget" "novnc" "websockify" "tigervnc-standalone-server" "dbus-x11" "tar" "openbox" "tilix" "libasound-dev" )
 for pkgs1 in ${pkgs[@]}; do
   dpkg -l | grep -qw $pkgs1
 
