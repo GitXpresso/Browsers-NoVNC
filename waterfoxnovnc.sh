@@ -50,5 +50,3 @@ while true; do
      clear
    fi
 done
-exit 1
-fi
