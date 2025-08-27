@@ -2,9 +2,10 @@
 echo "Updating Your System"
 sudo apt update
 echo "Installing the required packages in order for the script to work properly"
-sudo apt install -y wget novnc websockify tigervnc-standalone-server dbus-x11 tar openbox tilix libasound-dev
+
+pkgs=[ "wget" "novnc" "websockify" "tigervnc-standalone-server" "dbus-x11" "tar" "openbox" "tilix" "libasound-dev" ]
 cd ~/ 
-wget https://cdn1.waterfox.net/waterfox/releases/6.5.5/Linux_x86_64/waterfox-6.5.5.tar.bz2 && sudo tar -xvf ~/waterfox-6.5.5.tar.bz2 -C /usr/lib && sudo rm -rf waterfox-6.5.5.tar.bz2 
+wget https://cdn1.waterfox.net/waterfox/releases/6.6.1/Linux_x86_64/waterfox-6.6.1.tar.bz2 && sudo tar -xvf ~/waterfox-6.6.1.tar.bz2 -C /usr/lib && sudo rm -rf waterfox-6.6.1.tar.bz2 
 git clone https://github.com/gitxpresso/linux-novnc ~/linux-novnc
 cat << EOF > ~/waterfox.desktop
 [Desktop Entry]
