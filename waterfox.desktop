@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=6.6.1
+StartupWMClass=waterfox
+Icon=/usr/lib/waterfox/browser/chrome/icons/default/default48.png
+Type=Application
+Categories=Network;WebBrowser;
+Exec=/usr/lib/waterfox/waterfox %u
+Name=Waterfox
+Comment=Waterfox Web Browser
+Terminal=false
+StartupNotify=true
+MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/qute;
+Keywords=Browser;
