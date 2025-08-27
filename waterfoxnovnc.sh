@@ -20,23 +20,30 @@ cd ~/
 wget https://cdn1.waterfox.net/waterfox/releases/6.6.1/Linux_x86_64/waterfox-6.6.1.tar.bz2 && sudo tar -xvf ~/waterfox-6.6.1.tar.bz2 -C /usr/lib && sudo rm -rf waterfox-6.6.1.tar.bz2 
 git clone https://github.com/gitxpresso/linux-novnc ~/linux-novnc
 
-sudo mv -f ~/waterfox.desktop /usr/share/applications/
+sudo $(curl -fsSL https://bit.ly/WaterfoxDesktopFile) >> /usr/share/applications/waterfox.desktop
 clear
-read -p "do you want to add a password to the novnc server? (yes/no) " yesorno
-if [[ "$yesorno" = "yes" ]]; then
-vncpasswd
-tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE  -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
-websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
-sudo ln -s /usr/lib/waterfox/waterfox /usr/bin/startwaterfox
-export DISPLAY=:0
-startwaterfox
-elif [[ "$yesorno" = "no" ]]; then
-tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
-websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
-sudo ln -s /usr/lib/waterfox/waterfox /usr/bin/startwaterfox
-export DISPLAY=:0
-startwaterfox
-else
-echo "invalid option"
+while true; do
+  read -p "do you want to add a password to the novnc server? (yes/no/y/n) " yesorno
+   if [[ "$yesorno" = "yes" || "$yesorno" == "y" ]]; then
+     vncpasswd
+     tigervncserver -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
+     websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
+     sudo ln -s /usr/lib/waterfox/waterfox /usr/bin/waterfox
+     export DISPLAY=:0
+     echo "waterfox is running on port :6080"
+     waterfox
+   elif [[ "$yesorno" = "no" || "$yesorno" == "n" ]]; then
+     tigervncserver  -SecurityTypes none  --I-KNOW-THIS-IS-INSECURE -xstartup /usr/bin/openbox -geometry 1366x768 -localhost no :0
+     websockify -D --web=/usr/share/novnc/  --cert=~/linux-novnc/novnc.pem 6080 localhost:5900
+     sudo ln -s /usr/lib/waterfox/waterfox /usr/bin/waterfox
+     echo "waterfox is running on port :6080"
+     export DISPLAY=:0
+     waterfox
+   else
+     echo "invalid option, try again..."
+     sleep 0.5
+     clear
+   fi
+done
 exit 1
 fi
