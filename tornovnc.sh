@@ -1,4 +1,8 @@
 #!/bin/bash
+if ! grep -qi "Debian" /etc/*release; then
+  echo "You are using an non-debian based distro, exiting..."
+  exit 1
+fi
 if [ ! ~/.bash_history ]; then
    touch ~/.bash_history
    history -w ~/.bash_history
@@ -36,7 +40,7 @@ else
     sleep 0.5
     clear
 fi
-if [ -f /usr/bin/tigervnc-standalone-server ]; then
+if dpkg -L | grep -qw tigervnc-standalone-server; then
     echo "tigervnc-standalone-server is already installed."
 else
     sudo apt install -y tigervnc-standalone-server
