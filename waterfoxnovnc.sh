@@ -1,8 +1,13 @@
 #!/bin/bash
+if ! grep -qi "Debian" /etc/*release; then
+ echo "You are using an non-debian based distro, exiting..."
+ exit 1
+fi
+if [ ! /usr/bin/waterfox ]; then
 echo "Updating Your System"
 sudo apt update
 echo "Installing the required packages in order for the script to work properly"
-
+fi
 pkgs=( "wget" "novnc" "websockify" "tigervnc-standalone-server" "dbus-x11" "tar" "openbox" "tilix" "libasound-dev" )g
 for pkgs1 in ${pkgs[@]}; do
   dpkg -l | grep -qw $pkgs1
