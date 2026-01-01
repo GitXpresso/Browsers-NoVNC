@@ -51,13 +51,7 @@ if dpkg -L | grep "dbus-x11"; then
   echo "dbus-x11 already installed, not installing dbus-x11"
 else
   echo "dbus-x11 not installed, installing dbus-x11..."
-  sudo apt install dbus-x11-y
-fi
-if [ -f /usr/bin/tilix ]; then
-  echo "Tilix is already installed, not installing tilix..."
-else
-  echo "Tilix is not installed, installing tilix..."
-  sudo apt install tilix -y
+  sudo apt install dbus-x11 -y
 fi
 if [ -f /usr/bin/extrepo ]; then
   echo "Extrepo already installed, not installing Extrepo..."
