@@ -4,8 +4,13 @@ if ! grep "Debian" /etc/*release; then
   exit
 fi
 echo "updating system to successfully install required packages"
-sudo apt update
-echo "Installing required packages"
+if ! ls /var/lib/apt/list | grep "InRelease"; then 
+  echo "system already updated"
+else
+  echo "system is not updated, updating..."
+  sudo apt update
+fi
+  echo "Installing required packages"
 if [ -f /usr/bin/wget ]; then
   echo "wget already installed, not installing wget..."
 else
