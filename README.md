@@ -1,4 +1,10 @@
 # Browsers-NoVNC
+> [!WARNING]
+> ## **This project is deprecated.**
+> 
+> ### **Why?:** because I lost interest in working on this project.
+> 
+> ### **Will it be worked on again?:** Hopefully in the future.
 Every browser in a novnc server, plain bash no docker. Does not support audio
 ***More than just Browsers***
 ## Table of Contents
